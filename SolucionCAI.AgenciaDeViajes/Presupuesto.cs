@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Practica
+namespace SolucionCAI.AgenciaDeViajes
 {
-    public partial class PresupuestoOK : Form
+    public partial class Presupuesto : Form
     {
-        public PresupuestoOK()
+        public Presupuesto()
         {
             InitializeComponent();
         }

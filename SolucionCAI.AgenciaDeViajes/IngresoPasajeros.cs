@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Login
+namespace SolucionCAI.AgenciaDeViajes
 {
     public partial class IngresoPasajeros : Form
     {

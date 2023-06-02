@@ -1,4 +1,4 @@
-﻿namespace Login
+﻿namespace SolucionCAI.AgenciaDeViajes
 {
     partial class IngresoPasajeros
     {

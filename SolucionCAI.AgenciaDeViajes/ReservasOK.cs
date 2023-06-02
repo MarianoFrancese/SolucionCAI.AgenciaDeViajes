@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Practica2
+namespace SolucionCAI.AgenciaDeViajes
 {
-    public partial class Form1 : Form
+    public partial class Reservas : Form
     {
-        public Form1()
+        public Reservas()
         {
             InitializeComponent();
         }

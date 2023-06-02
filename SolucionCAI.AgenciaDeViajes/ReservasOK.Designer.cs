@@ -1,6 +1,6 @@
-﻿namespace Practica2
+﻿namespace SolucionCAI.AgenciaDeViajes
 {
-    partial class Form1
+    partial class Reservas
     {
         /// <summary>
         /// Required designer variable.
