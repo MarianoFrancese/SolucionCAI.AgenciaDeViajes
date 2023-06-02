@@ -8,5 +8,9 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
 {
     internal class TarifaEnt
     {
+        public char Clase { get; set; }
+        public char TipoPasajero { get; set; }
+        public decimal Precio { get; set; }
+        public int Disponibilidad { get; set; }
     }
 }
