@@ -68,7 +68,6 @@
             this.label1.Size = new System.Drawing.Size(294, 36);
             this.label1.TabIndex = 2;
             this.label1.Text = "Gestión de viajes";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -114,7 +113,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(254, 240);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Login
             // 
