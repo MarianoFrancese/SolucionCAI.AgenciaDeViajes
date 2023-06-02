@@ -30,7 +30,8 @@ namespace SolucionCAI.AgenciaDeViajes
 
             if (esValido)
             {
-                MenuPrincipal.Mostrar();
+                Form MenuPrincipal = new SolucionCAI.AgenciaDeViajes.MenuPrincipal();
+                MenuPrincipal.Show();
                 this.Hide();
             }
             else
@@ -39,14 +40,5 @@ namespace SolucionCAI.AgenciaDeViajes
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
