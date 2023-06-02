@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SolucionCAI.AgenciaDeViajes.Archivos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SolucionCAI.AgenciaDeViajes.Archivos;
 
 namespace SolucionCAI.AgenciaDeViajes
 {
@@ -17,6 +17,7 @@ namespace SolucionCAI.AgenciaDeViajes
         {
             InitializeComponent();
             textBox2.PasswordChar = '*';
+
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -25,9 +26,9 @@ namespace SolucionCAI.AgenciaDeViajes
             string contraseña = textBox2.Text;
 
             var login = new Validaciones();
-            bool loginOK = login.ValidaUsuario(usuario, contraseña);
+            bool esValido = login.ValidaUsuario(usuario, contraseña);
 
-            if(loginOK)
+            if (esValido)
             {
                 MenuPrincipal.Mostrar();
                 this.Hide();
@@ -36,7 +37,6 @@ namespace SolucionCAI.AgenciaDeViajes
             {
                 MessageBox.Show("Usuario o contraseña incorrectos");
             }
-
         }
     }
 }

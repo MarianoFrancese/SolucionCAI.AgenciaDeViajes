@@ -3,9 +3,9 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net7.0-windows</TargetFramework>
+	<UseWindowsForms>true</UseWindowsForms>  
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-	<UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,32 +22,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="IngresoPasajeros.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Update="IngresoPasajeros.cs" />
+    <Compile Update="Login.cs" />
     <Compile Update="Presupuesto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Properties\Resources.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Update="ReservasOK.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="segundoForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Update="Reserva.cs" />
+    <Compile Update="segundoForm.cs" />
   </ItemGroup>
 
-  <ItemGroup>
-    <EmbeddedResource Update="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-  </ItemGroup>
 </Project>
