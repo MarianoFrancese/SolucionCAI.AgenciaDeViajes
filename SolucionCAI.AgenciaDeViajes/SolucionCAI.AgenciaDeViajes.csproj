@@ -33,7 +33,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Update="Reserva.cs" />
-    <Compile Update="Menu Principal.cs" />
+    <Compile Update="MenuPrincipal.cs" />
   </ItemGroup>
 
   <ItemGroup>

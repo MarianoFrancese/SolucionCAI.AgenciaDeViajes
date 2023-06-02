@@ -82,7 +82,7 @@
             this.Controls.Add(this.Presupuestobtn);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "MenuPrincipal";
-            this.Text = "Menu Principal";
+            this.Text = "MenuPrincipal";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
