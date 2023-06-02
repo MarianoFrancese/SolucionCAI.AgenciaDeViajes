@@ -10,7 +10,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
     {
         public static void Mostrar()
         {
-            Form frm2 = new segundoForm();
+            Form frm2 = new AgenciaDeViajes.MenuPrincipal();
             frm2.Show();
         }
     }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SolucionCAI.AgenciaDeViajes
 {
-    public partial class segundoForm : Form
+    public partial class MenuPrincipal : Form
     {
-        public segundoForm()
+        public MenuPrincipal()
         {
             InitializeComponent();
         }
