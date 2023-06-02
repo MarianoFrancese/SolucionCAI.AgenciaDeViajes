@@ -16,14 +16,14 @@ namespace SolucionCAI.AgenciaDeViajes
         public Login()
         {
             InitializeComponent();
-            textBox2.PasswordChar = '*';
+            ContraseñaLogin.PasswordChar = '*';
 
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string usuario = textBox1.Text;
-            string contraseña = textBox2.Text;
+            string usuario = UsuarioLogin.Text;
+            string contraseña = ContraseñaLogin.Text;
 
             var login = new Validaciones();
             bool esValido = login.ValidaUsuario(usuario, contraseña);
@@ -37,6 +37,16 @@ namespace SolucionCAI.AgenciaDeViajes
             {
                 MessageBox.Show("Usuario o contraseña incorrectos");
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

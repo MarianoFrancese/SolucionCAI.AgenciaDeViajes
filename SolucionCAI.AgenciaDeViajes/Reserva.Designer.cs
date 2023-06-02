@@ -32,14 +32,17 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button7 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.buscarPres = new System.Windows.Forms.Button();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductosPres = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.CompletarDatosPre = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -54,11 +57,9 @@
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.CompletarDatosRes = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
@@ -72,10 +73,10 @@
             this.DtoMP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductosPres = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button8 = new System.Windows.Forms.Button();
+            this.buscarPrere = new System.Windows.Forms.Button();
+            this.buscarRes = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -94,14 +95,14 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(905, 433);
+            this.tabControl1.Size = new System.Drawing.Size(905, 448);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.button7);
             this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.button4);
+            this.tabPage1.Controls.Add(this.buscarPres);
             this.tabPage1.Controls.Add(this.textBox7);
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.dataGridView1);
@@ -109,43 +110,52 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tabPage1.Size = new System.Drawing.Size(897, 405);
+            this.tabPage1.Size = new System.Drawing.Size(897, 420);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Presupuestos";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(464, 368);
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Location = new System.Drawing.Point(468, 380);
             this.button7.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(88, 27);
+            this.button7.Size = new System.Drawing.Size(130, 34);
             this.button7.TabIndex = 13;
             this.button7.Text = "Reservar";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(316, 368);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(270, 380);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 27);
+            this.button1.Size = new System.Drawing.Size(132, 34);
             this.button1.TabIndex = 11;
             this.button1.Text = "Prereservar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button4
+            // buscarPres
             // 
-            this.button4.Location = new System.Drawing.Point(253, 12);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(88, 27);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Buscar";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.buscarPres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buscarPres.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buscarPres.ForeColor = System.Drawing.Color.White;
+            this.buscarPres.Location = new System.Drawing.Point(253, 12);
+            this.buscarPres.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buscarPres.Name = "buscarPres";
+            this.buscarPres.Size = new System.Drawing.Size(88, 27);
+            this.buscarPres.TabIndex = 10;
+            this.buscarPres.Text = "Buscar";
+            this.buscarPres.UseVisualStyleBackColor = false;
+            this.buscarPres.Click += new System.EventHandler(this.button4_Click);
             // 
             // textBox7
             // 
@@ -158,10 +168,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.Location = new System.Drawing.Point(7, 15);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 15);
+            this.label7.Size = new System.Drawing.Size(102, 15);
             this.label7.TabIndex = 3;
             this.label7.Text = "Nro Seguimiento";
             // 
@@ -177,15 +188,35 @@
             this.dataGridView1.Location = new System.Drawing.Point(4, 46);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(889, 315);
+            this.dataGridView1.Size = new System.Drawing.Size(889, 328);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "NroSeguimiento";
+            this.Column1.Name = "Column1";
+            // 
+            // ProductosPres
+            // 
+            this.ProductosPres.HeaderText = "Productos";
+            this.ProductosPres.Name = "ProductosPres";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "FechaCreacion";
+            this.Column3.Name = "Column3";
+            // 
+            // Column29
+            // 
+            this.Column29.HeaderText = "Total";
+            this.Column29.Name = "Column29";
+            // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.buscarPrere);
             this.tabPage2.Controls.Add(this.CompletarDatosPre);
             this.tabPage2.Controls.Add(this.button5);
-            this.tabPage2.Controls.Add(this.button3);
             this.tabPage2.Controls.Add(this.textBox4);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.dataGridView2);
@@ -193,43 +224,38 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tabPage2.Size = new System.Drawing.Size(897, 405);
+            this.tabPage2.Size = new System.Drawing.Size(897, 420);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Prereservas";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // CompletarDatosPre
             // 
-            this.CompletarDatosPre.Location = new System.Drawing.Point(273, 368);
+            this.CompletarDatosPre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.CompletarDatosPre.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.CompletarDatosPre.ForeColor = System.Drawing.Color.White;
+            this.CompletarDatosPre.Location = new System.Drawing.Point(250, 379);
             this.CompletarDatosPre.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.CompletarDatosPre.Name = "CompletarDatosPre";
-            this.CompletarDatosPre.Size = new System.Drawing.Size(117, 27);
+            this.CompletarDatosPre.Size = new System.Drawing.Size(173, 35);
             this.CompletarDatosPre.TabIndex = 13;
             this.CompletarDatosPre.Text = "Completar Datos";
-            this.CompletarDatosPre.UseVisualStyleBackColor = true;
+            this.CompletarDatosPre.UseVisualStyleBackColor = false;
             this.CompletarDatosPre.Click += new System.EventHandler(this.button8_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(547, 369);
+            this.button5.BackColor = System.Drawing.Color.OrangeRed;
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(490, 379);
             this.button5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(88, 27);
+            this.button5.Size = new System.Drawing.Size(114, 35);
             this.button5.TabIndex = 12;
             this.button5.Text = "Reservar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(248, 13);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(88, 27);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Buscar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // textBox4
             // 
@@ -242,10 +268,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(7, 16);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 15);
+            this.label4.Size = new System.Drawing.Size(102, 15);
             this.label4.TabIndex = 2;
             this.label4.Text = "Nro Seguimiento";
             // 
@@ -267,7 +294,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(4, 46);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(889, 315);
+            this.dataGridView2.Size = new System.Drawing.Size(889, 327);
             this.dataGridView2.TabIndex = 0;
             // 
             // Column8
@@ -322,11 +349,11 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.CompletarDatosRes);
+            this.tabPage3.Controls.Add(this.button2);
+            this.tabPage3.Controls.Add(this.buscarRes);
             this.tabPage3.Controls.Add(this.label10);
             this.tabPage3.Controls.Add(this.textBox10);
             this.tabPage3.Controls.Add(this.button6);
-            this.tabPage3.Controls.Add(this.button2);
             this.tabPage3.Controls.Add(this.textBox1);
             this.tabPage3.Controls.Add(this.label1);
             this.tabPage3.Controls.Add(this.dataGridView3);
@@ -334,28 +361,19 @@
             this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tabPage3.Size = new System.Drawing.Size(897, 405);
+            this.tabPage3.Size = new System.Drawing.Size(897, 420);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Reservas";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // CompletarDatosRes
-            // 
-            this.CompletarDatosRes.Location = new System.Drawing.Point(274, 369);
-            this.CompletarDatosRes.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.CompletarDatosRes.Name = "CompletarDatosRes";
-            this.CompletarDatosRes.Size = new System.Drawing.Size(115, 27);
-            this.CompletarDatosRes.TabIndex = 16;
-            this.CompletarDatosRes.Text = "Completar Datos";
-            this.CompletarDatosRes.UseVisualStyleBackColor = true;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.Location = new System.Drawing.Point(217, 18);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 15);
+            this.label10.Size = new System.Drawing.Size(70, 15);
             this.label10.TabIndex = 15;
             this.label10.Text = "EstadoPago";
             // 
@@ -369,25 +387,17 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(527, 369);
+            this.button6.BackColor = System.Drawing.Color.OrangeRed;
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(458, 378);
             this.button6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(88, 27);
+            this.button6.Size = new System.Drawing.Size(123, 36);
             this.button6.TabIndex = 13;
             this.button6.Text = "Confirmar";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(422, 13);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 27);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Buscar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox1
             // 
@@ -400,10 +410,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(7, 16);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 15);
+            this.label1.Size = new System.Drawing.Size(73, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "NroReserva";
             // 
@@ -425,7 +436,7 @@
             this.dataGridView3.Location = new System.Drawing.Point(4, 46);
             this.dataGridView3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(889, 320);
+            this.dataGridView3.Size = new System.Drawing.Size(889, 327);
             this.dataGridView3.TabIndex = 0;
             // 
             // NSegReserva
@@ -478,31 +489,63 @@
             this.EstadoPago.HeaderText = "EstadoPago";
             this.EstadoPago.Name = "EstadoPago";
             // 
-            // Column1
+            // button8
             // 
-            this.Column1.HeaderText = "NroSeguimiento";
-            this.Column1.Name = "Column1";
+            this.button8.BackColor = System.Drawing.Color.OrangeRed;
+            this.button8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Location = new System.Drawing.Point(12, 484);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 32;
+            this.button8.Text = "Salir";
+            this.button8.UseVisualStyleBackColor = false;
             // 
-            // ProductosPres
+            // buscarPrere
             // 
-            this.ProductosPres.HeaderText = "Productos";
-            this.ProductosPres.Name = "ProductosPres";
+            this.buscarPrere.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buscarPrere.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buscarPrere.ForeColor = System.Drawing.Color.White;
+            this.buscarPrere.Location = new System.Drawing.Point(250, 13);
+            this.buscarPrere.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buscarPrere.Name = "buscarPrere";
+            this.buscarPrere.Size = new System.Drawing.Size(88, 27);
+            this.buscarPrere.TabIndex = 14;
+            this.buscarPrere.Text = "Buscar";
+            this.buscarPrere.UseVisualStyleBackColor = false;
             // 
-            // Column3
+            // buscarRes
             // 
-            this.Column3.HeaderText = "FechaCreacion";
-            this.Column3.Name = "Column3";
+            this.buscarRes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buscarRes.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buscarRes.ForeColor = System.Drawing.Color.White;
+            this.buscarRes.Location = new System.Drawing.Point(417, 13);
+            this.buscarRes.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buscarRes.Name = "buscarRes";
+            this.buscarRes.Size = new System.Drawing.Size(88, 27);
+            this.buscarRes.TabIndex = 17;
+            this.buscarRes.Text = "Buscar";
+            this.buscarRes.UseVisualStyleBackColor = false;
             // 
-            // Column29
+            // button2
             // 
-            this.Column29.HeaderText = "Total";
-            this.Column29.Name = "Column29";
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(233, 379);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(173, 35);
+            this.button2.TabIndex = 18;
+            this.button2.Text = "Completar Datos";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // Reserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 519);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Reserva";
@@ -537,9 +580,7 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buscarPres;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
@@ -557,7 +598,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Pasajeros;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column23;
-        private System.Windows.Forms.Button CompletarDatosRes;
         private System.Windows.Forms.DataGridViewTextBoxColumn NSegReserva;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductoReserva;
         private System.Windows.Forms.DataGridViewTextBoxColumn PasajerosReserv;
@@ -572,6 +612,10 @@
         private DataGridViewTextBoxColumn ProductosPres;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column29;
+        private Button buscarPrere;
+        private Button buscarRes;
+        private Button button8;
+        private Button button2;
     }
 }
 
