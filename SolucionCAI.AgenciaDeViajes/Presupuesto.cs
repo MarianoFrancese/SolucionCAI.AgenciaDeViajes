@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SolucionCAI.AgenciaDeViajes
 {
@@ -42,17 +43,35 @@ namespace SolucionCAI.AgenciaDeViajes
             MessageBox.Show("Este botón agrega un item de vuelo en el presupuesto");
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e) //Boton Filtrar Hospedaje
         {
             MessageBox.Show("Este botón filtra por características de los hospedajes (a revisar)");
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) //Boton Filtrar Vuelos
         {
-            MessageBox.Show("Este botón filtra por características de los vuelos (a revisar)");
+            //MessageBox.Show("Este botón filtra por características de los vuelos (a revisar)");
+
+            string origen = comboBox1.SelectedItem.ToString();
+            string destino = comboBox4.SelectedItem.ToString();
+            DateTime fechaPartida = dateTimePicker1.Value;
+            int cantPasajeros = (int)numericUpDown1.Value;
+            string tipoPasajero = comboBox2.SelectedItem.ToString();
+            string clase = comboBox3.SelectedItem.ToString(); 
         }
 
+
         private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -37,7 +37,7 @@
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BuscarHosp = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -128,7 +128,7 @@
             this.tabPage1.Controls.Add(this.dateTimePicker3);
             this.tabPage1.Controls.Add(this.dateTimePicker2);
             this.tabPage1.Controls.Add(this.comboBox5);
-            this.tabPage1.Controls.Add(this.button3);
+            this.tabPage1.Controls.Add(this.BuscarHosp);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.label6);
@@ -215,19 +215,19 @@
             this.comboBox5.Size = new System.Drawing.Size(104, 23);
             this.comboBox5.TabIndex = 31;
             // 
-            // button3
+            // BuscarHosp
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(757, 30);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(88, 27);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Buscar";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.BuscarHosp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.BuscarHosp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BuscarHosp.ForeColor = System.Drawing.Color.White;
+            this.BuscarHosp.Location = new System.Drawing.Point(757, 30);
+            this.BuscarHosp.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.BuscarHosp.Name = "BuscarHosp";
+            this.BuscarHosp.Size = new System.Drawing.Size(88, 27);
+            this.BuscarHosp.TabIndex = 16;
+            this.BuscarHosp.Text = "Buscar";
+            this.BuscarHosp.UseVisualStyleBackColor = false;
+            this.BuscarHosp.Click += new System.EventHandler(this.button3_Click);
             // 
             // label8
             // 
@@ -391,6 +391,7 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(81, 23);
             this.comboBox4.TabIndex = 35;
+            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // comboBox1
             // 
@@ -400,6 +401,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(81, 23);
             this.comboBox1.TabIndex = 34;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // dateTimePicker1
             // 
@@ -803,7 +805,7 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button BuscarHosp;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
