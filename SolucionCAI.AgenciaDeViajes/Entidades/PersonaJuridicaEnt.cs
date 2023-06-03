@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace SolucionCAI.AgenciaDeViajes.Entidades
 {
-    internal class PersonaJuridicaEnt
+    internal class PersonaJuridicaEnt : ClienteEnt
     {
+        public string Domicilio { get; set; }
+        public CuitEnt CUIT { get; set; }
     }
 }

@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace SolucionCAI.AgenciaDeViajes.Entidades
 {
-    internal class CuitEnt
+    public class CuitEnt
     {
+        public int Prefijo { get; set; }
+        public int NumSoc { get; set; }
+        public int Sufijo { get; set; }
     }
 }

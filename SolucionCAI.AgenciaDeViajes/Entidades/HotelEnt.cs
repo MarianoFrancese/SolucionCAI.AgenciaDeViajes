@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace SolucionCAI.AgenciaDeViajes.Entidades
 {
-    internal class HotelEnt
+    public class HotelEnt
     {
+        public string Codigo { get; set; }
+        public string Nombre { get; set; }
+        public string CodigoCiudad { get; set; }
+        public int Calificacion { get; set; }
+        public DireccionEnt Direccion { get; set; }
+        public List<DisponibilidadHabEnt> Disponibilidad { get; set; }
     }
 }

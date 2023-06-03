@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SolucionCAI.AgenciaDeViajes.Entidades
 {
-    internal class VueloEnt
+    public class VueloEnt
     {
         public string Codigo { get; set; }
         public string Origen { get; set; }
@@ -16,7 +16,7 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
         public DateTime FechaArribo { get; set; }
         public TimeSpan TiempoVuelo { get { return CalcularTiempoVuelo(); } }
         public string Aerolinea { get; set; }
-        public List<decimal> Tarifas { get; set; }
+        public List<TarifaEnt> Tarifas { get; set; }
 
         public TimeSpan CalcularTiempoVuelo()
         {

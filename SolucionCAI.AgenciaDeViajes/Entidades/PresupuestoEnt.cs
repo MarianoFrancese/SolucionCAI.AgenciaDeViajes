@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace SolucionCAI.AgenciaDeViajes.Entidades
 {
-    internal class PresupuestoEnt
+    public class PresupuestoEnt
     {
+        public int NroSeguimiento { get; set; }
+        public List<ProductoLineaEnt> Productos { get; set; }
+        public Decimal Total { get; set; }
     }
 }

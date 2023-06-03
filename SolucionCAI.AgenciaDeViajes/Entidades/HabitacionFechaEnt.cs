@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace SolucionCAI.AgenciaDeViajes.Entidades
 {
-    internal class HabitacionFechaEnt
+    public class HabitacionFechaEnt
     {
+        public DateTime FechaHab { get; set; }
+        public int CantHab { get; set; }
     }
 }
