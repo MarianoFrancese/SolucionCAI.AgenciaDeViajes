@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using SolucionCAI.AgenciaDeViajes.Entidades;
 using Newtonsoft.Json;
 using System.Reflection.Metadata.Ecma335;
+using Newtonsoft.Json.Linq;
+using System.Windows.Forms;
 
 namespace SolucionCAI.AgenciaDeViajes.Archivos
 {
@@ -13,29 +15,33 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
     {
         public static List<VueloEnt> ListaVuelos(string origen, string destino, DateTime fechaPartida, int cantPasajeros, string tipoPasajero, string clase)
         {
-            // Q: How can I filter all the variables i set as parameters, in the JSON file?
-            // A
+            
+
             if (File.Exists("vuelos.json"))
             {
                 string contenidoDelArchivo = File.ReadAllText("vuelos.json");
 
-                dynamic jsonData = JsonConvert.DeserializeObject<List<VueloEnt>>(contenidoDelArchivo);
+                JObject jsonObject = JObject.Parse(contenidoDelArchivo);
 
+                //List<dynamic> vuelosJson = JsonConvert.DeserializeObject<List<dynamic>>(contenidoDelArchivo);          
+                List<VueloEnt> vuelosFiltrados = new List<VueloEnt>();
 
-
-
-                if (contenidoDelArchivo != "")
+                foreach (var contenido in contenidoDelArchivo)
                 {
-                    foreach (origen in jsonData["origen"] && destino in jsonData["destino"] && fechaPartida in ["fecha partida"] )
-                    {
-                        int jsonValue = origen;
+                    string origenjson = (string)jsonObject["origen"];
+                    string destinojson = (string)jsonObject["destino"];
+                    string fechapartidajson = (string)jsonObject["fecha de partida"];
+                    string cantpjson = (string)jsonObject["cantidad pasajeros"];
+                    string tipopjson = (string)jsonObject["tipo de pasajero"];
+                    string clasejson = (string)jsonObject["clase"];
 
+                    if (origenjson==origen && destinojson==destino && DateTime.Parse(fechapartidajson)==fechaPartida && Int64.Parse(cantpjson)==cantPasajeros && tipopjson==tipoPasajero && clasejson==clase)
+                    {
+
+                        
                     }
-                    jsonVuelos = JsonConvert.DeserializeObject<List<VueloEnt>>(contenidoDelArchivo);
-                    return jsonVuelos;
-                }   
-                // Acá hay que parsear la lista y filtrar por los parámetros que nos pasan
-                // y devolver la lista filtrada
+
+                }
             }
             else
             {
