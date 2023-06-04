@@ -1,0 +1,59 @@
+{
+					"Nombre": "Intermedio",
+					"TarifaHab": 50000, 
+					"Capacidad": 4,
+					"Adultos": 2,
+					"Menores": 2, 
+					"Infantes": 0,
+					
+				},
+				
+	{
+					"Nombre": "Deluxe",
+					"TarifaHab": 75200, 
+					"Capacidad": 5,
+					"Adultos": 3,
+					"Menores": 2, 
+					"Infantes": 0,
+					
+				},
+				
+{
+					"Nombre": "Standard",
+					"TarifaHab": 16927, 
+					"Capacidad": 3,
+					"Adultos": 2,
+					"Menores": 1, 
+					"Infantes": 0,
+					
+				},
+				
+				{
+					"Nombre": "Standard",
+					"TarifaHab": 67189, 
+					"Capacidad": 2,
+					"Adultos": 2,
+					"Menores": 0, 
+					"Infantes": 0,
+					
+				},
+				
+				{
+					"Nombre": "Duplex",
+					"TarifaHab": 135000, 
+					"Capacidad": 4,
+					"Adultos": 2,
+					"Menores": 2, 
+					"Infantes": 0,
+					
+				},
+				
+				{
+					"Nombre": "Deluxe",
+					"TarifaHab": 88900, 
+					"Capacidad": 4,
+					"Adultos": 2,
+					"Menores": 2, 
+					"Infantes": 0,
+					
+				},
