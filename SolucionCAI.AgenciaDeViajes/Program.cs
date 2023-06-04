@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Text;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SolucionCAI.AgenciaDeViajes.Archivos;
+using SolucionCAI.AgenciaDeViajes.Entidades;
 
 namespace SolucionCAI.AgenciaDeViajes
 {
@@ -22,3 +24,8 @@ namespace SolucionCAI.AgenciaDeViajes
         }
     }
 }
+
+    
+
+
+
