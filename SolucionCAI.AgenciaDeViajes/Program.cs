@@ -21,6 +21,8 @@ namespace SolucionCAI.AgenciaDeViajes
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
             //MenuPrincipal.Mostrar();
+            Console.WriteLine("Press any key to exit...");
+            Console.ReadKey();
         }
     }
 }

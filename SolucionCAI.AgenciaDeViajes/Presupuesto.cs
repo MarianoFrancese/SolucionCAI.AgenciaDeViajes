@@ -10,6 +10,9 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using SolucionCAI.AgenciaDeViajes.Entidades;
 using SolucionCAI.AgenciaDeViajes.Archivos;
+using Microsoft.VisualBasic.ApplicationServices;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Collections;
 
 namespace SolucionCAI.AgenciaDeViajes
 {
@@ -21,6 +24,13 @@ namespace SolucionCAI.AgenciaDeViajes
         }
 
         private List<VueloEnt> vuelosFiltrados;
+        string origen;
+        string destino;
+        DateTime fechaPartida;
+        int cantPasajeros;
+        string tipoPasajero;
+        string clase;
+        string fechaPartidaFormateada;
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -53,57 +63,54 @@ namespace SolucionCAI.AgenciaDeViajes
             MessageBox.Show("Este botón filtra por características de los hospedajes (a revisar)");
         }
 
-        private void button2_Click(object sender, EventArgs e) //Boton Filtrar Vuelos
+        private void button2_Click(object sender, EventArgs e)
         {
             //MessageBox.Show("Este botón filtra por características de los vuelos (a revisar)");
 
-            string origen = comboBox1.SelectedItem.ToString();
-            string destino = comboBox4.SelectedItem.ToString();
-            DateTime fechaPartida = dateTimePicker1.Value;
-            int cantPasajeros = (int)numericUpDown1.Value;
-            string tipoPasajero = comboBox2.SelectedItem.ToString();
-            string clase = comboBox3.SelectedItem.ToString();
+            origen = comboBox1.Text;
+            destino = comboBox4.Text;
+            fechaPartida = dateTimePicker1.Value;
+            fechaPartidaFormateada = fechaPartida.ToString("dd/MM/yyyy");
+            cantPasajeros = (int)numericUpDown1.Value;
+            tipoPasajero = comboBox2.Text;
+            clase = comboBox3.Text;
 
-            vuelosFiltrados = ModuloProductos.ListaVuelos(origen, destino, fechaPartida, cantPasajeros, tipoPasajero, clase);
-            RellenarTabla();
+            FiltrarYRellenarTabla();
+
+            //Q: What should this void do?
+            //A: It should filter the flights by the selected filters and show them in the table
+
         }
 
-        private void RellenarTabla()
+        private void RellenarTabla(List<VueloEnt> vuelosFiltrados)
         {
-            dataGridView3.Rows.Clear();
+            dataGridView1.Rows.Clear();
 
             foreach (var vuelo in vuelosFiltrados)
             {
-                dataGridView3.Rows.Add(
-                    vuelo.Codigo, 
-                    vuelo.Origen, 
-                    vuelo.Destino, 
-                    vuelo.FechaSalida, 
-                    vuelo.FechaArribo, 
-                    vuelo.TiempoVuelo, 
+                dataGridView1.Rows.Add(
+                    vuelo.Codigo,
+                    vuelo.Origen,
+                    vuelo.Destino,
+                    vuelo.FechaSalida,
+                    vuelo.FechaArribo,
+                    vuelo.TiempoVuelo,
                     vuelo.Aerolinea,
+                    vuelo.Tarifas[0].TipoPasajero,
+                    vuelo.Tarifas[0].Clase,
                     string.Join(",", vuelo.Tarifas)
                     );
             }
         }
 
+        private void FiltrarYRellenarTabla()
+        {
+            vuelosFiltrados = ModuloProductos.ListaVuelos(origen, destino, fechaPartidaFormateada, cantPasajeros, tipoPasajero, clase);
+            RellenarTabla(vuelosFiltrados);
+        }
+
 
         private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker3_ValueChanged(object sender, EventArgs e)
         {
 
         }

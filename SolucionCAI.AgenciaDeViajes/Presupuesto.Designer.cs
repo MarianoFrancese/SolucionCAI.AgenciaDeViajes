@@ -193,7 +193,6 @@
             dateTimePicker3.Size = new Size(184, 39);
             dateTimePicker3.TabIndex = 33;
             dateTimePicker3.Value = new DateTime(2023, 6, 1, 0, 0, 0, 0);
-            dateTimePicker3.ValueChanged += dateTimePicker3_ValueChanged;
             // 
             // dateTimePicker2
             // 
@@ -407,7 +406,6 @@
             comboBox4.Name = "comboBox4";
             comboBox4.Size = new Size(147, 40);
             comboBox4.TabIndex = 35;
-            comboBox4.SelectedIndexChanged += comboBox4_SelectedIndexChanged;
             // 
             // comboBox1
             // 
@@ -417,7 +415,6 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(147, 40);
             comboBox1.TabIndex = 34;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // dateTimePicker1
             // 
@@ -458,6 +455,8 @@
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(147, 40);
             comboBox2.TabIndex = 32;
+            comboBox2.DisplayMember = "Clase";
+            comboBox2.ValueMember = "Clase";
             // 
             // label10
             // 
@@ -785,7 +784,7 @@
             button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button4.ForeColor = Color.White;
             button4.Location = new Point(26, 1043);
-            button4.Margin = new Padding(6, 6, 6, 6);
+            button4.Margin = new Padding(6);
             button4.Name = "button4";
             button4.Size = new Size(139, 49);
             button4.TabIndex = 31;
