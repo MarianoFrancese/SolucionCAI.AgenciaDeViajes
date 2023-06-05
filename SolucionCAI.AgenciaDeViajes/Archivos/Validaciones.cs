@@ -22,6 +22,27 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             }
         }
 
+        //Este devolvería mensaje de error
+
+        public bool ValidaUsuario2(string usuario, string contraseña)
+        {
+            bool flag = false;
+
+            if (String.IsNullOrWhiteSpace(usuario) || String.IsNullOrWhiteSpace(contraseña))
+            {
+                Console.WriteLine("Usuario/Contraseña no puede estar vacio.");
+            }
+            
+            else
+            {
+                flag = true;
+            }
+
+            return flag;
+        }
+
+
+
         public bool ValidaAereo(string codigo, string origen, string destino, DateTime fechaSalida, DateTime fechaArribo, TimeSpan tiempoVuelo, string aerolinea, List<decimal> tarifas)
         {
             if (string.IsNullOrEmpty(codigo) || string.IsNullOrEmpty(origen) || string.IsNullOrEmpty(destino) || string.IsNullOrEmpty(aerolinea) || tarifas.Count == 0)
@@ -42,4 +63,36 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             }
         }
     }
+
+
+
+        public bool ValidaDni(int DNI)
+            {
+                bool flag = false;
+
+                if (!int.TryParse(numero, out salida))
+                     {
+                         Console.WriteLine("Usted debe ingresar un dato numérico.");
+                       }
+                 else if (salida <= 0)
+                      {
+                        Console.WriteLine("Usted debe ingresar un número mayor que cero.");
+                         }
+                  else
+                        {
+                            flag = true;
+                        }
+
+                     return flag;
+               }
+
+
+
+
+
+
+
 }
+
+
+
