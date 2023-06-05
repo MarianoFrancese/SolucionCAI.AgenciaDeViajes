@@ -26,10 +26,10 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
         }
 
         //Acá sería crear un método en el que le asignemos una de las variables matcheadas en el filtro de presupuesto
-        public VueloEnt Vuelo(string codigo)
-        {
+        //public VueloEnt Vuelo(string codigo)
+        //{
             
-        }
+        //}
 
     }
 }

@@ -64,7 +64,8 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void button8_Click(object sender, EventArgs e)
         {
-
+            Form IngresoPasajeros = new SolucionCAI.AgenciaDeViajes.IngresoPasajeros();
+            IngresoPasajeros.Show();
         }
 
         private void Form1_Load(object sender, EventArgs e)
