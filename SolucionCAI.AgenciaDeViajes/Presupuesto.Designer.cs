@@ -1,4 +1,4 @@
-﻿    namespace SolucionCAI.AgenciaDeViajes
+﻿namespace SolucionCAI.AgenciaDeViajes
 {
     partial class Presupuesto
     {
@@ -28,835 +28,871 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.label11 = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.BuscarHosp = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.CodHotel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CodCiudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TarifaEstadia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoAdulto = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.TipoMenor = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.TipoInfante = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column30 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaPartida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaArribo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TiempoVuelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoPasajero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tarifa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.SuspendLayout();
+            tabControl1 = new TabControl();
+            tabPage1 = new TabPage();
+            comboBox6 = new ComboBox();
+            label12 = new Label();
+            numericUpDown2 = new NumericUpDown();
+            label11 = new Label();
+            dateTimePicker3 = new DateTimePicker();
+            dateTimePicker2 = new DateTimePicker();
+            comboBox5 = new ComboBox();
+            BuscarHosp = new Button();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            dataGridView3 = new DataGridView();
+            CodHotel = new DataGridViewTextBoxColumn();
+            Column22 = new DataGridViewTextBoxColumn();
+            CodCiudad = new DataGridViewTextBoxColumn();
+            Column31 = new DataGridViewTextBoxColumn();
+            Column32 = new DataGridViewTextBoxColumn();
+            Column24 = new DataGridViewTextBoxColumn();
+            Column25 = new DataGridViewTextBoxColumn();
+            Column26 = new DataGridViewTextBoxColumn();
+            Column28 = new DataGridViewTextBoxColumn();
+            TarifaEstadia = new DataGridViewTextBoxColumn();
+            TipoAdulto = new DataGridViewComboBoxColumn();
+            TipoMenor = new DataGridViewComboBoxColumn();
+            TipoInfante = new DataGridViewComboBoxColumn();
+            Column30 = new DataGridViewButtonColumn();
+            tabPage2 = new TabPage();
+            comboBox4 = new ComboBox();
+            comboBox1 = new ComboBox();
+            dateTimePicker1 = new DateTimePicker();
+            numericUpDown1 = new NumericUpDown();
+            comboBox3 = new ComboBox();
+            comboBox2 = new ComboBox();
+            label10 = new Label();
+            label4 = new Label();
+            label21 = new Label();
+            button2 = new Button();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            dataGridView1 = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            FechaPartida = new DataGridViewTextBoxColumn();
+            FechaArribo = new DataGridViewTextBoxColumn();
+            TiempoVuelo = new DataGridViewTextBoxColumn();
+            Column7 = new DataGridViewTextBoxColumn();
+            TipoPasajero = new DataGridViewTextBoxColumn();
+            Column8 = new DataGridViewTextBoxColumn();
+            Tarifa = new DataGridViewTextBoxColumn();
+            Column12 = new DataGridViewButtonColumn();
+            dataGridView2 = new DataGridView();
+            Column14 = new DataGridViewTextBoxColumn();
+            Column16 = new DataGridViewTextBoxColumn();
+            Column15 = new DataGridViewTextBoxColumn();
+            Column17 = new DataGridViewTextBoxColumn();
+            Column18 = new DataGridViewTextBoxColumn();
+            Column19 = new DataGridViewTextBoxColumn();
+            TotalProducto = new DataGridViewTextBoxColumn();
+            Column13 = new DataGridViewButtonColumn();
+            textBox5 = new TextBox();
+            label5 = new Label();
+            label9 = new Label();
+            button1 = new Button();
+            label13 = new Label();
+            textBox11 = new TextBox();
+            button4 = new Button();
+            tabControl1.SuspendLayout();
+            tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
+            tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(14, 14);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(883, 257);
-            this.tabControl1.TabIndex = 2;
+            tabControl1.Controls.Add(tabPage1);
+            tabControl1.Controls.Add(tabPage2);
+            tabControl1.Location = new Point(26, 30);
+            tabControl1.Margin = new Padding(7, 6, 7, 6);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(1640, 548);
+            tabControl1.TabIndex = 2;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.comboBox6);
-            this.tabPage1.Controls.Add(this.label12);
-            this.tabPage1.Controls.Add(this.numericUpDown2);
-            this.tabPage1.Controls.Add(this.label11);
-            this.tabPage1.Controls.Add(this.dateTimePicker3);
-            this.tabPage1.Controls.Add(this.dateTimePicker2);
-            this.tabPage1.Controls.Add(this.comboBox5);
-            this.tabPage1.Controls.Add(this.BuscarHosp);
-            this.tabPage1.Controls.Add(this.label8);
-            this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.dataGridView3);
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tabPage1.Size = new System.Drawing.Size(875, 229);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Hospedaje";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            tabPage1.Controls.Add(comboBox6);
+            tabPage1.Controls.Add(label12);
+            tabPage1.Controls.Add(numericUpDown2);
+            tabPage1.Controls.Add(label11);
+            tabPage1.Controls.Add(dateTimePicker3);
+            tabPage1.Controls.Add(dateTimePicker2);
+            tabPage1.Controls.Add(comboBox5);
+            tabPage1.Controls.Add(BuscarHosp);
+            tabPage1.Controls.Add(label8);
+            tabPage1.Controls.Add(label7);
+            tabPage1.Controls.Add(label6);
+            tabPage1.Controls.Add(dataGridView3);
+            tabPage1.Location = new Point(8, 46);
+            tabPage1.Margin = new Padding(7, 6, 7, 6);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(7, 6, 7, 6);
+            tabPage1.Size = new Size(1624, 494);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "Hospedaje";
+            tabPage1.UseVisualStyleBackColor = true;
             // 
             // comboBox6
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(597, 40);
-            this.comboBox6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(104, 23);
-            this.comboBox6.TabIndex = 37;
+            comboBox6.FormattingEnabled = true;
+            comboBox6.Location = new Point(1109, 85);
+            comboBox6.Margin = new Padding(7, 6, 7, 6);
+            comboBox6.Name = "comboBox6";
+            comboBox6.Size = new Size(190, 40);
+            comboBox6.TabIndex = 37;
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(602, 16);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(93, 15);
-            this.label12.TabIndex = 36;
-            this.label12.Text = "Tipo Habitacion";
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label12.Location = new Point(1118, 34);
+            label12.Margin = new Padding(7, 0, 7, 0);
+            label12.Name = "label12";
+            label12.Size = new Size(196, 32);
+            label12.TabIndex = 36;
+            label12.Text = "Tipo Habitacion";
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(491, 40);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(63, 23);
-            this.numericUpDown2.TabIndex = 35;
-            this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            numericUpDown2.Location = new Point(912, 85);
+            numericUpDown2.Margin = new Padding(7, 6, 7, 6);
+            numericUpDown2.Name = "numericUpDown2";
+            numericUpDown2.Size = new Size(117, 39);
+            numericUpDown2.TabIndex = 35;
+            numericUpDown2.TextAlign = HorizontalAlignment.Center;
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(471, 17);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(96, 15);
-            this.label11.TabIndex = 34;
-            this.label11.Text = "Cant Huespedes";
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label11.Location = new Point(875, 36);
+            label11.Margin = new Padding(7, 0, 7, 0);
+            label11.Name = "label11";
+            label11.Size = new Size(197, 32);
+            label11.TabIndex = 34;
+            label11.Text = "Cant Huespedes";
             // 
             // dateTimePicker3
             // 
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(271, 36);
-            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dateTimePicker3.MaxDate = new System.DateTime(2030, 12, 31, 0, 0, 0, 0);
-            this.dateTimePicker3.MinDate = new System.DateTime(2023, 6, 1, 0, 0, 0, 0);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(101, 23);
-            this.dateTimePicker3.TabIndex = 33;
-            this.dateTimePicker3.Value = new System.DateTime(2023, 6, 1, 0, 0, 0, 0);
+            dateTimePicker3.Format = DateTimePickerFormat.Short;
+            dateTimePicker3.Location = new Point(503, 77);
+            dateTimePicker3.Margin = new Padding(7, 6, 7, 6);
+            dateTimePicker3.MaxDate = new DateTime(2030, 12, 31, 0, 0, 0, 0);
+            dateTimePicker3.MinDate = new DateTime(2023, 6, 1, 0, 0, 0, 0);
+            dateTimePicker3.Name = "dateTimePicker3";
+            dateTimePicker3.Size = new Size(184, 39);
+            dateTimePicker3.TabIndex = 33;
+            dateTimePicker3.Value = new DateTime(2023, 6, 1, 0, 0, 0, 0);
+            dateTimePicker3.ValueChanged += dateTimePicker3_ValueChanged;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(149, 37);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dateTimePicker2.MaxDate = new System.DateTime(2030, 12, 31, 0, 0, 0, 0);
-            this.dateTimePicker2.MinDate = new System.DateTime(2023, 6, 1, 0, 0, 0, 0);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(101, 23);
-            this.dateTimePicker2.TabIndex = 32;
-            this.dateTimePicker2.Value = new System.DateTime(2023, 6, 1, 0, 0, 0, 0);
+            dateTimePicker2.Format = DateTimePickerFormat.Short;
+            dateTimePicker2.Location = new Point(277, 79);
+            dateTimePicker2.Margin = new Padding(7, 6, 7, 6);
+            dateTimePicker2.MaxDate = new DateTime(2030, 12, 31, 0, 0, 0, 0);
+            dateTimePicker2.MinDate = new DateTime(2023, 6, 1, 0, 0, 0, 0);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(184, 39);
+            dateTimePicker2.TabIndex = 32;
+            dateTimePicker2.Value = new DateTime(2023, 6, 1, 0, 0, 0, 0);
             // 
             // comboBox5
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(12, 36);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(104, 23);
-            this.comboBox5.TabIndex = 31;
+            comboBox5.FormattingEnabled = true;
+            comboBox5.Location = new Point(22, 77);
+            comboBox5.Margin = new Padding(7, 6, 7, 6);
+            comboBox5.Name = "comboBox5";
+            comboBox5.Size = new Size(190, 40);
+            comboBox5.TabIndex = 31;
             // 
             // BuscarHosp
             // 
-            this.BuscarHosp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.BuscarHosp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BuscarHosp.ForeColor = System.Drawing.Color.White;
-            this.BuscarHosp.Location = new System.Drawing.Point(757, 30);
-            this.BuscarHosp.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.BuscarHosp.Name = "BuscarHosp";
-            this.BuscarHosp.Size = new System.Drawing.Size(88, 27);
-            this.BuscarHosp.TabIndex = 16;
-            this.BuscarHosp.Text = "Buscar";
-            this.BuscarHosp.UseVisualStyleBackColor = false;
-            this.BuscarHosp.Click += new System.EventHandler(this.button3_Click);
+            BuscarHosp.BackColor = Color.FromArgb(255, 128, 0);
+            BuscarHosp.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            BuscarHosp.ForeColor = Color.White;
+            BuscarHosp.Location = new Point(1406, 64);
+            BuscarHosp.Margin = new Padding(7, 6, 7, 6);
+            BuscarHosp.Name = "BuscarHosp";
+            BuscarHosp.Size = new Size(163, 58);
+            BuscarHosp.TabIndex = 16;
+            BuscarHosp.Text = "Buscar";
+            BuscarHosp.UseVisualStyleBackColor = false;
+            BuscarHosp.Click += button3_Click;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(279, 14);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 15);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Fecha Salida";
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Location = new Point(518, 30);
+            label8.Margin = new Padding(7, 0, 7, 0);
+            label8.Name = "label8";
+            label8.Size = new Size(153, 32);
+            label8.TabIndex = 12;
+            label8.Text = "Fecha Salida";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(146, 14);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 15);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Fecha Entrada";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.Location = new Point(271, 30);
+            label7.Margin = new Padding(7, 0, 7, 0);
+            label7.Name = "label7";
+            label7.Size = new Size(173, 32);
+            label7.TabIndex = 11;
+            label7.Text = "Fecha Entrada";
+            label7.Click += label7_Click;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(38, 14);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 15);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Ciudad";
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(71, 30);
+            label6.Margin = new Padding(7, 0, 7, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(94, 32);
+            label6.TabIndex = 10;
+            label6.Text = "Ciudad";
             // 
             // dataGridView3
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CodHotel,
-            this.Column22,
-            this.CodCiudad,
-            this.Column31,
-            this.Column32,
-            this.Column24,
-            this.Column25,
-            this.Column26,
-            this.Column28,
-            this.TarifaEstadia,
-            this.TipoAdulto,
-            this.TipoMenor,
-            this.TipoInfante,
-            this.Column30});
-            this.dataGridView3.Location = new System.Drawing.Point(0, 90);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(874, 137);
-            this.dataGridView3.TabIndex = 0;
-            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
+            dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView3.Columns.AddRange(new DataGridViewColumn[] { CodHotel, Column22, CodCiudad, Column31, Column32, Column24, Column25, Column26, Column28, TarifaEstadia, TipoAdulto, TipoMenor, TipoInfante, Column30 });
+            dataGridView3.Location = new Point(0, 192);
+            dataGridView3.Margin = new Padding(7, 6, 7, 6);
+            dataGridView3.Name = "dataGridView3";
+            dataGridView3.RowHeadersWidth = 82;
+            dataGridView3.Size = new Size(1623, 292);
+            dataGridView3.TabIndex = 0;
+            dataGridView3.CellContentClick += dataGridView3_CellContentClick;
             // 
             // CodHotel
             // 
-            this.CodHotel.HeaderText = "Código Hotel";
-            this.CodHotel.Name = "CodHotel";
+            CodHotel.HeaderText = "Código Hotel";
+            CodHotel.MinimumWidth = 10;
+            CodHotel.Name = "CodHotel";
+            CodHotel.Width = 200;
             // 
             // Column22
             // 
-            this.Column22.HeaderText = "Nombre";
-            this.Column22.Name = "Column22";
+            Column22.HeaderText = "Nombre";
+            Column22.MinimumWidth = 10;
+            Column22.Name = "Column22";
+            Column22.Width = 200;
             // 
             // CodCiudad
             // 
-            this.CodCiudad.HeaderText = "Ciudad";
-            this.CodCiudad.Name = "CodCiudad";
+            CodCiudad.HeaderText = "Ciudad";
+            CodCiudad.MinimumWidth = 10;
+            CodCiudad.Name = "CodCiudad";
+            CodCiudad.Width = 200;
             // 
             // Column31
             // 
-            this.Column31.HeaderText = "Fecha Entrada";
-            this.Column31.Name = "Column31";
+            Column31.HeaderText = "Fecha Entrada";
+            Column31.MinimumWidth = 10;
+            Column31.Name = "Column31";
+            Column31.Width = 200;
             // 
             // Column32
             // 
-            this.Column32.HeaderText = "Fecha Salida";
-            this.Column32.Name = "Column32";
+            Column32.HeaderText = "Fecha Salida";
+            Column32.MinimumWidth = 10;
+            Column32.Name = "Column32";
+            Column32.Width = 200;
             // 
             // Column24
             // 
-            this.Column24.HeaderText = "Dirección";
-            this.Column24.Name = "Column24";
+            Column24.HeaderText = "Dirección";
+            Column24.MinimumWidth = 10;
+            Column24.Name = "Column24";
+            Column24.Width = 200;
             // 
             // Column25
             // 
-            this.Column25.HeaderText = "Calificación";
-            this.Column25.Name = "Column25";
+            Column25.HeaderText = "Calificación";
+            Column25.MinimumWidth = 10;
+            Column25.Name = "Column25";
+            Column25.Width = 200;
             // 
             // Column26
             // 
-            this.Column26.HeaderText = "Tipo Habitación";
-            this.Column26.Name = "Column26";
+            Column26.HeaderText = "Tipo Habitación";
+            Column26.MinimumWidth = 10;
+            Column26.Name = "Column26";
+            Column26.Width = 200;
             // 
             // Column28
             // 
-            this.Column28.HeaderText = "Capacidad";
-            this.Column28.Name = "Column28";
+            Column28.HeaderText = "Capacidad";
+            Column28.MinimumWidth = 10;
+            Column28.Name = "Column28";
+            Column28.Width = 200;
             // 
             // TarifaEstadia
             // 
-            this.TarifaEstadia.HeaderText = "Tarifa Estadia";
-            this.TarifaEstadia.Name = "TarifaEstadia";
+            TarifaEstadia.HeaderText = "Tarifa Estadia";
+            TarifaEstadia.MinimumWidth = 10;
+            TarifaEstadia.Name = "TarifaEstadia";
+            TarifaEstadia.Width = 200;
             // 
             // TipoAdulto
             // 
-            this.TipoAdulto.HeaderText = "Adultos";
-            this.TipoAdulto.Name = "TipoAdulto";
+            TipoAdulto.HeaderText = "Adultos";
+            TipoAdulto.MinimumWidth = 10;
+            TipoAdulto.Name = "TipoAdulto";
+            TipoAdulto.Width = 200;
             // 
             // TipoMenor
             // 
-            this.TipoMenor.HeaderText = "Menores";
-            this.TipoMenor.Name = "TipoMenor";
+            TipoMenor.HeaderText = "Menores";
+            TipoMenor.MinimumWidth = 10;
+            TipoMenor.Name = "TipoMenor";
+            TipoMenor.Width = 200;
             // 
             // TipoInfante
             // 
-            this.TipoInfante.HeaderText = "Infantes";
-            this.TipoInfante.Name = "TipoInfante";
+            TipoInfante.HeaderText = "Infantes";
+            TipoInfante.MinimumWidth = 10;
+            TipoInfante.Name = "TipoInfante";
+            TipoInfante.Width = 200;
             // 
             // Column30
             // 
-            this.Column30.HeaderText = "Agregar";
-            this.Column30.Name = "Column30";
+            Column30.HeaderText = "Agregar";
+            Column30.MinimumWidth = 10;
+            Column30.Name = "Column30";
+            Column30.Width = 200;
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.comboBox4);
-            this.tabPage2.Controls.Add(this.comboBox1);
-            this.tabPage2.Controls.Add(this.dateTimePicker1);
-            this.tabPage2.Controls.Add(this.numericUpDown1);
-            this.tabPage2.Controls.Add(this.comboBox3);
-            this.tabPage2.Controls.Add(this.comboBox2);
-            this.tabPage2.Controls.Add(this.label10);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.label21);
-            this.tabPage2.Controls.Add(this.button2);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tabPage2.Size = new System.Drawing.Size(875, 229);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Vuelos";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            tabPage2.Controls.Add(comboBox4);
+            tabPage2.Controls.Add(comboBox1);
+            tabPage2.Controls.Add(dateTimePicker1);
+            tabPage2.Controls.Add(numericUpDown1);
+            tabPage2.Controls.Add(comboBox3);
+            tabPage2.Controls.Add(comboBox2);
+            tabPage2.Controls.Add(label10);
+            tabPage2.Controls.Add(label4);
+            tabPage2.Controls.Add(label21);
+            tabPage2.Controls.Add(button2);
+            tabPage2.Controls.Add(label3);
+            tabPage2.Controls.Add(label2);
+            tabPage2.Controls.Add(label1);
+            tabPage2.Controls.Add(dataGridView1);
+            tabPage2.Location = new Point(8, 46);
+            tabPage2.Margin = new Padding(7, 6, 7, 6);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(7, 6, 7, 6);
+            tabPage2.Size = new Size(1624, 494);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "Vuelos";
+            tabPage2.UseVisualStyleBackColor = true;
             // 
             // comboBox4
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(156, 29);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(81, 23);
-            this.comboBox4.TabIndex = 35;
-            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
+            comboBox4.FormattingEnabled = true;
+            comboBox4.Location = new Point(290, 62);
+            comboBox4.Margin = new Padding(7, 6, 7, 6);
+            comboBox4.Name = "comboBox4";
+            comboBox4.Size = new Size(147, 40);
+            comboBox4.TabIndex = 35;
+            comboBox4.SelectedIndexChanged += comboBox4_SelectedIndexChanged;
             // 
             // comboBox1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(18, 29);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(81, 23);
-            this.comboBox1.TabIndex = 34;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(33, 62);
+            comboBox1.Margin = new Padding(7, 6, 7, 6);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(147, 40);
+            comboBox1.TabIndex = 34;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Checked = false;
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(274, 25);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dateTimePicker1.MaxDate = new System.DateTime(2030, 12, 31, 0, 0, 0, 0);
-            this.dateTimePicker1.MinDate = new System.DateTime(2023, 6, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(102, 23);
-            this.dateTimePicker1.TabIndex = 32;
-            this.dateTimePicker1.Value = new System.DateTime(2023, 6, 1, 0, 0, 0, 0);
+            dateTimePicker1.Checked = false;
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.Location = new Point(509, 53);
+            dateTimePicker1.Margin = new Padding(7, 6, 7, 6);
+            dateTimePicker1.MaxDate = new DateTime(2030, 12, 31, 0, 0, 0, 0);
+            dateTimePicker1.MinDate = new DateTime(2023, 6, 1, 0, 0, 0, 0);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(186, 39);
+            dateTimePicker1.TabIndex = 32;
+            dateTimePicker1.Value = new DateTime(2023, 6, 1, 0, 0, 0, 0);
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(462, 25);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(47, 23);
-            this.numericUpDown1.TabIndex = 31;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            numericUpDown1.Location = new Point(858, 53);
+            numericUpDown1.Margin = new Padding(7, 6, 7, 6);
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(87, 39);
+            numericUpDown1.TabIndex = 31;
+            numericUpDown1.TextAlign = HorizontalAlignment.Center;
             // 
             // comboBox3
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(672, 24);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(78, 23);
-            this.comboBox3.TabIndex = 33;
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Location = new Point(1248, 51);
+            comboBox3.Margin = new Padding(7, 6, 7, 6);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(141, 40);
+            comboBox3.TabIndex = 33;
             // 
             // comboBox2
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(561, 25);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(81, 23);
-            this.comboBox2.TabIndex = 32;
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(1042, 53);
+            comboBox2.Margin = new Padding(7, 6, 7, 6);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(147, 40);
+            comboBox2.TabIndex = 32;
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(690, 7);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(35, 15);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "Clase";
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.Location = new Point(1281, 15);
+            label10.Margin = new Padding(7, 0, 7, 0);
+            label10.Name = "label10";
+            label10.Size = new Size(73, 32);
+            label10.TabIndex = 13;
+            label10.Text = "Clase";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(558, 7);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 15);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Tipo Pasajero";
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(1036, 15);
+            label4.Margin = new Padding(7, 0, 7, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(168, 32);
+            label4.TabIndex = 11;
+            label4.Text = "Tipo Pasajero";
             // 
             // label21
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label21.Location = new System.Drawing.Point(169, 7);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(50, 15);
-            this.label21.TabIndex = 9;
-            this.label21.Text = "Destino";
+            label21.AutoSize = true;
+            label21.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label21.Location = new Point(314, 15);
+            label21.Margin = new Padding(7, 0, 7, 0);
+            label21.Name = "label21";
+            label21.Size = new Size(102, 32);
+            label21.TabIndex = 9;
+            label21.Text = "Destino";
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(779, 22);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 27);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Buscar";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            button2.BackColor = Color.FromArgb(255, 128, 0);
+            button2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(1447, 47);
+            button2.Margin = new Padding(7, 6, 7, 6);
+            button2.Name = "button2";
+            button2.Size = new Size(163, 58);
+            button2.TabIndex = 8;
+            button2.Text = "Buscar";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(37, 7);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 15);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Origen";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(69, 15);
+            label3.Margin = new Padding(7, 0, 7, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(92, 32);
+            label3.TabIndex = 3;
+            label3.Text = "Origen";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(436, 7);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 15);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Cantidad Pasajeros";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(810, 15);
+            label2.Margin = new Padding(7, 0, 7, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(230, 32);
+            label2.TabIndex = 2;
+            label2.Text = "Cantidad Pasajeros";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(282, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Fecha Partida";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(524, 15);
+            label1.Margin = new Padding(7, 0, 7, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(167, 32);
+            label1.TabIndex = 1;
+            label1.Text = "Fecha Partida";
             // 
             // dataGridView1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.FechaPartida,
-            this.FechaArribo,
-            this.TiempoVuelo,
-            this.Column7,
-            this.TipoPasajero,
-            this.Column8,
-            this.Tarifa,
-            this.Column12});
-            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 85);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(867, 138);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, FechaPartida, FechaArribo, TiempoVuelo, Column7, TipoPasajero, Column8, Tarifa, Column12 });
+            dataGridView1.EditMode = DataGridViewEditMode.EditOnKeystroke;
+            dataGridView1.Location = new Point(7, 181);
+            dataGridView1.Margin = new Padding(7, 6, 7, 6);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 82;
+            dataGridView1.Size = new Size(1610, 294);
+            dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Column1
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column1.HeaderText = "CódigoVuelo";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 101;
+            Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            Column1.HeaderText = "CódigoVuelo";
+            Column1.MinimumWidth = 10;
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
+            Column1.Width = 197;
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "Origen";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
+            Column2.HeaderText = "Origen";
+            Column2.MinimumWidth = 10;
+            Column2.Name = "Column2";
+            Column2.ReadOnly = true;
+            Column2.Width = 200;
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "Destino";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
+            Column3.HeaderText = "Destino";
+            Column3.MinimumWidth = 10;
+            Column3.Name = "Column3";
+            Column3.ReadOnly = true;
+            Column3.Width = 200;
             // 
             // FechaPartida
             // 
-            this.FechaPartida.HeaderText = "Fecha Partida";
-            this.FechaPartida.Name = "FechaPartida";
-            this.FechaPartida.ReadOnly = true;
+            FechaPartida.HeaderText = "Fecha Partida";
+            FechaPartida.MinimumWidth = 10;
+            FechaPartida.Name = "FechaPartida";
+            FechaPartida.ReadOnly = true;
+            FechaPartida.Width = 200;
             // 
             // FechaArribo
             // 
-            this.FechaArribo.HeaderText = "Fecha Arribo";
-            this.FechaArribo.Name = "FechaArribo";
-            this.FechaArribo.ReadOnly = true;
+            FechaArribo.HeaderText = "Fecha Arribo";
+            FechaArribo.MinimumWidth = 10;
+            FechaArribo.Name = "FechaArribo";
+            FechaArribo.ReadOnly = true;
+            FechaArribo.Width = 200;
             // 
             // TiempoVuelo
             // 
-            this.TiempoVuelo.HeaderText = "Tiempo Vuelo";
-            this.TiempoVuelo.Name = "TiempoVuelo";
-            this.TiempoVuelo.ReadOnly = true;
+            TiempoVuelo.HeaderText = "Tiempo Vuelo";
+            TiempoVuelo.MinimumWidth = 10;
+            TiempoVuelo.Name = "TiempoVuelo";
+            TiempoVuelo.ReadOnly = true;
+            TiempoVuelo.Width = 200;
             // 
             // Column7
             // 
-            this.Column7.HeaderText = "Aerolinea";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
+            Column7.HeaderText = "Aerolinea";
+            Column7.MinimumWidth = 10;
+            Column7.Name = "Column7";
+            Column7.ReadOnly = true;
+            Column7.Width = 200;
             // 
             // TipoPasajero
             // 
-            this.TipoPasajero.HeaderText = "Tipo Pasajero";
-            this.TipoPasajero.Name = "TipoPasajero";
+            TipoPasajero.HeaderText = "Tipo Pasajero";
+            TipoPasajero.MinimumWidth = 10;
+            TipoPasajero.Name = "TipoPasajero";
+            TipoPasajero.Width = 200;
             // 
             // Column8
             // 
-            this.Column8.HeaderText = "Clase";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
+            Column8.HeaderText = "Clase";
+            Column8.MinimumWidth = 10;
+            Column8.Name = "Column8";
+            Column8.ReadOnly = true;
+            Column8.Width = 200;
             // 
             // Tarifa
             // 
-            this.Tarifa.HeaderText = "Tarifa";
-            this.Tarifa.Name = "Tarifa";
-            this.Tarifa.ReadOnly = true;
+            Tarifa.HeaderText = "Tarifa";
+            Tarifa.MinimumWidth = 10;
+            Tarifa.Name = "Tarifa";
+            Tarifa.ReadOnly = true;
+            Tarifa.Width = 200;
             // 
             // Column12
             // 
-            this.Column12.HeaderText = "Agregar";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
+            Column12.HeaderText = "Agregar";
+            Column12.MinimumWidth = 10;
+            Column12.Name = "Column12";
+            Column12.ReadOnly = true;
+            Column12.Width = 200;
             // 
             // dataGridView2
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column14,
-            this.Column16,
-            this.Column15,
-            this.Column17,
-            this.Column18,
-            this.Column19,
-            this.TotalProducto,
-            this.Column13});
-            this.dataGridView2.Location = new System.Drawing.Point(14, 331);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(878, 129);
-            this.dataGridView2.TabIndex = 3;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { Column14, Column16, Column15, Column17, Column18, Column19, TotalProducto, Column13 });
+            dataGridView2.Location = new Point(26, 706);
+            dataGridView2.Margin = new Padding(7, 6, 7, 6);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.RowHeadersWidth = 82;
+            dataGridView2.Size = new Size(1631, 275);
+            dataGridView2.TabIndex = 3;
+            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
             // 
             // Column14
             // 
-            this.Column14.HeaderText = "Producto";
-            this.Column14.Name = "Column14";
-            this.Column14.ReadOnly = true;
+            Column14.HeaderText = "Producto";
+            Column14.MinimumWidth = 10;
+            Column14.Name = "Column14";
+            Column14.ReadOnly = true;
+            Column14.Width = 200;
             // 
             // Column16
             // 
-            this.Column16.HeaderText = "PrecioUnitario";
-            this.Column16.Name = "Column16";
-            this.Column16.ReadOnly = true;
+            Column16.HeaderText = "PrecioUnitario";
+            Column16.MinimumWidth = 10;
+            Column16.Name = "Column16";
+            Column16.ReadOnly = true;
+            Column16.Width = 200;
             // 
             // Column15
             // 
-            this.Column15.HeaderText = "Cantidad";
-            this.Column15.Name = "Column15";
-            this.Column15.ReadOnly = true;
+            Column15.HeaderText = "Cantidad";
+            Column15.MinimumWidth = 10;
+            Column15.Name = "Column15";
+            Column15.ReadOnly = true;
+            Column15.Width = 200;
             // 
             // Column17
             // 
-            this.Column17.HeaderText = "Descuento";
-            this.Column17.Name = "Column17";
-            this.Column17.ReadOnly = true;
+            Column17.HeaderText = "Descuento";
+            Column17.MinimumWidth = 10;
+            Column17.Name = "Column17";
+            Column17.ReadOnly = true;
+            Column17.Width = 200;
             // 
             // Column18
             // 
-            this.Column18.HeaderText = "SubTotal";
-            this.Column18.Name = "Column18";
-            this.Column18.ReadOnly = true;
+            Column18.HeaderText = "SubTotal";
+            Column18.MinimumWidth = 10;
+            Column18.Name = "Column18";
+            Column18.ReadOnly = true;
+            Column18.Width = 200;
             // 
             // Column19
             // 
-            this.Column19.HeaderText = "IVA";
-            this.Column19.Name = "Column19";
-            this.Column19.ReadOnly = true;
+            Column19.HeaderText = "IVA";
+            Column19.MinimumWidth = 10;
+            Column19.Name = "Column19";
+            Column19.ReadOnly = true;
+            Column19.Width = 200;
             // 
             // TotalProducto
             // 
-            this.TotalProducto.HeaderText = "Total Producto";
-            this.TotalProducto.Name = "TotalProducto";
-            this.TotalProducto.ReadOnly = true;
+            TotalProducto.HeaderText = "Total Producto";
+            TotalProducto.MinimumWidth = 10;
+            TotalProducto.Name = "TotalProducto";
+            TotalProducto.ReadOnly = true;
+            TotalProducto.Width = 200;
             // 
             // Column13
             // 
-            this.Column13.HeaderText = "Eliminar";
-            this.Column13.Name = "Column13";
+            Column13.HeaderText = "Eliminar";
+            Column13.MinimumWidth = 10;
+            Column13.Name = "Column13";
+            Column13.Width = 200;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(777, 467);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(116, 23);
-            this.textBox5.TabIndex = 6;
+            textBox5.Location = new Point(1443, 996);
+            textBox5.Margin = new Padding(7, 6, 7, 6);
+            textBox5.Name = "textBox5";
+            textBox5.ReadOnly = true;
+            textBox5.Size = new Size(212, 39);
+            textBox5.TabIndex = 6;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(737, 470);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 15);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Total";
+            label5.AutoSize = true;
+            label5.Location = new Point(1369, 1003);
+            label5.Margin = new Padding(7, 0, 7, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(65, 32);
+            label5.TabIndex = 9;
+            label5.Text = "Total";
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(14, 303);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(103, 18);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Presupuesto";
+            label9.AutoSize = true;
+            label9.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.Location = new Point(26, 646);
+            label9.Margin = new Padding(7, 0, 7, 0);
+            label9.Name = "label9";
+            label9.Size = new Size(194, 36);
+            label9.TabIndex = 10;
+            label9.Text = "Presupuesto";
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(359, 479);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(191, 37);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Generar Presupuesto";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.BackColor = Color.FromArgb(255, 128, 0);
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(667, 1022);
+            button1.Margin = new Padding(7, 6, 7, 6);
+            button1.Name = "button1";
+            button1.Size = new Size(355, 79);
+            button1.TabIndex = 11;
+            button1.Text = "Generar Presupuesto";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(749, 308);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(27, 15);
-            this.label13.TabIndex = 27;
-            this.label13.Text = "Nro";
+            label13.AutoSize = true;
+            label13.Location = new Point(1391, 657);
+            label13.Margin = new Padding(7, 0, 7, 0);
+            label13.Name = "label13";
+            label13.Size = new Size(54, 32);
+            label13.TabIndex = 27;
+            label13.Text = "Nro";
             // 
             // textBox11
             // 
-            this.textBox11.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox11.Location = new System.Drawing.Point(784, 305);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(108, 23);
-            this.textBox11.TabIndex = 30;
+            textBox11.BackColor = SystemColors.Control;
+            textBox11.Location = new Point(1456, 651);
+            textBox11.Margin = new Padding(7, 6, 7, 6);
+            textBox11.Name = "textBox11";
+            textBox11.ReadOnly = true;
+            textBox11.Size = new Size(197, 39);
+            textBox11.TabIndex = 30;
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.OrangeRed;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(14, 489);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 31;
-            this.button4.Text = "Salir";
-            this.button4.UseVisualStyleBackColor = false;
+            button4.BackColor = Color.OrangeRed;
+            button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.ForeColor = Color.White;
+            button4.Location = new Point(26, 1043);
+            button4.Margin = new Padding(6, 6, 6, 6);
+            button4.Name = "button4";
+            button4.Size = new Size(139, 49);
+            button4.TabIndex = 31;
+            button4.Text = "Salir";
+            button4.UseVisualStyleBackColor = false;
             // 
             // Presupuesto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(933, 519);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Name = "Presupuesto";
-            this.Text = "Presupuesto";
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1733, 1107);
+            Controls.Add(button4);
+            Controls.Add(textBox11);
+            Controls.Add(label13);
+            Controls.Add(button1);
+            Controls.Add(label9);
+            Controls.Add(label5);
+            Controls.Add(textBox5);
+            Controls.Add(dataGridView2);
+            Controls.Add(tabControl1);
+            Margin = new Padding(7, 6, 7, 6);
+            Name = "Presupuesto";
+            Text = "Presupuesto";
+            tabControl1.ResumeLayout(false);
+            tabPage1.ResumeLayout(false);
+            tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
+            tabPage2.ResumeLayout(false);
+            tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.Button BuscarHosp;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaPartida;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaArribo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TiempoVuelo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoPasajero;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tarifa;
-        private System.Windows.Forms.DataGridViewButtonColumn Column12;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TotalProducto;
-        private System.Windows.Forms.DataGridViewButtonColumn Column13;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CodHotel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CodCiudad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column31;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column32;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column24;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column25;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column26;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column28;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TarifaEstadia;
-        private System.Windows.Forms.DataGridViewComboBoxColumn TipoAdulto;
-        private System.Windows.Forms.DataGridViewComboBoxColumn TipoMenor;
-        private System.Windows.Forms.DataGridViewComboBoxColumn TipoInfante;
-        private System.Windows.Forms.DataGridViewButtonColumn Column30;
+        private TabControl tabControl1;
+        private TabPage tabPage2;
+        private DataGridView dataGridView1;
+        private Label label3;
+        private Label label2;
+        private Label label1;
+        private DataGridView dataGridView2;
+        private TextBox textBox5;
+        private Label label5;
+        private Label label9;
+        private Button button1;
+        private Button button2;
+        private Label label13;
+        private TextBox textBox11;
+        private Label label21;
+        private TabPage tabPage1;
+        private ComboBox comboBox5;
+        private Button BuscarHosp;
+        private Label label8;
+        private Label label7;
+        private Label label6;
+        private DataGridView dataGridView3;
+        private ComboBox comboBox4;
+        private ComboBox comboBox1;
+        private DateTimePicker dateTimePicker1;
+        private NumericUpDown numericUpDown1;
+        private ComboBox comboBox3;
+        private ComboBox comboBox2;
+        private Label label10;
+        private Label label4;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn FechaPartida;
+        private DataGridViewTextBoxColumn FechaArribo;
+        private DataGridViewTextBoxColumn TiempoVuelo;
+        private DataGridViewTextBoxColumn Column7;
+        private DataGridViewTextBoxColumn TipoPasajero;
+        private DataGridViewTextBoxColumn Column8;
+        private DataGridViewTextBoxColumn Tarifa;
+        private DataGridViewButtonColumn Column12;
+        private NumericUpDown numericUpDown2;
+        private Label label11;
+        private DateTimePicker dateTimePicker3;
+        private DateTimePicker dateTimePicker2;
+        private DataGridViewTextBoxColumn Column14;
+        private DataGridViewTextBoxColumn Column16;
+        private DataGridViewTextBoxColumn Column15;
+        private DataGridViewTextBoxColumn Column17;
+        private DataGridViewTextBoxColumn Column18;
+        private DataGridViewTextBoxColumn Column19;
+        private DataGridViewTextBoxColumn TotalProducto;
+        private DataGridViewButtonColumn Column13;
+        private ComboBox comboBox6;
+        private Label label12;
+        private DataGridViewTextBoxColumn CodHotel;
+        private DataGridViewTextBoxColumn Column22;
+        private DataGridViewTextBoxColumn CodCiudad;
+        private DataGridViewTextBoxColumn Column31;
+        private DataGridViewTextBoxColumn Column32;
+        private DataGridViewTextBoxColumn Column24;
+        private DataGridViewTextBoxColumn Column25;
+        private DataGridViewTextBoxColumn Column26;
+        private DataGridViewTextBoxColumn Column28;
+        private DataGridViewTextBoxColumn TarifaEstadia;
+        private DataGridViewComboBoxColumn TipoAdulto;
+        private DataGridViewComboBoxColumn TipoMenor;
+        private DataGridViewComboBoxColumn TipoInfante;
+        private DataGridViewButtonColumn Column30;
         private Button button4;
     }
 }

@@ -13,44 +13,56 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 {
     public class ModuloProductos
     {
-        //public static List<VueloEnt> ListaVuelos(string origen, string destino, DateTime fechaPartida, int cantPasajeros, string tipoPasajero, string clase)
-        //{
-            
+        public static List<VueloEnt> ListaVuelos(string origen, string destino, DateTime fechaPartida, int cantPasajeros, string tipoPasajero, string clase)
+        {
 
-        //    if (File.Exists("vuelos.json"))
-        //    {
-        //        string contenidoDelArchivo = File.ReadAllText("vuelos.json");
 
-        //        JObject jsonObject = JObject.Parse(contenidoDelArchivo);
+            if (File.Exists("vuelos.json"))
+            {
+                string contenidoDelArchivo = File.ReadAllText("vuelos.json");
 
-        //        //List<dynamic> vuelosJson = JsonConvert.DeserializeObject<List<dynamic>>(contenidoDelArchivo);          
-        //        List<VueloEnt> vuelosFiltrados = new List<VueloEnt>();
+                JObject jsonObject = JObject.Parse(contenidoDelArchivo);
 
-        //        foreach (var contenido in contenidoDelArchivo)
-        //        {
-        //            string origenjson = (string)jsonObject["origen"];
-        //            string destinojson = (string)jsonObject["destino"];
-        //            string fechapartidajson = (string)jsonObject["fecha de partida"];
-        //            string cantpjson = (string)jsonObject["cantidad pasajeros"];
-        //            string tipopjson = (string)jsonObject["tipo de pasajero"];
-        //            string clasejson = (string)jsonObject["clase"];
+                //List<dynamic> vuelosJson = JsonConvert.DeserializeObject<List<dynamic>>(contenidoDelArchivo);          
+                List<VueloEnt> vuelosFiltrados = new List<VueloEnt>();
 
-        //            if (origenjson==origen && destinojson==destino && DateTime.Parse(fechapartidajson)==fechaPartida && Int64.Parse(cantpjson)==cantPasajeros && tipopjson==tipoPasajero && clasejson==clase)
-        //            {
+                foreach (JObject vueloJson in jsonObject["vuelos"])
+                {
+                    string origenjson = (string)vueloJson["origen"];
+                    string destinojson = (string)vueloJson["destino"];
+                    string fechapartidajson = (string)vueloJson["fecha de partida"];
+                    string cantpjson = (string)vueloJson["cantidad pasajeros"];
+                    string tipopjson = (string)vueloJson["tipo de pasajero"];
+                    string clasejson = (string)vueloJson["clase"];
 
-                        
-        //            }
+                    if (origenjson == origen && destinojson == destino && DateTime.Parse(fechapartidajson) == fechaPartida && Int64.Parse(cantpjson) == cantPasajeros && tipopjson == tipoPasajero && clasejson == clase)
+                    {
+                        VueloEnt vuelo = new VueloEnt
+                        {
+                            Codigo = (string)vueloJson["codigo"],
+                            Origen = origenjson,
+                            Destino = destinojson,
+                            FechaSalida = DateTime.Parse(fechapartidajson),
+                            // Add more properties as needed
+                            FechaArribo = (DateTime)vueloJson["fecha de llegada"],
+                            TiempoVuelo = TimeSpan.Parse((string)vueloJson["duracion"]),
+                            Aerolinea = (string)vueloJson["aerolinea"],
+                            Tarifas = JsonConvert.DeserializeObject<List<TarifaEnt>>(vueloJson["tarifas"].ToString())
+                        };
 
-        //        }
-        //    }
-        //    else
-        //    {
-        //        jsonVuelos = new List<VueloEnt>();
-        //        return jsonVuelos;
-        //    }
-        //}
-        // Mariano Francese
-        
+                        vuelosFiltrados.Add(vuelo);
+
+                    }
+
+                }
+                return vuelosFiltrados;
+            }
+            else
+            {
+                return new List<VueloEnt>();
+            }
+        }
+
     }
 }
 
