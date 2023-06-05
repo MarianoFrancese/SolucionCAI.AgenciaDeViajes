@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using SolucionCAI.AgenciaDeViajes.Entidades;
+using SolucionCAI.AgenciaDeViajes.Archivos;
 
 namespace SolucionCAI.AgenciaDeViajes
 {
@@ -17,6 +19,8 @@ namespace SolucionCAI.AgenciaDeViajes
         {
             InitializeComponent();
         }
+
+        private List<VueloEnt> vuelosFiltrados;
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -36,6 +40,7 @@ namespace SolucionCAI.AgenciaDeViajes
         private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             MessageBox.Show("Este botón agrega un item de hospedaje en el presupuesto (por rango de días)");
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -57,7 +62,29 @@ namespace SolucionCAI.AgenciaDeViajes
             DateTime fechaPartida = dateTimePicker1.Value;
             int cantPasajeros = (int)numericUpDown1.Value;
             string tipoPasajero = comboBox2.SelectedItem.ToString();
-            string clase = comboBox3.SelectedItem.ToString(); 
+            string clase = comboBox3.SelectedItem.ToString();
+
+            vuelosFiltrados = ModuloProductos.ListaVuelos(origen, destino, fechaPartida, cantPasajeros, tipoPasajero, clase);
+            RellenarTabla();
+        }
+
+        private void RellenarTabla()
+        {
+            dataGridView3.Rows.Clear();
+
+            foreach (var vuelo in vuelosFiltrados)
+            {
+                dataGridView3.Rows.Add(
+                    vuelo.Codigo, 
+                    vuelo.Origen, 
+                    vuelo.Destino, 
+                    vuelo.FechaSalida, 
+                    vuelo.FechaArribo, 
+                    vuelo.TiempoVuelo, 
+                    vuelo.Aerolinea,
+                    string.Join(",", vuelo.Tarifas)
+                    );
+            }
         }
 
 
@@ -72,6 +99,11 @@ namespace SolucionCAI.AgenciaDeViajes
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker3_ValueChanged(object sender, EventArgs e)
         {
 
         }
