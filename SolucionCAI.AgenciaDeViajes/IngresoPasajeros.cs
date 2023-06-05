@@ -67,9 +67,6 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Add options to the ComboBox
-            comboBox1.Items.Add("Persona Física");
-            comboBox1.Items.Add("Persona Jurídica");
 
             // Get the selected option from the ComboBox
             string opcionpersona = comboBox1.SelectedItem.ToString();

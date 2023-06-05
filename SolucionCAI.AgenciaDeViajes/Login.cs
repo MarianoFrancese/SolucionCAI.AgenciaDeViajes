@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.DataFormats;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SolucionCAI.AgenciaDeViajes
 {
@@ -30,14 +32,18 @@ namespace SolucionCAI.AgenciaDeViajes
 
             if (esValido)
             {
-                Form MenuPrincipal = new SolucionCAI.AgenciaDeViajes.MenuPrincipal();
-                MenuPrincipal.Show();
+                MenuPrincipal MPrinc = new MenuPrincipal(usuario);
+                //MPrinc.Customusuario = usuario; // Assign the TextBox value to the Customusuario property
+                               
+                MPrinc.Show();
                 this.Hide();
             }
             else
             {
                 MessageBox.Show("Usuario o contraseña incorrectos");
             }
+
+            
         }
 
     }

@@ -137,6 +137,9 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Persona Física",
+            "Persona Jurídica"});
             this.comboBox1.Location = new System.Drawing.Point(90, 26);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 23);
@@ -246,7 +249,7 @@
             this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Location = new System.Drawing.Point(13, 69);
+            this.groupBox1.Location = new System.Drawing.Point(12, 69);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(320, 254);
             this.groupBox1.TabIndex = 18;
@@ -266,6 +269,12 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Responsable Inscripto",
+            "Autónomo",
+            "Monotributista",
+            "Exento",
+            "No alcanzado"});
             this.comboBox2.Location = new System.Drawing.Point(166, 144);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(95, 23);
@@ -297,6 +306,12 @@
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Responsable Inscripto",
+            "Autónomo",
+            "Monotributista",
+            "Exento",
+            "No alcanzado"});
             this.comboBox3.Location = new System.Drawing.Point(166, 149);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(95, 23);
@@ -419,7 +434,6 @@
             this.groupBox3.TabIndex = 22;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Pasajeros";
-            this.groupBox3.Visible = false;
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // button1

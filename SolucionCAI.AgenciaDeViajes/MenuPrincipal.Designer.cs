@@ -77,12 +77,12 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Adobe Gothic Std B", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(26, 81);
+            this.label3.Location = new System.Drawing.Point(26, 64);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(170, 68);
+            this.label3.Size = new System.Drawing.Size(22, 34);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Bienvenid@ \r\n[usuario]";
+            this.label3.Text = ".";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // MenuPrincipal
@@ -108,6 +108,6 @@
         private System.Windows.Forms.Button Presupuestobtn;
         private System.Windows.Forms.Button button2;
         private PictureBox pictureBox1;
-        private Label label3;
+        public Label label3;
     }
 }
