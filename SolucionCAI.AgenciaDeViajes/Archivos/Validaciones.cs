@@ -96,7 +96,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
         }
 
 
-        /* Para llamar a esta validación
+        /* Para llamar a esta validación mas tarde
           PasajeroEnt pasajero = new PasajeroEnt();
             pasajero.DN = 12345678;
 
