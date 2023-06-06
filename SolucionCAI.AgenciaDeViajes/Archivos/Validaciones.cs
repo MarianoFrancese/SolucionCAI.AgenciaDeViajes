@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using SolucionCAI.AgenciaDeViajes.Entidades;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using static System.Windows.Forms.DataFormats;
 
 namespace SolucionCAI.AgenciaDeViajes.Archivos
 {
@@ -25,7 +26,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             }
         }
 
-        //Este devolvería mensaje de error
+        //Este devolvería mensaje de error, es igual a la de arriba
 
         public bool ValidaUsuario2(string usuario, string contraseña)
         {
@@ -67,7 +68,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
         }
 
 
-
+        //ValidaDNI del pasajero
         public bool ValidaDNI(int dni)
         {
             const int longitudDNI = 8;
@@ -86,7 +87,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             {
                 if (!Char.IsDigit(c))
                 {
-                    Console.WriteLine("El DNI ingresado no es válido.");
+                    Console.WriteLine("El DNI ingresado no es válido.");  
                     return false;
                 }
             }
@@ -98,7 +99,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
         /* Para llamar a esta validación mas tarde
           PasajeroEnt pasajero = new PasajeroEnt();
-            pasajero.DN = 12345678;
+            pasajero.DNI = 12345678;
 
             bool dniValido = ValidaDNI(pasajero.DN);
                 if (dniValido)
@@ -111,9 +112,55 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 }*/
 
 
+        
 
 
+        //ValidaCUIL
 
+        public static bool ValidarCUIT(string cuit)
+        {
+            {
+                // Verificar longitud del CUIT
+                if (cuit.Length != 11)
+                {
+                    return false;
+                }
+                // Verificar que todos los caracteres sean dígitos numéricos
+                foreach (char c in cuit)
+                {
+                    if (!char.IsDigit(c))
+                    {
+                        return false;
+                    }
+                }
+                // Validar dígito verificador  (ver si hace falta, creo que no) 
+                int[] coeficientes = { 5, 4, 3, 2, 7, 6, 5, 4, 3, 2 };
+                int suma = 0;
+                for (int i = 0; i < 10; i++)
+                {
+                    suma += coeficientes[i] * int.Parse(cuit[i].ToString());
+                }
+                int verificadorCalculado = 11 - (suma % 11);
+                if (verificadorCalculado == 11)
+                {
+                    verificadorCalculado = 0;
+                }
+                else if (verificadorCalculado == 10)
+                {
+                    verificadorCalculado = 9;
+                }
+                int verificador = int.Parse(cuit[10].ToString());
+                if (verificador != verificadorCalculado)
+                {
+                    return false;
+                }
+                // Implementa la lógica adicional de validación aquí
+                // Si todas las validaciones pasan, devuelve true
+                return true;
+            }
+        }
+        
+        
 
 
 
