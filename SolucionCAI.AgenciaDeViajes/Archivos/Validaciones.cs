@@ -120,6 +120,8 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
         public static bool ValidarCUIT(string cuit)
         {
             {
+                string cleanedcuil = cuit;
+
                 // Verificar longitud del CUIT
                 if (cuit.Length != 11)
                 {
@@ -133,33 +135,27 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                         return false;
                     }
                 }
-                // Validar dígito verificador  (ver si hace falta, creo que no) 
-                int[] coeficientes = { 5, 4, 3, 2, 7, 6, 5, 4, 3, 2 };
-                int suma = 0;
-                for (int i = 0; i < 10; i++)
-                {
-                    suma += coeficientes[i] * int.Parse(cuit[i].ToString());
-                }
-                int verificadorCalculado = 11 - (suma % 11);
-                if (verificadorCalculado == 11)
-                {
-                    verificadorCalculado = 0;
-                }
-                else if (verificadorCalculado == 10)
-                {
-                    verificadorCalculado = 9;
-                }
-                int verificador = int.Parse(cuit[10].ToString());
-                if (verificador != verificadorCalculado)
-                {
-                    return false;
-                }
-                
-                // Si todas las validaciones pasan, devuelve true
-                return true;
-            }
-        }
 
+                // Obtener los dos primeros dígitos
+                string firstTwoDigits = cleanedcuil.Substring(0, 2);
+
+                // Verificar que los dos primeros dígitos sean válidos
+                int firstTwoDigitsValue = Convert.ToInt32(firstTwoDigits);
+
+                if (firstTwoDigitsValue != 20 || firstTwoDigitsValue != 27 || firstTwoDigitsValue != 23)
+                {
+                    Console.WriteLine("El CUIT es inválido");
+                }
+
+                else
+
+                { return true; }
+
+            }
+
+            // Si todas las validaciones pasan, devuelve true
+            return true;
+        }
 
         //Valida CUIT
 
@@ -171,7 +167,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             {
                 return false;
             }
-           
+
 
             // Verificar que todos los caracteres sean dígitos numéricos
             foreach (char c in cuil)
@@ -186,4 +182,9 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
         }
     }
 
-}
+
+    
+    }
+    
+
+
