@@ -87,7 +87,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             {
                 if (!Char.IsDigit(c))
                 {
-                    Console.WriteLine("El DNI ingresado no es válido.");  
+                    Console.WriteLine("El DNI ingresado no es válido.");
                     return false;
                 }
             }
@@ -112,7 +112,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 }*/
 
 
-        
+
 
 
         //ValidaCUIL
@@ -159,13 +159,20 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 return true;
             }
         }
-        
-        
 
 
+        //Valida CUIT
 
+        public static bool ValidarCUIL(string cuil)
+        {
 
+            // Verificar longitud del CUIL
+            if (cuil.Length != 11)
+            {
+                return false;
+            }
+            return true;
+        }
     }
 
 }
-
