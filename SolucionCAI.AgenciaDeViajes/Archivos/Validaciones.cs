@@ -142,7 +142,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 // Verificar que los dos primeros dígitos sean válidos
                 int firstTwoDigitsValue = Convert.ToInt32(firstTwoDigits);
 
-                if (firstTwoDigitsValue != 20 || firstTwoDigitsValue != 27 || firstTwoDigitsValue != 23)
+                if (firstTwoDigitsValue != 20 && firstTwoDigitsValue != 27 && firstTwoDigitsValue != 23)
                 {
                     Console.WriteLine("El CUIT es inválido");
                 }
