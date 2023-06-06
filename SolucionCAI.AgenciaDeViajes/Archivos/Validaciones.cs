@@ -4,11 +4,13 @@ using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using SolucionCAI.AgenciaDeViajes.Entidades;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using static System.Windows.Forms.DataFormats;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace SolucionCAI.AgenciaDeViajes.Archivos
 {
@@ -179,6 +181,30 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
             }
             return true;
+        }
+
+
+        //Valida email
+       
+
+        
+        public static bool ValidateEmail(string email)
+        {
+            bool isValid = false;
+
+            // Expresión regular para validar el formato del correo electrónico
+            string pattern = @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$";
+
+            // Utilizar Regex.IsMatch para verificar si el correo electrónico coincide con el patrón
+            return Regex.IsMatch(email, pattern);
+
+            if (isValid == false)
+
+                Console.WriteLine("El correo electrónico es inválido");
+            else
+            {
+                return true;
+            }
         }
     }
 
