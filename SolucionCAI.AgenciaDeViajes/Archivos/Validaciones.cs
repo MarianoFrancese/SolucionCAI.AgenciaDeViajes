@@ -154,7 +154,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 {
                     return false;
                 }
-                // Implementa la lógica adicional de validación aquí
+                
                 // Si todas las validaciones pasan, devuelve true
                 return true;
             }
@@ -170,6 +170,17 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             if (cuil.Length != 11)
             {
                 return false;
+            }
+           
+
+            // Verificar que todos los caracteres sean dígitos numéricos
+            foreach (char c in cuil)
+            {
+                if (!char.IsDigit(c))
+                {
+                    return false;
+                }
+
             }
             return true;
         }
