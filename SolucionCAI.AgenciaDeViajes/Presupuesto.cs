@@ -98,7 +98,7 @@ namespace SolucionCAI.AgenciaDeViajes
                     vuelo.Aerolinea,
                     vuelo.Tarifas[0].TipoPasajero,
                     vuelo.Tarifas[0].Clase,
-                    string.Join(",", vuelo.Tarifas)
+                    vuelo.Tarifas[0].Precio
                     );
             }
         }

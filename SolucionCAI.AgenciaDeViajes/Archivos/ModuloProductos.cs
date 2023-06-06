@@ -22,10 +22,10 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
         public static List<VueloEnt> ListaVuelos(string origen, string destino, string fechaPartida, int cantPasajeros, string tipoPasajero, string clase)
         {
 
-            if (File.Exists("C:\\Users\\mfrancese\\source\\repos\\SolucionCAI.AgenciaDeViajes\\SolucionCAI.AgenciaDeViajes\\Archivos\\VuelosEnt.json"))
+            if (File.Exists("VuelosEnt.json"))
             {
                 Console.WriteLine("El archivo existe");
-                string contenidoDelArchivo = File.ReadAllText("C:\\Users\\mfrancese\\source\\repos\\SolucionCAI.AgenciaDeViajes\\SolucionCAI.AgenciaDeViajes\\Archivos\\VuelosEnt.json");
+                string contenidoDelArchivo = File.ReadAllText("VuelosEnt.json");
 
                 JArray jsonArray = JArray.Parse(contenidoDelArchivo);
 
@@ -39,9 +39,11 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                     string cantpjson = (string)vueloJson["Tarifas"][0]["Disponibilidad"].ToString();
                     string tipopjson = (string)vueloJson["Tarifas"][0]["TipoPasajero"];
                     string clasejson = (string)vueloJson["Tarifas"][0]["Clase"];
+                    string preciojson = (string)vueloJson["Tarifas"][0]["Precio"].ToString();
 
                     if (origenjson == origen && destinojson == destino && fechapartidajson == fechaPartida && Int64.Parse(cantpjson) >= cantPasajeros && tipopjson == tipoPasajero && clasejson == clase)
                     {
+                        var tarifas = JsonConvert.DeserializeObject<List<TarifaEnt>>(vueloJson["Tarifas"].ToString());
                         VueloEnt vuelo = new VueloEnt
                         {
                             Codigo = (string)vueloJson["Codigo"],
@@ -54,6 +56,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                             Aerolinea = (string)vueloJson["Aerolinea"],
                             Tarifas = JsonConvert.DeserializeObject<List<TarifaEnt>>(vueloJson["Tarifas"].ToString())
                         };
+                        Console.WriteLine(vuelo.Tarifas);
 
                         vuelosFiltrados.Add(vuelo);
 

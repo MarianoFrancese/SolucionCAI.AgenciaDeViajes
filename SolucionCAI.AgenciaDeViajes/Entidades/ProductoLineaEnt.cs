@@ -10,7 +10,7 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
     {
         public HotelEnt ProductoH { get; set; }
         public VueloEnt ProductoV { get; set; }
-        public Decimal PrecioUn { get; set; }
+        public TarifaEnt PrecioUn { get; set; }
         public int Cantidad { get; set; }
         public Decimal Descuento { get; set; }
         public Decimal SubTotal { get; set; }
