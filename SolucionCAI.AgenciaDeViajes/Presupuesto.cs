@@ -114,5 +114,41 @@ namespace SolucionCAI.AgenciaDeViajes
         {
 
         }
+
+        private void Presupuesto_Load(object sender, EventArgs e)
+        {
+
+        }
+        
+        private readonly string customusuario;
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            
+            Form menuform = new MenuPrincipal(customusuario);
+            menuform.Show();
+            this.Hide();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            Form loginform = new Login();
+            loginform.Show();
+            this.Hide();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            groupBox3.Visible = false;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            groupBox3.Visible = false;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            groupBox3.Visible = true;
+        }
     }
 }

@@ -45,5 +45,12 @@ namespace SolucionCAI.AgenciaDeViajes
         {
 
         }
+
+        //private void button1_Click_1(object sender, EventArgs e)
+        //{
+        //    Form loginform = new Login();
+        //    loginform.Show();
+        //    this.Hide();
+        //}
     }
 }
