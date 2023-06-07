@@ -220,10 +220,10 @@
             // 
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Items.AddRange(new object[] {
-            "Buenos Aires",
-            "Madrid",
-            "Miami",
-            "Santiago de Chile"});
+            "BUE",
+            "MAD",
+            "MIA",
+            "SCL"});
             this.comboBox5.Location = new System.Drawing.Point(12, 36);
             this.comboBox5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.comboBox5.Name = "comboBox5";
