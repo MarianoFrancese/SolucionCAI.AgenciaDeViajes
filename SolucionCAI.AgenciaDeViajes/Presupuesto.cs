@@ -193,7 +193,7 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            codigo = dataGridView1.SelectedRows.Cells[0].Value.ToString();
+            codigo = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
             origen = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
             destino = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
             fechaPartida = Convert.ToDateTime(dataGridView1.SelectedRows[0].Cells[3].Value.ToString());
@@ -230,6 +230,11 @@ namespace SolucionCAI.AgenciaDeViajes
 
             var productosAgregados = ModuloPresupuesto.LineaProductoVuelos(vueloSeleccionado);
             RellenarPresupuestoTabla(productosAgregados);
+        }
+
+        private void dataGridView1_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

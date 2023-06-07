@@ -32,11 +32,11 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
             return descuento;
         }
 
-        public decimal CalcularSubtotal(int cantidad, decimal precioUnitari)
+        public decimal CalcularSubtotal(int cantidad, decimal precioUnitario)
         {
             decimal subtotal;
 
-            subtotal = cantidad * precioUnitari;
+            subtotal = cantidad * precioUnitario;
 
             return subtotal;
         }

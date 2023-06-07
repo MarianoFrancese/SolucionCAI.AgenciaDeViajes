@@ -1,70 +1,104 @@
 [
-    {
-        "Codigo": "AA000",
-        "Origen": "BUE",
-        "Destino": "MIA",
-        "FechaSalida": "29/06/2023",
-        "FechaArribo": "30/06/2023",
-        "TiempoVuelo": "12:30:00",
-        "Aerolinea": "American Airlines",
-        "Tarifas": [
-            {
-                "Clase": "E",
-                "TipoPasajero": "A",
-                "Precio": 348000.00,
-                "Disponibilidad": 2
-            }
-        ]
-    },
-    {
-        "Codigo": "AA001",
-        "Origen": "BUE",
-        "Destino": "ROM",
-        "FechaSalida": "15/06/2023",
-        "FechaArribo": "16/06/2023",
-        "TiempoVuelo": "15:00:00",
-        "Aerolinea": "Air Italia",
-        "Tarifas": [
-            {
-                "Clase": "B",
-                "TipoPasajero": "A",
-                "Precio": 438000.00,
-                "Disponibilidad": 4
-            }
-        ]
-    },
-    {
-        "Codigo": "AA002",
-        "Origen": "BUE",
-        "Destino": "PAR",
-        "FechaSalida": "18/06/2023",
-        "FechaArribo": "19/06/2023",
-        "TiempoVuelo": "11:00:00",
-        "Aerolinea": "Air France",
-        "Tarifas": [
-            {
-                "Clase": "F",
-                "TipoPasajero": "A",
-                "Precio": 640000.00,
-                "Disponibilidad": 1
-            }
-        ]
-    },
-    {
-        "Codigo": "AA003",
-        "Origen": "BUE",
-        "Destino": "TOK",
-        "FechaSalida": "21/06/2023",
-        "FechaArribo": "22/06/2023",
-        "TiempoVuelo": "23:00:00",
-        "Aerolinea": "United Airlines",
-        "Tarifas": [
-            {
-                "Clase": "E",
-                "TipoPasajero": "A",
-                "Precio": 1925000.00,
-                "Disponibilidad": 5
-            }
-        ]
-    }
+  {
+    "Codigo": "AA000",
+    "Origen": "BUE",
+    "Destino": "MIA",
+    "FechaSalida": "29/06/2023",
+    "FechaArribo": "30/06/2023",
+    "TiempoVuelo": "12:30:00",
+    "Aerolinea": "American Airlines",
+    "Tarifas": [
+      {
+        "Clase": "Economy",
+        "TipoPasajero": "Adulto",
+        "Precio": 348000.00,
+        "Disponibilidad": 2
+      }
+    ]
+  },
+  {
+    "Codigo": "AA001",
+    "Origen": "BUE",
+    "Destino": "ROM",
+    "FechaSalida": "15/06/2023",
+    "FechaArribo": "16/06/2023",
+    "TiempoVuelo": "15:00:00",
+    "Aerolinea": "Air Italia",
+    "Tarifas": [
+      {
+        "Clase": "B",
+        "TipoPasajero": "A",
+        "Precio": 438000.00,
+        "Disponibilidad": 4
+      }
+    ]
+  },
+  {
+    "Codigo": "AA002",
+    "Origen": "BUE",
+    "Destino": "CDG",
+    "FechaSalida": "18/06/2023",
+    "FechaArribo": "19/06/2023",
+    "TiempoVuelo": "11:00:00",
+    "Aerolinea": "Air France",
+    "Tarifas": [
+      {
+        "Clase": "F",
+        "TipoPasajero": "A",
+        "Precio": 640000.00,
+        "Disponibilidad": 1
+      }
+    ]
+  },
+  {
+    "Codigo": "AA003",
+    "Origen": "BUE",
+    "Destino": "TOK",
+    "FechaSalida": "21/06/2023",
+    "FechaArribo": "22/06/2023",
+    "TiempoVuelo": "23:00:00",
+    "Aerolinea": "United Airlines",
+    "Tarifas": [
+      {
+        "Clase": "E",
+        "TipoPasajero": "A",
+        "Precio": 1925000.00,
+        "Disponibilidad": 5
+      }
+    ]
+  },
+  {
+    "Codigo": "AA004",
+    "Origen": "BUE",
+    "Destino": "ROM",
+    "FechaSalida": "21/07/2023",
+    "FechaArribo": "22/07/2023",
+    "TiempoVuelo": "13:00:00",
+    "Aerolinea": "KLM",
+    "Tarifas": [
+      {
+        "Clase": "E",
+        "TipoPasajero": "A",
+        "Precio": 350000.00,
+        "Disponibilidad": 3
+      }
+    ]
+  },
+  {
+    "Codigo": "AA005",
+    "Origen": "BUE",
+    "Destino": "SCL",
+    "FechaSalida": "21/08/2023",
+    "FechaArribo": "22/08/2023",
+    "TiempoVuelo": "2:00:00",
+    "Aerolinea": "Aerolineas Argentinas",
+    "Tarifas": [
+      {
+        "Clase": "E",
+        "TipoPasajero": "A",
+        "Precio": 90000.00,
+        "Disponibilidad": 6
+      }
+    ]
+  }
 ]
