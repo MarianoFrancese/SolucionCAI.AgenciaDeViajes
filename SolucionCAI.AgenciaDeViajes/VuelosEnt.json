@@ -5,7 +5,7 @@
         "Destino": "MIA",
         "FechaSalida": "29/06/2023",
         "FechaArribo": "30/06/2023",
-        "TiempoVuelo": "12:30:00:00",
+        "TiempoVuelo": "12:30:00",
         "Aerolinea": "American Airlines",
         "Tarifas": [
             {
@@ -22,7 +22,7 @@
         "Destino": "ROM",
         "FechaSalida": "15/06/2023",
         "FechaArribo": "16/06/2023",
-        "TiempoVuelo": "15:00:00:00",
+        "TiempoVuelo": "15:00:00",
         "Aerolinea": "Air Italia",
         "Tarifas": [
             {
@@ -39,7 +39,7 @@
         "Destino": "PAR",
         "FechaSalida": "18/06/2023",
         "FechaArribo": "19/06/2023",
-        "TiempoVuelo": "11:00:00:00",
+        "TiempoVuelo": "11:00:00",
         "Aerolinea": "Air France",
         "Tarifas": [
             {
@@ -56,7 +56,7 @@
         "Destino": "TOK",
         "FechaSalida": "21/06/2023",
         "FechaArribo": "22/06/2023",
-        "TiempoVuelo": "23:00:00:00",
+        "TiempoVuelo": "23:00:00",
         "Aerolinea": "United Airlines",
         "Tarifas": [
             {
