@@ -96,6 +96,9 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            //Acá irían las validaciones , antes de tomar los datos. 
+
             // Get the values from the text boxes
             string nombrep = textBox14.Text;
             string apellidop = textBox15.Text;

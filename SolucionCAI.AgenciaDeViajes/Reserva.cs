@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace SolucionCAI.AgenciaDeViajes
 {
@@ -24,17 +25,22 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Se prerreserva el presupuesto y se piden más datos relativos al cliente");
+            groupBox1.Visible = true;
+            groupBox2.Visible = false;
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Se reserva el presupuesto y se piden más datos relativos al cliente");
+            groupBox1.Visible = true;
+            groupBox2.Visible = false;
+           // MessageBox.Show("Se reserva el presupuesto y se piden más datos relativos al cliente");
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Se reserva la prereserva (datos ya cargados)");
+            groupBox3.Visible = true;
+            
+            //MessageBox.Show("Se reserva la prereserva (datos ya cargados)");
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -72,5 +78,56 @@ namespace SolucionCAI.AgenciaDeViajes
         {
 
         }
+
+        private readonly string customusuario;
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            Form menuform = new MenuPrincipal(customusuario);
+            menuform.Show();
+            this.Hide();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            groupBox2.Visible = false;
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            groupBox1.Visible = false;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            groupBox2.Visible = false;
+            
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            groupBox1.Visible = false;
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            groupBox3.Visible = false;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            groupBox3.Visible = false;
+        }
+
+        //private void button3_Click_1(object sender, EventArgs e)
+        //{
+        //    Form loginform = new Login();
+        //    loginform.Show();
+        //    this.Hide();
+        //}
     }
 }

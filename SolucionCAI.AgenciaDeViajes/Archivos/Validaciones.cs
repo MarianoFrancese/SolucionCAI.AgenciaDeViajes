@@ -4,10 +4,13 @@ using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using SolucionCAI.AgenciaDeViajes.Entidades;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using static System.Windows.Forms.DataFormats;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace SolucionCAI.AgenciaDeViajes.Archivos
 {
@@ -25,7 +28,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             }
         }
 
-        //Este devolvería mensaje de error
+        //Este devolvería mensaje de error, es igual a la de arriba
 
         public bool ValidaUsuario2(string usuario, string contraseña)
         {
@@ -67,7 +70,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
         }
 
 
-
+        //ValidaDNI del pasajero
         public bool ValidaDNI(int dni)
         {
             const int longitudDNI = 8;
@@ -96,9 +99,9 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
         }
 
 
-        /* Para llamar a esta validación
+        /* Para llamar a esta validación mas tarde
           PasajeroEnt pasajero = new PasajeroEnt();
-            pasajero.DN = 12345678;
+            pasajero.DNI = 12345678;
 
             bool dniValido = ValidaDNI(pasajero.DN);
                 if (dniValido)
@@ -114,11 +117,100 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
 
 
+        //ValidaCUIL
+
+        public static bool ValidarCUIT(string cuit)
+        {
+            {
+                string cleanedcuil = cuit;
+
+                // Verificar longitud del CUIT
+                if (cuit.Length != 11)
+                {
+                    return false;
+                }
+                // Verificar que todos los caracteres sean dígitos numéricos
+                foreach (char c in cuit)
+                {
+                    if (!char.IsDigit(c))
+                    {
+                        return false;
+                    }
+                }
+
+                // Obtener los dos primeros dígitos
+                string firstTwoDigits = cleanedcuil.Substring(0, 2);
+
+                // Verificar que los dos primeros dígitos sean válidos
+                int firstTwoDigitsValue = Convert.ToInt32(firstTwoDigits);
+
+                if (firstTwoDigitsValue != 30 && firstTwoDigitsValue != 33 && firstTwoDigitsValue != 34)
+                {
+                    Console.WriteLine("El CUIT es inválido");
+                }
+
+                else
+
+                { return true; }
+
+            }
+
+            // Si todas las validaciones pasan, devuelve true
+            return true;
+        }
+
+        //Valida CUIT
+
+        public static bool ValidarCUIL(string cuil)
+        {
+
+            // Verificar longitud del CUIL
+            if (cuil.Length != 11)
+            {
+                return false;
+            }
 
 
+            // Verificar que todos los caracteres sean dígitos numéricos
+            foreach (char c in cuil)
+            {
+                if (!char.IsDigit(c))
+                {
+                    return false;
+                }
+
+            }
+            return true;
+        }
 
 
+        //Valida email
+       
+
+        
+        public static bool ValidateEmail(string email)
+        {
+            bool isValid = false;
+
+            // Expresión regular para validar el formato del correo electrónico
+            string pattern = @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$";
+
+            // Utilizar Regex.IsMatch para verificar si el correo electrónico coincide con el patrón
+            return Regex.IsMatch(email, pattern);
+
+            if (isValid == false)
+
+                Console.WriteLine("El correo electrónico es inválido");
+            else
+            {
+                return true;
+            }
+        }
     }
 
-}
+
+    
+    }
+    
+
 
