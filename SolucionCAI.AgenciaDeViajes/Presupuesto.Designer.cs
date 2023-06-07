@@ -449,13 +449,13 @@
             // 
             // comboBox2
             // 
+            comboBox2.DisplayMember = "Clase";
             comboBox2.FormattingEnabled = true;
             comboBox2.Location = new Point(1042, 53);
             comboBox2.Margin = new Padding(7, 6, 7, 6);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(147, 40);
             comboBox2.TabIndex = 32;
-            comboBox2.DisplayMember = "Clase";
             comboBox2.ValueMember = "Clase";
             // 
             // label10

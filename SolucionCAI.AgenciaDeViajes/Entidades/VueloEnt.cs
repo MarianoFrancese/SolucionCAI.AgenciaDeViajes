@@ -15,15 +15,9 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
         public DateTime FechaSalida { get; set; }
         public DateTime FechaArribo { get; set; }
 
-        public TimeSpan TiempoVuelo { get; set; }
-        // public TimeSpan TiempoVuelo { get { return CalcularTiempoVuelo(); } } 
+        public TimeSpan TiempoVuelo { get; set; } 
         public string Aerolinea { get; set; }
         public List<TarifaEnt> Tarifas { get; set; } //Acá llamar a un método de TarifaEnt que traiga una lista de tarifas
-
-        public TimeSpan CalcularTiempoVuelo()
-        {
-            return FechaArribo - FechaSalida;
-        }
 
         //Acá sería crear un método en el que le asignemos una de las variables matcheadas en el filtro de presupuesto
         //public VueloEnt Vuelo(string codigo)
