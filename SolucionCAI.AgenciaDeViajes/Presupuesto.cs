@@ -87,14 +87,15 @@ namespace SolucionCAI.AgenciaDeViajes
             tipoPasajero = comboBox2.Text;
             clase = comboBox3.Text;
 
-            FiltrarYRellenarTabla();
+            vuelosFiltrados = ModuloProductos.ListaVuelos(origen, destino, fechaPartidaFormateada, cantPasajeros, tipoPasajero, clase);
+            RellenarTabla(vuelosFiltrados, cantPasajeros);
 
             //Q: What should this void do?
             //A: It should filter the flights by the selected filters and show them in the table
 
         }
 
-        private void RellenarTabla(List<VueloEnt> vuelosFiltrados)
+        private void RellenarTabla(List<VueloEnt> vuelosFiltrados, int cantPasajeros)
         {
             dataGridView1.Rows.Clear();
 
@@ -108,17 +109,13 @@ namespace SolucionCAI.AgenciaDeViajes
                     vuelo.FechaArribo,
                     vuelo.TiempoVuelo,
                     vuelo.Aerolinea,
+                    cantPasajeros,
                     vuelo.Tarifas[0].TipoPasajero,
                     vuelo.Tarifas[0].Clase,
-                    vuelo.Tarifas[0].Precio
+                    vuelo.Tarifas[0].Precio,
+                    vuelo.Tarifas[0].Disponibilidad
                     );
             }
-        }
-
-        private void FiltrarYRellenarTabla()
-        {
-            vuelosFiltrados = ModuloProductos.ListaVuelos(origen, destino, fechaPartidaFormateada, cantPasajeros, tipoPasajero, clase);
-            RellenarTabla(vuelosFiltrados);
         }
 
         private void RellenarPresupuestoTabla(List<ProductoLineaEnt> productosagregados)

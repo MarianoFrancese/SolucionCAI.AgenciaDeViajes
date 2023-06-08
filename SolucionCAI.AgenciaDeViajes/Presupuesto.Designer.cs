@@ -98,7 +98,7 @@
             this.FechaArribo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TiempoVuelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantPasajero = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.cantPasajero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoPasajero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tarifa = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -886,13 +886,10 @@
             // cantPasajero
             // 
             this.cantPasajero.HeaderText = "CantidadPasajeros";
-            this.cantPasajero.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
+            this.Column7.MinimumWidth = 15;
             this.cantPasajero.Name = "cantPasajero";
-            this.cantPasajero.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.cantPasajero.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 200;
             // 
             // TipoPasajero
             // 
@@ -1036,7 +1033,7 @@
         private DataGridViewTextBoxColumn FechaArribo;
         private DataGridViewTextBoxColumn TiempoVuelo;
         private DataGridViewTextBoxColumn Column7;
-        private DataGridViewComboBoxColumn cantPasajero;
+        private DataGridViewTextBoxColumn cantPasajero;
         private DataGridViewTextBoxColumn TipoPasajero;
         private DataGridViewTextBoxColumn Column8;
         private DataGridViewTextBoxColumn Tarifa;
