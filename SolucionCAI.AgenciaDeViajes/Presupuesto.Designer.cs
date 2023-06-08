@@ -565,6 +565,7 @@
             this.button2.TabIndex = 8;
             this.button2.Text = "Buscar";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += button2_Click;
             // 
             // label3
             // 
