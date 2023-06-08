@@ -147,11 +147,11 @@ namespace SolucionCAI.AgenciaDeViajes
 
         }
 
-        private readonly string customusuario;
+        private readonly string usuario;
         private void button4_Click_1(object sender, EventArgs e)
         {
 
-            Form menuform = new MenuPrincipal(customusuario);
+            Form menuform = new MenuPrincipal(usuario);
             menuform.Show();
             this.Hide();
         }

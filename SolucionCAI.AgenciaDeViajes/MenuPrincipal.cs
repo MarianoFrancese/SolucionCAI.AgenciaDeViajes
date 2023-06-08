@@ -14,13 +14,13 @@ namespace SolucionCAI.AgenciaDeViajes
 {
     public partial class MenuPrincipal : Form
     {
-        private readonly string customusuario;
+        private readonly string usuario;
 
-        public MenuPrincipal(string customusuario)
+        public MenuPrincipal(string usuario)
         {
             InitializeComponent();
-            this.customusuario = customusuario;
-            label3.Text = "Bienvenid@ " + Environment.NewLine + this.customusuario; // Set the Label's text using the CustomLabelText property
+            this.usuario = usuario;
+            label3.Text = "Bienvenid@ " + Environment.NewLine + this.usuario; // Set the Label's text using the CustomLabelText property
         }
         
            

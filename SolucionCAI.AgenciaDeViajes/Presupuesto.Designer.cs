@@ -71,6 +71,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaPartida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaArribo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TiempoVuelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantPasajero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoPasajero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tarifa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.disponibilidadVuelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -91,19 +104,6 @@
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaPartida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaArribo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TiempoVuelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantPasajero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoPasajero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tarifa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.disponibilidadVuelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -153,10 +153,9 @@
             // 
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Items.AddRange(new object[] {
-            "Simple",
-            "Doble",
-            "Deluxe",
-            "Penthouse"});
+            "Standard",
+            "Intermedia",
+            "Deluxe"});
             this.comboBox6.Location = new System.Drawing.Point(597, 40);
             this.comboBox6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.comboBox6.Name = "comboBox6";
@@ -222,10 +221,12 @@
             // 
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Items.AddRange(new object[] {
-            "Buenos Aires",
-            "Madrid",
-            "Miami",
-            "Santiago de Chile"});
+            "BUE",
+            "PAR",
+            "MAD",
+            "MIA",
+            "ROM",
+            "SCL"});
             this.comboBox5.Location = new System.Drawing.Point(12, 36);
             this.comboBox5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.comboBox5.Name = "comboBox5";
@@ -446,8 +447,10 @@
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
             "BUE",
+            "CDG",
             "MAD",
             "MIA",
+            "ROM",
             "SCL"});
             this.comboBox4.Location = new System.Drawing.Point(156, 29);
             this.comboBox4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -460,8 +463,10 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "BUE",
+            "CDG",
             "MAD",
             "MIA",
+            "ROM",
             "SCL"});
             this.comboBox1.Location = new System.Drawing.Point(18, 29);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -495,10 +500,10 @@
             // 
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
-            "E",
-            "P",
-            "B",
-            "F"});
+            "Economy",
+            "Premium",
+            "Business",
+            "First"});
             this.comboBox3.Location = new System.Drawing.Point(672, 24);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.comboBox3.Name = "comboBox3";
@@ -510,9 +515,9 @@
             this.comboBox2.DisplayMember = "Clase";
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
-            "A",
-            "M",
-            "I"});
+            "Adulto",
+            "Menor",
+            "Infante"});
             this.comboBox2.Location = new System.Drawing.Point(561, 25);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.comboBox2.Name = "comboBox2";
@@ -565,7 +570,6 @@
             this.button2.TabIndex = 8;
             this.button2.Text = "Buscar";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += button2_Click;
             // 
             // label3
             // 
@@ -624,6 +628,104 @@
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.Size = new System.Drawing.Size(867, 138);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column1.HeaderText = "CódigoVuelo";
+            this.Column1.MinimumWidth = 10;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 101;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Origen";
+            this.Column2.MinimumWidth = 10;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 200;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Destino";
+            this.Column3.MinimumWidth = 10;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 200;
+            // 
+            // FechaPartida
+            // 
+            this.FechaPartida.HeaderText = "Fecha Partida";
+            this.FechaPartida.MinimumWidth = 10;
+            this.FechaPartida.Name = "FechaPartida";
+            this.FechaPartida.ReadOnly = true;
+            this.FechaPartida.Width = 200;
+            // 
+            // FechaArribo
+            // 
+            this.FechaArribo.HeaderText = "Fecha Arribo";
+            this.FechaArribo.MinimumWidth = 10;
+            this.FechaArribo.Name = "FechaArribo";
+            this.FechaArribo.ReadOnly = true;
+            this.FechaArribo.Width = 200;
+            // 
+            // TiempoVuelo
+            // 
+            this.TiempoVuelo.HeaderText = "Tiempo Vuelo";
+            this.TiempoVuelo.MinimumWidth = 10;
+            this.TiempoVuelo.Name = "TiempoVuelo";
+            this.TiempoVuelo.ReadOnly = true;
+            this.TiempoVuelo.Width = 200;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Aerolinea";
+            this.Column7.MinimumWidth = 15;
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 200;
+            // 
+            // cantPasajero
+            // 
+            this.cantPasajero.HeaderText = "CantidadPasajeros";
+            this.cantPasajero.Name = "cantPasajero";
+            // 
+            // TipoPasajero
+            // 
+            this.TipoPasajero.HeaderText = "Tipo Pasajero";
+            this.TipoPasajero.MinimumWidth = 10;
+            this.TipoPasajero.Name = "TipoPasajero";
+            this.TipoPasajero.Width = 200;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Clase";
+            this.Column8.MinimumWidth = 10;
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 200;
+            // 
+            // Tarifa
+            // 
+            this.Tarifa.HeaderText = "Tarifa";
+            this.Tarifa.MinimumWidth = 10;
+            this.Tarifa.Name = "Tarifa";
+            this.Tarifa.ReadOnly = true;
+            this.Tarifa.Width = 200;
+            // 
+            // disponibilidadVuelo
+            // 
+            this.disponibilidadVuelo.HeaderText = "Disponibilidad";
+            this.disponibilidadVuelo.Name = "disponibilidadVuelo";
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Agregar";
+            this.Column12.MinimumWidth = 10;
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Width = 200;
             // 
             // dataGridView2
             // 
@@ -826,107 +928,6 @@
             this.label14.Size = new System.Drawing.Size(236, 21);
             this.label14.TabIndex = 0;
             this.label14.Text = "¿Desea generar un Presupuesto?";
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column1.HeaderText = "CódigoVuelo";
-            this.Column1.MinimumWidth = 10;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 101;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Origen";
-            this.Column2.MinimumWidth = 10;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 200;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Destino";
-            this.Column3.MinimumWidth = 10;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 200;
-            // 
-            // FechaPartida
-            // 
-            this.FechaPartida.HeaderText = "Fecha Partida";
-            this.FechaPartida.MinimumWidth = 10;
-            this.FechaPartida.Name = "FechaPartida";
-            this.FechaPartida.ReadOnly = true;
-            this.FechaPartida.Width = 200;
-            // 
-            // FechaArribo
-            // 
-            this.FechaArribo.HeaderText = "Fecha Arribo";
-            this.FechaArribo.MinimumWidth = 10;
-            this.FechaArribo.Name = "FechaArribo";
-            this.FechaArribo.ReadOnly = true;
-            this.FechaArribo.Width = 200;
-            // 
-            // TiempoVuelo
-            // 
-            this.TiempoVuelo.HeaderText = "Tiempo Vuelo";
-            this.TiempoVuelo.MinimumWidth = 10;
-            this.TiempoVuelo.Name = "TiempoVuelo";
-            this.TiempoVuelo.ReadOnly = true;
-            this.TiempoVuelo.Width = 200;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Aerolinea";
-            this.Column7.MinimumWidth = 10;
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 200;
-            // 
-            // cantPasajero
-            // 
-            this.cantPasajero.HeaderText = "CantidadPasajeros";
-            this.Column7.MinimumWidth = 15;
-            this.cantPasajero.Name = "cantPasajero";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 200;
-            // 
-            // TipoPasajero
-            // 
-            this.TipoPasajero.HeaderText = "Tipo Pasajero";
-            this.TipoPasajero.MinimumWidth = 10;
-            this.TipoPasajero.Name = "TipoPasajero";
-            this.TipoPasajero.Width = 200;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Clase";
-            this.Column8.MinimumWidth = 10;
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 200;
-            // 
-            // Tarifa
-            // 
-            this.Tarifa.HeaderText = "Tarifa";
-            this.Tarifa.MinimumWidth = 10;
-            this.Tarifa.Name = "Tarifa";
-            this.Tarifa.ReadOnly = true;
-            this.Tarifa.Width = 200;
-            // 
-            // disponibilidadVuelo
-            // 
-            this.disponibilidadVuelo.HeaderText = "Disponibilidad";
-            this.disponibilidadVuelo.Name = "disponibilidadVuelo";
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Agregar";
-            this.Column12.MinimumWidth = 10;
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            this.Column12.Width = 200;
             // 
             // Presupuesto
             // 
