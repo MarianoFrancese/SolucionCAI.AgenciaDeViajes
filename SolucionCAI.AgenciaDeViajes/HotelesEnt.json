@@ -15,9 +15,9 @@
 		"Nombre": "Intermedio",
 		"TarifaHab": 50000,
 		"Capacidad": 4,
-		"Adultos": 2,
+		"Adultos": 4,
 		"Menores": 2,
-		"Infantes": 0
+		"Infantes": 2
 
 	},
 
@@ -53,9 +53,9 @@
 					"Nombre": "Intermedio",
 					"TarifaHab": 50000, 
 					"Capacidad": 4,
-					"Adultos": 2,
+					"Adultos": 4,
 					"Menores": 2, 
-					"Infantes": 0
+					"Infantes": 2
 					
 				}
                 
@@ -92,9 +92,9 @@
 					"Nombre": "Intermedio",
 					"TarifaHab": 50000, 
 					"Capacidad": 4,
-					"Adultos": 2,
+					"Adultos": 4,
 					"Menores": 2, 
-					"Infantes": 0
+					"Infantes": 2
 					
 				}
                 
@@ -131,9 +131,9 @@
 					"Nombre": "Intermedio",
 					"TarifaHab": 50000, 
 					"Capacidad": 4,
-					"Adultos": 2,
+					"Adultos": 4,
 					"Menores": 2, 
-					"Infantes": 0
+					"Infantes": 2
 					
 				}
                 
@@ -170,9 +170,9 @@
 					"Nombre": "Intermedio",
 					"TarifaHab": 50000, 
 					"Capacidad": 4,
-					"Adultos": 2,
+					"Adultos": 4,
 					"Menores": 2, 
-					"Infantes": 0
+					"Infantes": 2
 					
 				}
                 
@@ -209,9 +209,9 @@
 					"Nombre": "Intermedio",
 					"TarifaHab": 50000, 
 					"Capacidad": 4,
-					"Adultos": 2,
+					"Adultos": 4,
 					"Menores": 2, 
-					"Infantes": 0
+					"Infantes": 2
 					
 				}
                 
@@ -249,9 +249,9 @@
 					"Nombre": "Intermedio",
 					"TarifaHab": 50000, 
 					"Capacidad": 4,
-					"Adultos": 2,
+					"Adultos": 4,
 					"Menores": 2, 
-					"Infantes": 0
+					"Infantes": 2
 					
 				}
                 
@@ -289,8 +289,8 @@
 					"TarifaHab": 35000, 
 					"Capacidad": 2,
 					"Adultos": 2,
-					"Menores": 0, 
-					"Infantes": 0
+					"Menores": 1, 
+					"Infantes": 1
 					
 				}
                 
@@ -328,8 +328,8 @@
 					"TarifaHab": 35000, 
 					"Capacidad": 2,
 					"Adultos": 2,
-					"Menores": 0, 
-					"Infantes": 0
+					"Menores": 1, 
+					"Infantes": 1
 					
 				}
                 
@@ -367,8 +367,8 @@
 					"TarifaHab": 35000, 
 					"Capacidad": 2,
 					"Adultos": 2,
-					"Menores": 0, 
-					"Infantes": 0
+					"Menores": 1, 
+					"Infantes": 1
 					
 				}
                 
@@ -406,8 +406,8 @@
 					"TarifaHab": 35000, 
 					"Capacidad": 2,
 					"Adultos": 2,
-					"Menores": 0, 
-					"Infantes": 0
+					"Menores": 1, 
+					"Infantes": 1
 					
 				}
                 
@@ -445,8 +445,8 @@
 					"TarifaHab": 35000, 
 					"Capacidad": 2,
 					"Adultos": 2,
-					"Menores": 0, 
-					"Infantes": 0
+					"Menores": 1, 
+					"Infantes": 1
 					
 				}
                 
@@ -483,8 +483,8 @@
 					"TarifaHab": 35000, 
 					"Capacidad": 2,
 					"Adultos": 2,
-					"Menores": 0, 
-					"Infantes": 0
+					"Menores": 1, 
+					"Infantes": 1
 					
 				}
                 
@@ -521,8 +521,8 @@
 					"TarifaHab": 35000, 
 					"Capacidad": 2,
 					"Adultos": 2,
-					"Menores": 0, 
-					"Infantes": 0
+					"Menores": 1, 
+					"Infantes": 1
 					
 				}
                 
@@ -559,9 +559,9 @@
 					"Nombre": "Deluxe",
 					"TarifaHab": 65000, 
 					"Capacidad": 6,
-					"Adultos": 4,
-					"Menores": 2, 
-					"Infantes": 2
+					"Adultos": 6,
+					"Menores": 3, 
+					"Infantes": 3
 					
 				}
                 
@@ -600,9 +600,9 @@
 					"Nombre": "Deluxe",
 					"TarifaHab": 65000, 
 					"Capacidad": 6,
-					"Adultos": 4,
-					"Menores": 2, 
-					"Infantes": 2
+					"Adultos": 6,
+					"Menores": 3, 
+					"Infantes": 3
 					
 				}
                 
@@ -639,9 +639,9 @@
 					"Nombre": "Deluxe",
 					"TarifaHab": 65000, 
 					"Capacidad": 6,
-					"Adultos": 4,
-					"Menores": 2, 
-					"Infantes": 2
+					"Adultos": 6,
+					"Menores": 3, 
+					"Infantes": 3
 					
 				}
                 
@@ -679,9 +679,9 @@
 					"Nombre": "Deluxe",
 					"TarifaHab": 65000, 
 					"Capacidad": 6,
-					"Adultos": 4,
-					"Menores": 2, 
-					"Infantes": 2
+					"Adultos": 6,
+					"Menores": 3, 
+					"Infantes": 3
 					
 				}
                 
@@ -718,9 +718,9 @@
 					"Nombre": "Deluxe",
 					"TarifaHab": 65000, 
 					"Capacidad": 6,
-					"Adultos": 4,
-					"Menores": 2, 
-					"Infantes": 2
+					"Adultos": 6,
+					"Menores": 3, 
+					"Infantes": 3
 					
 				}
                 
@@ -757,9 +757,9 @@
 					"Nombre": "Deluxe",
 					"TarifaHab": 65000, 
 					"Capacidad": 6,
-					"Adultos": 4,
-					"Menores": 2, 
-					"Infantes": 2
+					"Adultos": 6,
+					"Menores": 3, 
+					"Infantes": 3
 					
 				}
                 
@@ -797,9 +797,9 @@
 					"Nombre": "Deluxe",
 					"TarifaHab": 65000, 
 					"Capacidad": 6,
-					"Adultos": 4,
-					"Menores": 2, 
-					"Infantes": 2
+					"Adultos": 6,
+					"Menores": 3, 
+					"Infantes": 3
 					
 				}
                 
@@ -837,9 +837,9 @@
 					"Nombre": "Deluxe",
 					"TarifaHab": 75200, 
 					"Capacidad": 6,
-					"Adultos": 4,
-					"Menores": 2, 
-					"Infantes": 2,
+					"Adultos": 6,
+					"Menores": 3, 
+					"Infantes": 3,
 					
 				}
                 
@@ -878,9 +878,9 @@
 					"Nombre": "Deluxe",
 					"TarifaHab": 75200, 
 					"Capacidad": 6,
-					"Adultos": 4,
-					"Menores": 2, 
-					"Infantes": 2,
+					"Adultos": 6,
+					"Menores": 3, 
+					"Infantes": 3,
 					
 				}
                 
@@ -917,9 +917,9 @@
 					"Nombre": "Deluxe",
 					"TarifaHab": 75200, 
 					"Capacidad": 6,
-					"Adultos": 4,
-					"Menores": 2, 
-					"Infantes": 2,
+					"Adultos": 6,
+					"Menores": 3, 
+					"Infantes": 3,
 					
 				}
                 
@@ -957,9 +957,9 @@
 					"Nombre": "Deluxe",
 					"TarifaHab": 75200, 
 					"Capacidad": 6,
-					"Adultos": 4,
-					"Menores": 2, 
-					"Infantes": 2,
+					"Adultos": 6,
+					"Menores": 3, 
+					"Infantes": 3,
 					
 				}
                 
@@ -997,9 +997,9 @@
 					"Nombre": "Deluxe",
 					"TarifaHab": 75200, 
 					"Capacidad": 6,
-					"Adultos": 4,
-					"Menores": 2, 
-					"Infantes": 2,
+					"Adultos": 6,
+					"Menores": 3, 
+					"Infantes": 3,
 					
 				}
                 
@@ -1036,9 +1036,9 @@
 					"Nombre": "Deluxe",
 					"TarifaHab": 75200, 
 					"Capacidad": 6,
-					"Adultos": 4,
-					"Menores": 2, 
-					"Infantes": 2,
+					"Adultos": 6,
+					"Menores": 3, 
+					"Infantes": 3,
 					
 				}
                 
@@ -1075,9 +1075,9 @@
 					"Nombre": "Deluxe",
 					"TarifaHab": 75200, 
 					"Capacidad": 6,
-					"Adultos": 4,
-					"Menores": 2, 
-					"Infantes": 2,
+					"Adultos": 6,
+					"Menores": 3, 
+					"Infantes": 3,
 					
 				}
                 
@@ -1655,12 +1655,12 @@
 	{
 				"Codigo": "HT003",
                 "Nombre": "ibis budget Meudon",
-                "CodigoDeCiudad": "PAR",
+                "CodigoDeCiudad": "ROM",
                 "Calificacion": 3,
                 "Direccion": 
 				
 				{
-					"Calle": "Bis Rue de Paris",
+					"Calle": "Pza Vittorio Emanuele",
 					"Numero": 3,
 					"CP": 92190,
 					"Latitud": 48.81806260303906,
@@ -1672,17 +1672,17 @@
 				{
 					"Nombre": "Standard",
 					"TarifaHab": 16927, 
-					"Capacidad": 3,
+					"Capacidad": 2,
 					"Adultos": 2,
 					"Menores": 1, 
-					"Infantes": 0,
+					"Infantes": 1,
 					
 				}
                 
 				"HabitacionFechaDis":
 				
 				{
-					"FechaHab": "18-06-2023",
+					"FechaHab": "29-06-2023",
 					"CantHab": 3
 					
 				}
@@ -1692,6 +1692,800 @@
 	},
 	
 	 
+{
+				"Codigo": "HT003",
+                "Nombre": "ibis budget Meudon",
+                "CodigoDeCiudad": "ROM",
+                "Calificacion": 3,
+                "Direccion": 
+				
+				{
+					"Calle": "Pza Vittorio Emanuele",
+					"Numero": 3,
+					"CP": 92190,
+					"Latitud": 48.81806260303906,
+					"Longitud": 2.2493296544913317,
+					
+				}	
+                "Disponibilidad": 
+				
+				{
+					"Nombre": "Standard",
+					"TarifaHab": 16927, 
+					"Capacidad": 2,
+					"Adultos": 2,
+					"Menores": 1, 
+					"Infantes": 1,
+					
+				}
+                
+				"HabitacionFechaDis":
+				
+				{
+					"FechaHab": "30-06-2023",
+					"CantHab": 4
+					
+				}
+            
+				
+				
+	},
+
+
+{
+				"Codigo": "HT003",
+                "Nombre": "ibis budget Meudon",
+                "CodigoDeCiudad": "ROM",
+                "Calificacion": 3,
+                "Direccion": 
+				
+				{
+					"Calle": "Pza Vittorio Emanuele",
+					"Numero": 3,
+					"CP": 92190,
+					"Latitud": 48.81806260303906,
+					"Longitud": 2.2493296544913317,
+					
+				}	
+                "Disponibilidad": 
+				
+				{
+					"Nombre": "Standard",
+					"TarifaHab": 16927, 
+					"Capacidad": 2,
+					"Adultos": 2,
+					"Menores": 1, 
+					"Infantes": 1,
+					
+				}
+                
+				"HabitacionFechaDis":
+				
+				{
+					"FechaHab": "01-07-2023",
+					"CantHab": 6
+					
+				}
+            
+				
+				
+	},
+
+{
+				"Codigo": "HT003",
+                "Nombre": "ibis budget Meudon",
+                "CodigoDeCiudad": "ROM",
+                "Calificacion": 3,
+                "Direccion": 
+				
+				{
+					"Calle": "Pza Vittorio Emanuele",
+					"Numero": 3,
+					"CP": 92190,
+					"Latitud": 48.81806260303906,
+					"Longitud": 2.2493296544913317,
+					
+				}	
+                "Disponibilidad": 
+				
+				{
+					"Nombre": "Standard",
+					"TarifaHab": 16927, 
+					"Capacidad": 2,
+					"Adultos": 2,
+					"Menores": 1, 
+					"Infantes": 1,
+					
+				}
+                
+				"HabitacionFechaDis":
+				
+				{
+					"FechaHab": "02-07-2023",
+					"CantHab": 5
+					
+				}
+            
+				
+				
+	},
+
+
+{
+				"Codigo": "HT003",
+                "Nombre": "ibis budget Meudon",
+                "CodigoDeCiudad": "ROM",
+                "Calificacion": 3,
+                "Direccion": 
+				
+				{
+					"Calle": "Pza Vittorio Emanuele",
+					"Numero": 3,
+					"CP": 92190,
+					"Latitud": 48.81806260303906,
+					"Longitud": 2.2493296544913317,
+					
+				}	
+                "Disponibilidad": 
+				
+				{
+					"Nombre": "Standard",
+					"TarifaHab": 16927, 
+					"Capacidad": 2,
+					"Adultos": 2,
+					"Menores": 1, 
+					"Infantes": 1,
+					
+				}
+                
+				"HabitacionFechaDis":
+				
+				{
+					"FechaHab": "03-07-2023",
+					"CantHab": 4
+					
+				}
+            
+				
+				
+	},
+
+{
+				"Codigo": "HT003",
+                "Nombre": "ibis budget Meudon",
+                "CodigoDeCiudad": "ROM",
+                "Calificacion": 3,
+                "Direccion": 
+				
+				{
+					"Calle": "Pza Vittorio Emanuele",
+					"Numero": 3,
+					"CP": 92190,
+					"Latitud": 48.81806260303906,
+					"Longitud": 2.2493296544913317,
+					
+				}	
+                "Disponibilidad": 
+				
+				{
+					"Nombre": "Standard",
+					"TarifaHab": 16927, 
+					"Capacidad": 2,
+					"Adultos": 2,
+					"Menores": 1, 
+					"Infantes": 1,
+					
+				}
+                
+				"HabitacionFechaDis":
+				
+				{
+					"FechaHab": "04-07-2023",
+					"CantHab": 5
+					
+				}
+            
+				
+				
+	},
+
+{
+				"Codigo": "HT003",
+                "Nombre": "ibis budget Meudon",
+                "CodigoDeCiudad": "ROM",
+                "Calificacion": 3,
+                "Direccion": 
+				
+				{
+					"Calle": "Pza Vittorio Emanuele",
+					"Numero": 3,
+					"CP": 92190,
+					"Latitud": 48.81806260303906,
+					"Longitud": 2.2493296544913317,
+					
+				}	
+                "Disponibilidad": 
+				
+				{
+					"Nombre": "Standard",
+					"TarifaHab": 16927, 
+					"Capacidad": 2,
+					"Adultos": 2,
+					"Menores": 1, 
+					"Infantes": 1,
+					
+				}
+                
+				"HabitacionFechaDis":
+				
+				{
+					"FechaHab": "05-07-2023",
+					"CantHab": 3
+					
+				}
+            
+				
+				
+	},
+
+{
+				"Codigo": "HT003",
+                "Nombre": "ibis budget Meudon",
+                "CodigoDeCiudad": "ROM",
+                "Calificacion": 3,
+                "Direccion": 
+				
+				{
+					"Calle": "Pza Vittorio Emanuele",
+					"Numero": 3,
+					"CP": 92190,
+					"Latitud": 48.81806260303906,
+					"Longitud": 2.2493296544913317,
+					
+				}	
+                "Disponibilidad": 
+				
+				{
+					"Nombre": "Intermedia",
+					"TarifaHab": 25500, 
+					"Capacidad": 4,
+					"Adultos": 4,
+					"Menores": 2, 
+					"Infantes": 2,
+					
+				}
+                
+				"HabitacionFechaDis":
+				
+				{
+					"FechaHab": "29-06-2023",
+					"CantHab": 3
+					
+				}
+            
+				
+				
+	},
+
+
+{
+				"Codigo": "HT003",
+                "Nombre": "ibis budget Meudon",
+                "CodigoDeCiudad": "ROM",
+                "Calificacion": 3,
+                "Direccion": 
+				
+				{
+					"Calle": "Pza Vittorio Emanuele",
+					"Numero": 3,
+					"CP": 92190,
+					"Latitud": 48.81806260303906,
+					"Longitud": 2.2493296544913317,
+					
+				}	
+                "Disponibilidad": 
+				
+				{
+					"Nombre": "Intermedia",
+					"TarifaHab": 25500, 
+					"Capacidad": 4,
+					"Adultos": 4,
+					"Menores": 2, 
+					"Infantes": 2,
+					
+				}
+                
+				"HabitacionFechaDis":
+				
+				{
+					"FechaHab": "30-06-2023",
+					"CantHab": 4
+					
+				}
+            
+				
+				
+	},
+
+
+
+{
+				"Codigo": "HT003",
+                "Nombre": "ibis budget Meudon",
+                "CodigoDeCiudad": "ROM",
+                "Calificacion": 3,
+                "Direccion": 
+				
+				{
+					"Calle": "Pza Vittorio Emanuele",
+					"Numero": 3,
+					"CP": 92190,
+					"Latitud": 48.81806260303906,
+					"Longitud": 2.2493296544913317,
+					
+				}	
+                "Disponibilidad": 
+				
+				{
+					"Nombre": "Intermedia",
+					"TarifaHab": 25500, 
+					"Capacidad": 4,
+					"Adultos": 4,
+					"Menores": 2, 
+					"Infantes": 2,
+					
+				}
+                
+				"HabitacionFechaDis":
+				
+				{
+					"FechaHab": "01-07-2023",
+					"CantHab": 5
+					
+				}
+            
+				
+				
+	},
+
+{
+				"Codigo": "HT003",
+                "Nombre": "ibis budget Meudon",
+                "CodigoDeCiudad": "ROM",
+                "Calificacion": 3,
+                "Direccion": 
+				
+				{
+					"Calle": "Pza Vittorio Emanuele",
+					"Numero": 3,
+					"CP": 92190,
+					"Latitud": 48.81806260303906,
+					"Longitud": 2.2493296544913317,
+					
+				}	
+                "Disponibilidad": 
+				
+				{
+					"Nombre": "Intermedia",
+					"TarifaHab": 25500, 
+					"Capacidad": 4,
+					"Adultos": 4,
+					"Menores": 2, 
+					"Infantes": 2,
+					
+				}
+                
+				"HabitacionFechaDis":
+				
+				{
+					"FechaHab": "02-07-2023",
+					"CantHab": 4
+					
+				}
+            
+				
+				
+	},
+
+{
+				"Codigo": "HT003",
+                "Nombre": "ibis budget Meudon",
+                "CodigoDeCiudad": "ROM",
+                "Calificacion": 3,
+                "Direccion": 
+				
+				{
+					"Calle": "Pza Vittorio Emanuele",
+					"Numero": 3,
+					"CP": 92190,
+					"Latitud": 48.81806260303906,
+					"Longitud": 2.2493296544913317,
+					
+				}	
+                "Disponibilidad": 
+				
+				{
+					"Nombre": "Intermedia",
+					"TarifaHab": 25500, 
+					"Capacidad": 4,
+					"Adultos": 4,
+					"Menores": 2, 
+					"Infantes": 2,
+					
+				}
+                
+				"HabitacionFechaDis":
+				
+				{
+					"FechaHab": "03-07-2023",
+					"CantHab": 6
+					
+				}
+            
+				
+				
+	},
+
+{
+				"Codigo": "HT003",
+                "Nombre": "ibis budget Meudon",
+                "CodigoDeCiudad": "ROM",
+                "Calificacion": 3,
+                "Direccion": 
+				
+				{
+					"Calle": "Pza Vittorio Emanuele",
+					"Numero": 3,
+					"CP": 92190,
+					"Latitud": 48.81806260303906,
+					"Longitud": 2.2493296544913317,
+					
+				}	
+                "Disponibilidad": 
+				
+				{
+					"Nombre": "Intermedia",
+					"TarifaHab": 25500, 
+					"Capacidad": 4,
+					"Adultos": 4,
+					"Menores": 2, 
+					"Infantes": 2,
+					
+				}
+                
+				"HabitacionFechaDis":
+				
+				{
+					"FechaHab": "04-07-2023",
+					"CantHab": 4
+					
+				}
+            
+				
+				
+	},
+
+{
+				"Codigo": "HT003",
+                "Nombre": "ibis budget Meudon",
+                "CodigoDeCiudad": "ROM",
+                "Calificacion": 3,
+                "Direccion": 
+				
+				{
+					"Calle": "Pza Vittorio Emanuele",
+					"Numero": 3,
+					"CP": 92190,
+					"Latitud": 48.81806260303906,
+					"Longitud": 2.2493296544913317,
+					
+				}	
+                "Disponibilidad": 
+				
+				{
+					"Nombre": "Intermedia",
+					"TarifaHab": 25500, 
+					"Capacidad": 4,
+					"Adultos": 4,
+					"Menores": 2, 
+					"Infantes": 2,
+					
+				}
+                
+				"HabitacionFechaDis":
+				
+				{
+					"FechaHab": "05-07-2023",
+					"CantHab": 3
+					
+				}
+            
+				
+				
+	},
+
+
+{
+				"Codigo": "HT003",
+                "Nombre": "ibis budget Meudon",
+                "CodigoDeCiudad": "ROM",
+                "Calificacion": 3,
+                "Direccion": 
+				
+				{
+					"Calle": "Pza Vittorio Emanuele",
+					"Numero": 3,
+					"CP": 92190,
+					"Latitud": 48.81806260303906,
+					"Longitud": 2.2493296544913317,
+					
+				}	
+                "Disponibilidad": 
+				
+				{
+					"Nombre": "Deluxe",
+					"TarifaHab": 48000, 
+					"Capacidad": 6,
+					"Adultos": 6,
+					"Menores": 3, 
+					"Infantes": 3,
+					
+				}
+                
+				"HabitacionFechaDis":
+				
+				{
+					"FechaHab": "29-06-2023",
+					"CantHab": 3
+					
+				}
+            
+				
+				
+	},
+
+
+{
+				"Codigo": "HT003",
+                "Nombre": "ibis budget Meudon",
+                "CodigoDeCiudad": "ROM",
+                "Calificacion": 3,
+                "Direccion": 
+				
+				{
+					"Calle": "Pza Vittorio Emanuele",
+					"Numero": 3,
+					"CP": 92190,
+					"Latitud": 48.81806260303906,
+					"Longitud": 2.2493296544913317,
+					
+				}	
+                "Disponibilidad": 
+				
+				{
+					"Nombre": "Deluxe",
+					"TarifaHab": 48000, 
+					"Capacidad": 6,
+					"Adultos": 6,
+					"Menores": 3, 
+					"Infantes": 3,
+					
+				}
+                
+				"HabitacionFechaDis":
+				
+				{
+					"FechaHab": "30-06-2023",
+					"CantHab": 2
+					
+				}
+            
+				
+				
+	},
+
+
+{
+				"Codigo": "HT003",
+                "Nombre": "ibis budget Meudon",
+                "CodigoDeCiudad": "ROM",
+                "Calificacion": 3,
+                "Direccion": 
+				
+				{
+					"Calle": "Pza Vittorio Emanuele",
+					"Numero": 3,
+					"CP": 92190,
+					"Latitud": 48.81806260303906,
+					"Longitud": 2.2493296544913317,
+					
+				}	
+                "Disponibilidad": 
+				
+				{
+					"Nombre": "Deluxe",
+					"TarifaHab": 48000, 
+					"Capacidad": 6,
+					"Adultos": 6,
+					"Menores": 3, 
+					"Infantes": 3,
+					
+				}
+                
+				"HabitacionFechaDis":
+				
+				{
+					"FechaHab": "01-07-2023",
+					"CantHab": 4
+					
+				}
+            
+				
+				
+	},
+
+{
+				"Codigo": "HT003",
+                "Nombre": "ibis budget Meudon",
+                "CodigoDeCiudad": "ROM",
+                "Calificacion": 3,
+                "Direccion": 
+				
+				{
+					"Calle": "Pza Vittorio Emanuele",
+					"Numero": 3,
+					"CP": 92190,
+					"Latitud": 48.81806260303906,
+					"Longitud": 2.2493296544913317,
+					
+				}	
+                "Disponibilidad": 
+				
+				{
+					"Nombre": "Deluxe",
+					"TarifaHab": 48000, 
+					"Capacidad": 6,
+					"Adultos": 6,
+					"Menores": 3, 
+					"Infantes": 3,
+					
+				}
+                
+				"HabitacionFechaDis":
+				
+				{
+					"FechaHab": "02-07-2023",
+					"CantHab": 5
+					
+				}
+            
+				
+				
+	},
+
+{
+				"Codigo": "HT003",
+                "Nombre": "ibis budget Meudon",
+                "CodigoDeCiudad": "ROM",
+                "Calificacion": 3,
+                "Direccion": 
+				
+				{
+					"Calle": "Pza Vittorio Emanuele",
+					"Numero": 3,
+					"CP": 92190,
+					"Latitud": 48.81806260303906,
+					"Longitud": 2.2493296544913317,
+					
+				}	
+                "Disponibilidad": 
+				
+				{
+					"Nombre": "Deluxe",
+					"TarifaHab": 48000, 
+					"Capacidad": 6,
+					"Adultos": 6,
+					"Menores": 3, 
+					"Infantes": 3,
+					
+				}
+                
+				"HabitacionFechaDis":
+				
+				{
+					"FechaHab": "03-07-2023",
+					"CantHab": 4
+					
+				}
+            
+				
+				
+	},
+
+{
+				"Codigo": "HT003",
+                "Nombre": "ibis budget Meudon",
+                "CodigoDeCiudad": "ROM",
+                "Calificacion": 3,
+                "Direccion": 
+				
+				{
+					"Calle": "Pza Vittorio Emanuele",
+					"Numero": 3,
+					"CP": 92190,
+					"Latitud": 48.81806260303906,
+					"Longitud": 2.2493296544913317,
+					
+				}	
+                "Disponibilidad": 
+				
+				{
+					"Nombre": "Deluxe",
+					"TarifaHab": 48000, 
+					"Capacidad": 6,
+					"Adultos": 6,
+					"Menores": 3, 
+					"Infantes": 3,
+					
+				}
+                
+				"HabitacionFechaDis":
+				
+				{
+					"FechaHab": "04-07-2023",
+					"CantHab": 5
+					
+				}
+            
+				
+				
+	},
+
+{
+				"Codigo": "HT003",
+                "Nombre": "ibis budget Meudon",
+                "CodigoDeCiudad": "ROM",
+                "Calificacion": 3,
+                "Direccion": 
+				
+				{
+					"Calle": "Pza Vittorio Emanuele",
+					"Numero": 3,
+					"CP": 92190,
+					"Latitud": 48.81806260303906,
+					"Longitud": 2.2493296544913317,
+					
+				}	
+                "Disponibilidad": 
+				
+				{
+					"Nombre": "Deluxe",
+					"TarifaHab": 48000, 
+					"Capacidad": 6,
+					"Adultos": 6,
+					"Menores": 3, 
+					"Infantes": 3,
+					
+				}
+                
+				"HabitacionFechaDis":
+				
+				{
+					"FechaHab": "05-07-2023",
+					"CantHab": 3
+					
+				}
+            
+				
+				
+	},
+
+
+
+
+
+
+
 	
 	{
 				"Codigo": "HT004",
@@ -1736,7 +2530,7 @@
 		{
 				"Codigo": "HT005",
                 "Nombre": "Fendi Private Suites",
-                "CodigoDeCiudad": "PAR",
+                "CodigoDeCiudad": "ROM",
                 "Calificacion": 3,
                 "Direccion": 
 				
