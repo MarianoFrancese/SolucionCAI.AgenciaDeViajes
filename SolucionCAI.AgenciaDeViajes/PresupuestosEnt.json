@@ -1,0 +1,58 @@
+[
+  {
+    "NroSeguimiento": "0001",
+    "Productos": "AA000-BUE-MIA-Economy",
+    "FechaCreacion": "29-06-2023",
+    "Total": 842160.00
+
+  },
+
+  {
+    "NroSeguimiento": "0002",
+    "Productos": "HT001-Sheraton-MIA-Deluxe",
+    "FechaCreacion": "29-06-2023",
+    "Total": 78650.00
+  },
+  {
+    "NroSeguimiento": "0003",
+    "Productos": "HT003-ibis budget Meudon-ROM-Standard",
+    "FechaCreacion": "30-06-2023",
+    "Total": 40963.34
+
+  },
+  {
+    "NroSeguimiento": "0004",
+    "Productos": "HT002-Four Seasons-MAD-Delux",
+    "FechaCreacion": "05-07-2023",
+    "Total": 90992.00
+  },
+
+  {
+    "NroSeguimiento": "0005",
+    "Productos": "HT001-Sheraton-MIA-Intermedia",
+    "FechaCreacion": "05-07-2023",
+    "Total": 60500.00
+  },
+
+  {
+    "NroSeguimiento": "0006",
+    "Productos": "AA011-CDG-BUE-First",
+    "FechaCreacion": "10-07-2023",
+    "Total": 750200.00
+  },
+
+  {
+    "NroSeguimiento": "0007",
+    "Productos": "AA009-ROM-BUE-Economy",
+    "FechaCreacion": "16-07-2023",
+    "Total": 822800.00
+  },
+
+  {
+    "NroSeguimiento": "0008",
+    "Productos": "AA014-SCL-BUE-Economy",
+    "FechaCreacion": "28-08-2023",
+    "Total": 1113200.00
+  }
+
+]
