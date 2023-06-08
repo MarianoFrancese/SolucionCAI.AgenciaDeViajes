@@ -1,0 +1,135 @@
+
+
+{
+					"NroSeguimiento": 0001,
+					"Productos": "AA000-BUE-MIA-Economy",
+					"Tipo Cliente": "Persona Física",
+					"Nombre": "Antonella Orlando",
+					"Razón Social": "Antonella Orlando", 
+					"DNI": 34956210,
+					"CUIT": 27349562109,
+					"Pasajeros": "Antonella Orlando; Javier Contreras",
+					"Fecha Prereserva": "30-06-2023",
+					"Total": 842160.00
+					
+					
+}	,
+
+{
+					"NroSeguimiento": 0002,
+					"Productos": "HT001-Sheraton-MIA-Deluxe",
+					"Tipo Cliente": "Persona Física",
+					"Nombre": "Andres Pistanich",
+					"Razón Social": "Andres Pistanich", 
+					"DNI": 28987456,
+					"CUIT": 21289874567,
+					"Pasajeros": "Andres Pistanich; Alejandro Mendez",
+					"Fecha Prereserva": "30-06-2023",
+					"Total": 78650.00
+					
+					
+}	,
+
+{
+					"NroSeguimiento": 0003,
+					"Productos": "HT003-ibis budget Meudon-ROM-Standard",
+					"Tipo Cliente": "Persona Juridica",
+					"Nombre": "Mariano Francese",
+					"Razón Social": "COA Teconología", 
+					"DNI": 405678456,
+					"CUIT": 334056784561,
+					"Pasajeros": "Mariano Francese",
+					"Fecha Prereserva": "01-07-2023",
+					"Total": 40963.34
+					
+					
+}	,
+
+{
+					"NroSeguimiento": 0004,
+					"Productos": "HT002-Four Seasons-MAD-Deluxe",
+					"Tipo Cliente": "Persona Física",
+					"Nombre": "Gabriel Duarte",
+					"Razón Social": "Gabriel Duarte", 
+					"DNI": 25657857,
+					"CUIT": 21256578577,
+					"Pasajeros": "Gabriel Duarte",
+					"Fecha Prereserva": "06-07-2023",
+					"Total": 90992.00
+					
+					
+}	,
+{
+					"NroSeguimiento": 0005,
+					"Productos": "HT001-Sheraton-MIA-Intermedia",
+					"Tipo Cliente": "Persona Física",
+					"Nombre": "Ivan Duarte",
+					"Razón Social": "Ivan Duarte", 
+					"DNI": 29650957,
+					"CUIT": 21296509577,
+					"Pasajeros": "Ivan Duarte, Gabriela Michalla",
+					"Fecha Prereserva": "12-07-2023",
+					"Total": 90992.00
+					
+					
+}	,
+
+{
+					"NroSeguimiento": 0006,
+					"Productos": "AA011-CDG-BUE-First",
+					"Tipo Cliente": "Persona Juridica",
+					"Nombre": "Cesar Briano",
+					"Razón Social": "UBA Graduados", 
+					"DNI": 12468765,
+					"CUIT": 30124687651,
+					"Pasajeros": "Cesar Briano",
+					"Fecha Prereserva": "12-07-2023",
+					"Total": 90992.00
+					
+					
+}	,
+
+{
+					"NroSeguimiento": 0007,
+					"Productos": "AA009-ROM-BUE-Economy",
+					"Tipo Cliente": "Persona Física",
+					"Nombre": "Germán Grin",
+					"Razón Social": "Germán Grin", 
+					"DNI": 32968749,
+					"CUIT": 21329687497,
+					"Pasajeros": "Germán Grin",
+					"Fecha Prereserva": "17-07-2023",
+					"Total": 822800.00
+					
+					
+}	,
+
+{
+					"NroSeguimiento": 0008,
+					"Productos": "AA014-SCL-BUE-Economy",
+					"Tipo Cliente": "Persona Física",
+					"Nombre": "Florencia Soledad Sueiro",
+					"Razón Social": "Florencia Soledad Sueiro", 
+					"DNI": 34568749,
+					"CUIT": 27345687499,
+					"Pasajeros": "Germán Grin, Florencia Soledad Sueiro",
+					"Fecha Prereserva": "28-07-2023",
+					"Total": 1113200.00
+					
+					
+}	,
+
+{
+					"NroSeguimiento": 0008,
+					"Productos": "AA014-SCL-BUE-Economy",
+					"Tipo Cliente": "Persona Física",
+					"Nombre": "Florencia Soledad Sueiro",
+					"Razón Social": "Florencia Soledad Sueiro", 
+					"DNI": 34568749,
+					"CUIT": 27345687499,
+					"Pasajeros": "Germán Grin, Florencia Soledad Sueiro",
+					"Fecha Prereserva": "28-07-2023",
+					"Total": 1113200.00
+					
+					
+}	,
