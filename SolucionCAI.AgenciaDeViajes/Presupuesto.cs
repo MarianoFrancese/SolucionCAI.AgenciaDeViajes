@@ -45,16 +45,6 @@ namespace SolucionCAI.AgenciaDeViajes
             MessageBox.Show("Este botón eliminaría un item de la fila, si la fila fuese de un solo producto, desaparecería");
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Este botón busca por CUIT, si lo encontrase, los demás textboxes se llenarían con los datos");
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Este botón generaría el presupuesto con los datos de clientes encontrados o agregados y con los items seleccionados");
-        }
-
         private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             MessageBox.Show("Este botón agrega un item de hospedaje en el presupuesto (por rango de días)");
@@ -77,7 +67,7 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show("Este botón filtra por características de los vuelos (a revisar)");
+            //MessageBox.Show("Este botón filtra por características de los vuelos");
 
             origen = comboBox1.Text;
             destino = comboBox4.Text;
@@ -148,7 +138,7 @@ namespace SolucionCAI.AgenciaDeViajes
         }
 
         private readonly string usuario;
-        private void button4_Click_1(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e) //boton para volver al menu princ
         {
 
             Form menuform = new MenuPrincipal(usuario);
@@ -156,13 +146,7 @@ namespace SolucionCAI.AgenciaDeViajes
             this.Hide();
         }
 
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-            Form loginform = new Login();
-            loginform.Show();
-            this.Hide();
-        }
-
+        
         private void button12_Click(object sender, EventArgs e)
         {
             groupBox3.Visible = false;
@@ -233,5 +217,6 @@ namespace SolucionCAI.AgenciaDeViajes
         {
 
         }
+
     }
 }

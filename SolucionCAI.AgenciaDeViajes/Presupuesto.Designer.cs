@@ -852,6 +852,7 @@
             this.button1.TabIndex = 11;
             this.button1.Text = "Generar Presupuesto";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label13
             // 
@@ -885,6 +886,7 @@
             this.button4.TabIndex = 31;
             this.button4.Text = "Volver";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // groupBox3
             // 
@@ -908,6 +910,7 @@
             this.button11.TabIndex = 2;
             this.button11.Text = "Confirmar";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button12
             // 
@@ -918,6 +921,7 @@
             this.button12.TabIndex = 1;
             this.button12.Text = "Cancelar";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // label14
             // 
