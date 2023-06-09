@@ -49,22 +49,16 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.buscarPrere = new System.Windows.Forms.Button();
             this.CompletarDatosPre = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreFisico = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CUIT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pasajeros = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
             this.buscarRes = new System.Windows.Forms.Button();
@@ -74,6 +68,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.button8 = new System.Windows.Forms.Button();
             this.NSegReserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductoReserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PasajerosReserv = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,24 +76,28 @@
             this.NombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RazSocialRes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MedioPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DtoMP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button8 = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
+            this.nrosegPre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductosPre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TCPre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreFisico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CUIT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pasajeros = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalPre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -338,6 +337,51 @@
             this.tabPage2.Text = "Prereservas";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.button11);
+            this.groupBox3.Controls.Add(this.button12);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Location = new System.Drawing.Point(277, 225);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(338, 91);
+            this.groupBox3.TabIndex = 33;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Confirmación";
+            this.groupBox3.Visible = false;
+            // 
+            // button11
+            // 
+            this.button11.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button11.Location = new System.Drawing.Point(263, 62);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(70, 23);
+            this.button11.TabIndex = 2;
+            this.button11.Text = "Confirmar";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button12
+            // 
+            this.button12.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button12.Location = new System.Drawing.Point(191, 62);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(66, 23);
+            this.button12.TabIndex = 1;
+            this.button12.Text = "Cancelar";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(13, 29);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(213, 21);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "¿Desea generar una Reserva?";
+            // 
             // buscarPrere
             // 
             this.buscarPrere.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -350,6 +394,7 @@
             this.buscarPrere.TabIndex = 14;
             this.buscarPrere.Text = "Buscar";
             this.buscarPrere.UseVisualStyleBackColor = false;
+            this.buscarPrere.Click += new System.EventHandler(this.buscarPrere_Click);
             // 
             // CompletarDatosPre
             // 
@@ -403,71 +448,22 @@
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column8,
-            this.Column12,
-            this.Column9,
+            this.nrosegPre,
+            this.ProductosPre,
+            this.TCPre,
             this.NombreFisico,
             this.RazonSocial,
             this.DNI,
             this.CUIT,
             this.Pasajeros,
             this.Column13,
-            this.Column23});
+            this.TotalPre});
             this.dataGridView2.Location = new System.Drawing.Point(4, 46);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(889, 327);
             this.dataGridView2.TabIndex = 0;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "NroSeguimiento";
-            this.Column8.Name = "Column8";
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Productos";
-            this.Column12.Name = "Column12";
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Tipo Cliente";
-            this.Column9.Name = "Column9";
-            // 
-            // NombreFisico
-            // 
-            this.NombreFisico.HeaderText = "Nombre";
-            this.NombreFisico.Name = "NombreFisico";
-            // 
-            // RazonSocial
-            // 
-            this.RazonSocial.HeaderText = "Razon Social";
-            this.RazonSocial.Name = "RazonSocial";
-            // 
-            // DNI
-            // 
-            this.DNI.HeaderText = "DNI";
-            this.DNI.Name = "DNI";
-            // 
-            // CUIT
-            // 
-            this.CUIT.HeaderText = "CUIT";
-            this.CUIT.Name = "CUIT";
-            // 
-            // Pasajeros
-            // 
-            this.Pasajeros.HeaderText = "Pasajeros";
-            this.Pasajeros.Name = "Pasajeros";
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "Fecha Prereserva";
-            this.Column13.Name = "Column13";
-            // 
-            // Column23
-            // 
-            this.Column23.HeaderText = "Total";
-            this.Column23.Name = "Column23";
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // tabPage3
             // 
@@ -578,7 +574,6 @@
             this.NombreCliente,
             this.RazSocialRes,
             this.MedioPago,
-            this.DtoMP,
             this.Total,
             this.EstadoPago});
             this.dataGridView3.Location = new System.Drawing.Point(4, 46);
@@ -586,6 +581,19 @@
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(889, 327);
             this.dataGridView3.TabIndex = 0;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Location = new System.Drawing.Point(18, 484);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 32;
+            this.button8.Text = "Volver";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click_1);
             // 
             // NSegReserva
             // 
@@ -622,11 +630,6 @@
             this.MedioPago.HeaderText = "Medio De Pago";
             this.MedioPago.Name = "MedioPago";
             // 
-            // DtoMP
-            // 
-            this.DtoMP.HeaderText = "Descuento Aplicado";
-            this.DtoMP.Name = "DtoMP";
-            // 
             // Total
             // 
             this.Total.HeaderText = "Total";
@@ -637,63 +640,55 @@
             this.EstadoPago.HeaderText = "EstadoPago";
             this.EstadoPago.Name = "EstadoPago";
             // 
-            // button8
+            // nrosegPre
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(18, 484);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 32;
-            this.button8.Text = "Volver";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click_1);
+            this.nrosegPre.HeaderText = "NroSeguimiento";
+            this.nrosegPre.Name = "nrosegPre";
             // 
-            // groupBox3
+            // ProductosPre
             // 
-            this.groupBox3.Controls.Add(this.button11);
-            this.groupBox3.Controls.Add(this.button12);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Location = new System.Drawing.Point(277, 225);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(338, 91);
-            this.groupBox3.TabIndex = 33;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Confirmación";
-            this.groupBox3.Visible = false;
+            this.ProductosPre.HeaderText = "Productos";
+            this.ProductosPre.Name = "ProductosPre";
             // 
-            // button11
+            // TCPre
             // 
-            this.button11.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button11.Location = new System.Drawing.Point(263, 62);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(70, 23);
-            this.button11.TabIndex = 2;
-            this.button11.Text = "Confirmar";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.TCPre.HeaderText = "Tipo Cliente";
+            this.TCPre.Name = "TCPre";
             // 
-            // button12
+            // NombreFisico
             // 
-            this.button12.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button12.Location = new System.Drawing.Point(191, 62);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(66, 23);
-            this.button12.TabIndex = 1;
-            this.button12.Text = "Cancelar";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.NombreFisico.HeaderText = "Nombre";
+            this.NombreFisico.Name = "NombreFisico";
             // 
-            // label5
+            // RazonSocial
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(13, 29);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(213, 21);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "¿Desea generar una Reserva?";
+            this.RazonSocial.HeaderText = "Razon Social";
+            this.RazonSocial.Name = "RazonSocial";
+            // 
+            // DNI
+            // 
+            this.DNI.HeaderText = "DNI";
+            this.DNI.Name = "DNI";
+            // 
+            // CUIT
+            // 
+            this.CUIT.HeaderText = "CUIT";
+            this.CUIT.Name = "CUIT";
+            // 
+            // Pasajeros
+            // 
+            this.Pasajeros.HeaderText = "Pasajeros";
+            this.Pasajeros.Name = "Pasajeros";
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "Fecha Prereserva";
+            this.Column13.Name = "Column13";
+            // 
+            // TotalPre
+            // 
+            this.TotalPre.HeaderText = "Total";
+            this.TotalPre.Name = "TotalPre";
             // 
             // Reserva
             // 
@@ -716,12 +711,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -749,26 +744,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Button CompletarDatosPre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreFisico;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RazonSocial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DNI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CUIT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pasajeros;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NSegReserva;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductoReserva;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PasajerosReserv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RazSocialRes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MedioPago;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DtoMP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EstadoPago;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn ProductosPres;
         private DataGridViewTextBoxColumn Column3;
@@ -789,6 +764,25 @@
         private Button button11;
         private Button button12;
         private Label label5;
+        private DataGridViewTextBoxColumn nrosegPre;
+        private DataGridViewTextBoxColumn ProductosPre;
+        private DataGridViewTextBoxColumn TCPre;
+        private DataGridViewTextBoxColumn NombreFisico;
+        private DataGridViewTextBoxColumn RazonSocial;
+        private DataGridViewTextBoxColumn DNI;
+        private DataGridViewTextBoxColumn CUIT;
+        private DataGridViewTextBoxColumn Pasajeros;
+        private DataGridViewTextBoxColumn Column13;
+        private DataGridViewTextBoxColumn TotalPre;
+        private DataGridViewTextBoxColumn NSegReserva;
+        private DataGridViewTextBoxColumn ProductoReserva;
+        private DataGridViewTextBoxColumn PasajerosReserv;
+        private DataGridViewTextBoxColumn TipoCliente;
+        private DataGridViewTextBoxColumn NombreCliente;
+        private DataGridViewTextBoxColumn RazSocialRes;
+        private DataGridViewTextBoxColumn MedioPago;
+        private DataGridViewTextBoxColumn Total;
+        private DataGridViewTextBoxColumn EstadoPago;
     }
 }
 

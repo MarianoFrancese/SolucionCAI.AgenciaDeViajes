@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SolucionCAI.AgenciaDeViajes.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +14,11 @@ namespace SolucionCAI.AgenciaDeViajes
 {
     public partial class IngresoPasajeros : Form
     {
-        public IngresoPasajeros()
+        private ItinerarioEnt selectedItinerario;
+        public IngresoPasajeros(ItinerarioEnt itinerario)
         {
             InitializeComponent();
+            selectedItinerario = itinerario;
         }
 
         private void btnTerminar_Click(object sender, EventArgs e)
@@ -42,7 +45,12 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void IngresoPasajeros_Load(object sender, EventArgs e)
         {
-
+            if (selectedItinerario != null)
+            {
+                List<ProductoLineaEnt> producto = selectedItinerario.Productos;
+                ProductoPasajero.DataSource = producto;
+                ProductoPasajero.DisplayMember = "ProductoV";
+            }
         }
 
         private void label5_Click(object sender, EventArgs e)

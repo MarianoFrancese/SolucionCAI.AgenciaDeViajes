@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SolucionCAI.AgenciaDeViajes.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.DataFormats;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace SolucionCAI.AgenciaDeViajes
@@ -16,6 +18,12 @@ namespace SolucionCAI.AgenciaDeViajes
         public Reserva()
         {
             InitializeComponent();
+
+        }
+        
+        private void buscarPrere_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -70,8 +78,12 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void button8_Click(object sender, EventArgs e)
         {
-            Form IngresoPasajeros = new SolucionCAI.AgenciaDeViajes.IngresoPasajeros();
-            IngresoPasajeros.Show();
+            if (selectedItinerario != null)
+            {
+                Form IngresoPasajeros = new IngresoPasajeros(selectedItinerario);
+                IngresoPasajeros.ShowDialog();
+            }
+                        
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -122,6 +134,16 @@ namespace SolucionCAI.AgenciaDeViajes
         {
             groupBox3.Visible = false;
         }
+
+        private ItinerarioEnt selectedItinerario;
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Get the selected Itinerario object from the selected row
+            selectedItinerario = dataGridView2.Rows[e.RowIndex].DataBoundItem as ItinerarioEnt;
+        }
+
+        
+
 
         //private void button3_Click_1(object sender, EventArgs e)
         //{
