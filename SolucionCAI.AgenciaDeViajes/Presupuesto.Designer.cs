@@ -570,6 +570,7 @@
             this.button2.TabIndex = 8;
             this.button2.Text = "Buscar";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += button2_Click;
             // 
             // label3
             // 
@@ -628,6 +629,7 @@
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.Size = new System.Drawing.Size(867, 138);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
             // 
             // Column1
             // 
@@ -745,6 +747,7 @@
             this.dataGridView2.RowHeadersWidth = 82;
             this.dataGridView2.Size = new System.Drawing.Size(878, 129);
             this.dataGridView2.TabIndex = 3;
+            this.dataGridView2.CellContentClick += dataGridView2_CellContentClick;
             // 
             // Column14
             // 

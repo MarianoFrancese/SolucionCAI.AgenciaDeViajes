@@ -42,7 +42,17 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            MessageBox.Show("Este botón eliminaría un item de la fila, si la fila fuese de un solo producto, desaparecería");
+            if (e.ColumnIndex == dataGridView2.Columns["Column13"].Index && e.RowIndex >= 0)
+
+            {
+
+                DataGridViewRow row = this.dataGridView2.Rows[e.RowIndex];
+
+                dataGridView2.Rows.RemoveAt(e.RowIndex);
+
+            }   
+            
+            //MessageBox.Show("Este botón eliminaría un item de la fila, si la fila fuese de un solo producto, desaparecería");
         }
 
         private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -112,17 +122,32 @@ namespace SolucionCAI.AgenciaDeViajes
         {
             dataGridView2.Rows.Clear();
 
+
+
             foreach (var producto in productosagregados)
+
             {
+
+                var productoProperties = producto.ProductoV[0].GetType().GetProperties();
+
+                string propiedadesFormateadas = string.Join(", ", productoProperties.Select(p => p.Name + ": " + p.GetValue(producto.ProductoV[0], null)));
+
                 dataGridView2.Rows.Add(
-                    producto.ProductoV.ToString(),
+
+                    propiedadesFormateadas,
+
                     producto.PrecioUn,
+
                     producto.Cantidad,
-                    producto.Descuento,
+
                     producto.SubTotal,
+
                     producto.IVA,
+
                     producto.TotalProd
+
                     );
+
             }
 
         }
@@ -174,43 +199,45 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            codigo = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-            origen = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
-            destino = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
-            fechaPartida = Convert.ToDateTime(dataGridView1.SelectedRows[0].Cells[3].Value.ToString());
-            fechaArribo = Convert.ToDateTime(dataGridView1.SelectedRows[0].Cells[4].Value.ToString());
-            tiempoVuelo = TimeSpan.Parse(dataGridView1.SelectedRows[0].Cells[5].Value.ToString());
-            aerolinea = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
-            tipoPasajero = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
-            clase = dataGridView1.SelectedRows[0].Cells[8].Value.ToString();
-            tarifa = Convert.ToDecimal(dataGridView1.SelectedRows[0].Cells[9].Value.ToString());
-            cantPasajeros = (int)numericUpDown1.Value;
+            if (e.ColumnIndex == dataGridView1.Columns["Column12"].Index && e.RowIndex >= 0)
 
-            TarifaEnt tarifaVuelo = new TarifaEnt
             {
-                Clase = clase.ToCharArray()[0],
-                TipoPasajero = tipoPasajero.ToCharArray()[0],
-                Precio = tarifa,
-                Disponibilidad = cantPasajeros,
-            };
 
-            List<TarifaEnt> listaTarifas = new List<TarifaEnt>();
-            listaTarifas.Add(tarifaVuelo);
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
 
-            VueloEnt vueloSeleccionado = new VueloEnt
-            {
-                Codigo = codigo,
-                Origen = origen,
-                Destino = destino,
-                FechaSalida = fechaPartida,
-                FechaArribo = fechaArribo,
-                TiempoVuelo = tiempoVuelo,
-                Aerolinea = aerolinea,
-                Tarifas = listaTarifas,
-            };
+                string codigo = row.Cells[0].Value.ToString();
 
-            var productosAgregados = ModuloPresupuesto.LineaProductoVuelos(vueloSeleccionado);
-            RellenarPresupuestoTabla(productosAgregados);
+                string origen = row.Cells[1].Value.ToString();
+
+                string destino = row.Cells[2].Value.ToString();
+
+                DateTime fechaPartida = Convert.ToDateTime(row.Cells[3].Value.ToString());
+
+                DateTime fechaArribo = Convert.ToDateTime(row.Cells[4].Value.ToString());
+
+                TimeSpan tiempoVuelo = TimeSpan.Parse(row.Cells[5].Value.ToString());
+
+                string aerolinea = row.Cells[6].Value.ToString();
+
+                int cantPasajeros = Convert.ToInt32(row.Cells[7].Value.ToString());
+
+                string tipoPasajero = row.Cells[8].Value.ToString();
+
+                string clase = row.Cells[9].Value.ToString();
+
+                decimal tarifa = Convert.ToDecimal(row.Cells[10].Value.ToString());
+
+                int disponibilidadVuelo = Convert.ToInt32(row.Cells[11].Value.ToString());
+
+
+
+                var listaVuelos = ModuloPresupuesto.GenerarListaVuelo(clase, tipoPasajero, tarifa, cantPasajeros, codigo, origen, destino, fechaPartida, fechaArribo, tiempoVuelo, aerolinea);
+
+                var productosAgregados = ModuloPresupuesto.AgregarVueloLinea(listaVuelos);
+
+                RellenarPresupuestoTabla(productosAgregados);
+
+            }
         }
 
         private void dataGridView1_CellContentClick_2(object sender, DataGridViewCellEventArgs e)

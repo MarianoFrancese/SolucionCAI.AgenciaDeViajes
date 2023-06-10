@@ -8,30 +8,15 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
 {
     public class ProductoLineaEnt
     {
-        public HotelEnt ProductoH { get; set; }
-        public VueloEnt ProductoV { get; set; }
+        public List<HotelEnt> ProductoH { get; set; } //ver si se puede cambiar a obj
+        public List<VueloEnt> ProductoV { get; set; } //ver si se puede cambiar a obj
         public decimal PrecioUn { get; set; }
         public int Cantidad { get; set; }
-        public Decimal Descuento { get { return CalcularDescuento(Cantidad); } }
         public Decimal SubTotal { get { return CalcularSubtotal(Cantidad, PrecioUn); } }
         public Decimal IVA { get { return CalcularIVA(SubTotal); } }
         public Decimal TotalProd { get { return CalcularTotal(SubTotal, IVA); } }
 
-        public decimal CalcularDescuento(int cantidad)
-        {
-            decimal descuento;
-
-            if (cantidad >= 5)
-            {
-                descuento = 0.1m;
-            }
-            else
-            {
-                descuento = 0;
-            }
-            return descuento;
-        }
-
+     
         public decimal CalcularSubtotal(int cantidad, decimal precioUnitario)
         {
             decimal subtotal;
