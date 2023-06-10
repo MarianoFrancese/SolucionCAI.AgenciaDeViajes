@@ -19,34 +19,37 @@ namespace SolucionCAI.AgenciaDeViajes
             InitializeComponent();
         }
 
-        //private void TipoClienteCombo_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    // Get the selected option from the ComboBox
-        //    string opcionpersona = TipoClienteCombo.SelectedItem.ToString();
+        private void tipoCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Get the selected option from the ComboBox
 
-        //    // Show or hide the relevant GroupBoxes based on the selected option
-        //    if (opcionpersona == "Persona Física")
-        //    {
-        //        groupBox1.Visible = true;
-        //        groupBox2.Visible = false;
-        //        // Set the visibility of other GroupBoxes as needed
-        //    }
-        //    else if (opcionpersona == "Persona Jurídica")
-        //    {
-        //        groupBox1.Visible = false;
-        //        groupBox2.Visible = true;
-        //    }
+            string opcionpersona = tipoCliente.SelectedItem.ToString();
 
-        //    else
-        //    {
-        //        // If no specific option is selected, hide all GroupBoxes
-        //        groupBox1.Visible = false;
-        //        groupBox2.Visible = false;
+            // Show or hide the relevant GroupBoxes based on the selected option
+            if (opcionpersona == "Persona Fisica")
+            {
+                personaFisica.Visible = true;
+                personaJuridica.Visible = false;
+                // Set the visibility of other GroupBoxes as needed
+            }
+            else if (opcionpersona == "Persona Juridica")
+            {
+                personaFisica.Visible = false;
+                personaJuridica.Visible = true;
+            }
 
-        //    }
-        //}
+            else
+            {
+                // If no specific option is selected, hide all GroupBoxes
+                personaFisica.Visible = false;
+                personaJuridica.Visible = false;
 
+            }
+        }
 
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

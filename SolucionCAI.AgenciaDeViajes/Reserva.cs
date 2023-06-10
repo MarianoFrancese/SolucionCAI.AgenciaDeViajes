@@ -33,8 +33,10 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void button1_Click(object sender, EventArgs e)
         {
-            groupBox1.Visible = true;
-            
+            //  groupBox1.Visible = true;
+            IngresoClientes ingresoClientes = new IngresoClientes();
+            ingresoClientes.Show();
+
         }
 
         private void button7_Click(object sender, EventArgs e)
