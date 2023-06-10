@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,8 +10,8 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
 {
     public class ProductoLineaEnt
     {
-        public List<HotelEnt> ProductoH { get; set; } //ver si se puede cambiar a obj
-        public List<VueloEnt> ProductoV { get; set; } //ver si se puede cambiar a obj
+        public string ProductoH { get; set; } //ver si se puede cambiar a obj
+        public string ProductoV { get; set; } //ver si se puede cambiar a obj
         public decimal PrecioUn { get; set; }
         public int Cantidad { get; set; }
         public Decimal SubTotal { get { return CalcularSubtotal(Cantidad, PrecioUn); } }

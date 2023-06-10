@@ -1,4 +1,6 @@
-﻿using SolucionCAI.AgenciaDeViajes.Entidades;
+﻿using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
+using SolucionCAI.AgenciaDeViajes.Entidades;
 using System.Globalization;
 using System.IO;
 
@@ -64,7 +66,6 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
         }
         public static List<ProductoLineaEnt> AgregarVueloLinea(List<VueloEnt> vuelosPresupuestados)
-
         {
 
             List<ProductoLineaEnt> listaProductos = new List<ProductoLineaEnt>();
@@ -72,13 +73,9 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             ProductoLineaEnt producto = new ProductoLineaEnt
 
             {
-
-                ProductoV = vuelosPresupuestados,
-
+                ProductoV = vuelosPresupuestados[0].Descripcion,
                 ProductoH = null,
-
                 PrecioUn = vuelosPresupuestados[0].Tarifas[0].Precio,
-
                 Cantidad = vuelosPresupuestados[0].Tarifas[0].Disponibilidad,
 
             };
@@ -86,9 +83,44 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             listaProductos.Add(producto);
 
             return listaProductos;
-
-
         }
+
+        public static int BuscarUltimoId()
+        {
+            int id = 0;
+            if (File.Exists("PresupuestosEnt.json"))
+            {
+                Console.WriteLine("El archivo existe");
+                string contenidoDelArchivo = File.ReadAllText("PresupuestosEnt.json");
+
+                JArray jsonArray = JArray.Parse(contenidoDelArchivo);
+                JObject lastObject = (JObject)jsonArray.Last;
+
+                id = (int)lastObject["NroSeguimiento"];
+
+                return id;
+            }
+            else
+            {
+                return id;
+            }
+        }
+
+        public static List<PresupuestoEnt> CrearPresupuesto(List<ProductoLineaEnt> productosAgregados)
+        {
+            List<PresupuestoEnt> listaPresupuestos = new List<PresupuestoEnt>();
+
+            PresupuestoEnt presupuesto = new PresupuestoEnt
+            {
+                NroSeguimiento = BuscarUltimoId() + 1,
+                Productos = productosAgregados,
+            };
+
+            listaPresupuestos.Add(presupuesto);
+
+            return listaPresupuestos;
+        }
+
 
     }
 }

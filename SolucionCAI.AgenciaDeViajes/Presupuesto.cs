@@ -118,23 +118,15 @@ namespace SolucionCAI.AgenciaDeViajes
             }
         }
 
-        private void RellenarPresupuestoTabla(List<ProductoLineaEnt> productosagregados)
+        private void RellenarPresupuestoTabla(List<ProductoLineaEnt> productosAgregados)
         {
-            dataGridView2.Rows.Clear();
-
-
-
-            foreach (var producto in productosagregados)
+            foreach (var producto in productosAgregados)
 
             {
 
-                var productoProperties = producto.ProductoV[0].GetType().GetProperties();
-
-                string propiedadesFormateadas = string.Join(", ", productoProperties.Select(p => p.Name + ": " + p.GetValue(producto.ProductoV[0], null)));
-
                 dataGridView2.Rows.Add(
 
-                    propiedadesFormateadas,
+                    producto.ProductoV,
 
                     producto.PrecioUn,
 
@@ -147,9 +139,7 @@ namespace SolucionCAI.AgenciaDeViajes
                     producto.TotalProd
 
                     );
-
             }
-
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -229,12 +219,11 @@ namespace SolucionCAI.AgenciaDeViajes
 
                 int disponibilidadVuelo = Convert.ToInt32(row.Cells[11].Value.ToString());
 
-
-
                 var listaVuelos = ModuloPresupuesto.GenerarListaVuelo(clase, tipoPasajero, tarifa, cantPasajeros, codigo, origen, destino, fechaPartida, fechaArribo, tiempoVuelo, aerolinea);
-
                 var productosAgregados = ModuloPresupuesto.AgregarVueloLinea(listaVuelos);
 
+                textBox11.Text = ModuloPresupuesto.CrearPresupuesto(productosAgregados)[0].NroSeguimiento.ToString();
+                textBox5.Text = ModuloPresupuesto.CrearPresupuesto(productosAgregados)[0].Total.ToString();
                 RellenarPresupuestoTabla(productosAgregados);
 
             }

@@ -1,58 +1,46 @@
 [
-  {
-    "NroSeguimiento": "0001",
-    "Productos": "AA000-BUE-MIA-Economy",
-    "FechaCreacion": "29-06-2023",
-    "Total": 842160.00
-
-  },
-
-  {
-    "NroSeguimiento": "0002",
-    "Productos": "HT001-Sheraton-MIA-Deluxe",
-    "FechaCreacion": "29-06-2023",
-    "Total": 78650.00
-  },
-  {
-    "NroSeguimiento": "0003",
-    "Productos": "HT003-ibis budget Meudon-ROM-Standard",
-    "FechaCreacion": "30-06-2023",
-    "Total": 40963.34
-
-  },
-  {
-    "NroSeguimiento": "0004",
-    "Productos": "HT002-Four Seasons-MAD-Deluxe",
-    "FechaCreacion": "05-07-2023",
-    "Total": 90992.00
-  },
-
-  {
-    "NroSeguimiento": "0005",
-    "Productos": "HT001-Sheraton-MIA-Intermedia",
-    "FechaCreacion": "05-07-2023",
-    "Total": 60500.00
-  },
-
-  {
-    "NroSeguimiento": "0006",
-    "Productos": "AA011-CDG-BUE-First",
-    "FechaCreacion": "10-07-2023",
-    "Total": 750200.00
-  },
-
-  {
-    "NroSeguimiento": "0007",
-    "Productos": "AA009-ROM-BUE-Economy",
-    "FechaCreacion": "16-07-2023",
-    "Total": 822800.00
-  },
-
-  {
-    "NroSeguimiento": "0008",
-    "Productos": "AA014-SCL-BUE-Economy",
-    "FechaCreacion": "28-08-2023",
-    "Total": 1113200.00
-  }
-
+    {
+        "NroSeguimiento": "1",
+        "Productos": [
+            {
+                "ProductoV": "Codigo: AA000 - Vuelo de BUE a MIA con American Airlines",
+                "PrecioUnitario": 348000.00,
+                "Cantidad": 2,
+                "SubTotal": 696000.00,
+                "IVA": 146160.00,
+                "TotalProducto": 842160.00
+            },
+            {
+                "ProductoV": "Codigo: AA001 - Vuelo de BUE a ROM con Air Italia",
+                "PrecioUnitario": 308000.00,
+                "Cantidad": 2,
+                "SubTotal": 616000.00,
+                "IVA": 129360.00,
+                "TotalProducto": 745360.00
+            }
+        ],
+        "Total": 1312000.00
+    },
+    {
+        "NroSeguimiento": "2",
+        "Productos": [
+            {
+                "ProductoV": "Codigo: AA004 - Vuelo de BUE a ROM con KLM",
+                "PrecioUnitario": 300000.00,
+                "Cantidad": 1,
+                "SubTotal": 300000.00,
+                "IVA": 63000.00,
+                "TotalProducto": 363000.00
+            },
+            {
+                "ProductoV": "Codigo: AA002 - Vuelo de BUE a CDG con Air France",
+                "PrecioUnitario": 640000.00,
+                "Cantidad": 1,
+                "SubTotal": 640000.00,
+                "IVA": 134400.00,
+                "TotalProducto": 774400.00
+            }
+        ],
+        "Total": 1137400.00
+    }
 ]
