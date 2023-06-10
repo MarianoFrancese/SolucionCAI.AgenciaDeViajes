@@ -9,7 +9,7 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
     public class ItinerarioEnt // : PresupuestoEnt //no deberia ser heredado
     {
         public List<PresupuestoEnt> PresupuestosList { get; set; } //se agrego presupuesto como atributo de itinerario
-        public int nroseg { get { return TraerNumSeguimiento; } }
+        //public int nroseg { get { return TraerNumSeguimiento; } }
         public string Estado { get; set; }
         public bool TipoCliente { get; set; }
         public PersonaFisicaEnt PersonaFisica { get; set;}
@@ -20,11 +20,11 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
         //public decimal DescuentoMP { get; }
         public string EstadoPago { get; set; }
 
-        public int TraerNumSeguimiento (PresupuestoEnt presupuesto) 
-        {
-            int nroseguimiento = presupuesto.NroSeguimiento;
-            return nroseguimiento;
-        }
+        //public int TraerNumSeguimiento (PresupuestoEnt presupuesto) 
+        //{
+        //    int nroseguimiento = presupuesto.NroSeguimiento;
+        //    return nroseguimiento;
+        //}
 
     }
 }
