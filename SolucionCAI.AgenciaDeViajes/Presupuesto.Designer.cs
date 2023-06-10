@@ -570,7 +570,6 @@
             this.button2.TabIndex = 8;
             this.button2.Text = "Buscar";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += button2_Click;
             // 
             // label3
             // 
@@ -629,7 +628,6 @@
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.Size = new System.Drawing.Size(867, 138);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
             // 
             // Column1
             // 
@@ -747,7 +745,6 @@
             this.dataGridView2.RowHeadersWidth = 82;
             this.dataGridView2.Size = new System.Drawing.Size(878, 129);
             this.dataGridView2.TabIndex = 3;
-            this.dataGridView2.CellContentClick += dataGridView2_CellContentClick;
             // 
             // Column14
             // 
@@ -896,7 +893,7 @@
             this.groupBox3.Controls.Add(this.button11);
             this.groupBox3.Controls.Add(this.button12);
             this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Location = new System.Drawing.Point(289, 303);
+            this.groupBox3.Location = new System.Drawing.Point(297, 277);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(338, 91);
             this.groupBox3.TabIndex = 34;
