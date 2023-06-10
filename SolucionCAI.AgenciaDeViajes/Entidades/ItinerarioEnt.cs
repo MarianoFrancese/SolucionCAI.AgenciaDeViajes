@@ -14,7 +14,7 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
         public bool TipoCliente { get; set; }
         public PersonaFisicaEnt PersonaFisica { get; set;}
         public PersonaJuridicaEnt PersonaJuridica { get; set; }
-        public List<PasajeroEnt> Pasajeros { get; set; }
+        public List<PasajeroEnt> Pasajeros { get; set; } //los pasajeros estarian dentro de vuelo, no de itinerario
         public string MedioPago { get; set; }
         
         //public decimal DescuentoMP { get; }

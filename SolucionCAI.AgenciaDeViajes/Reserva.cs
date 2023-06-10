@@ -34,13 +34,13 @@ namespace SolucionCAI.AgenciaDeViajes
         private void button1_Click(object sender, EventArgs e)
         {
             groupBox1.Visible = true;
-            groupBox2.Visible = false;
+            
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             groupBox1.Visible = true;
-            groupBox2.Visible = false;
+            
            // MessageBox.Show("Se reserva el presupuesto y se piden más datos relativos al cliente");
         }
 
@@ -106,7 +106,7 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void button10_Click(object sender, EventArgs e)
         {
-            groupBox2.Visible = false;
+            
         }
 
         private void button3_Click_1(object sender, EventArgs e)
@@ -116,7 +116,7 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void button9_Click(object sender, EventArgs e)
         {
-            groupBox2.Visible = false;
+            
             
         }
 

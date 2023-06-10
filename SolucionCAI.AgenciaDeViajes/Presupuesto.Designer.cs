@@ -85,14 +85,6 @@
             this.disponibilidadVuelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -104,6 +96,13 @@
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -734,7 +733,6 @@
             this.Column14,
             this.Column16,
             this.Column15,
-            this.Column17,
             this.Column18,
             this.Column19,
             this.TotalProducto,
@@ -745,69 +743,6 @@
             this.dataGridView2.RowHeadersWidth = 82;
             this.dataGridView2.Size = new System.Drawing.Size(878, 129);
             this.dataGridView2.TabIndex = 3;
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "Producto";
-            this.Column14.MinimumWidth = 10;
-            this.Column14.Name = "Column14";
-            this.Column14.ReadOnly = true;
-            this.Column14.Width = 200;
-            // 
-            // Column16
-            // 
-            this.Column16.HeaderText = "PrecioUnitario";
-            this.Column16.MinimumWidth = 10;
-            this.Column16.Name = "Column16";
-            this.Column16.ReadOnly = true;
-            this.Column16.Width = 200;
-            // 
-            // Column15
-            // 
-            this.Column15.HeaderText = "Cantidad";
-            this.Column15.MinimumWidth = 10;
-            this.Column15.Name = "Column15";
-            this.Column15.ReadOnly = true;
-            this.Column15.Width = 200;
-            // 
-            // Column17
-            // 
-            this.Column17.HeaderText = "Descuento";
-            this.Column17.MinimumWidth = 10;
-            this.Column17.Name = "Column17";
-            this.Column17.ReadOnly = true;
-            this.Column17.Width = 200;
-            // 
-            // Column18
-            // 
-            this.Column18.HeaderText = "SubTotal";
-            this.Column18.MinimumWidth = 10;
-            this.Column18.Name = "Column18";
-            this.Column18.ReadOnly = true;
-            this.Column18.Width = 200;
-            // 
-            // Column19
-            // 
-            this.Column19.HeaderText = "IVA";
-            this.Column19.MinimumWidth = 10;
-            this.Column19.Name = "Column19";
-            this.Column19.ReadOnly = true;
-            this.Column19.Width = 200;
-            // 
-            // TotalProducto
-            // 
-            this.TotalProducto.HeaderText = "Total Producto";
-            this.TotalProducto.MinimumWidth = 10;
-            this.TotalProducto.Name = "TotalProducto";
-            this.TotalProducto.ReadOnly = true;
-            this.TotalProducto.Width = 200;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "Eliminar";
-            this.Column13.MinimumWidth = 10;
-            this.Column13.Name = "Column13";
-            this.Column13.Width = 200;
             // 
             // textBox5
             // 
@@ -933,6 +868,61 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "¿Desea generar un Presupuesto?";
             // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "Producto";
+            this.Column14.MinimumWidth = 10;
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            this.Column14.Width = 200;
+            // 
+            // Column16
+            // 
+            this.Column16.HeaderText = "PrecioUnitario";
+            this.Column16.MinimumWidth = 10;
+            this.Column16.Name = "Column16";
+            this.Column16.ReadOnly = true;
+            this.Column16.Width = 200;
+            // 
+            // Column15
+            // 
+            this.Column15.HeaderText = "Cantidad";
+            this.Column15.MinimumWidth = 10;
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            this.Column15.Width = 200;
+            // 
+            // Column18
+            // 
+            this.Column18.HeaderText = "SubTotal";
+            this.Column18.MinimumWidth = 10;
+            this.Column18.Name = "Column18";
+            this.Column18.ReadOnly = true;
+            this.Column18.Width = 200;
+            // 
+            // Column19
+            // 
+            this.Column19.HeaderText = "IVA";
+            this.Column19.MinimumWidth = 10;
+            this.Column19.Name = "Column19";
+            this.Column19.ReadOnly = true;
+            this.Column19.Width = 200;
+            // 
+            // TotalProducto
+            // 
+            this.TotalProducto.HeaderText = "Total Producto";
+            this.TotalProducto.MinimumWidth = 10;
+            this.TotalProducto.Name = "TotalProducto";
+            this.TotalProducto.ReadOnly = true;
+            this.TotalProducto.Width = 200;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "Eliminar";
+            this.Column13.MinimumWidth = 10;
+            this.Column13.Name = "Column13";
+            this.Column13.Width = 200;
+            // 
             // Presupuesto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1003,14 +993,6 @@
         private Label label11;
         private DateTimePicker dateTimePicker3;
         private DateTimePicker dateTimePicker2;
-        private DataGridViewTextBoxColumn Column14;
-        private DataGridViewTextBoxColumn Column16;
-        private DataGridViewTextBoxColumn Column15;
-        private DataGridViewTextBoxColumn Column17;
-        private DataGridViewTextBoxColumn Column18;
-        private DataGridViewTextBoxColumn Column19;
-        private DataGridViewTextBoxColumn TotalProducto;
-        private DataGridViewButtonColumn Column13;
         private ComboBox comboBox6;
         private Label label12;
         private Button button4;
@@ -1045,6 +1027,13 @@
         private DataGridViewTextBoxColumn Tarifa;
         private DataGridViewTextBoxColumn disponibilidadVuelo;
         private DataGridViewButtonColumn Column12;
+        private DataGridViewTextBoxColumn Column14;
+        private DataGridViewTextBoxColumn Column16;
+        private DataGridViewTextBoxColumn Column15;
+        private DataGridViewTextBoxColumn Column18;
+        private DataGridViewTextBoxColumn Column19;
+        private DataGridViewTextBoxColumn TotalProducto;
+        private DataGridViewButtonColumn Column13;
     }
 }
 
