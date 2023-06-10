@@ -45,12 +45,12 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void IngresoPasajeros_Load(object sender, EventArgs e)
         {
-            if (selectedItinerario != null)
-            {
-                List<ProductoLineaEnt> producto = selectedItinerario.Productos;
-                ProductoPasajero.DataSource = producto;
-                ProductoPasajero.DisplayMember = "ProductoV";
-            }
+            //if (selectedItinerario != null)
+            //{
+            //    List<ProductoLineaEnt> producto = selectedItinerario.Productos;
+            //    ProductoPasajero.DataSource = producto;
+            //    ProductoPasajero.DisplayMember = "ProductoV";
+            //}
         }
 
         private void label5_Click(object sender, EventArgs e)
