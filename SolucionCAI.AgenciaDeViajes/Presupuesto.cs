@@ -170,6 +170,8 @@ namespace SolucionCAI.AgenciaDeViajes
         private void button11_Click(object sender, EventArgs e)
         {
             groupBox3.Visible = false;
+
+            MessageBox.Show("El Presupuesto ha sido confirmado");
         }
 
         private void button1_Click_1(object sender, EventArgs e)
