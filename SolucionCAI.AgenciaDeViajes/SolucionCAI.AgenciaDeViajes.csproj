@@ -44,6 +44,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Itinerarios.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="PresupuestosEnt.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

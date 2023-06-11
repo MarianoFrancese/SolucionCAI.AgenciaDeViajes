@@ -37,18 +37,19 @@ namespace SolucionCAI.AgenciaDeViajes
         {
             dataGridView2.Rows.Clear();
 
+            
             foreach (var itinerario in itinerariosFiltrados)
             {
                 dataGridView2.Rows.Add(
                     itinerario.PresupuestosList[0].NroSeguimiento,
                     itinerario.PresupuestosList[0].Productos,
-                    itinerario.Cliente[0].PersonaFisica[1].Nombre,
-                    itinerario.Cliente[0].PersonaJuridica[1].RazonSocial,
-                    itinerario.Cliente[0].PersonaFisica[1].DNI,
-                    itinerario.Cliente[0].PersonaJuridica[1].CUIT,
+                    itinerario.Cliente[0].PersonaFisica.Nombre,
+                    itinerario.Cliente[0].PersonaJuridica.RazonSocial,
+                    itinerario.Cliente[0].PersonaFisica.DNI,
+                    itinerario.Cliente[0].PersonaJuridica.CUIT,
                     itinerario.MedioPago,
                     itinerario.PresupuestosList[0].Total
-                                        
+
                     );
             }
         }

@@ -8,8 +8,8 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
 {
     public class ClienteEnt
     {
-        public List<PersonaFisicaEnt> PersonaFisica { get; set; }
-        public List<PersonaJuridicaEnt> PersonaJuridica { get; set; }
+        public PersonaFisicaEnt PersonaFisica { get; set; }
+        public PersonaJuridicaEnt PersonaJuridica { get; set; }
         
         public string CondFiscal { get; set; }
         public int Telefono { get; set; }
