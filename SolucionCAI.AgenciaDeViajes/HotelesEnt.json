@@ -2368,33 +2368,33 @@
 
 	{
 		"Codigo": "HT004",
-		"Nombre": "Hotel Imperial",
-		"CodigoDeCiudad": "TOK",
+		"Nombre": "Ibis Paris Tour Eiffel",
+		"CodigoDeCiudad": "PAR",
 		"Calificacion": 4,
 		"Direccion": {
-			"Calle": "Uchisaiwaicho",
-			"Numero": 3,
-			"CP": 10085,
-			"Latitud": 35.67291568730059,
-			"Longitud": 139.75805021595886
+			"Calle": "Rue Cambronne",
+			"Numero": 2,
+			"CP": 75015,
+			"Latitud": 48.847255201785835,
+			"Longitud": 2.3018222656948266
 
 		},
 		"Disponibilidad": [
 			{
 				"Nombre": "Standard",
-				"TarifaHab": 67189,
+				"TarifaHab": 37000,
 				"Capacidad": 2,
 				"Adultos": 2,
-				"Menores": 0,
-				"Infantes": 0
+				"Menores": 1,
+				"Infantes": 1
 
 			}
 		],
 
 		"HabitacionFechaDis": [
 			{
-				"FechaHab": "21-06-2023",
-				"CantHab": 4
+				"FechaHab": "29-06-2023",
+				"CantHab": 3
 
 			}
 		]
@@ -2405,34 +2405,887 @@
 
 
 	{
-		"Codigo": "HT005",
-		"Nombre": "Fendi Private Suites",
-		"CodigoDeCiudad": "ROM",
-		"Calificacion": 3,
+		"Codigo": "HT004",
+		"Nombre": "Ibis Paris Tour Eiffel",
+		"CodigoDeCiudad": "PAR",
+		"Calificacion": 4,
 		"Direccion": {
-			"Calle": "Villa della Fontanella",
-			"Numero": 48,
-			"CP": 100095,
-			"Latitud": 41.90511675430925,
-			"Longitud": 12.496799466785122
+			"Calle": "Rue Cambronne",
+			"Numero": 2,
+			"CP": 75015,
+			"Latitud": 48.847255201785835,
+			"Longitud": 2.3018222656948266
 
 		},
 		"Disponibilidad": [
 			{
-				"Nombre": "Duplex",
-				"TarifaHab": 135000,
-				"Capacidad": 4,
+				"Nombre": "Standard",
+				"TarifaHab": 37000,
+				"Capacidad": 2,
 				"Adultos": 2,
-				"Menores": 2,
-				"Infantes": 0
+				"Menores": 1,
+				"Infantes": 1
 
 			}
 		],
 
 		"HabitacionFechaDis": [
 			{
-				"FechaHab": "15-06-2023",
+				"FechaHab": "30-06-2023",
+				"CantHab": 6
+
+			}
+		]
+
+
+
+	},
+
+	{
+		"Codigo": "HT004",
+		"Nombre": "Ibis Paris Tour Eiffel",
+		"CodigoDeCiudad": "PAR",
+		"Calificacion": 4,
+		"Direccion": {
+			"Calle": "Rue Cambronne",
+			"Numero": 2,
+			"CP": 75015,
+			"Latitud": 48.847255201785835,
+			"Longitud": 2.3018222656948266
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Standard",
+				"TarifaHab": 37000,
+				"Capacidad": 2,
+				"Adultos": 2,
+				"Menores": 1,
+				"Infantes": 1
+
+			}
+		],
+
+		"HabitacionFechaDis": [
+			{
+				"FechaHab": "01-07-2023",
+				"CantHab": 2
+
+			}
+		]
+
+
+
+	},
+
+
+
+	{
+		"Codigo": "HT004",
+		"Nombre": "Ibis Paris Tour Eiffel",
+		"CodigoDeCiudad": "PAR",
+		"Calificacion": 4,
+		"Direccion": {
+			"Calle": "Rue Cambronne",
+			"Numero": 2,
+			"CP": 75015,
+			"Latitud": 48.847255201785835,
+			"Longitud": 2.3018222656948266
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Intermedia",
+				"TarifaHab": 49000,
+				"Capacidad": 4,
+				"Adultos": 4,
+				"Menores": 2,
+				"Infantes": 2
+
+			}
+		],
+
+		"HabitacionFechaDis": [
+			{
+				"FechaHab": "29-06-2023",
+				"CantHab": 2
+
+			}
+		]
+
+
+
+	},
+
+	{
+		"Codigo": "HT004",
+		"Nombre": "Ibis Paris Tour Eiffel",
+		"CodigoDeCiudad": "PAR",
+		"Calificacion": 4,
+		"Direccion": {
+			"Calle": "Rue Cambronne",
+			"Numero": 2,
+			"CP": 75015,
+			"Latitud": 48.847255201785835,
+			"Longitud": 2.3018222656948266
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Intermedia",
+				"TarifaHab": 49000,
+				"Capacidad": 4,
+				"Adultos": 4,
+				"Menores": 2,
+				"Infantes": 2
+
+			}
+		],
+
+		"HabitacionFechaDis": [
+			{
+				"FechaHab": "30-06-2023",
+				"CantHab": 4
+
+			}
+		]
+
+
+
+	},
+
+	{
+		"Codigo": "HT004",
+		"Nombre": "Ibis Paris Tour Eiffel",
+		"CodigoDeCiudad": "PAR",
+		"Calificacion": 4,
+		"Direccion": {
+			"Calle": "Rue Cambronne",
+			"Numero": 2,
+			"CP": 75015,
+			"Latitud": 48.847255201785835,
+			"Longitud": 2.3018222656948266
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Intermedia",
+				"TarifaHab": 49000,
+				"Capacidad": 4,
+				"Adultos": 4,
+				"Menores": 2,
+				"Infantes": 2
+
+			}
+		],
+
+		"HabitacionFechaDis": [
+			{
+				"FechaHab": "01-07-2023",
+				"CantHab": 8
+
+			}
+		]
+
+
+
+	},
+
+	{
+		"Codigo": "HT004",
+		"Nombre": "Ibis Paris Tour Eiffel",
+		"CodigoDeCiudad": "PAR",
+		"Calificacion": 4,
+		"Direccion": {
+			"Calle": "Rue Cambronne",
+			"Numero": 2,
+			"CP": 75015,
+			"Latitud": 48.847255201785835,
+			"Longitud": 2.3018222656948266
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Deluxe",
+				"TarifaHab": 64000,
+				"Capacidad": 6,
+				"Adultos": 6,
+				"Menores": 3,
+				"Infantes": 3
+
+			}
+		],
+
+		"HabitacionFechaDis": [
+			{
+				"FechaHab": "29-06-2023",
+				"CantHab": 3
+
+			}
+		]
+
+
+
+	},
+
+	{
+		"Codigo": "HT004",
+		"Nombre": "Ibis Paris Tour Eiffel",
+		"CodigoDeCiudad": "PAR",
+		"Calificacion": 4,
+		"Direccion": {
+			"Calle": "Rue Cambronne",
+			"Numero": 2,
+			"CP": 75015,
+			"Latitud": 48.847255201785835,
+			"Longitud": 2.3018222656948266
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Deluxe",
+				"TarifaHab": 64000,
+				"Capacidad": 6,
+				"Adultos": 6,
+				"Menores": 3,
+				"Infantes": 3
+
+			}
+		],
+
+		"HabitacionFechaDis": [
+			{
+				"FechaHab": "30-06-2023",
+				"CantHab": 4
+
+			}
+		]
+
+
+
+	},
+
+	{
+		"Codigo": "HT004",
+		"Nombre": "Ibis Paris Tour Eiffel",
+		"CodigoDeCiudad": "PAR",
+		"Calificacion": 4,
+		"Direccion": {
+			"Calle": "Rue Cambronne",
+			"Numero": 2,
+			"CP": 75015,
+			"Latitud": 48.847255201785835,
+			"Longitud": 2.3018222656948266
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Deluxe",
+				"TarifaHab": 64000,
+				"Capacidad": 6,
+				"Adultos": 6,
+				"Menores": 3,
+				"Infantes": 3
+
+			}
+		],
+
+		"HabitacionFechaDis": [
+			{
+				"FechaHab": "01-07-2023",
+				"CantHab": 7
+
+			}
+		]
+
+
+
+	},
+
+	{
+		"Codigo": "HT005",
+		"Nombre": "Holiday Inn Santiago",
+		"CodigoDeCiudad": "SCL",
+		"Calificacion": 4,
+		"Direccion": {
+			"Calle": "Armando Cortinez Pte.",
+			"Numero": 2150,
+			"CP": 8320000,
+			"Latitud": -33.396465364152384,
+			"Longitud": -70.79344064755682
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Standar",
+				"TarifaHab": 29000,
+				"Capacidad": 2,
+				"Adultos": 2,
+				"Menores": 1,
+				"Infantes": 1
+
+			}
+		],
+
+		"HabitacionFechaDis": [
+			{
+				"FechaHab": "29-06-2023",
+				"CantHab": 3
+
+			}
+		]
+
+
+
+	},
+
+	{
+		"Codigo": "HT005",
+		"Nombre": "Holiday Inn Santiago",
+		"CodigoDeCiudad": "SCL",
+		"Calificacion": 4,
+		"Direccion": {
+			"Calle": "Armando Cortinez Pte.",
+			"Numero": 2150,
+			"CP": 8320000,
+			"Latitud": -33.396465364152384,
+			"Longitud": -70.79344064755682
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Standar",
+				"TarifaHab": 29000,
+				"Capacidad": 2,
+				"Adultos": 2,
+				"Menores": 1,
+				"Infantes": 1
+
+			}
+		],
+
+		"HabitacionFechaDis": [
+			{
+				"FechaHab": "30-06-2023",
+				"CantHab": 8
+
+			}
+		]
+
+
+
+	},
+
+	{
+		"Codigo": "HT005",
+		"Nombre": "Holiday Inn Santiago",
+		"CodigoDeCiudad": "SCL",
+		"Calificacion": 4,
+		"Direccion": {
+			"Calle": "Armando Cortinez Pte.",
+			"Numero": 2150,
+			"CP": 8320000,
+			"Latitud": -33.396465364152384,
+			"Longitud": -70.79344064755682
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Standar",
+				"TarifaHab": 29000,
+				"Capacidad": 2,
+				"Adultos": 2,
+				"Menores": 1,
+				"Infantes": 1
+
+			}
+		],
+
+		"HabitacionFechaDis": [
+			{
+				"FechaHab": "01-07-2023",
 				"CantHab": 5
+
+			}
+		]
+
+
+
+	},
+
+	{
+		"Codigo": "HT005",
+		"Nombre": "Holiday Inn Santiago",
+		"CodigoDeCiudad": "SCL",
+		"Calificacion": 4,
+		"Direccion": {
+			"Calle": "Armando Cortinez Pte.",
+			"Numero": 2150,
+			"CP": 8320000,
+			"Latitud": -33.396465364152384,
+			"Longitud": -70.79344064755682
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Intermedia",
+				"TarifaHab": 38000,
+				"Capacidad": 4,
+				"Adultos": 4,
+				"Menores": 2,
+				"Infantes": 2
+
+			}
+		],
+
+		"HabitacionFechaDis": [
+			{
+				"FechaHab": "29-06-2023",
+				"CantHab": 7
+
+			}
+		]
+
+
+
+	},
+
+	{
+		"Codigo": "HT005",
+		"Nombre": "Holiday Inn Santiago",
+		"CodigoDeCiudad": "SCL",
+		"Calificacion": 4,
+		"Direccion": {
+			"Calle": "Armando Cortinez Pte.",
+			"Numero": 2150,
+			"CP": 8320000,
+			"Latitud": -33.396465364152384,
+			"Longitud": -70.79344064755682
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Intermedia",
+				"TarifaHab": 38000,
+				"Capacidad": 4,
+				"Adultos": 4,
+				"Menores": 2,
+				"Infantes": 2
+
+			}
+		],
+
+		"HabitacionFechaDis": [
+			{
+				"FechaHab": "30-06-2023",
+				"CantHab": 6
+
+			}
+		]
+
+
+
+	},
+
+	{
+		"Codigo": "HT005",
+		"Nombre": "Holiday Inn Santiago",
+		"CodigoDeCiudad": "SCL",
+		"Calificacion": 4,
+		"Direccion": {
+			"Calle": "Armando Cortinez Pte.",
+			"Numero": 2150,
+			"CP": 8320000,
+			"Latitud": -33.396465364152384,
+			"Longitud": -70.79344064755682
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Intermedia",
+				"TarifaHab": 38000,
+				"Capacidad": 4,
+				"Adultos": 4,
+				"Menores": 2,
+				"Infantes": 2
+
+			}
+		],
+
+		"HabitacionFechaDis": [
+			{
+				"FechaHab": "01-07-2023",
+				"CantHab": 3
+
+			}
+		]
+
+
+
+	},
+
+	{
+		"Codigo": "HT005",
+		"Nombre": "Holiday Inn Santiago",
+		"CodigoDeCiudad": "SCL",
+		"Calificacion": 4,
+		"Direccion": {
+			"Calle": "Armando Cortinez Pte.",
+			"Numero": 2150,
+			"CP": 8320000,
+			"Latitud": -33.396465364152384,
+			"Longitud": -70.79344064755682
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Deluxe",
+				"TarifaHab": 79000,
+				"Capacidad": 6,
+				"Adultos": 6,
+				"Menores": 3,
+				"Infantes": 3
+
+			}
+		],
+
+		"HabitacionFechaDis": [
+			{
+				"FechaHab": "29-06-2023",
+				"CantHab": 4
+
+			}
+		]
+
+
+
+	},
+
+	{
+		"Codigo": "HT005",
+		"Nombre": "Holiday Inn Santiago",
+		"CodigoDeCiudad": "SCL",
+		"Calificacion": 4,
+		"Direccion": {
+			"Calle": "Armando Cortinez Pte.",
+			"Numero": 2150,
+			"CP": 8320000,
+			"Latitud": -33.396465364152384,
+			"Longitud": -70.79344064755682
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Deluxe",
+				"TarifaHab": 79000,
+				"Capacidad": 6,
+				"Adultos": 6,
+				"Menores": 3,
+				"Infantes": 3
+
+			}
+		],
+
+		"HabitacionFechaDis": [
+			{
+				"FechaHab": "30-06-2023",
+				"CantHab": 9
+
+			}
+		]
+
+
+
+	},
+
+	{
+		"Codigo": "HT005",
+		"Nombre": "Holiday Inn Santiago",
+		"CodigoDeCiudad": "SCL",
+		"Calificacion": 4,
+		"Direccion": {
+			"Calle": "Armando Cortinez Pte.",
+			"Numero": 2150,
+			"CP": 8320000,
+			"Latitud": -33.396465364152384,
+			"Longitud": -70.79344064755682
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Deluxe",
+				"TarifaHab": 79000,
+				"Capacidad": 6,
+				"Adultos": 6,
+				"Menores": 3,
+				"Infantes": 3
+
+			}
+		],
+
+		"HabitacionFechaDis": [
+			{
+				"FechaHab": "29-06-2023",
+				"CantHab": 2
+
+			}
+		]
+
+
+
+	},
+
+
+	{
+		"Codigo": "HT006",
+		"Nombre": "Sofitel",
+		"CodigoDeCiudad": "BUE",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "Posadas ",
+			"Numero": 1232,
+			"CP": 1001,
+			"Latitud": -34.589276818961046,
+			"Longitud": -58.38411528860917
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Standard",
+				"TarifaHab": 48000,
+				"Capacidad": 2,
+				"Adultos": 2,
+				"Menores": 1,
+				"Infantes": 1
+
+			}
+		],
+
+		"HabitacionFechaDis": [
+			{
+				"FechaHab": "29-06-2023",
+				"CantHab": 4
+
+			}
+		]
+
+
+
+	},
+
+	{
+		"Codigo": "HT006",
+		"Nombre": "Sofitel",
+		"CodigoDeCiudad": "BUE",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "Posadas ",
+			"Numero": 1232,
+			"CP": 1001,
+			"Latitud": -34.589276818961046,
+			"Longitud": -58.38411528860917
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Standard",
+				"TarifaHab": 48000,
+				"Capacidad": 2,
+				"Adultos": 2,
+				"Menores": 1,
+				"Infantes": 1
+
+			}
+		],
+
+		"HabitacionFechaDis": [
+			{
+				"FechaHab": "30-06-2023",
+				"CantHab": 5
+
+			}
+		]
+
+
+
+	}
+	{
+		"Codigo": "HT006",
+		"Nombre": "Sofitel",
+		"CodigoDeCiudad": "BUE",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "Posadas ",
+			"Numero": 1232,
+			"CP": 1001,
+			"Latitud": -34.589276818961046,
+			"Longitud": -58.38411528860917
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Standard",
+				"TarifaHab": 48000,
+				"Capacidad": 2,
+				"Adultos": 2,
+				"Menores": 1,
+				"Infantes": 1
+
+			}
+		],
+
+		"HabitacionFechaDis": [
+			{
+				"FechaHab": "01-07-2023",
+				"CantHab": 6
+
+			}
+		]
+
+
+
+	},
+
+	{
+		"Codigo": "HT006",
+		"Nombre": "Sofitel",
+		"CodigoDeCiudad": "BUE",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "Posadas ",
+			"Numero": 1232,
+			"CP": 1001,
+			"Latitud": -34.589276818961046,
+			"Longitud": -58.38411528860917
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Intermedia",
+				"TarifaHab": 63000,
+				"Capacidad": 4,
+				"Adultos": 4,
+				"Menores": 2,
+				"Infantes": 2
+
+			}
+		],
+
+		"HabitacionFechaDis": [
+			{
+				"FechaHab": "29-06-2023",
+				"CantHab": 8
+
+			}
+		]
+
+
+
+	},
+
+	{
+		"Codigo": "HT006",
+		"Nombre": "Sofitel",
+		"CodigoDeCiudad": "BUE",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "Posadas ",
+			"Numero": 1232,
+			"CP": 1001,
+			"Latitud": -34.589276818961046,
+			"Longitud": -58.38411528860917
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Intermedia",
+				"TarifaHab": 63000,
+				"Capacidad": 4,
+				"Adultos": 4,
+				"Menores": 2,
+				"Infantes": 2
+
+			}
+		],
+
+		"HabitacionFechaDis": [
+			{
+				"FechaHab": "30-06-2023",
+				"CantHab": 9
+
+			}
+		]
+
+
+
+	},
+
+	{
+		"Codigo": "HT006",
+		"Nombre": "Sofitel",
+		"CodigoDeCiudad": "BUE",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "Posadas ",
+			"Numero": 1232,
+			"CP": 1001,
+			"Latitud": -34.589276818961046,
+			"Longitud": -58.38411528860917
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Intermedia",
+				"TarifaHab": 63000,
+				"Capacidad": 4,
+				"Adultos": 4,
+				"Menores": 2,
+				"Infantes": 2
+
+			}
+		],
+
+		"HabitacionFechaDis": [
+			{
+				"FechaHab": "01-07-2023",
+				"CantHab": 4
+
+			}
+		]
+
+
+
+	},
+
+	{
+		"Codigo": "HT006",
+		"Nombre": "Sofitel",
+		"CodigoDeCiudad": "BUE",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "Posadas ",
+			"Numero": 1232,
+			"CP": 1001,
+			"Latitud": -34.589276818961046,
+			"Longitud": -58.38411528860917
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Deluxe",
+				"TarifaHab": 81000,
+				"Capacidad": 6,
+				"Adultos": 6,
+				"Menores": 3,
+				"Infantes": 3
+
+			}
+		],
+
+		"HabitacionFechaDis": [
+			{
+				"FechaHab": "29-06-2023",
+				"CantHab": 6
 
 			}
 		]
@@ -2458,19 +3311,57 @@
 		"Disponibilidad": [
 			{
 				"Nombre": "Deluxe",
-				"TarifaHab": 88900,
-				"Capacidad": 4,
-				"Adultos": 2,
-				"Menores": 2,
-				"Infantes": 0
+				"TarifaHab": 81000,
+				"Capacidad": 6,
+				"Adultos": 6,
+				"Menores": 3,
+				"Infantes": 3
 
 			}
 		],
 
 		"HabitacionFechaDis": [
 			{
-				"FechaHab": "22-06-2023",
-				"CantHab": 3
+				"FechaHab": "30-06-2023",
+				"CantHab": 9
+
+			}
+		]
+
+
+
+	},
+
+
+	{
+		"Codigo": "HT006",
+		"Nombre": "Sofitel",
+		"CodigoDeCiudad": "BUE",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "Posadas ",
+			"Numero": 1232,
+			"CP": 1001,
+			"Latitud": -34.589276818961046,
+			"Longitud": -58.38411528860917
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Deluxe",
+				"TarifaHab": 81000,
+				"Capacidad": 6,
+				"Adultos": 6,
+				"Menores": 3,
+				"Infantes": 3
+
+			}
+		],
+
+		"HabitacionFechaDis": [
+			{
+				"FechaHab": "01-07-2023",
+				"CantHab": 7
 
 			}
 		]
@@ -2478,4 +3369,5 @@
 
 
 	}
+
 ]
