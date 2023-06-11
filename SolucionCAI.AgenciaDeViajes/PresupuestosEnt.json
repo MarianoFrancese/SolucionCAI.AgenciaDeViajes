@@ -1,6 +1,6 @@
 [
     {
-        "NroSeguimiento": "0001",
+        "NroSeguimiento": "0001", //se esta tomando como string pero deberia ser int
         "Productos": [
             {
                 "ProductoV": "Codigo: AA000 - Vuelo de BUE a MIA con American Airlines",

@@ -1,19 +1,5 @@
 {
 	"Estado": "PreReserva",
-	"Tipo Cliente": "Persona Física",
-	"Nombre": "Antonella",
-	"Condicion Fiscal": "Consumidor Final",
-	"Telefono": 1123894488,
-	"Email": "aorlando@gmail.com",
-	"Persona Fisica": [
-		{
-			"Apellido": "Orlando",
-			"DNI": 34956210,
-			"CUIL": 27349562109
-		}
-	],
-	"Medio de Pago": "TC",
-	"Estado Pago": "Pendiente",
 	"Presupuestos": [
 		{
 			"NroSeguimiento": "0100",
@@ -30,7 +16,24 @@
 			"Total": 114950.00
 		}
 	],
-},
+	"Cliente": [
+		{
+			"Condicion Fiscal": "Consumidor Final",
+			"Telefono": 1123894488,
+			"Email": "aorlando@gmail.com",
+			"Persona Fisica": [
+				{
+					"Nombre": "Antonella Orlando",
+					"DNI": 34956210,
+					"CUIL": 27349562109
+				}
+			]
+		}
+	],
+	"Medio de Pago": "TC",
+	"Estado Pago": "Pendiente"
+
+}
 
 /*
 {

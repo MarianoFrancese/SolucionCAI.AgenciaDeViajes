@@ -1,4 +1,5 @@
-﻿using SolucionCAI.AgenciaDeViajes.Entidades;
+﻿using SolucionCAI.AgenciaDeViajes.Archivos;
+using SolucionCAI.AgenciaDeViajes.Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,10 +21,36 @@ namespace SolucionCAI.AgenciaDeViajes
             InitializeComponent();
 
         }
-        
+
+        private List<ItinerarioEnt> itinerariosFiltrados;
+        string nroseguimiento;
         private void buscarPrere_Click(object sender, EventArgs e)
         {
+            nroseguimiento = textBox4.Text;
 
+            itinerariosFiltrados = ModuloItinerario.ListaItinerario(nroseguimiento);
+            
+            RellenarTablaPre(itinerariosFiltrados);
+
+        }
+        private void RellenarTablaPre(List<ItinerarioEnt> itinerariosFiltrados)
+        {
+            dataGridView2.Rows.Clear();
+
+            foreach (var itinerario in itinerariosFiltrados)
+            {
+                dataGridView2.Rows.Add(
+                    itinerario.PresupuestosList[0].NroSeguimiento,
+                    itinerario.PresupuestosList[0].Productos,
+                    itinerario.Cliente[0].PersonaFisica[1].Nombre,
+                    itinerario.Cliente[0].PersonaJuridica[1].RazonSocial,
+                    itinerario.Cliente[0].PersonaFisica[1].DNI,
+                    itinerario.Cliente[0].PersonaJuridica[1].CUIT,
+                    itinerario.MedioPago,
+                    itinerario.PresupuestosList[0].Total
+                                        
+                    );
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

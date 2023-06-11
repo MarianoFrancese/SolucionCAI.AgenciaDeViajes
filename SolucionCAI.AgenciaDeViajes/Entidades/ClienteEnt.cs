@@ -8,7 +8,9 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
 {
     public class ClienteEnt
     {
-        public string Nombre { get; set; }
+        public List<PersonaFisicaEnt> PersonaFisica { get; set; }
+        public List<PersonaJuridicaEnt> PersonaJuridica { get; set; }
+        
         public string CondFiscal { get; set; }
         public int Telefono { get; set; }
         public string Email { get; set; }

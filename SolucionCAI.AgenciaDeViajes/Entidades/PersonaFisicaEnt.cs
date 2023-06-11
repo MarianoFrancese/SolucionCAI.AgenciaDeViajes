@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace SolucionCAI.AgenciaDeViajes.Entidades
 {
-    public class PersonaFisicaEnt : ClienteEnt
+    public class PersonaFisicaEnt // : ClienteEnt no hereda para simplificar
     {
-        public string Apellido { get; set; }
+        public string Nombre { get; set; }
+        
         public int DNI { get; set; }
         public CuilEnt CUIL { get; set; }
     }

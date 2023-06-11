@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace SolucionCAI.AgenciaDeViajes.Entidades
 {
-    public class PersonaJuridicaEnt : ClienteEnt
+    public class PersonaJuridicaEnt // : ClienteEnt se saca la herencia para simplificar
     {
+        public string RazonSocial { get; set; }
         public string Domicilio { get; set; }
         public CuitEnt CUIT { get; set; }
     }
