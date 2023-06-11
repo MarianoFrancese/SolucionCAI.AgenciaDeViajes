@@ -15,6 +15,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Collections;
 using Newtonsoft.Json;
 using System.Globalization;
+using System.Net.NetworkInformation;
 
 namespace SolucionCAI.AgenciaDeViajes
 {
@@ -48,10 +49,10 @@ namespace SolucionCAI.AgenciaDeViajes
 
                 DataGridViewRow row = this.dataGridView2.Rows[e.RowIndex];
 
-                dataGridView2.Rows.RemoveAt(e.RowIndex);
+                dataGridView2.Rows.RemoveAt(e.RowIndex);  //ojo acá que da excepción si se elimina la fila antes de confirmar
 
-            }   
-            
+            }
+
             //MessageBox.Show("Este botón eliminaría un item de la fila, si la fila fuese de un solo producto, desaparecería");
         }
 
@@ -161,7 +162,7 @@ namespace SolucionCAI.AgenciaDeViajes
             this.Hide();
         }
 
-        
+
         private void button12_Click(object sender, EventArgs e)
         {
             groupBox3.Visible = false;
@@ -172,6 +173,19 @@ namespace SolucionCAI.AgenciaDeViajes
             groupBox3.Visible = false;
 
             MessageBox.Show("El Presupuesto ha sido confirmado");
+
+            comboBox1.Text = string.Empty;
+            comboBox4.Text = string.Empty;
+            dateTimePicker1.Value = DateTime.Now;
+
+            numericUpDown1.Value = numericUpDown1.Minimum;
+            comboBox2.Text = string.Empty;
+            comboBox3.Text = string.Empty;
+            textBox5.Text = string.Empty;
+
+            dataGridView1.Rows.Clear();
+            dataGridView2.Rows.Clear();
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
