@@ -9,12 +9,14 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
     public class ItinerarioEnt // : PresupuestoEnt //no deberia ser heredado
     {
         public List<PresupuestoEnt> PresupuestosList { get; set; } //se agrego presupuesto como atributo de itinerario
+       
         //public int nroseg { get { return TraerNumSeguimiento; } }
         public string Estado { get; set; }
-        public bool TipoCliente { get; set; }
+        public string TipoCliente { get; set; }
         public PersonaFisicaEnt PersonaFisica { get; set;}
         public PersonaJuridicaEnt PersonaJuridica { get; set; }
-        public List<PasajeroEnt> Pasajeros { get; set; } //los pasajeros estarian dentro de vuelo, no de itinerario
+        
+        // public List<PasajeroEnt> Pasajeros { get; set; } //los pasajeros estarian dentro de vuelo, no de itinerario
         public string MedioPago { get; set; }
         
         //public decimal DescuentoMP { get; }
