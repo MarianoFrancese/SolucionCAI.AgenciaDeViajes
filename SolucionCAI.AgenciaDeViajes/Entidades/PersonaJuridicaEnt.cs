@@ -10,6 +10,8 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
     {
         public string RazonSocial { get; set; }
         public string Domicilio { get; set; }
-        public CuitEnt CUIT { get; set; }
+        public long CUIT { get; set; }
+        
+        //public CuitEnt CUIT { get; set; }
     }
 }

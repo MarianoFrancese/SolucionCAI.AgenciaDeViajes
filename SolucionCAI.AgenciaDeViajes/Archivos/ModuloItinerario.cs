@@ -30,7 +30,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                     string estadojson = (string)itinerarioJson["Estado"];
                     
 
-                    if (nrosegjson == nroseguimiento && estadojson == "PreReserva")
+                    if (nrosegjson == nroseguimiento && estadojson == "PreReserva") //funciona ok, busca ambas condiciones
                     {
                         var presupuestos = JsonConvert.DeserializeObject<List<PresupuestoEnt>>(itinerarioJson["Presupuestos"].ToString());
                         var cliente = JsonConvert.DeserializeObject<List<ClienteEnt>>(itinerarioJson["Cliente"].ToString());
@@ -39,7 +39,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                         {
                             PresupuestosList = JsonConvert.DeserializeObject<List<PresupuestoEnt>>(itinerarioJson["Presupuestos"].ToString()),
                             Cliente = JsonConvert.DeserializeObject<List<ClienteEnt>>(itinerarioJson["Cliente"].ToString()),                          
-                            MedioPago = (string)itinerarioJson["Medio de Pago"],
+                            MedioPago = (string)itinerarioJson["MedioPago"],
                                                        
                         };
                         Console.WriteLine(itinerario.PresupuestosList);

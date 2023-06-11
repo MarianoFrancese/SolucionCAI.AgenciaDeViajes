@@ -1,6 +1,8 @@
 [
 	{
 		"Estado": "PreReserva",
+		"MedioPago": "TC",
+		"EstadoPago": "Pendiente",
 		"Presupuestos": [
 			{
 				"NroSeguimiento": "0100",
@@ -19,10 +21,10 @@
 		],
 		"Cliente": [
 			{
-				"Condicion Fiscal": "Consumidor Final",
+				"CondFiscal": "Consumidor Final",
 				"Telefono": 1123894488,
 				"Email": "aorlando@gmail.com",
-				"Persona Fisica": [
+				"PersonaFisica": [
 					{
 						"Nombre": "Antonella Orlando",
 						"DNI": 34956210,
@@ -30,9 +32,45 @@
 					}
 				]
 			}
+		]
+
+	},
+
+
+	{
+		"Estado": "PreReserva",
+		"MedioPago": "TD",
+		"EstadoPago": "Pendiente",
+		"Presupuestos": [
+			{
+				"NroSeguimiento": "0200",
+				"Productos": [
+					{
+						"ProductoV": "Codigo: AA015 - Vuelo de SCL a BUE con KLM",
+						"PrecioUnitario": 82000.00,
+						"Cantidad": 1,
+						"SubTotal": 82000.00,
+						"IVA": 17220.00,
+						"TotalProducto": 99220.00
+					}
+				],
+				"Total": 99220.00
+			}
 		],
-		"Medio de Pago": "TC",
-		"Estado Pago": "Pendiente"
+		"Cliente": [
+			{
+				"CondFiscal": "Exento",
+				"Telefono": 1123894400,
+				"Email": "empresa@gmail.com",
+				"PersonaJuridica": [
+					{
+						"RazonSocial": "Empresa SRL",
+						"Domicilio": "Ramon Falcon 3088 CABA",
+						"CUIT": 40349562108
+					}
+				]
+			}
+		]
 
 	}
 ]

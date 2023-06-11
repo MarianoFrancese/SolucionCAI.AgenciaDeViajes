@@ -11,6 +11,8 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
         public string Nombre { get; set; }
         
         public int DNI { get; set; }
-        public CuilEnt CUIL { get; set; }
+        public long CUIL { get; set; }
+        
+        //public CuilEnt CUIL { get; set; }
     }
 }
