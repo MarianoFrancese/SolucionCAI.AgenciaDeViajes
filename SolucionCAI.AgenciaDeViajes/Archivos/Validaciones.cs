@@ -55,11 +55,11 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             {
                 return false;
             }
-            else if (fechaSalida > fechaArribo || fechaSalida < DateTime.Now || fechaArribo < DateTime.Now)
+            else if (fechaSalida > fechaArribo || fechaSalida < DateTime.Now || fechaArribo < DateTime.Now) //fecha arribo no se busca en el filtro asique no se valida
             {
                 return false;
             }
-            else if (tiempoVuelo <= TimeSpan.Zero)
+            else if (tiempoVuelo <= TimeSpan.Zero) //tiempo vuela se calcula, no se filtra, no deberia validarse
             {
                 return false;
             }
@@ -69,6 +69,25 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             }
         }
 
+        public bool ValidaHotel(string ciudad, DateTime fechaEntrada, int cantHuespedes, string tipoHabitacion)
+        {
+            if (string.IsNullOrEmpty(ciudad) || string.IsNullOrEmpty(tipoHabitacion))
+            {
+                return false;
+            }
+            else if (fechaEntrada < DateTime.Now) 
+            {
+                return false;
+            }
+            else if (cantHuespedes == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
 
         //ValidaDNI del pasajero
         public bool ValidaDNI(int dni)
