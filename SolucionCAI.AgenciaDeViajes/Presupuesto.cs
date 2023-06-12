@@ -21,25 +21,34 @@ namespace SolucionCAI.AgenciaDeViajes
 {
     public partial class Presupuesto : Form
     {
+        private List<VueloEnt> vuelosFiltrados;
+        private List<VueloEnt> listaVuelos = new List<VueloEnt>();
+        private List<ProductoLineaEnt> productosAgregados = new List<ProductoLineaEnt>();
+        private List<HotelEnt> hotelesFiltrados;
+        string origen;
+        string destino;
+        DateTime fechaPartida;
+        string fechaPartidaFormateada;
+        int cantPasajeros;
+        string tipoPasajero;
+        string clase;
+        decimal value;
+        string producto;
+        decimal precio;
+        int cantidad;
+        decimal total;
+        string ciudad;
+        DateTime fechaEntrada;
+        DateTime fechaSalida;
+        string fechaEntradaFormateada;
+        string fechaSalidaFormateada;
+        int cantHuespedes;
+        string tipoHabitacion;
+
         public Presupuesto()
         {
             InitializeComponent();
         }
-
-        private List<VueloEnt> vuelosFiltrados;
-        private List<ProductoLineaEnt> productosAgregados;
-        string codigo;
-        string origen;
-        string destino;
-        DateTime fechaPartida;
-        DateTime fechaArribo;
-        TimeSpan tiempoVuelo;
-        string aerolinea;
-        int cantPasajeros;
-        string tipoPasajero;
-        string clase;
-        decimal tarifa;
-        string fechaPartidaFormateada;
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -52,29 +61,38 @@ namespace SolucionCAI.AgenciaDeViajes
                 dataGridView2.Rows.RemoveAt(e.RowIndex);  //ojo acá que da excepción si se elimina la fila antes de confirmar
 
             }
-
-            //MessageBox.Show("Este botón eliminaría un item de la fila, si la fila fuese de un solo producto, desaparecería");
+            CalcularTotal();
         }
 
         private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            MessageBox.Show("Este botón agrega un item de hospedaje en el presupuesto (por rango de días)");
+            if (e.ColumnIndex == dataGridView3.Columns["Column30"].Index && e.RowIndex >= 0)
 
-        }
+            {
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //MessageBox.Show("Este botón agrega un item de vuelo en el presupuesto");
+                DataGridViewRow row = this.dataGridView3.Rows[e.RowIndex];
 
-        }
+                string codigo = row.Cells[0].Value.ToString();
+                string hotel = row.Cells[1].Value.ToString();
+                string ciudad = row.Cells[2].Value.ToString();
+                DateTime fechaEntrada = Convert.ToDateTime(row.Cells[3].Value.ToString());
+                DateTime fechaSalida = Convert.ToDateTime(row.Cells[4].Value.ToString());
+                string direccion = row.Cells[5].Value.ToString();
+                int calificacion = Convert.ToInt32(row.Cells[6].Value.ToString());
+                string tipoHab = row.Cells[7].Value.ToString();
+                int capacidad = Convert.ToInt32(row.Cells[8].Value.ToString());
+                decimal tarifa = Convert.ToDecimal(row.Cells[9].Value.ToString());
+                int adultos = Convert.ToInt32(row.Cells[10].Value.ToString());
+                int menores = Convert.ToInt32(row.Cells[11].Value.ToString());
+                int infantes = Convert.ToInt32(row.Cells[12].Value.ToString());
 
-        private void button3_Click(object sender, EventArgs e) //Boton Filtrar Hospedaje
-        {
-            //MessageBox.Show("Este botón filtra por características de los hospedajes (a revisar)");
+                listaHoteles = ModuloPresupuesto.GenerarListaVuelo(clase, tipoPasajero, tarifa, cantPasajeros, codigo, origen, destino, fechaPartida, fechaArribo, tiempoVuelo, aerolinea);
+                productosAgregados = ModuloPresupuesto.AgregarVueloLinea(listaVuelos);
+                textBox11.Text = ModuloPresupuesto.CrearPresupuesto(productosAgregados, 0)[0].NroSeguimiento.ToString();
+                RellenarPresupuestoTabla(productosAgregados);
+                CalcularTotal();
 
-            //RellenarPresupuestoTabla();
-
-        }
+            }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -89,14 +107,14 @@ namespace SolucionCAI.AgenciaDeViajes
             clase = comboBox3.Text;
 
             vuelosFiltrados = ModuloProductos.ListaVuelos(origen, destino, fechaPartidaFormateada, cantPasajeros, tipoPasajero, clase);
-            RellenarTabla(vuelosFiltrados, cantPasajeros);
+            RellenarTablaVuelos(vuelosFiltrados, cantPasajeros);
 
             //Q: What should this void do?
             //A: It should filter the flights by the selected filters and show them in the table
 
         }
 
-        private void RellenarTabla(List<VueloEnt> vuelosFiltrados, int cantPasajeros)
+        private void RellenarTablaVuelos(List<VueloEnt> vuelosFiltrados, int cantPasajeros)
         {
             dataGridView1.Rows.Clear();
 
@@ -122,7 +140,6 @@ namespace SolucionCAI.AgenciaDeViajes
         private void RellenarPresupuestoTabla(List<ProductoLineaEnt> productosAgregados)
         {
             foreach (var producto in productosAgregados)
-
             {
 
                 dataGridView2.Rows.Add(
@@ -144,11 +161,6 @@ namespace SolucionCAI.AgenciaDeViajes
         }
 
         private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Presupuesto_Load(object sender, EventArgs e)
         {
 
         }
@@ -190,7 +202,36 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            groupBox3.Visible = true;
+
+            List<ProductoLineaEnt> productosAGrabar = new List<ProductoLineaEnt>();
+            ProductoLineaEnt productos;
+            foreach (DataGridViewRow fila in dataGridView2.Rows)
+            {
+                if (fila != null)
+                {
+                    producto = fila.Cells[0]?.Value?.ToString();
+                    precio = Convert.ToDecimal(fila.Cells[1]?.Value?.ToString());
+                    cantidad = Convert.ToInt32(fila.Cells[2]?.Value?.ToString());
+                    //subtotal = Convert.ToDecimal(fila.Cells[3]?.Value?.ToString());
+                    //iva = Convert.ToDecimal(fila.Cells[4]?.Value?.ToString());
+                    total = Convert.ToDecimal(textBox5.Text);
+                    productos = new ProductoLineaEnt
+                    {
+                        ProductoV = producto,
+                        PrecioUn = precio,
+                        Cantidad = cantidad
+                    };
+                    productosAGrabar.Add(productos);
+                }
+
+            }
+            productosAGrabar.RemoveAt(productosAGrabar.Count - 1);
+            Console.WriteLine(productosAGrabar);
+
+
+            var listaProd = ModuloPresupuesto.CrearPresupuesto(productosAGrabar, total);
+            var presupuesto = ModuloPresupuesto.GrabarPresupuesto(listaProd);
+
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -198,10 +239,6 @@ namespace SolucionCAI.AgenciaDeViajes
 
         }
 
-        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
@@ -235,20 +272,106 @@ namespace SolucionCAI.AgenciaDeViajes
 
                 int disponibilidadVuelo = Convert.ToInt32(row.Cells[11].Value.ToString());
 
-                var listaVuelos = ModuloPresupuesto.GenerarListaVuelo(clase, tipoPasajero, tarifa, cantPasajeros, codigo, origen, destino, fechaPartida, fechaArribo, tiempoVuelo, aerolinea);
-                var productosAgregados = ModuloPresupuesto.AgregarVueloLinea(listaVuelos);
-
-                textBox11.Text = ModuloPresupuesto.CrearPresupuesto(productosAgregados)[0].NroSeguimiento.ToString();
-                textBox5.Text = ModuloPresupuesto.CrearPresupuesto(productosAgregados)[0].Total.ToString();
+                listaVuelos = ModuloPresupuesto.GenerarListaVuelo(clase, tipoPasajero, tarifa, cantPasajeros, codigo, origen, destino, fechaPartida, fechaArribo, tiempoVuelo, aerolinea);
+                productosAgregados = ModuloPresupuesto.AgregarVueloLinea(listaVuelos);
+                textBox11.Text = ModuloPresupuesto.CrearPresupuesto(productosAgregados, 0)[0].NroSeguimiento.ToString();
                 RellenarPresupuestoTabla(productosAgregados);
+                CalcularTotal();
 
             }
         }
 
-        private void dataGridView1_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
+
+        public void CalcularTotal()
+        {
+            value = 0;
+            int columnIndex = dataGridView2.Columns["TotalProducto"].Index;
+            foreach (DataGridViewRow fila in dataGridView2.Rows)
+            {
+                if (fila.Cells[columnIndex].Value != null)
+                {
+                    DataGridViewCell cell = fila.Cells[5];
+                    string cellValue = cell.Value?.ToString();
+                    if (decimal.TryParse(cellValue, out decimal total))
+                    {
+                        value += total;
+
+                    }
+
+                }
+            }
+            textBox5.Text = value.ToString();
+
+        }
+
+        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Ciudad
+        }
+
+        private void dateTimePicker2_ValueChanged_1(object sender, EventArgs e)
+        {
+            //Fecha de entrada
+        }
+
+        private void dateTimePicker3_ValueChanged(object sender, EventArgs e)
+        {
+            //Fecha de salida
+        }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+            //Cant huespedes
+        }
+
+        private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Tipo de habitacion
+        }
+        private void button3_Click(object sender, EventArgs e) //Boton Filtrar Hospedaje
         {
 
         }
 
+        private void RellenarTablaHoteles(List<HotelEnt> hotelesFiltrados)
+        {
+            dataGridView3.Rows.Clear();
+
+            string direccionFormateada = string.Join(", ", hotelesFiltrados[0].Direccion.GetType().GetProperties().Select(p => $"{p.Name}: {p.GetValue(hotelesFiltrados[0].Direccion)}"));
+
+            foreach (var hotel in hotelesFiltrados)
+            {
+                dataGridView3.Rows.Add(
+                    hotel.Codigo,
+                    hotel.Nombre,
+                    hotel.CodigoCiudad,
+                    hotel.HabitacionFecha.FechaEntHab,
+                    hotel.HabitacionFecha.FechaSalHab,
+                    direccionFormateada,
+                    hotel.Calificacion,
+                    hotel.Disponibilidad[0].Nombre,
+                    hotel.Disponibilidad[0].Capacidad,
+                    hotel.Disponibilidad[0].TarifaHab,
+                    hotel.Disponibilidad[0].Adultos,
+                    hotel.Disponibilidad[0].Menores,
+                    hotel.Disponibilidad[0].Infantes
+                    );
+            }
+        }
+
+        private void BuscarHosp_Click(object sender, EventArgs e)
+        {
+            ciudad = comboBox5.Text;
+            fechaEntrada = dateTimePicker2.Value;
+            fechaEntradaFormateada = fechaEntrada.ToString("dd/MM/yyyy");
+            fechaSalida = dateTimePicker3.Value;
+            fechaSalidaFormateada = fechaSalida.ToString("dd/MM/yyyy");
+            cantHuespedes = (int)numericUpDown2.Value;
+            tipoHabitacion = comboBox6.Text;
+
+            hotelesFiltrados = ModuloProductos.ListaHoteles(ciudad, fechaEntradaFormateada, fechaSalidaFormateada, cantHuespedes, tipoHabitacion);
+            RellenarTablaHoteles(hotelesFiltrados);
+
+        }
     }
 }

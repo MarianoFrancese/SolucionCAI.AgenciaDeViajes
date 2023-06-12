@@ -47,8 +47,11 @@
     <None Update="Itinerarios.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="PresupuestosEnt.json">
+    <None Update="Presupuestos.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Presupuestos.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="VuelosEnt.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

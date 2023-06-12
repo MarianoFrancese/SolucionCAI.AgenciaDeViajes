@@ -8,7 +8,8 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
 {
     public class HabitacionFechaEnt
     {
-        public DateTime FechaHab { get; set; }
+        public DateTime FechaEntHab { get; set; }
+        public DateTime FechaSalHab { get; set; }
         public int CantHab { get; set; }
     }
 }

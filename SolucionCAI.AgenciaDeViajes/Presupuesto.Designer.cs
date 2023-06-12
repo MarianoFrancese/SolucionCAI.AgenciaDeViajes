@@ -52,9 +52,9 @@
             Column26 = new DataGridViewTextBoxColumn();
             Column28 = new DataGridViewTextBoxColumn();
             TarifaEstadia = new DataGridViewTextBoxColumn();
-            TipoAdulto = new DataGridViewComboBoxColumn();
-            TipoMenor = new DataGridViewComboBoxColumn();
-            TipoInfante = new DataGridViewComboBoxColumn();
+            TipoAdulto = new DataGridViewTextBoxColumn();
+            TipoMenor = new DataGridViewTextBoxColumn();
+            TipoInfante = new DataGridViewTextBoxColumn();
             Column30 = new DataGridViewButtonColumn();
             tabPage2 = new TabPage();
             comboBox4 = new ComboBox();
@@ -118,11 +118,11 @@
             // 
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
-            tabControl1.Location = new Point(16, 19);
-            tabControl1.Margin = new Padding(5, 4, 5, 4);
+            tabControl1.Location = new Point(14, 14);
+            tabControl1.Margin = new Padding(4, 3, 4, 3);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(1009, 343);
+            tabControl1.Size = new Size(883, 257);
             tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -139,11 +139,11 @@
             tabPage1.Controls.Add(label7);
             tabPage1.Controls.Add(label6);
             tabPage1.Controls.Add(dataGridView3);
-            tabPage1.Location = new Point(4, 29);
-            tabPage1.Margin = new Padding(5, 4, 5, 4);
+            tabPage1.Location = new Point(4, 24);
+            tabPage1.Margin = new Padding(4, 3, 4, 3);
             tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(5, 4, 5, 4);
-            tabPage1.Size = new Size(1001, 310);
+            tabPage1.Padding = new Padding(4, 3, 4, 3);
+            tabPage1.Size = new Size(875, 229);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Hospedaje";
             tabPage1.UseVisualStyleBackColor = true;
@@ -152,98 +152,104 @@
             // 
             comboBox6.FormattingEnabled = true;
             comboBox6.Items.AddRange(new object[] { "Standard", "Intermedia", "Deluxe" });
-            comboBox6.Location = new Point(682, 53);
-            comboBox6.Margin = new Padding(5, 4, 5, 4);
+            comboBox6.Location = new Point(597, 40);
+            comboBox6.Margin = new Padding(4, 3, 4, 3);
             comboBox6.Name = "comboBox6";
-            comboBox6.Size = new Size(118, 28);
+            comboBox6.Size = new Size(104, 23);
             comboBox6.TabIndex = 37;
+            comboBox6.SelectedIndexChanged += comboBox6_SelectedIndexChanged;
             // 
             // label12
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label12.Location = new Point(688, 21);
-            label12.Margin = new Padding(5, 0, 5, 0);
+            label12.Location = new Point(602, 16);
+            label12.Margin = new Padding(4, 0, 4, 0);
             label12.Name = "label12";
-            label12.Size = new Size(119, 20);
+            label12.Size = new Size(93, 15);
             label12.TabIndex = 36;
             label12.Text = "Tipo Habitacion";
             // 
             // numericUpDown2
             // 
-            numericUpDown2.Location = new Point(561, 53);
-            numericUpDown2.Margin = new Padding(5, 4, 5, 4);
+            numericUpDown2.Location = new Point(491, 40);
+            numericUpDown2.Margin = new Padding(4, 3, 4, 3);
             numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(72, 27);
+            numericUpDown2.Size = new Size(63, 23);
             numericUpDown2.TabIndex = 35;
             numericUpDown2.TextAlign = HorizontalAlignment.Center;
+            numericUpDown2.ValueChanged += numericUpDown2_ValueChanged;
             // 
             // label11
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.Location = new Point(538, 23);
-            label11.Margin = new Padding(5, 0, 5, 0);
+            label11.Location = new Point(471, 17);
+            label11.Margin = new Padding(4, 0, 4, 0);
             label11.Name = "label11";
-            label11.Size = new Size(121, 20);
+            label11.Size = new Size(96, 15);
             label11.TabIndex = 34;
             label11.Text = "Cant Huespedes";
             // 
             // dateTimePicker3
             // 
             dateTimePicker3.Format = DateTimePickerFormat.Short;
-            dateTimePicker3.Location = new Point(310, 48);
-            dateTimePicker3.Margin = new Padding(5, 4, 5, 4);
+            dateTimePicker3.Location = new Point(271, 36);
+            dateTimePicker3.Margin = new Padding(4, 3, 4, 3);
             dateTimePicker3.MaxDate = new DateTime(2030, 12, 31, 0, 0, 0, 0);
             dateTimePicker3.MinDate = new DateTime(2023, 6, 1, 0, 0, 0, 0);
             dateTimePicker3.Name = "dateTimePicker3";
-            dateTimePicker3.Size = new Size(115, 27);
+            dateTimePicker3.Size = new Size(101, 23);
             dateTimePicker3.TabIndex = 33;
             dateTimePicker3.Value = new DateTime(2023, 6, 1, 0, 0, 0, 0);
+            dateTimePicker3.ValueChanged += dateTimePicker3_ValueChanged;
             // 
             // dateTimePicker2
             // 
             dateTimePicker2.Format = DateTimePickerFormat.Short;
-            dateTimePicker2.Location = new Point(170, 49);
-            dateTimePicker2.Margin = new Padding(5, 4, 5, 4);
+            dateTimePicker2.Location = new Point(149, 37);
+            dateTimePicker2.Margin = new Padding(4, 3, 4, 3);
             dateTimePicker2.MaxDate = new DateTime(2030, 12, 31, 0, 0, 0, 0);
             dateTimePicker2.MinDate = new DateTime(2023, 6, 1, 0, 0, 0, 0);
             dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(115, 27);
+            dateTimePicker2.Size = new Size(101, 23);
             dateTimePicker2.TabIndex = 32;
             dateTimePicker2.Value = new DateTime(2023, 6, 1, 0, 0, 0, 0);
+            dateTimePicker2.ValueChanged += dateTimePicker2_ValueChanged_1;
             // 
             // comboBox5
             // 
             comboBox5.FormattingEnabled = true;
             comboBox5.Items.AddRange(new object[] { "BUE", "PAR", "MAD", "MIA", "ROM", "SCL" });
-            comboBox5.Location = new Point(14, 48);
-            comboBox5.Margin = new Padding(5, 4, 5, 4);
+            comboBox5.Location = new Point(12, 36);
+            comboBox5.Margin = new Padding(4, 3, 4, 3);
             comboBox5.Name = "comboBox5";
-            comboBox5.Size = new Size(118, 28);
+            comboBox5.Size = new Size(104, 23);
             comboBox5.TabIndex = 31;
+            comboBox5.SelectedIndexChanged += comboBox5_SelectedIndexChanged;
             // 
             // BuscarHosp
             // 
             BuscarHosp.BackColor = Color.FromArgb(255, 128, 0);
             BuscarHosp.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             BuscarHosp.ForeColor = Color.White;
-            BuscarHosp.Location = new Point(865, 40);
-            BuscarHosp.Margin = new Padding(5, 4, 5, 4);
+            BuscarHosp.Location = new Point(757, 30);
+            BuscarHosp.Margin = new Padding(4, 3, 4, 3);
             BuscarHosp.Name = "BuscarHosp";
-            BuscarHosp.Size = new Size(101, 36);
+            BuscarHosp.Size = new Size(88, 27);
             BuscarHosp.TabIndex = 16;
             BuscarHosp.Text = "Buscar";
             BuscarHosp.UseVisualStyleBackColor = false;
+            BuscarHosp.Click += BuscarHosp_Click;
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(319, 19);
-            label8.Margin = new Padding(5, 0, 5, 0);
+            label8.Location = new Point(279, 14);
+            label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
-            label8.Size = new Size(94, 20);
+            label8.Size = new Size(74, 15);
             label8.TabIndex = 12;
             label8.Text = "Fecha Salida";
             // 
@@ -251,10 +257,10 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(174, 19);
-            label7.Margin = new Padding(5, 0, 5, 0);
+            label7.Location = new Point(152, 14);
+            label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(107, 20);
+            label7.Size = new Size(84, 15);
             label7.TabIndex = 11;
             label7.Text = "Fecha Entrada";
             // 
@@ -262,10 +268,10 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(43, 19);
-            label6.Margin = new Padding(5, 0, 5, 0);
+            label6.Location = new Point(38, 14);
+            label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(57, 20);
+            label6.Size = new Size(44, 15);
             label6.TabIndex = 10;
             label6.Text = "Ciudad";
             // 
@@ -273,11 +279,11 @@
             // 
             dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView3.Columns.AddRange(new DataGridViewColumn[] { CodHotel, Column22, CodCiudad, Column31, Column32, Column24, Column25, Column26, Column28, TarifaEstadia, TipoAdulto, TipoMenor, TipoInfante, Column30 });
-            dataGridView3.Location = new Point(0, 120);
-            dataGridView3.Margin = new Padding(5, 4, 5, 4);
+            dataGridView3.Location = new Point(0, 90);
+            dataGridView3.Margin = new Padding(4, 3, 4, 3);
             dataGridView3.Name = "dataGridView3";
             dataGridView3.RowHeadersWidth = 82;
-            dataGridView3.Size = new Size(999, 183);
+            dataGridView3.Size = new Size(874, 137);
             dataGridView3.TabIndex = 0;
             // 
             // CodHotel
@@ -353,25 +359,28 @@
             // TipoAdulto
             // 
             TipoAdulto.HeaderText = "Adultos";
-            TipoAdulto.Items.AddRange(new object[] { "1", "2", "3", "4" });
             TipoAdulto.MinimumWidth = 10;
             TipoAdulto.Name = "TipoAdulto";
+            TipoAdulto.Resizable = DataGridViewTriState.True;
+            TipoAdulto.SortMode = DataGridViewColumnSortMode.NotSortable;
             TipoAdulto.Width = 200;
             // 
             // TipoMenor
             // 
             TipoMenor.HeaderText = "Menores";
-            TipoMenor.Items.AddRange(new object[] { "1", "2", "3", "4" });
             TipoMenor.MinimumWidth = 10;
             TipoMenor.Name = "TipoMenor";
+            TipoMenor.Resizable = DataGridViewTriState.True;
+            TipoMenor.SortMode = DataGridViewColumnSortMode.NotSortable;
             TipoMenor.Width = 200;
             // 
             // TipoInfante
             // 
             TipoInfante.HeaderText = "Infantes";
-            TipoInfante.Items.AddRange(new object[] { "1", "2", "3", "4" });
             TipoInfante.MinimumWidth = 10;
             TipoInfante.Name = "TipoInfante";
+            TipoInfante.Resizable = DataGridViewTriState.True;
+            TipoInfante.SortMode = DataGridViewColumnSortMode.NotSortable;
             TipoInfante.Width = 200;
             // 
             // Column30
@@ -397,11 +406,11 @@
             tabPage2.Controls.Add(label2);
             tabPage2.Controls.Add(label1);
             tabPage2.Controls.Add(dataGridView1);
-            tabPage2.Location = new Point(4, 29);
-            tabPage2.Margin = new Padding(5, 4, 5, 4);
+            tabPage2.Location = new Point(4, 24);
+            tabPage2.Margin = new Padding(4, 3, 4, 3);
             tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(5, 4, 5, 4);
-            tabPage2.Size = new Size(1001, 310);
+            tabPage2.Padding = new Padding(4, 3, 4, 3);
+            tabPage2.Size = new Size(875, 229);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Vuelos";
             tabPage2.UseVisualStyleBackColor = true;
@@ -410,41 +419,41 @@
             // 
             comboBox4.FormattingEnabled = true;
             comboBox4.Items.AddRange(new object[] { "BUE", "CDG", "MAD", "MIA", "ROM", "SCL" });
-            comboBox4.Location = new Point(178, 39);
-            comboBox4.Margin = new Padding(5, 4, 5, 4);
+            comboBox4.Location = new Point(156, 29);
+            comboBox4.Margin = new Padding(4, 3, 4, 3);
             comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(92, 28);
+            comboBox4.Size = new Size(81, 23);
             comboBox4.TabIndex = 35;
             // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "BUE", "CDG", "MAD", "MIA", "ROM", "SCL" });
-            comboBox1.Location = new Point(21, 39);
-            comboBox1.Margin = new Padding(5, 4, 5, 4);
+            comboBox1.Location = new Point(18, 29);
+            comboBox1.Margin = new Padding(4, 3, 4, 3);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(92, 28);
+            comboBox1.Size = new Size(81, 23);
             comboBox1.TabIndex = 34;
             // 
             // dateTimePicker1
             // 
             dateTimePicker1.Checked = false;
             dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(313, 33);
-            dateTimePicker1.Margin = new Padding(5, 4, 5, 4);
+            dateTimePicker1.Location = new Point(274, 25);
+            dateTimePicker1.Margin = new Padding(4, 3, 4, 3);
             dateTimePicker1.MaxDate = new DateTime(2030, 12, 31, 0, 0, 0, 0);
             dateTimePicker1.MinDate = new DateTime(2023, 6, 1, 0, 0, 0, 0);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(116, 27);
+            dateTimePicker1.Size = new Size(102, 23);
             dateTimePicker1.TabIndex = 32;
             dateTimePicker1.Value = new DateTime(2023, 6, 1, 0, 0, 0, 0);
             // 
             // numericUpDown1
             // 
-            numericUpDown1.Location = new Point(528, 33);
-            numericUpDown1.Margin = new Padding(5, 4, 5, 4);
+            numericUpDown1.Location = new Point(462, 25);
+            numericUpDown1.Margin = new Padding(4, 3, 4, 3);
             numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(54, 27);
+            numericUpDown1.Size = new Size(47, 23);
             numericUpDown1.TabIndex = 31;
             numericUpDown1.TextAlign = HorizontalAlignment.Center;
             // 
@@ -452,10 +461,10 @@
             // 
             comboBox3.FormattingEnabled = true;
             comboBox3.Items.AddRange(new object[] { "Economy", "Premium", "Business", "First" });
-            comboBox3.Location = new Point(768, 32);
-            comboBox3.Margin = new Padding(5, 4, 5, 4);
+            comboBox3.Location = new Point(672, 24);
+            comboBox3.Margin = new Padding(4, 3, 4, 3);
             comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(89, 28);
+            comboBox3.Size = new Size(78, 23);
             comboBox3.TabIndex = 33;
             // 
             // comboBox2
@@ -463,10 +472,10 @@
             comboBox2.DisplayMember = "Clase";
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { "Adulto", "Menor", "Infante" });
-            comboBox2.Location = new Point(641, 33);
-            comboBox2.Margin = new Padding(5, 4, 5, 4);
+            comboBox2.Location = new Point(561, 25);
+            comboBox2.Margin = new Padding(4, 3, 4, 3);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(92, 28);
+            comboBox2.Size = new Size(81, 23);
             comboBox2.TabIndex = 32;
             comboBox2.ValueMember = "Clase";
             // 
@@ -474,10 +483,10 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.Location = new Point(789, 9);
-            label10.Margin = new Padding(5, 0, 5, 0);
+            label10.Location = new Point(690, 7);
+            label10.Margin = new Padding(4, 0, 4, 0);
             label10.Name = "label10";
-            label10.Size = new Size(45, 20);
+            label10.Size = new Size(35, 15);
             label10.TabIndex = 13;
             label10.Text = "Clase";
             // 
@@ -485,10 +494,10 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(638, 9);
-            label4.Margin = new Padding(5, 0, 5, 0);
+            label4.Location = new Point(558, 7);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(103, 20);
+            label4.Size = new Size(80, 15);
             label4.TabIndex = 11;
             label4.Text = "Tipo Pasajero";
             // 
@@ -496,10 +505,10 @@
             // 
             label21.AutoSize = true;
             label21.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label21.Location = new Point(193, 9);
-            label21.Margin = new Padding(5, 0, 5, 0);
+            label21.Location = new Point(169, 7);
+            label21.Margin = new Padding(4, 0, 4, 0);
             label21.Name = "label21";
-            label21.Size = new Size(63, 20);
+            label21.Size = new Size(50, 15);
             label21.TabIndex = 9;
             label21.Text = "Destino";
             // 
@@ -508,10 +517,10 @@
             button2.BackColor = Color.FromArgb(255, 128, 0);
             button2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(890, 29);
-            button2.Margin = new Padding(5, 4, 5, 4);
+            button2.Location = new Point(779, 22);
+            button2.Margin = new Padding(4, 3, 4, 3);
             button2.Name = "button2";
-            button2.Size = new Size(101, 36);
+            button2.Size = new Size(88, 27);
             button2.TabIndex = 8;
             button2.Text = "Buscar";
             button2.UseVisualStyleBackColor = false;
@@ -521,10 +530,10 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(42, 9);
-            label3.Margin = new Padding(5, 0, 5, 0);
+            label3.Location = new Point(37, 7);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(56, 20);
+            label3.Size = new Size(45, 15);
             label3.TabIndex = 3;
             label3.Text = "Origen";
             // 
@@ -532,10 +541,10 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(498, 9);
-            label2.Margin = new Padding(5, 0, 5, 0);
+            label2.Location = new Point(436, 7);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(141, 20);
+            label2.Size = new Size(109, 15);
             label2.TabIndex = 2;
             label2.Text = "Cantidad Pasajeros";
             // 
@@ -543,10 +552,10 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(322, 9);
-            label1.Margin = new Padding(5, 0, 5, 0);
+            label1.Location = new Point(282, 7);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(103, 20);
+            label1.Size = new Size(81, 15);
             label1.TabIndex = 1;
             label1.Text = "Fecha Partida";
             // 
@@ -555,11 +564,11 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, FechaPartida, FechaArribo, TiempoVuelo, Column7, cantPasajero, TipoPasajero, Column8, Tarifa, disponibilidadVuelo, Column12 });
             dataGridView1.EditMode = DataGridViewEditMode.EditOnKeystroke;
-            dataGridView1.Location = new Point(5, 113);
-            dataGridView1.Margin = new Padding(5, 4, 5, 4);
+            dataGridView1.Location = new Point(4, 85);
+            dataGridView1.Margin = new Padding(4, 3, 4, 3);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 82;
-            dataGridView1.Size = new Size(991, 184);
+            dataGridView1.Size = new Size(867, 138);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
             // 
@@ -570,7 +579,7 @@
             Column1.MinimumWidth = 10;
             Column1.Name = "Column1";
             Column1.ReadOnly = true;
-            Column1.Width = 125;
+            Column1.Width = 101;
             // 
             // Column2
             // 
@@ -669,11 +678,11 @@
             // 
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.Columns.AddRange(new DataGridViewColumn[] { Column14, Column16, Column15, Column18, Column19, TotalProducto, Column13 });
-            dataGridView2.Location = new Point(16, 441);
-            dataGridView2.Margin = new Padding(5, 4, 5, 4);
+            dataGridView2.Location = new Point(14, 331);
+            dataGridView2.Margin = new Padding(4, 3, 4, 3);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 82;
-            dataGridView2.Size = new Size(1003, 172);
+            dataGridView2.Size = new Size(878, 129);
             dataGridView2.TabIndex = 3;
             dataGridView2.CellContentClick += dataGridView2_CellContentClick;
             // 
@@ -737,20 +746,20 @@
             textBox5.Enabled = false;
             textBox5.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
             textBox5.ForeColor = SystemColors.WindowText;
-            textBox5.Location = new Point(888, 623);
-            textBox5.Margin = new Padding(5, 4, 5, 4);
+            textBox5.Location = new Point(777, 467);
+            textBox5.Margin = new Padding(4, 3, 4, 3);
             textBox5.Name = "textBox5";
             textBox5.ReadOnly = true;
-            textBox5.Size = new Size(132, 28);
+            textBox5.Size = new Size(116, 24);
             textBox5.TabIndex = 6;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(842, 627);
-            label5.Margin = new Padding(5, 0, 5, 0);
+            label5.Location = new Point(737, 470);
+            label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(42, 20);
+            label5.Size = new Size(32, 15);
             label5.TabIndex = 9;
             label5.Text = "Total";
             // 
@@ -758,10 +767,10 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.Location = new Point(16, 404);
-            label9.Margin = new Padding(5, 0, 5, 0);
+            label9.Location = new Point(14, 303);
+            label9.Margin = new Padding(4, 0, 4, 0);
             label9.Name = "label9";
-            label9.Size = new Size(127, 24);
+            label9.Size = new Size(103, 18);
             label9.TabIndex = 10;
             label9.Text = "Presupuesto";
             // 
@@ -770,10 +779,10 @@
             button1.BackColor = Color.FromArgb(255, 128, 0);
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(410, 639);
-            button1.Margin = new Padding(5, 4, 5, 4);
+            button1.Location = new Point(359, 479);
+            button1.Margin = new Padding(4, 3, 4, 3);
             button1.Name = "button1";
-            button1.Size = new Size(218, 49);
+            button1.Size = new Size(191, 37);
             button1.TabIndex = 11;
             button1.Text = "Generar Presupuesto";
             button1.UseVisualStyleBackColor = false;
@@ -782,10 +791,10 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(856, 411);
-            label13.Margin = new Padding(5, 0, 5, 0);
+            label13.Location = new Point(749, 308);
+            label13.Margin = new Padding(4, 0, 4, 0);
             label13.Name = "label13";
-            label13.Size = new Size(34, 20);
+            label13.Size = new Size(27, 15);
             label13.TabIndex = 27;
             label13.Text = "Nro";
             // 
@@ -793,11 +802,11 @@
             // 
             textBox11.BackColor = SystemColors.Control;
             textBox11.Enabled = false;
-            textBox11.Location = new Point(896, 407);
-            textBox11.Margin = new Padding(5, 4, 5, 4);
+            textBox11.Location = new Point(784, 305);
+            textBox11.Margin = new Padding(4, 3, 4, 3);
             textBox11.Name = "textBox11";
             textBox11.ReadOnly = true;
-            textBox11.Size = new Size(123, 27);
+            textBox11.Size = new Size(108, 23);
             textBox11.TabIndex = 30;
             // 
             // button4
@@ -805,10 +814,9 @@
             button4.BackColor = Color.FromArgb(255, 128, 0);
             button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button4.ForeColor = Color.White;
-            button4.Location = new Point(14, 651);
-            button4.Margin = new Padding(3, 4, 3, 4);
+            button4.Location = new Point(12, 488);
             button4.Name = "button4";
-            button4.Size = new Size(86, 31);
+            button4.Size = new Size(75, 23);
             button4.TabIndex = 31;
             button4.Text = "Volver";
             button4.UseVisualStyleBackColor = false;
@@ -819,11 +827,9 @@
             groupBox3.Controls.Add(button11);
             groupBox3.Controls.Add(button12);
             groupBox3.Controls.Add(label14);
-            groupBox3.Location = new Point(339, 369);
-            groupBox3.Margin = new Padding(3, 4, 3, 4);
+            groupBox3.Location = new Point(297, 277);
             groupBox3.Name = "groupBox3";
-            groupBox3.Padding = new Padding(3, 4, 3, 4);
-            groupBox3.Size = new Size(386, 121);
+            groupBox3.Size = new Size(338, 91);
             groupBox3.TabIndex = 34;
             groupBox3.TabStop = false;
             groupBox3.Text = "Confirmación";
@@ -832,10 +838,9 @@
             // button11
             // 
             button11.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button11.Location = new Point(301, 83);
-            button11.Margin = new Padding(3, 4, 3, 4);
+            button11.Location = new Point(263, 62);
             button11.Name = "button11";
-            button11.Size = new Size(80, 31);
+            button11.Size = new Size(70, 23);
             button11.TabIndex = 2;
             button11.Text = "Confirmar";
             button11.UseVisualStyleBackColor = true;
@@ -844,10 +849,9 @@
             // button12
             // 
             button12.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button12.Location = new Point(218, 83);
-            button12.Margin = new Padding(3, 4, 3, 4);
+            button12.Location = new Point(191, 62);
             button12.Name = "button12";
-            button12.Size = new Size(75, 31);
+            button12.Size = new Size(66, 23);
             button12.TabIndex = 1;
             button12.Text = "Cancelar";
             button12.UseVisualStyleBackColor = true;
@@ -857,17 +861,17 @@
             // 
             label14.AutoSize = true;
             label14.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.Location = new Point(15, 39);
+            label14.Location = new Point(13, 29);
             label14.Name = "label14";
-            label14.Size = new Size(293, 28);
+            label14.Size = new Size(236, 21);
             label14.TabIndex = 0;
             label14.Text = "¿Desea generar un Presupuesto?";
             // 
             // Presupuesto
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1072, 732);
+            ClientSize = new Size(938, 549);
             Controls.Add(groupBox3);
             Controls.Add(button4);
             Controls.Add(textBox11);
@@ -878,7 +882,7 @@
             Controls.Add(textBox5);
             Controls.Add(dataGridView2);
             Controls.Add(tabControl1);
-            Margin = new Padding(5, 4, 5, 4);
+            Margin = new Padding(4, 3, 4, 3);
             Name = "Presupuesto";
             Text = "Presupuesto";
             tabControl1.ResumeLayout(false);
@@ -935,20 +939,6 @@
         private ComboBox comboBox6;
         private Label label12;
         private Button button4;
-        private DataGridViewTextBoxColumn CodHotel;
-        private DataGridViewTextBoxColumn Column22;
-        private DataGridViewTextBoxColumn CodCiudad;
-        private DataGridViewTextBoxColumn Column31;
-        private DataGridViewTextBoxColumn Column32;
-        private DataGridViewTextBoxColumn Column24;
-        private DataGridViewTextBoxColumn Column25;
-        private DataGridViewTextBoxColumn Column26;
-        private DataGridViewTextBoxColumn Column28;
-        private DataGridViewTextBoxColumn TarifaEstadia;
-        private DataGridViewComboBoxColumn TipoAdulto;
-        private DataGridViewComboBoxColumn TipoMenor;
-        private DataGridViewComboBoxColumn TipoInfante;
-        private DataGridViewButtonColumn Column30;
         private GroupBox groupBox3;
         private Button button11;
         private Button button12;
@@ -973,6 +963,20 @@
         private DataGridViewTextBoxColumn Column19;
         private DataGridViewTextBoxColumn TotalProducto;
         private DataGridViewButtonColumn Column13;
+        private DataGridViewTextBoxColumn CodHotel;
+        private DataGridViewTextBoxColumn Column22;
+        private DataGridViewTextBoxColumn CodCiudad;
+        private DataGridViewTextBoxColumn Column31;
+        private DataGridViewTextBoxColumn Column32;
+        private DataGridViewTextBoxColumn Column24;
+        private DataGridViewTextBoxColumn Column25;
+        private DataGridViewTextBoxColumn Column26;
+        private DataGridViewTextBoxColumn Column28;
+        private DataGridViewTextBoxColumn TarifaEstadia;
+        private DataGridViewTextBoxColumn TipoAdulto;
+        private DataGridViewTextBoxColumn TipoMenor;
+        private DataGridViewTextBoxColumn TipoInfante;
+        private DataGridViewButtonColumn Column30;
     }
 }
 

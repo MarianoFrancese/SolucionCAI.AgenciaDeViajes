@@ -7,25 +7,14 @@ using System.IO;
 namespace SolucionCAI.AgenciaDeViajes.Archivos
 {
     public class ModuloProductos
-    {   //Q: Why cant i get file path to work?
-        //A: Because the file is not in the same folder as the executable.
-        //Q: Which is the executable?
-        //A: The .exe file that is created when you build the project.
-        //Q: But if I have it in this solution project?
-        //A: It doesn't matter. The executable is created in a different folder.
-        //Q: So how do I get the file path to work?
-        //A: You have to copy the file to the same folder as the executable.
-        //Q: Is there any way to access to the file when having it in the solution project?
-        //A: Yes, you can use the "Copy to Output Directory" property of the file.
-        //Q: How do I do that?
-
+    {
         public static List<VueloEnt> ListaVuelos(string origen, string destino, string fechaPartida, int cantPasajeros, string tipoPasajero, string clase)
         {
 
-            if (File.Exists("VuelosEnt.json"))
+            if (File.Exists("Vuelos.json"))
             {
+                string contenidoDelArchivo = File.ReadAllText("Vuelos.json");
                 Console.WriteLine("El archivo existe");
-                string contenidoDelArchivo = File.ReadAllText("VuelosEnt.json");
 
                 JArray jsonArray = JArray.Parse(contenidoDelArchivo);
 
@@ -50,7 +39,6 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                             Origen = origenjson,
                             Destino = destinojson,
                             FechaSalida = DateTime.ParseExact(fechapartidajson, "dd/MM/yyyy", CultureInfo.InvariantCulture),
-                            // Agregar más propiedades
                             FechaArribo = DateTime.ParseExact((string)vueloJson["FechaArribo"], "dd/MM/yyyy", CultureInfo.InvariantCulture),
                             TiempoVuelo = TimeSpan.Parse((string)vueloJson["TiempoVuelo"]),
                             Aerolinea = (string)vueloJson["Aerolinea"],
@@ -68,6 +56,77 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             else
             {
                 return new List<VueloEnt>();
+            }
+        }
+
+        public static List<HotelEnt> ListaHoteles(string ciudad, string fechaEntrada, string fechaSalida, int cantHuespedes, string tipoHabitacion)
+        {
+            if (File.Exists("Hoteles.json"))
+            {
+                string contenidoDelArchivo = File.ReadAllText("Hoteles.json");
+                Console.WriteLine("El archivo existe");
+
+                JArray jsonArray = JArray.Parse(contenidoDelArchivo);
+
+                List<HotelEnt> hotelesFiltrados = new List<HotelEnt>();
+
+                foreach (JObject hotelJson in jsonArray)
+                {
+                    string codigoJson = (string)hotelJson["Codigo"];
+                    string nombreJson = (string)hotelJson["Nombre"];
+                    string ciudadJson = (string)hotelJson["CodigoDeCiudad"];
+                    DateTime fechaEntradaJson = Convert.ToDateTime(hotelJson["HabitacionFechaDis"]["FechaEntradaHab"]);
+                    DateTime fechaSalidaJson = Convert.ToDateTime(hotelJson["HabitacionFechaDis"]["FechaSalidaHab"]);
+                    string calificacionJson = (string)hotelJson["Calificacion"];
+                    string tipoHabitacionJson = (string)hotelJson["Disponibilidad"][0]["Nombre"];
+                    int capacidadJson = Convert.ToInt32(hotelJson["Disponibilidad"][0]["Capacidad"]);
+                    int cantHab = Convert.ToInt32(hotelJson["HabitacionFechaDis"]["CantHab"]);
+                    int disponibilidad = cantHab * capacidadJson; 
+
+
+                    if (ciudadJson == ciudad && fechaEntradaJson <= Convert.ToDateTime(fechaEntrada) && fechaSalidaJson >= Convert.ToDateTime(fechaSalida) && disponibilidad >= cantHuespedes && tipoHabitacionJson == tipoHabitacion)
+                    {
+                        var listaDisponibilidad = JsonConvert.DeserializeObject<List<DisponibilidadHabEnt>>(hotelJson["Disponibilidad"].ToString());
+                        // Ver como manejar la disponibilidad de la habitacion con la cantidad de habitaciones
+                        //IMPORTANTE!!
+                        
+                        DireccionEnt direccion = new DireccionEnt
+                        {
+                            Calle = hotelJson["Direccion"]["Calle"].ToString(),
+                            Numero = Convert.ToInt32(hotelJson["Direccion"]["Numero"]),
+                            CP = Convert.ToInt32(hotelJson["Direccion"]["CP"]),
+                            Latitud = Convert.ToDecimal(hotelJson["Direccion"]["Latitud"]),
+                            Longitud = Convert.ToDecimal(hotelJson["Direccion"]["Longitud"])
+                        };
+
+                        HabitacionFechaEnt habitacionFecha = new HabitacionFechaEnt
+                        {
+                            FechaEntHab = DateTime.ParseExact(fechaEntrada, "dd/MM/yyyy", CultureInfo.InvariantCulture),
+                            FechaSalHab = DateTime.ParseExact(fechaSalida, "dd/MM/yyyy", CultureInfo.InvariantCulture),
+                            CantHab = cantHab
+                        };
+
+                        HotelEnt hotel = new HotelEnt
+                        {
+                            Codigo = codigoJson,
+                            Nombre = nombreJson,
+                            CodigoCiudad = ciudadJson,
+                            Calificacion = Convert.ToInt32(calificacionJson),
+                            Direccion = direccion,
+                            Disponibilidad = listaDisponibilidad,
+                            HabitacionFecha = habitacionFecha
+                        };
+                        Console.WriteLine(hotel.Disponibilidad);
+                        hotelesFiltrados.Add(hotel);
+
+                    }
+
+                }
+                return hotelesFiltrados;
+            }
+            else
+            {
+                return new List<HotelEnt>();
             }
         }
 

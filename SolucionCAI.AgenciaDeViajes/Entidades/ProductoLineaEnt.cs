@@ -18,7 +18,6 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
         public Decimal IVA { get { return CalcularIVA(SubTotal); } }
         public Decimal TotalProd { get { return CalcularTotal(SubTotal, IVA); } }
 
-     
         public decimal CalcularSubtotal(int cantidad, decimal precioUnitario)
         {
             decimal subtotal;
