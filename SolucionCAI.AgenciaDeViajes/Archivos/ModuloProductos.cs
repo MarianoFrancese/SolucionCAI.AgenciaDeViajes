@@ -78,6 +78,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                     string ciudadJson = (string)hotelJson["CodigoDeCiudad"];
                     DateTime fechaEntradaJson = DateTime.ParseExact(hotelJson["HabitacionFechaDis"]["FechaEntradaHab"].ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
                     DateTime fechaSalidaJson = DateTime.ParseExact(hotelJson["HabitacionFechaDis"]["FechaSalidaHab"].ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                    Console.WriteLine(fechaSalidaJson);
                     string calificacionJson = (string)hotelJson["Calificacion"];
                     string tipoHabitacionJson = (string)hotelJson["Disponibilidad"][0]["Nombre"];
                     int capacidadJson = Convert.ToInt32(hotelJson["Disponibilidad"][0]["Capacidad"]);
@@ -85,7 +86,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                     int disponibilidad = cantHab * capacidadJson; 
 
 
-                    if (ciudadJson == ciudad && fechaEntradaJson <= Convert.ToDateTime(fechaEntrada) && fechaSalidaJson >= Convert.ToDateTime(fechaSalida) && disponibilidad >= cantHuespedes && tipoHabitacionJson == tipoHabitacion && cantHab != 0)
+                    if (ciudadJson == ciudad && fechaEntradaJson >= Convert.ToDateTime(fechaEntrada) && fechaSalidaJson <= Convert.ToDateTime(fechaSalida) && disponibilidad >= cantHuespedes && tipoHabitacionJson == tipoHabitacion && cantHab != 0)
                     {
                         var listaDisponibilidad = JsonConvert.DeserializeObject<List<DisponibilidadHabEnt>>(hotelJson["Disponibilidad"].ToString());
                         // Ver como manejar la disponibilidad de la habitacion con la cantidad de habitaciones
@@ -102,8 +103,8 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
                         HabitacionFechaEnt habitacionFecha = new HabitacionFechaEnt
                         {
-                            FechaEntHab = DateTime.ParseExact(fechaEntrada, "dd/MM/yyyy", CultureInfo.InvariantCulture),
-                            FechaSalHab = DateTime.ParseExact(fechaSalida, "dd/MM/yyyy", CultureInfo.InvariantCulture),
+                            FechaEntHab = fechaEntradaJson,
+                            FechaSalHab = fechaSalidaJson,
                             CantHab = cantHab
                         };
 

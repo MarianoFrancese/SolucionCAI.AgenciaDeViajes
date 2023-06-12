@@ -6,6 +6,7 @@ using System.IO;
 using System.Windows.Forms;
 using SolucionCAI.AgenciaDeViajes;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Reflection;
 
 namespace SolucionCAI.AgenciaDeViajes.Archivos
 {
@@ -181,9 +182,34 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             foreach (string key in keysDireccion)
             {
                 string[] claveValor = key.Split(':');
-                string clave = claveValor[0].Trim();
-                string valor = claveValor[1].Trim();
-                direccionEnt.GetType().GetProperty(clave).SetValue(direccionEnt, valor);
+                if(claveValor.Length > 1)
+                {
+                    string clave = claveValor[0].Trim();
+                    string valor = claveValor[1].Trim();
+
+                    PropertyInfo property = direccionEnt.GetType().GetProperty(clave);
+
+                    if(property != null)
+                    {
+                        if (property.PropertyType == typeof(int))
+                        {
+                            int valorInt = int.Parse(valor);
+                            property.SetValue(direccionEnt, valorInt, null);
+                        }
+                        else if (property.PropertyType == typeof(decimal))
+                        {
+                            decimal valorDecimal = decimal.Parse(valor);
+                            property.SetValue(direccionEnt, valorDecimal, null);
+                        }
+                        else
+                        {
+                            property.SetValue(direccionEnt, valor, null);
+
+                        }      
+                    }
+                }
+
+                
             }
 
             DisponibilidadHabEnt disponibilidades = new DisponibilidadHabEnt

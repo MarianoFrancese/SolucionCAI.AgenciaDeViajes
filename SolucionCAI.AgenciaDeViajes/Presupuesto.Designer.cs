@@ -280,6 +280,7 @@
             dataGridView3.RowHeadersWidth = 82;
             dataGridView3.Size = new Size(874, 137);
             dataGridView3.TabIndex = 0;
+            dataGridView3.CellContentClick += dataGridView3_CellContentClick;
             // 
             // CodHotel
             // 
