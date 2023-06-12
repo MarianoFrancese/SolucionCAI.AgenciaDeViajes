@@ -164,7 +164,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             }
         }
 
-        public static List<HotelEnt> GenerarListaHotel(string codigo, string hotel, string ciudad, DateTime fechaEntrada, DateTime fechaSalida, string direccion, int cantHab, int calificacion, string tipoHab, int capacidad, decimal tarifa, int adultos, int menores, int infantes)
+        public static List<HotelEnt> GenerarListaHotel(string codigo, string hotel, string ciudad, DateTime fechaEntrada, DateTime fechaSalida, string direccion, int calificacion, string tipoHab, int capacidad, decimal tarifa, int adultos, int menores, int infantes)
         {
             List<HotelEnt> listaHoteles = new List<HotelEnt>();
             DireccionEnt direccionEnt = new DireccionEnt();
@@ -174,7 +174,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             {
                 FechaEntHab = fechaEntrada,
                 FechaSalHab = fechaSalida,
-                CantHab = cantHab,
+                CantHab = 1,
             };
 
             string[] keysDireccion = direccion.Split(',');

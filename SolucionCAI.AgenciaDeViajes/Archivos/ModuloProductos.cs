@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using SolucionCAI.AgenciaDeViajes.Entidades;
+using System;
 using System.Globalization;
 using System.IO;
 
@@ -75,8 +76,8 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                     string codigoJson = (string)hotelJson["Codigo"];
                     string nombreJson = (string)hotelJson["Nombre"];
                     string ciudadJson = (string)hotelJson["CodigoDeCiudad"];
-                    DateTime fechaEntradaJson = Convert.ToDateTime(hotelJson["HabitacionFechaDis"]["FechaEntradaHab"]);
-                    DateTime fechaSalidaJson = Convert.ToDateTime(hotelJson["HabitacionFechaDis"]["FechaSalidaHab"]);
+                    DateTime fechaEntradaJson = DateTime.ParseExact(hotelJson["HabitacionFechaDis"]["FechaEntradaHab"].ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                    DateTime fechaSalidaJson = DateTime.ParseExact(hotelJson["HabitacionFechaDis"]["FechaSalidaHab"].ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
                     string calificacionJson = (string)hotelJson["Calificacion"];
                     string tipoHabitacionJson = (string)hotelJson["Disponibilidad"][0]["Nombre"];
                     int capacidadJson = Convert.ToInt32(hotelJson["Disponibilidad"][0]["Capacidad"]);
@@ -84,7 +85,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                     int disponibilidad = cantHab * capacidadJson; 
 
 
-                    if (ciudadJson == ciudad && fechaEntradaJson <= Convert.ToDateTime(fechaEntrada) && fechaSalidaJson >= Convert.ToDateTime(fechaSalida) && disponibilidad >= cantHuespedes && tipoHabitacionJson == tipoHabitacion)
+                    if (ciudadJson == ciudad && fechaEntradaJson <= Convert.ToDateTime(fechaEntrada) && fechaSalidaJson >= Convert.ToDateTime(fechaSalida) && disponibilidad >= cantHuespedes && tipoHabitacionJson == tipoHabitacion && cantHab != 0)
                     {
                         var listaDisponibilidad = JsonConvert.DeserializeObject<List<DisponibilidadHabEnt>>(hotelJson["Disponibilidad"].ToString());
                         // Ver como manejar la disponibilidad de la habitacion con la cantidad de habitaciones

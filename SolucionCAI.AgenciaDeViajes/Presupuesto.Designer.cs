@@ -157,7 +157,6 @@
             comboBox6.Name = "comboBox6";
             comboBox6.Size = new Size(104, 23);
             comboBox6.TabIndex = 37;
-            comboBox6.SelectedIndexChanged += comboBox6_SelectedIndexChanged;
             // 
             // label12
             // 
@@ -178,7 +177,6 @@
             numericUpDown2.Size = new Size(63, 23);
             numericUpDown2.TabIndex = 35;
             numericUpDown2.TextAlign = HorizontalAlignment.Center;
-            numericUpDown2.ValueChanged += numericUpDown2_ValueChanged;
             // 
             // label11
             // 
@@ -202,7 +200,6 @@
             dateTimePicker3.Size = new Size(101, 23);
             dateTimePicker3.TabIndex = 33;
             dateTimePicker3.Value = new DateTime(2023, 6, 1, 0, 0, 0, 0);
-            dateTimePicker3.ValueChanged += dateTimePicker3_ValueChanged;
             // 
             // dateTimePicker2
             // 
@@ -215,7 +212,6 @@
             dateTimePicker2.Size = new Size(101, 23);
             dateTimePicker2.TabIndex = 32;
             dateTimePicker2.Value = new DateTime(2023, 6, 1, 0, 0, 0, 0);
-            dateTimePicker2.ValueChanged += dateTimePicker2_ValueChanged_1;
             // 
             // comboBox5
             // 
@@ -226,7 +222,6 @@
             comboBox5.Name = "comboBox5";
             comboBox5.Size = new Size(104, 23);
             comboBox5.TabIndex = 31;
-            comboBox5.SelectedIndexChanged += comboBox5_SelectedIndexChanged;
             // 
             // BuscarHosp
             // 

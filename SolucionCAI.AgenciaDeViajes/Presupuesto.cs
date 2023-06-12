@@ -86,13 +86,14 @@ namespace SolucionCAI.AgenciaDeViajes
                 int menores = Convert.ToInt32(row.Cells[11].Value.ToString());
                 int infantes = Convert.ToInt32(row.Cells[12].Value.ToString());
 
-                listaHoteles = ModuloPresupuesto.GenerarListaVuelo(clase, tipoPasajero, tarifa, cantPasajeros, codigo, origen, destino, fechaPartida, fechaArribo, tiempoVuelo, aerolinea);
-                productosAgregados = ModuloPresupuesto.AgregarVueloLinea(listaVuelos);
+                hotelesFiltrados = ModuloPresupuesto.GenerarListaHotel(codigo, hotel, ciudad, fechaEntrada, fechaSalida, direccion, calificacion, tipoHab, capacidad, tarifa, adultos, menores, infantes);
+                productosAgregados = ModuloPresupuesto.AgregarHotelLinea(hotelesFiltrados);
                 textBox11.Text = ModuloPresupuesto.CrearPresupuesto(productosAgregados, 0)[0].NroSeguimiento.ToString();
-                RellenarPresupuestoTabla(productosAgregados);
+                RellenarPresupuestoTablaHoteles(productosAgregados);
                 CalcularTotal();
 
             }
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -145,6 +146,29 @@ namespace SolucionCAI.AgenciaDeViajes
                 dataGridView2.Rows.Add(
 
                     producto.ProductoV,
+
+                    producto.PrecioUn,
+
+                    producto.Cantidad,
+
+                    producto.SubTotal,
+
+                    producto.IVA,
+
+                    producto.TotalProd
+
+                    );
+            }
+        }
+
+        private void RellenarPresupuestoTablaHoteles(List<ProductoLineaEnt> productosAgregados)
+        {
+            foreach (var producto in productosAgregados)
+            {
+
+                dataGridView2.Rows.Add(
+
+                    producto.ProductoH,
 
                     producto.PrecioUn,
 
@@ -304,31 +328,7 @@ namespace SolucionCAI.AgenciaDeViajes
 
         }
 
-        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //Ciudad
-        }
-
-        private void dateTimePicker2_ValueChanged_1(object sender, EventArgs e)
-        {
-            //Fecha de entrada
-        }
-
-        private void dateTimePicker3_ValueChanged(object sender, EventArgs e)
-        {
-            //Fecha de salida
-        }
-
-        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
-        {
-            //Cant huespedes
-        }
-
-        private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //Tipo de habitacion
-        }
-        private void button3_Click(object sender, EventArgs e) //Boton Filtrar Hospedaje
+        private void button3_Click(object sender, EventArgs e)
         {
 
         }
