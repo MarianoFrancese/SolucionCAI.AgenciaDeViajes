@@ -82,6 +82,15 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                     string calificacionJson = (string)hotelJson["Calificacion"];
                     string tipoHabitacionJson = (string)hotelJson["Disponibilidad"][0]["Nombre"];
                     int capacidadJson = Convert.ToInt32(hotelJson["Disponibilidad"][0]["Capacidad"]);
+
+                    //foreach (var habitacionFecha in hotelJson["Disponibilidad"][0]["HabitacionFechaDis"][0])
+                    //{
+                    //    Console.WriteLine(habitacionFecha);
+                    //    //if (disponibilidadJson["Nombre"].ToString() == tipoHabitacion)
+                    //    //{
+                    //    //    capacidadJson = Convert.ToInt32(disponibilidadJson["Capacidad"]);
+                    //    //}
+                    //}
                     int cantHab = Convert.ToInt32(hotelJson["HabitacionFechaDis"]["CantHab"]);
                     int disponibilidad = cantHab * capacidadJson; 
 
