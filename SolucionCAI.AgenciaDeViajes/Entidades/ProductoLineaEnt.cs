@@ -13,8 +13,8 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
 {
     public class ProductoLineaEnt
     {
-        public HotelEnt ProductoH { get; set; } //ver si se puede cambiar a obj
-        public VueloEnt ProductoV { get; set; } //ver si se puede cambiar a obj
+        public string ProductoH { get; set; } //ver si se puede cambiar a obj
+        public string ProductoV { get; set; } //ver si se puede cambiar a obj
         public decimal PrecioUn { get; set; }
         public int Cantidad { get; set; }
         public Decimal SubTotal { get { return CalcularSubtotal(Cantidad, PrecioUn); } }

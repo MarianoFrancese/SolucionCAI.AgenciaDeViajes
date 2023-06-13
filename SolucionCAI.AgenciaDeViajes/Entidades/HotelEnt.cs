@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,6 +21,19 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
         public string MostrarDescripcion()
         {
             return $"Codigo: {Codigo} - Hotel {Nombre}";
+        }
+
+        public List<DisponibilidadHabEnt> Disponibles(DateTime desde, DateTime hasta)
+        {
+            //var disponibles = new List<DisponibilidadHabEnt>();
+            //foreach(var disponibilidad in Disponibilidad)
+            //{
+            //    if(disponibilidad.Disponible(desde, hasta))
+            //    {
+            //        disponibles.Add(disponibilidad);
+            //    }
+            //}
+            return null;
         }
     }
 }

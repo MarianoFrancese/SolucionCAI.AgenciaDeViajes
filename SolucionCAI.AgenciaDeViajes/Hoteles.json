@@ -1,0 +1,868 @@
+[
+	{
+		"Codigo": "HT001",
+		"Nombre": "Sheraton",
+		"CodigoDeCiudad": "MIA",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "Collins Ave",
+			"Numero": 1234,
+			"CP": 7000,
+			"Latitud": 25.845362706221916,
+			"Longitud": -80.11993195337358
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Intermedio",
+				"TarifaHab": 50000,
+				"Capacidad": 4,
+				"Adultos": 4,
+				"Menores": 2,
+				"Infantes": 2
+
+			}
+		],
+		"HabitacionFechaDis": {
+			"FechaEntradaHab": "29/06/2023",
+			"FechaSalidaHab": "03/07/2023",
+			"CantHab": 3
+
+		}
+	},
+	{
+		"Codigo": "HT001",
+		"Nombre": "Sheraton",
+		"CodigoDeCiudad": "MIA",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "Collins Ave",
+			"Numero": 1234,
+			"CP": 7000,
+			"Latitud": 25.845362706221916,
+			"Longitud": -80.11993195337358
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Intermedio",
+				"TarifaHab": 50000,
+				"Capacidad": 4,
+				"Adultos": 4,
+				"Menores": 2,
+				"Infantes": 2
+
+			}
+		],
+		"HabitacionFechaDis": {
+			"FechaEntradaHab": "30/06/2023",
+			"FechaSalidaHab": "05/07/2023",
+			"CantHab": 4
+
+		}
+	},
+	{
+		"Codigo": "HT001",
+		"Nombre": "Sheraton",
+		"CodigoDeCiudad": "MIA",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "Collins Ave",
+			"Numero": 1234,
+			"CP": 7000,
+			"Latitud": 25.845362706221916,
+			"Longitud": -80.11993195337358
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Intermedio",
+				"TarifaHab": 50000,
+				"Capacidad": 4,
+				"Adultos": 4,
+				"Menores": 2,
+				"Infantes": 2
+
+			}
+
+		],
+		"HabitacionFechaDis": {
+			"FechaEntradaHab": "01/07/2023",
+			"FechaSalidaHab":  "05/07/2023",
+			"CantHab": 5
+
+		}
+	},
+	{
+		"Codigo": "HT001",
+		"Nombre": "Sheraton",
+		"CodigoDeCiudad": "MIA",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "Collins Ave",
+			"Numero": 1234,
+			"CP": 7000,
+			"Latitud": 25.845362706221916,
+			"Longitud": -80.11993195337358
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Intermedio",
+				"TarifaHab": 50000,
+				"Capacidad": 4,
+				"Adultos": 4,
+				"Menores": 2,
+				"Infantes": 2
+
+			}
+
+		],
+		"HabitacionFechaDis": {
+			"FechaEntradaHab": "02/07/2023",
+			"FechaSalidaHab":  "07/07/2023",
+			"CantHab": 5
+
+		}
+	},
+	{
+		"Codigo": "HT001",
+		"Nombre": "Sheraton",
+		"CodigoDeCiudad": "MIA",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "Collins Ave",
+			"Numero": 1234,
+			"CP": 7000,
+			"Latitud": 25.845362706221916,
+			"Longitud": -80.11993195337358
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Intermedio",
+				"TarifaHab": 50000,
+				"Capacidad": 4,
+				"Adultos": 4,
+				"Menores": 2,
+				"Infantes": 2
+
+			}
+
+		],
+		"HabitacionFechaDis": {
+			"FechaEntradaHab": "03/07/2023",
+			"FechaSalidaHab":  "06/07/2023",
+			"CantHab": 4
+
+		}
+	},
+	{
+		"Codigo": "HT001",
+		"Nombre": "Sheraton",
+		"CodigoDeCiudad": "MIA",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "Collins Ave",
+			"Numero": 1234,
+			"CP": 7000,
+			"Latitud": 25.845362706221916,
+			"Longitud": -80.11993195337358
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Intermedio",
+				"TarifaHab": 50000,
+				"Capacidad": 4,
+				"Adultos": 4,
+				"Menores": 2,
+				"Infantes": 2
+
+			}
+
+		],
+		"HabitacionFechaDis": {
+			"FechaEntradaHab": "04/07/2023",
+			"FechaSalidaHab":  "10/07/2023",
+			"CantHab": 7
+
+		}
+	},
+	{
+		"Codigo": "HT001",
+		"Nombre": "Sheraton",
+		"CodigoDeCiudad": "MIA",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "Collins Ave",
+			"Numero": 1234,
+			"CP": 7000,
+			"Latitud": 25.845362706221916,
+			"Longitud": -80.11993195337358
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Intermedio",
+				"TarifaHab": 50000,
+				"Capacidad": 4,
+				"Adultos": 4,
+				"Menores": 2,
+				"Infantes": 2
+
+			}
+
+		],
+		"HabitacionFechaDis": {
+			"FechaEntradaHab": "05/07/2023",
+			"FechaSalidaHab":  "07/07/2023",
+			"CantHab": 5
+
+		}
+	},
+	{
+		"Codigo": "HT001",
+		"Nombre": "Sheraton",
+		"CodigoDeCiudad": "MIA",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "Collins Ave",
+			"Numero": 1234,
+			"CP": 7000,
+			"Latitud": 25.845362706221916,
+			"Longitud": -80.11993195337358
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Standard",
+				"TarifaHab": 35000,
+				"Capacidad": 2,
+				"Adultos": 2,
+				"Menores": 1,
+				"Infantes": 1
+
+			}
+		],
+		"HabitacionFechaDis": {
+			"FechaEntradaHab": "29/06/2023",
+			"FechaSalidaHab":  "10/07/2023",
+			"CantHab": 3
+
+		}
+	},
+	{
+		"Codigo": "HT001",
+		"Nombre": "Sheraton",
+		"CodigoDeCiudad": "MIA",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "Collins Ave",
+			"Numero": 1234,
+			"CP": 7000,
+			"Latitud": 25.845362706221916,
+			"Longitud": -80.11993195337358
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Standard",
+				"TarifaHab": 35000,
+				"Capacidad": 2,
+				"Adultos": 2,
+				"Menores": 1,
+				"Infantes": 1
+
+			}
+		],
+		"HabitacionFechaDis": {
+			"FechaEntradaHab": "30/06/2023",
+			"FechaSalidaHab": "10/07/2023",
+			"CantHab": 4
+
+		}
+	},
+	{
+		"Codigo": "HT001",
+		"Nombre": "Sheraton",
+		"CodigoDeCiudad": "MIA",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "Collins Ave",
+			"Numero": 1234,
+			"CP": 7000,
+			"Latitud": 25.845362706221916,
+			"Longitud": -80.11993195337358
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Standard",
+				"TarifaHab": 35000,
+				"Capacidad": 2,
+				"Adultos": 2,
+				"Menores": 1,
+				"Infantes": 1
+
+			}
+		],
+		"HabitacionFechaDis": {
+			"FechaEntradaHab": "01/07/2023",
+			"FechaSalidaHab": "13/07/2023",
+			"CantHab": 4
+
+		}
+	},
+	{
+		"Codigo": "HT001",
+		"Nombre": "Sheraton",
+		"CodigoDeCiudad": "MIA",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "Collins Ave",
+			"Numero": 1234,
+			"CP": 7000,
+			"Latitud": 25.845362706221916,
+			"Longitud": -80.11993195337358
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Standard",
+				"TarifaHab": 35000,
+				"Capacidad": 2,
+				"Adultos": 2,
+				"Menores": 1,
+				"Infantes": 1
+
+			}
+		],
+		"HabitacionFechaDis": {
+			"FechaEntradaHab": "02/07/2023",
+			"FechaSalidaHab": "13/07/2023",
+			"CantHab": 5
+
+		}
+	},
+	{
+		"Codigo": "HT001",
+		"Nombre": "Sheraton",
+		"CodigoDeCiudad": "MIA",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "Collins Ave",
+			"Numero": 1234,
+			"CP": 7000,
+			"Latitud": 25.845362706221916,
+			"Longitud": -80.11993195337358
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Standard",
+				"TarifaHab": 35000,
+				"Capacidad": 2,
+				"Adultos": 2,
+				"Menores": 1,
+				"Infantes": 1
+
+			}
+		],
+		"HabitacionFechaDis": {
+			"FechaEntradaHab": "03/07/2023",
+			"FechaSalidaHab": "09/07/2023",
+			"CantHab": 6
+
+		}
+	},
+	{
+		"Codigo": "HT001",
+		"Nombre": "Sheraton",
+		"CodigoDeCiudad": "MIA",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "Collins Ave",
+			"Numero": 1234,
+			"CP": 7000,
+			"Latitud": 25.845362706221916,
+			"Longitud": -80.11993195337358
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Standard",
+				"TarifaHab": 35000,
+				"Capacidad": 2,
+				"Adultos": 2,
+				"Menores": 1,
+				"Infantes": 1
+
+			}
+		],
+		"HabitacionFechaDis": {
+			"FechaEntradaHab": "04/07/2023",
+			"FechaSalidaHab":  "12/07/2023",
+			"CantHab": 3
+
+		}
+	},
+	{
+		"Codigo": "HT001",
+		"Nombre": "Sheraton",
+		"CodigoDeCiudad": "MIA",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "Collins Ave",
+			"Numero": 1234,
+			"CP": 7000,
+			"Latitud": 25.845362706221916,
+			"Longitud": -80.11993195337358
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Standard",
+				"TarifaHab": 35000,
+				"Capacidad": 2,
+				"Adultos": 2,
+				"Menores": 1,
+				"Infantes": 1
+
+			}
+		],
+		"HabitacionFechaDis": {
+			"FechaEntradaHab": "05/07/2023",
+			"FechaSalidaHab": "15/07/2023",
+			"CantHab": 2
+
+		}
+	},
+	{
+		"Codigo": "HT001",
+		"Nombre": "Sheraton",
+		"CodigoDeCiudad": "MIA",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "Collins Ave",
+			"Numero": 1234,
+			"CP": 7000,
+			"Latitud": 25.845362706221916,
+			"Longitud": -80.11993195337358
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Deluxe",
+				"TarifaHab": 65000,
+				"Capacidad": 6,
+				"Adultos": 6,
+				"Menores": 3,
+				"Infantes": 3
+
+			}
+		],
+		"HabitacionFechaDis": {
+			"FechaEntradaHab": "29/06/2023",
+			"FechaSalidaHab": "02/07/2023",
+			"CantHab": 5
+
+		}
+	},
+	{
+		"Codigo": "HT001",
+		"Nombre": "Sheraton",
+		"CodigoDeCiudad": "MIA",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "Collins Ave",
+			"Numero": 1234,
+			"CP": 7000,
+			"Latitud": 25.845362706221916,
+			"Longitud": -80.11993195337358
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Deluxe",
+				"TarifaHab": 65000,
+				"Capacidad": 6,
+				"Adultos": 6,
+				"Menores": 3,
+				"Infantes": 3
+
+			}
+		],
+		"HabitacionFechaDis": {
+			"FechaEntradaHab": "30/06/2023",
+			"FechaSalidaHab": "03/07/2023",
+			"CantHab": 4
+
+		}
+	},
+	{
+		"Codigo": "HT001",
+		"Nombre": "Sheraton",
+		"CodigoDeCiudad": "MIA",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "Collins Ave",
+			"Numero": 1234,
+			"CP": 7000,
+			"Latitud": 25.845362706221916,
+			"Longitud": -80.11993195337358
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Deluxe",
+				"TarifaHab": 65000,
+				"Capacidad": 6,
+				"Adultos": 6,
+				"Menores": 3,
+				"Infantes": 3
+
+			}
+		],
+		"HabitacionFechaDis": {
+			"FechaEntradaHab": "01/07/2023",
+			"FechaSalidaHab": "10/07/2023",
+			"CantHab": 5
+
+		}
+	},
+	{
+		"Codigo": "HT001",
+		"Nombre": "Sheraton",
+		"CodigoDeCiudad": "MIA",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "Collins Ave",
+			"Numero": 1234,
+			"CP": 7000,
+			"Latitud": 25.845362706221916,
+			"Longitud": -80.11993195337358
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Deluxe",
+				"TarifaHab": 65000,
+				"Capacidad": 6,
+				"Adultos": 6,
+				"Menores": 3,
+				"Infantes": 3
+
+			}
+		],
+		"HabitacionFechaDis": {
+			"FechaEntradaHab": "02/07/2023",
+			"FechaSalidaHab": "07/07/2023",
+			"CantHab": 6
+
+		}
+	},
+	{
+		"Codigo": "HT001",
+		"Nombre": "Sheraton",
+		"CodigoDeCiudad": "MIA",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "Collins Ave",
+			"Numero": 1234,
+			"CP": 7000,
+			"Latitud": 25.845362706221916,
+			"Longitud": -80.11993195337358
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Deluxe",
+				"TarifaHab": 65000,
+				"Capacidad": 6,
+				"Adultos": 6,
+				"Menores": 3,
+				"Infantes": 3
+			}
+		],
+		"HabitacionFechaDis": {
+			"FechaEntradaHab": "03/07/2023",
+			"FechaSalidaHab": "15/07/2023",
+			"CantHab": 3
+
+		}
+	},
+	{
+		"Codigo": "HT001",
+		"Nombre": "Sheraton",
+		"CodigoDeCiudad": "MIA",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "Collins Ave",
+			"Numero": 1234,
+			"CP": 7000,
+			"Latitud": 25.845362706221916,
+			"Longitud": -80.11993195337358
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Deluxe",
+				"TarifaHab": 65000,
+				"Capacidad": 6,
+				"Adultos": 6,
+				"Menores": 3,
+				"Infantes": 3
+
+			}
+		],
+		"HabitacionFechaDis": {
+			"FechaEntradaHab": "04/07/2023",
+			"FechaSalidaHab": "11/07/2023",
+			"CantHab": 2
+
+		}
+	},
+	{
+		"Codigo": "HT001",
+		"Nombre": "Sheraton",
+		"CodigoDeCiudad": "MIA",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "Collins Ave",
+			"Numero": 1234,
+			"CP": 7000,
+			"Latitud": 25.845362706221916,
+			"Longitud": -80.11993195337358
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Deluxe",
+				"TarifaHab": 65000,
+				"Capacidad": 6,
+				"Adultos": 6,
+				"Menores": 3,
+				"Infantes": 3
+
+			}
+		],
+		"HabitacionFechaDis": {
+			"FechaEntradaHab": "05/07/2023",
+			"FechaSalidaHab": "08/07/2023",
+			"CantHab": 4
+
+		}
+	},
+	{
+		"Codigo": "HT002",
+		"Nombre": "Four Seasons",
+		"CodigoDeCiudad": "MAD",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "C. de Sevilla",
+			"Numero": 30,
+			"CP": 28014,
+			"Latitud": 40.41707269127456,
+			"Longitud": -3.7004233112454163
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Deluxe",
+				"TarifaHab": 75200,
+				"Capacidad": 6,
+				"Adultos": 6,
+				"Menores": 3,
+				"Infantes": 3
+			}
+		],
+		"HabitacionFechaDis": {
+			"FechaEntradaHab": "29/06/2023",
+			"FechaSalidaHab":  "04/07/2023",
+			"CantHab": 3
+
+		}
+	},
+	{
+		"Codigo": "HT002",
+		"Nombre": "Four Seasons",
+		"CodigoDeCiudad": "MAD",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "C. de Sevilla",
+			"Numero": 30,
+			"CP": 28014,
+			"Latitud": 40.41707269127456,
+			"Longitud": -3.7004233112454163
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Deluxe",
+				"TarifaHab": 75200,
+				"Capacidad": 6,
+				"Adultos": 6,
+				"Menores": 3,
+				"Infantes": 3
+			}
+		],
+		"HabitacionFechaDis": {
+			"FechaEntradaHab": "30/06/2023",
+			"FechaSalidaHab": "05/07/2023",
+			"CantHab": 4
+		}
+	},
+	{
+		"Codigo": "HT002",
+		"Nombre": "Four Seasons",
+		"CodigoDeCiudad": "MAD",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "C. de Sevilla",
+			"Numero": 30,
+			"CP": 28014,
+			"Latitud": 40.41707269127456,
+			"Longitud": -3.7004233112454163
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Deluxe",
+				"TarifaHab": 75200,
+				"Capacidad": 6,
+				"Adultos": 6,
+				"Menores": 3,
+				"Infantes": 3
+
+			}
+		],
+		"HabitacionFechaDis": {
+			"FechaEntradaHab": "01/07/2023",
+			"FechaSalidaHab": "08/07/2023",
+			"CantHab": 6
+		}
+	},
+	{
+		"Codigo": "HT002",
+		"Nombre": "Four Seasons",
+		"CodigoDeCiudad": "MAD",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "C. de Sevilla",
+			"Numero": 30,
+			"CP": 28014,
+			"Latitud": 40.41707269127456,
+			"Longitud": -3.7004233112454163
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Deluxe",
+				"TarifaHab": 75200,
+				"Capacidad": 6,
+				"Adultos": 6,
+				"Menores": 3,
+				"Infantes": 3
+
+			}
+		],
+		"HabitacionFechaDis": {
+			"FechaEntradaHab": "02/07/2023",
+			"FechaSalidaHab": "12/07/2023",
+			"CantHab": 6
+
+		}
+	},
+	{
+		"Codigo": "HT002",
+		"Nombre": "Four Seasons",
+		"CodigoDeCiudad": "MAD",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "C. de Sevilla",
+			"Numero": 30,
+			"CP": 28014,
+			"Latitud": 40.41707269127456,
+			"Longitud": -3.7004233112454163
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Deluxe",
+				"TarifaHab": 75200,
+				"Capacidad": 6,
+				"Adultos": 6,
+				"Menores": 3,
+				"Infantes": 3
+			}
+		],
+		"HabitacionFechaDis": {
+			"FechaEntradaHab": "03/07/2023",
+			"FechaSalidaHab": "09/07/2023",
+			"CantHab": 4
+
+		}
+	},
+	{
+		"Codigo": "HT002",
+		"Nombre": "Four Seasons",
+		"CodigoDeCiudad": "MAD",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "C. de Sevilla",
+			"Numero": 30,
+			"CP": 28014,
+			"Latitud": 40.41707269127456,
+			"Longitud": -3.7004233112454163
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Deluxe",
+				"TarifaHab": 75200,
+				"Capacidad": 6,
+				"Adultos": 6,
+				"Menores": 3,
+				"Infantes": 3
+
+			}
+		],
+		"HabitacionFechaDis": {
+			"FechaEntradaHab": "04/07/2023",
+			"FechaSalidaHab": "10/07/2023",
+			"CantHab": 5
+
+		}
+	},
+
+	{
+		"Codigo": "HT002",
+		"Nombre": "Four Seasons",
+		"CodigoDeCiudad": "MAD",
+		"Calificacion": 5,
+		"Direccion": {
+			"Calle": "C. de Sevilla",
+			"Numero": 30,
+			"CP": 28014,
+			"Latitud": 40.41707269127456,
+			"Longitud": -3.7004233112454163
+
+		},
+		"Disponibilidad": [
+			{
+				"Nombre": "Deluxe",
+				"TarifaHab": 75200,
+				"Capacidad": 6,
+				"Adultos": 6,
+				"Menores": 3,
+				"Infantes": 3
+
+			}
+		],
+		"HabitacionFechaDis": {
+			"FechaEntradaHab": "05/07/2023",
+			"FechaSalidaHab": "09/07/2023",
+			"CantHab": 6
+
+		}
+	}
+]

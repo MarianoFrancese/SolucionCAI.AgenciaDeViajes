@@ -1,0 +1,84 @@
+[
+  {
+    "NroSeguimiento": 1,
+    "Productos": [
+      {
+        "ProductoH": null,
+        "ProductoV": "Codigo: AA005 - Vuelo de BUE a SCL con Aerolineas Argentinas",
+        "PrecioUn": 90000.0,
+        "Cantidad": 3,
+        "SubTotal": 270000.0,
+        "IVA": 56700.000,
+        "TotalProd": 326700.000
+      }
+    ],
+    "Descripcion": null,
+    "Total": 326700.000
+  },
+  {
+    "NroSeguimiento": 2,
+    "Productos": [
+      {
+        "ProductoH": null,
+        "ProductoV": "Codigo: AA003 - Vuelo de BUE a MAD con United Airlines",
+        "PrecioUn": 392000.0,
+        "Cantidad": 3,
+        "SubTotal": 1176000.0,
+        "IVA": 246960.000,
+        "TotalProd": 1422960.000
+      }
+    ],
+    "Descripcion": null,
+    "Total": 1422960.000
+  },
+  {
+    "NroSeguimiento": 3,
+    "Productos": [
+      {
+        "ProductoH": null,
+        "ProductoV": "Codigo: HT002 - Hotel Four Seasons",
+        "PrecioUn": 75200.0,
+        "Cantidad": 6,
+        "SubTotal": 451200.0,
+        "IVA": 94752.000,
+        "TotalProd": 545952.000
+      },
+      {
+        "ProductoH": null,
+        "ProductoV": "Codigo: AA000 - Vuelo de BUE a MIA con American Airlines",
+        "PrecioUn": 348000.0,
+        "Cantidad": 2,
+        "SubTotal": 696000.0,
+        "IVA": 146160.000,
+        "TotalProd": 842160.000
+      }
+    ],
+    "Descripcion": null,
+    "Total": 1388112.000
+  },
+  {
+    "NroSeguimiento": 4,
+    "Productos": [
+      {
+        "ProductoH": null,
+        "ProductoV": "Codigo: HT002 - Hotel Four Seasons",
+        "PrecioUn": 75200.0,
+        "Cantidad": 6,
+        "SubTotal": 451200.0,
+        "IVA": 94752.00,
+        "TotalProd": 545952.00
+      },
+      {
+        "ProductoH": null,
+        "ProductoV": "Codigo: AA000 - Vuelo de BUE a MIA con American Airlines",
+        "PrecioUn": 348000.0,
+        "Cantidad": 2,
+        "SubTotal": 696000.0,
+        "IVA": 146160.000,
+        "TotalProd": 842160.000
+      }
+    ],
+    "Descripcion": null,
+    "Total": 1388112.000
+  }
+]
