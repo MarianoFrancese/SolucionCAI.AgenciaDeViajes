@@ -1,6 +1,6 @@
 [
   {
-    "NroSeguimiento": 1,
+    "NroSeguimiento": 10001,
     "Productos": [
       {
         "ProductoH": null,
@@ -16,7 +16,7 @@
     "Total": 326700.000
   },
   {
-    "NroSeguimiento": 2,
+    "NroSeguimiento": 10002,
     "Productos": [
       {
         "ProductoH": null,
@@ -32,53 +32,19 @@
     "Total": 1422960.000
   },
   {
-    "NroSeguimiento": 3,
+    "NroSeguimiento": 10003,
     "Productos": [
       {
         "ProductoH": null,
-        "ProductoV": "Codigo: HT002 - Hotel Four Seasons",
-        "PrecioUn": 75200.0,
-        "Cantidad": 6,
-        "SubTotal": 451200.0,
-        "IVA": 94752.000,
-        "TotalProd": 545952.000
-      },
-      {
-        "ProductoH": null,
-        "ProductoV": "Codigo: AA000 - Vuelo de BUE a MIA con American Airlines",
-        "PrecioUn": 348000.0,
-        "Cantidad": 2,
-        "SubTotal": 696000.0,
-        "IVA": 146160.000,
-        "TotalProd": 842160.000
+        "ProductoV": "Codigo: AA004 - Vuelo de BUE a ROM con KLM",
+        "PrecioUn": 350000.0,
+        "Cantidad": 1,
+        "SubTotal": 350000.0,
+        "IVA": 73500.000,
+        "TotalProd": 423500.000
       }
     ],
     "Descripcion": null,
-    "Total": 1388112.000
-  },
-  {
-    "NroSeguimiento": 4,
-    "Productos": [
-      {
-        "ProductoH": null,
-        "ProductoV": "Codigo: HT002 - Hotel Four Seasons",
-        "PrecioUn": 75200.0,
-        "Cantidad": 6,
-        "SubTotal": 451200.0,
-        "IVA": 94752.00,
-        "TotalProd": 545952.00
-      },
-      {
-        "ProductoH": null,
-        "ProductoV": "Codigo: AA000 - Vuelo de BUE a MIA con American Airlines",
-        "PrecioUn": 348000.0,
-        "Cantidad": 2,
-        "SubTotal": 696000.0,
-        "IVA": 146160.000,
-        "TotalProd": 842160.000
-      }
-    ],
-    "Descripcion": null,
-    "Total": 1388112.000
+    "Total": 423500.000
   }
 ]
