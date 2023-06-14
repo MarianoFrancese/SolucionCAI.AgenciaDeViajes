@@ -16,6 +16,7 @@ using System.Collections;
 using Newtonsoft.Json;
 using System.Globalization;
 using System.Net.NetworkInformation;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace SolucionCAI.AgenciaDeViajes
 {
@@ -204,11 +205,11 @@ namespace SolucionCAI.AgenciaDeViajes
             groupBox3.Visible = false;
         }
 
-        private void button11_Click(object sender, EventArgs e)
+        private void button11_Click(object sender, EventArgs e) //boton generar presupuesto, deberia generarse con el "confirmar"
         {
-            groupBox3.Visible = false;
+            // groupBox3.Visible = false;
 
-            MessageBox.Show("El Presupuesto ha sido confirmado");
+            MessageBox.Show("El Presupuesto ha sido confirmado"); //deberia salir luego de confirmar
 
             comboBox1.Text = string.Empty;
             comboBox4.Text = string.Empty;
@@ -226,6 +227,7 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            groupBox3.Visible = true;
 
             List<ProductoLineaEnt> productosAGrabar = new List<ProductoLineaEnt>();
             ProductoLineaEnt productos;

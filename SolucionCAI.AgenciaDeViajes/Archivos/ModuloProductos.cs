@@ -79,7 +79,9 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                     string codigoJson = (string)hotelJson["Codigo"];
                     string nombreJson = (string)hotelJson["Nombre"];
                     string ciudadJson = (string)hotelJson["CodigoDeCiudad"];
-                    DateTime fechaJson = DateTime.ParseExact(habitacionFecha["FechaHab"].ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                    DateTime fechaEntradaJson = DateTime.ParseExact(hotelJson["HabitacionFechaDis"]["FechaEntradaHab"].ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                    DateTime fechaSalidaJson = DateTime.ParseExact(hotelJson["HabitacionFechaDis"]["FechaSalidaHab"].ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                    Console.WriteLine(fechaSalidaJson);
                     string calificacionJson = (string)hotelJson["Calificacion"];
                     string tipoHabitacionJson = (string)hotelJson["Disponibilidad"][0]["Nombre"];
                     int capacidadJson = Convert.ToInt32(hotelJson["Disponibilidad"][0]["Capacidad"]);

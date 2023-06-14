@@ -3,8 +3,8 @@
     "Codigo": "AA000",
     "Origen": "BUE",
     "Destino": "MIA",
-    "FechaSalida": "29/06/2023",
-    "FechaArribo": "30/06/2023",
+    "FechaSalida": "28/06/2023",
+    "FechaArribo": "29/06/2023",
     "TiempoVuelo": "9:30:00",
     "Aerolinea": "American Airlines",
     "Tarifas": [
@@ -13,35 +13,13 @@
         "TipoPasajero": "Adulto",
         "Precio": 348000.00,
         "Disponibilidad": 2
-      }
-    ]
-  },
-  {
-    "Codigo": "AA000",
-    "Origen": "BUE",
-    "Destino": "MIA",
-    "FechaSalida": "29/06/2023",
-    "FechaArribo": "30/06/2023",
-    "TiempoVuelo": "9:30:00",
-    "Aerolinea": "American Airlines",
-    "Tarifas": [
+      },
       {
         "Clase": "Economy",
         "TipoPasajero": "Menor",
         "Precio": 328000.00,
         "Disponibilidad": 2
-      }
-    ]
-  },
-  {
-    "Codigo": "AA000",
-    "Origen": "BUE",
-    "Destino": "MIA",
-    "FechaSalida": "29/06/2023",
-    "FechaArribo": "30/06/2023",
-    "TiempoVuelo": "9:30:00",
-    "Aerolinea": "American Airlines",
-    "Tarifas": [
+      },
       {
         "Clase": "First",
         "TipoPasajero": "Adulto",
@@ -50,12 +28,13 @@
       }
     ]
   },
+  
   {
     "Codigo": "AA001",
     "Origen": "BUE",
     "Destino": "ROM",
-    "FechaSalida": "15/06/2023",
-    "FechaArribo": "16/06/2023",
+    "FechaSalida": "13/07/2023",
+    "FechaArribo": "14/07/2023",
     "TiempoVuelo": "15:00:00",
     "Aerolinea": "Air Italia",
     "Tarifas": [
@@ -64,52 +43,19 @@
         "TipoPasajero": "Adulto",
         "Precio": 438000.00,
         "Disponibilidad": 2
-      }
-    ]
-  },
-  {
-    "Codigo": "AA001",
-    "Origen": "BUE",
-    "Destino": "ROM",
-    "FechaSalida": "15/06/2023",
-    "FechaArribo": "16/06/2023",
-    "TiempoVuelo": "15:00:00",
-    "Aerolinea": "Air Italia",
-    "Tarifas": [
+      },
       {
         "Clase": "Economy",
         "TipoPasajero": "Adulto",
         "Precio": 338000.00,
         "Disponibilidad": 4
-      }
-    ]
-  },
-  {
-    "Codigo": "AA001",
-    "Origen": "BUE",
-    "Destino": "ROM",
-    "FechaSalida": "15/06/2023",
-    "FechaArribo": "16/06/2023",
-    "TiempoVuelo": "15:00:00",
-    "Aerolinea": "Air Italia",
-    "Tarifas": [
+      },
       {
         "Clase": "Economy",
         "TipoPasajero": "Infante",
         "Precio": 308000.00,
         "Disponibilidad": 2
-      }
-    ]
-  },
-  {
-    "Codigo": "AA001",
-    "Origen": "BUE",
-    "Destino": "ROM",
-    "FechaSalida": "15/06/2023",
-    "FechaArribo": "16/06/2023",
-    "TiempoVuelo": "15:00:00",
-    "Aerolinea": "Air Italia",
-    "Tarifas": [
+      },
       {
         "Clase": "Economy",
         "TipoPasajero": "Menor",
@@ -118,12 +64,13 @@
       }
     ]
   },
+  
   {
     "Codigo": "AA004",
     "Origen": "BUE",
     "Destino": "ROM",
-    "FechaSalida": "15/06/2023",
-    "FechaArribo": "15/06/2023",
+    "FechaSalida": "14/07/2023",
+    "FechaArribo": "15/07/2023",
     "TiempoVuelo": "11:00:00",
     "Aerolinea": "KLM",
     "Tarifas": [
@@ -132,6 +79,12 @@
         "TipoPasajero": "Menor",
         "Precio": 300000.00,
         "Disponibilidad": 2
+      },
+      {
+        "Clase": "Economy",
+        "TipoPasajero": "Adulto",
+        "Precio": 350000.00,
+        "Disponibilidad": 3
       }
     ]
   },
@@ -139,8 +92,8 @@
     "Codigo": "AA002",
     "Origen": "BUE",
     "Destino": "CDG",
-    "FechaSalida": "18/06/2023",
-    "FechaArribo": "19/06/2023",
+    "FechaSalida": "20/07/2023",
+    "FechaArribo": "21/07/2023",
     "TiempoVuelo": "11:00:00",
     "Aerolinea": "Air France",
     "Tarifas": [
@@ -149,18 +102,7 @@
         "TipoPasajero": "Adulto",
         "Precio": 640000.00,
         "Disponibilidad": 1
-      }
-    ]
-  },
-  {
-    "Codigo": "AA002",
-    "Origen": "BUE",
-    "Destino": "CDG",
-    "FechaSalida": "18/06/2023",
-    "FechaArribo": "19/06/2023",
-    "TiempoVuelo": "11:00:00",
-    "Aerolinea": "Air France",
-    "Tarifas": [
+      },
       {
         "Clase": "Premium",
         "TipoPasajero": "Adulto",
@@ -174,8 +116,8 @@
     "Codigo": "AA003",
     "Origen": "BUE",
     "Destino": "MAD",
-    "FechaSalida": "21/06/2023",
-    "FechaArribo": "22/06/2023",
+    "FechaSalida": "06/07/2023",
+    "FechaArribo": "07/07/2023",
     "TiempoVuelo": "13:00:00",
     "Aerolinea": "United Airlines",
     "Tarifas": [
@@ -184,137 +126,19 @@
         "TipoPasajero": "Adulto",
         "Precio": 392000.00,
         "Disponibilidad": 5
-      }
-    ]
-  },
-  {
-    "Codigo": "AA004",
-    "Origen": "BUE",
-    "Destino": "ROM",
-    "FechaSalida": "15/06/2023",
-    "FechaArribo": "15/06/2023",
-    "TiempoVuelo": "11:00:00",
-    "Aerolinea": "KLM",
-    "Tarifas": [
-      {
-        "Clase": "Economy",
-        "TipoPasajero": "Adulto",
-        "Precio": 350000.00,
-        "Disponibilidad": 3
-      }
-    ]
-  },
-  {
-    "Codigo": "AA005",
-    "Origen": "BUE",
-    "Destino": "SCL",
-    "FechaSalida": "21/08/2023",
-    "FechaArribo": "21/08/2023",
-    "TiempoVuelo": "2:00:00",
-    "Aerolinea": "Aerolineas Argentinas",
-    "Tarifas": [
-      {
-        "Clase": "Economy",
-        "TipoPasajero": "Adulto",
-        "Precio": 90000.00,
-        "Disponibilidad": 6
-      }
-    ]
-  },
-  {
-    "Codigo": "AA006",
-    "Origen": "MIA",
-    "Destino": "BUE",
-    "FechaSalida": "20/08/2023",
-    "FechaArribo": "20/08/2023",
-    "TiempoVuelo": "9:00:00",
-    "Aerolinea": "American Airlines",
-    "Tarifas": [
-      {
-        "Clase": "Economy",
-        "TipoPasajero": "Adulto",
-        "Precio": 328000.00,
-        "Disponibilidad": 3
-      }
-    ]
-  },
-  {
-    "Codigo": "AA006",
-    "Origen": "MIA",
-    "Destino": "BUE",
-    "FechaSalida": "20/08/2023",
-    "FechaArribo": "20/08/2023",
-    "TiempoVuelo": "9:00:00",
-    "Aerolinea": "American Airlines",
-    "Tarifas": [
-      {
-        "Clase": "Economy",
-        "TipoPasajero": "Menor",
-        "Precio": 308000.00,
-        "Disponibilidad": 3
-      }
-    ]
-  },
-  {
-    "Codigo": "AA006",
-    "Origen": "MIA",
-    "Destino": "BUE",
-    "FechaSalida": "20/08/2023",
-    "FechaArribo": "20/08/2023",
-    "TiempoVuelo": "9:00:00",
-    "Aerolinea": "American Airlines",
-    "Tarifas": [
-      {
-        "Clase": "First",
-        "TipoPasajero": "Adulto",
-        "Precio": 428000.00,
-        "Disponibilidad": 1
-      }
-    ]
-  },
-  {
-    "Codigo": "AA003",
-    "Origen": "BUE",
-    "Destino": "MAD",
-    "FechaSalida": "21/06/2023",
-    "FechaArribo": "22/06/2023",
-    "TiempoVuelo": "13:00:00",
-    "Aerolinea": "United Airlines",
-    "Tarifas": [
+      },
       {
         "Clase": "Economy",
         "TipoPasajero": "Menor",
         "Precio": 352000.00,
         "Disponibilidad": 3
-      }
-    ]
-  },
-  {
-    "Codigo": "AA003",
-    "Origen": "BUE",
-    "Destino": "MAD",
-    "FechaSalida": "21/06/2023",
-    "FechaArribo": "22/06/2023",
-    "TiempoVuelo": "13:00:00",
-    "Aerolinea": "United Airlines",
-    "Tarifas": [
+      },
       {
         "Clase": "Economy",
         "TipoPasajero": "Infante",
         "Precio": 322000.00,
         "Disponibilidad": 2
-      }
-    ]
-  },
-  {
-    "Codigo": "AA003",
-    "Origen": "BUE",
-    "Destino": "MAD",
-    "FechaSalida": "21/06/2023",
-    "FechaArribo": "22/06/2023",
-    "TiempoVuelo": "13:00:00",
-    "Aerolinea": "United Airlines",
-    "Tarifas": [
+      },
       {
         "Clase": "Economy",
         "TipoPasajero": "Adulto",
@@ -324,11 +148,71 @@
     ]
   },
   {
+    "Codigo": "AA005",
+    "Origen": "BUE",
+    "Destino": "SCL",
+    "FechaSalida": "24/07/2023",
+    "FechaArribo": "24/07/2023",
+    "TiempoVuelo": "2:00:00",
+    "Aerolinea": "Aerolineas Argentinas",
+    "Tarifas": [
+      {
+        "Clase": "Economy",
+        "TipoPasajero": "Adulto",
+        "Precio": 90000.00,
+        "Disponibilidad": 6
+      },
+      {
+        "Clase": "Economy",
+        "TipoPasajero": "Menor",
+        "Precio": 80000.00,
+        "Disponibilidad": 3
+      },
+      {
+        "Clase": "Economy",
+        "TipoPasajero": "Infante",
+        "Precio": 75000.00,
+        "Disponibilidad": 2
+      }
+    ]
+  },
+  {
+    "Codigo": "AA006",
+    "Origen": "MIA",
+    "Destino": "BUE",
+    "FechaSalida": "05/07/2023",
+    "FechaArribo": "06/07/2023",
+    "TiempoVuelo": "9:00:00",
+    "Aerolinea": "American Airlines",
+    "Tarifas": [
+      {
+        "Clase": "Economy",
+        "TipoPasajero": "Adulto",
+        "Precio": 328000.00,
+        "Disponibilidad": 3
+      },
+      {
+        "Clase": "Economy",
+        "TipoPasajero": "Menor",
+        "Precio": 308000.00,
+        "Disponibilidad": 3
+      },
+      {
+        "Clase": "First",
+        "TipoPasajero": "Adulto",
+        "Precio": 428000.00,
+        "Disponibilidad": 1
+      }
+    ]
+  },
+  
+  
+  {
     "Codigo": "AA007",
     "Origen": "MAD",
     "Destino": "BUE",
-    "FechaSalida": "10/07/2023",
-    "FechaArribo": "10/07/2023",
+    "FechaSalida": "13/07/2023",
+    "FechaArribo": "14/07/2023",
     "TiempoVuelo": "11:00:00",
     "Aerolinea": "KLM",
     "Tarifas": [
@@ -337,18 +221,7 @@
         "TipoPasajero": "Adulto",
         "Precio": 292000.00,
         "Disponibilidad": 4
-      }
-    ]
-  },
-  {
-    "Codigo": "AA007",
-    "Origen": "MAD",
-    "Destino": "BUE",
-    "FechaSalida": "10/07/2023",
-    "FechaArribo": "10/07/2023",
-    "TiempoVuelo": "11:00:00",
-    "Aerolinea": "KLM",
-    "Tarifas": [
+      },
       {
         "Clase": "Economy",
         "TipoPasajero": "Menor",
@@ -357,12 +230,13 @@
       }
     ]
   },
+  
   {
     "Codigo": "AA008",
     "Origen": "MAD",
     "Destino": "BUE",
-    "FechaSalida": "10/07/2023",
-    "FechaArribo": "11/07/2023",
+    "FechaSalida": "12/07/2023",
+    "FechaArribo": "13/07/2023",
     "TiempoVuelo": "13:00:00",
     "Aerolinea": "American Airlines",
     "Tarifas": [
@@ -371,18 +245,7 @@
         "TipoPasajero": "Adulto",
         "Precio": 290000.00,
         "Disponibilidad": 3
-      }
-    ]
-  },
-  {
-    "Codigo": "AA008",
-    "Origen": "MAD",
-    "Destino": "BUE",
-    "FechaSalida": "10/07/2023",
-    "FechaArribo": "11/07/2023",
-    "TiempoVuelo": "13:00:00",
-    "Aerolinea": "American Airlines",
-    "Tarifas": [
+      },
       {
         "Clase": "Economy",
         "TipoPasajero": "Menor",
@@ -391,12 +254,13 @@
       }
     ]
   },
+  
   {
     "Codigo": "AA009",
     "Origen": "ROM",
     "Destino": "BUE",
-    "FechaSalida": "15/07/2023",
-    "FechaArribo": "16/07/2023",
+    "FechaSalida": "20/07/2023",
+    "FechaArribo": "21/07/2023",
     "TiempoVuelo": "14:00:00",
     "Aerolinea": "Air Italia",
     "Tarifas": [
@@ -405,35 +269,13 @@
         "TipoPasajero": "Adulto",
         "Precio": 440000.00,
         "Disponibilidad": 2
-      }
-    ]
-  },
-  {
-    "Codigo": "AA009",
-    "Origen": "ROM",
-    "Destino": "BUE",
-    "FechaSalida": "15/07/2023",
-    "FechaArribo": "16/07/2023",
-    "TiempoVuelo": "14:00:00",
-    "Aerolinea": "Air Italia",
-    "Tarifas": [
+      },
       {
         "Clase": "Business",
         "TipoPasajero": "Menor",
         "Precio": 400000.00,
         "Disponibilidad": 1
-      }
-    ]
-  },
-  {
-    "Codigo": "AA009",
-    "Origen": "ROM",
-    "Destino": "BUE",
-    "FechaSalida": "15/07/2023",
-    "FechaArribo": "16/07/2023",
-    "TiempoVuelo": "14:00:00",
-    "Aerolinea": "Air Italia",
-    "Tarifas": [
+      },
       {
         "Clase": "Economy",
         "TipoPasajero": "Adulto",
@@ -442,12 +284,13 @@
       }
     ]
   },
+  
   {
     "Codigo": "AA010",
     "Origen": "ROM",
     "Destino": "BUE",
-    "FechaSalida": "15/07/2023",
-    "FechaArribo": "15/07/2023",
+    "FechaSalida": "19/07/2023",
+    "FechaArribo": "20/07/2023",
     "TiempoVuelo": "13:00:00",
     "Aerolinea": "Aerolineas Argentinas",
     "Tarifas": [
@@ -463,8 +306,8 @@
     "Codigo": "AA011",
     "Origen": "CDG",
     "Destino": "BUE",
-    "FechaSalida": "18/07/2023",
-    "FechaArribo": "19/07/2023",
+    "FechaSalida": "23/07/2023",
+    "FechaArribo": "24/07/2023",
     "TiempoVuelo": "11:00:00",
     "Aerolinea": "Air France",
     "Tarifas": [
@@ -473,18 +316,7 @@
         "TipoPasajero": "Adulto",
         "Precio": 620000.00,
         "Disponibilidad": 3
-      }
-    ]
-  },
-  {
-    "Codigo": "AA011",
-    "Origen": "CDG",
-    "Destino": "BUE",
-    "FechaSalida": "18/07/2023",
-    "FechaArribo": "19/07/2023",
-    "TiempoVuelo": "11:00:00",
-    "Aerolinea": "Air France",
-    "Tarifas": [
+      },
       {
         "Clase": "Premium",
         "TipoPasajero": "Adulto",
@@ -493,12 +325,13 @@
       }
     ]
   },
+  
   {
     "Codigo": "AA012",
     "Origen": "CDG",
     "Destino": "BUE",
-    "FechaSalida": "18/07/2023",
-    "FechaArribo": "18/07/2023",
+    "FechaSalida": "22/07/2023",
+    "FechaArribo": "23/07/2023",
     "TiempoVuelo": "11:00:00",
     "Aerolinea": "Aerolineas Argentinas",
     "Tarifas": [
@@ -507,18 +340,7 @@
         "TipoPasajero": "Adulto",
         "Precio": 450000.00,
         "Disponibilidad": 4
-      }
-    ]
-  },
-  {
-    "Codigo": "AA012",
-    "Origen": "CDG",
-    "Destino": "BUE",
-    "FechaSalida": "18/07/2023",
-    "FechaArribo": "18/07/2023",
-    "TiempoVuelo": "11:00:00",
-    "Aerolinea": "Aerolineas Argentinas",
-    "Tarifas": [
+      },
       {
         "Clase": "Economy",
         "TipoPasajero": "Menor",
@@ -527,46 +349,14 @@
       }
     ]
   },
-  {
-    "Codigo": "AA005",
-    "Origen": "BUE",
-    "Destino": "SCL",
-    "FechaSalida": "21/08/2023",
-    "FechaArribo": "21/08/2023",
-    "TiempoVuelo": "2:00:00",
-    "Aerolinea": "Aerolineas Argentinas",
-    "Tarifas": [
-      {
-        "Clase": "Economy",
-        "TipoPasajero": "Menor",
-        "Precio": 80000.00,
-        "Disponibilidad": 3
-      }
-    ]
-  },
-  {
-    "Codigo": "AA005",
-    "Origen": "BUE",
-    "Destino": "SCL",
-    "FechaSalida": "21/08/2023",
-    "FechaArribo": "21/08/2023",
-    "TiempoVuelo": "2:00:00",
-    "Aerolinea": "Aerolineas Argentinas",
-    "Tarifas": [
-      {
-        "Clase": "Economy",
-        "TipoPasajero": "Infante",
-        "Precio": 75000.00,
-        "Disponibilidad": 2
-      }
-    ]
-  },
+  
+ 
   {
     "Codigo": "AA013",
     "Origen": "BUE",
     "Destino": "SCL",
-    "FechaSalida": "21/08/2023",
-    "FechaArribo": "21/08/2023",
+    "FechaSalida": "24/07/2023",
+    "FechaArribo": "24/07/2023",
     "TiempoVuelo": "2:00:00",
     "Aerolinea": "KLM",
     "Tarifas": [
@@ -575,18 +365,7 @@
         "TipoPasajero": "Adulto",
         "Precio": 80000.00,
         "Disponibilidad": 4
-      }
-    ]
-  },
-  {
-    "Codigo": "AA013",
-    "Origen": "BUE",
-    "Destino": "SCL",
-    "FechaSalida": "21/08/2023",
-    "FechaArribo": "21/08/2023",
-    "TiempoVuelo": "2:00:00",
-    "Aerolinea": "KLM",
-    "Tarifas": [
+      },
       {
         "Clase": "Economy",
         "TipoPasajero": "Menor",
@@ -595,12 +374,13 @@
       }
     ]
   },
+  
   {
     "Codigo": "AA014",
     "Origen": "SCL",
     "Destino": "BUE",
-    "FechaSalida": "28/08/2023",
-    "FechaArribo": "28/08/2023",
+    "FechaSalida": "26/07/2023",
+    "FechaArribo": "26/07/2023",
     "TiempoVuelo": "2:00:00",
     "Aerolinea": "KLM",
     "Tarifas": [
@@ -609,35 +389,13 @@
         "TipoPasajero": "Adulto",
         "Precio": 92000.00,
         "Disponibilidad": 5
-      }
-    ]
-  },
-  {
-    "Codigo": "AA014",
-    "Origen": "SCL",
-    "Destino": "BUE",
-    "FechaSalida": "28/08/2023",
-    "FechaArribo": "28/08/2023",
-    "TiempoVuelo": "2:00:00",
-    "Aerolinea": "KLM",
-    "Tarifas": [
+      },
       {
         "Clase": "Economy",
         "TipoPasajero": "Menor",
         "Precio": 87000.00,
         "Disponibilidad": 3
-      }
-    ]
-  },
-  {
-    "Codigo": "AA014",
-    "Origen": "SCL",
-    "Destino": "BUE",
-    "FechaSalida": "28/08/2023",
-    "FechaArribo": "28/08/2023",
-    "TiempoVuelo": "2:00:00",
-    "Aerolinea": "KLM",
-    "Tarifas": [
+      },
       {
         "Clase": "Economy",
         "TipoPasajero": "Infante",
@@ -646,12 +404,14 @@
       }
     ]
   },
+  
+  
   {
     "Codigo": "AA015",
     "Origen": "SCL",
     "Destino": "BUE",
-    "FechaSalida": "28/08/2023",
-    "FechaArribo": "28/08/2023",
+    "FechaSalida": "26/07/2023",
+    "FechaArribo": "26/07/2023",
     "TiempoVuelo": "2:00:00",
     "Aerolinea": "Aerolineas Argentinas",
     "Tarifas": [
