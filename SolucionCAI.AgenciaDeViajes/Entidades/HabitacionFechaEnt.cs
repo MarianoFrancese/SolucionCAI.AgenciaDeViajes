@@ -10,5 +10,6 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
     {
         public DateTime FechaEntHab { get; set; }
         public int CantHab { get; set; }
+        //public Guid Uid { get; set; }
     }
 }

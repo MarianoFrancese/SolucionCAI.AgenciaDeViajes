@@ -4,6 +4,8 @@ using SolucionCAI.AgenciaDeViajes.Entidades;
 using System;
 using System.Globalization;
 using System.IO;
+using System.Linq;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace SolucionCAI.AgenciaDeViajes.Archivos
 {
@@ -16,7 +18,6 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             {
                 string contenidoDelArchivo = File.ReadAllText("Vuelos.json");
                 Console.WriteLine("El archivo existe");
-
                 JArray jsonArray = JArray.Parse(contenidoDelArchivo);
 
                 List<VueloEnt> vuelosFiltrados = new List<VueloEnt>();
@@ -62,32 +63,33 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
         public static List<HotelEnt> ListaHoteles(string ciudad, string fechaEntrada, string fechaSalida, int cantHuespedes, string tipoHabitacion)
         {
-            JArray jsonArray = ArchivoHoteles.LeerHoteles();            
-            Console.WriteLine("El archivo existe");
-
-            List<HotelEnt> hotelesFiltrados = new List<HotelEnt>();
-            List<DateTime> fechasJson = new List<DateTime>();
-            List<DateTime> fechasFiltro = new List<DateTime>();
-            DateTime fechaE = DateTime.ParseExact(fechaEntrada, "dd/MM/yyyy", CultureInfo.InvariantCulture);
-            DateTime fechaS = DateTime.ParseExact(fechaSalida, "dd/MM/yyyy", CultureInfo.InvariantCulture);
-
-            foreach (JObject hotelJson in jsonArray)
+            JArray jsonArray = ArchivoHoteles.LeerHoteles();
+            if(jsonArray.Count > 0)
             {
-                foreach (var habitacionFecha in hotelJson["Disponibilidad"][0]["HabitacionFechaDis"])
+                Console.WriteLine("El archivo existe");
+
+                List<HotelEnt> hotelesFiltrados = new List<HotelEnt>();
+                DateTime fechaE = DateTime.ParseExact(fechaEntrada, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                DateTime fechaS = DateTime.ParseExact(fechaSalida, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+
+                foreach (JObject hotelJson in jsonArray)
                 {
-                    Console.WriteLine(habitacionFecha);
+                    Console.WriteLine(hotelJson);
+                    List<DateTime> fechasJson = new List<DateTime>();
+                    List<DateTime> fechasFiltro = new List<DateTime>();
+
+                    foreach (var habitacionFecha in hotelJson["Disponibilidad"][0]["HabitacionFechaDis"])
+                    {
+                        DateTime fechaJson = DateTime.ParseExact(habitacionFecha["FechaHab"].ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                        fechasJson.Add(fechaJson);
+                    }
                     string codigoJson = (string)hotelJson["Codigo"];
                     string nombreJson = (string)hotelJson["Nombre"];
-                    string ciudadJson = (string)hotelJson["CodigoDeCiudad"];
-                    DateTime fechaEntradaJson = DateTime.ParseExact(hotelJson["HabitacionFechaDis"]["FechaEntradaHab"].ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture); //corregir esto ya que hay 1 sola fecha(FechaHab)
-                    DateTime fechaSalidaJson = DateTime.ParseExact(hotelJson["HabitacionFechaDis"]["FechaSalidaHab"].ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture);//corregir esto ya que hay 1 sola fecha(FechaHab)
-                    Console.WriteLine(fechaSalidaJson);
+                    string ciudadJson = (string)hotelJson["CodigoDeCiudad"];                      
                     string calificacionJson = (string)hotelJson["Calificacion"];
                     string tipoHabitacionJson = (string)hotelJson["Disponibilidad"][0]["Nombre"];
                     int capacidadJson = Convert.ToInt32(hotelJson["Disponibilidad"][0]["Capacidad"]);
-                    int cantHab = Convert.ToInt32(habitacionFecha["CantHab"]);
-                    int disponibilidad = cantHab * capacidadJson;
-                    fechasJson.Add(fechaJson);
+                        
 
                     while (fechaE <= fechaS)
                     {
@@ -96,10 +98,12 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                     }
 
                     bool compararFechas = fechasFiltro.All(value => fechasJson.Contains(value));
+                    Console.WriteLine(compararFechas);
 
-                    if (ciudadJson == ciudad && compararFechas && disponibilidad >= cantHuespedes && tipoHabitacionJson == tipoHabitacion && cantHab != 0)
+                    if (ciudadJson == ciudad && compararFechas && capacidadJson >= cantHuespedes && tipoHabitacionJson == tipoHabitacion)
                     {
                         var listaDisponibilidad = JsonConvert.DeserializeObject<List<DisponibilidadHabEnt>>(hotelJson["Disponibilidad"].ToString());
+                        List<HabitacionFechaEnt> listaHabitaciones = new List<HabitacionFechaEnt>();
                         // Ver como manejar la disponibilidad de la habitacion con la cantidad de habitaciones
                         //IMPORTANTE!!
                         DireccionEnt direccion = new DireccionEnt
@@ -113,9 +117,11 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
                         HabitacionFechaEnt habitacionFechaEnt = new HabitacionFechaEnt
                         {
-                            FechaEntHab = fechaJson,
-                            CantHab = cantHab
+                            FechaEntHab = fechaE,
+                            CantHab = 1
                         };
+                        listaHabitaciones.Add(habitacionFechaEnt);
+                        listaDisponibilidad[0].HabitacionFechaDisp = listaHabitaciones;
 
                         HotelEnt hotel = new HotelEnt
                         {
@@ -125,16 +131,39 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                             Calificacion = Convert.ToInt32(calificacionJson),
                             Direccion = direccion,
                             Disponibilidad = listaDisponibilidad,
-                            HabitacionFecha = habitacionFechaEnt
                         };
                         Console.WriteLine(hotel.Disponibilidad);
-                        hotelesFiltrados.Add(hotel);
+
+                        if(hotelesFiltrados.Count == 0)
+                        {
+                            hotelesFiltrados.Add(hotel);
+                        }
+                        else if(hotelesFiltrados.Count > 0 && hotel.Codigo != hotelesFiltrados[0].Codigo)
+                        {
+                            foreach(var codigo in hotelesFiltrados[0].Codigo)
+                            {
+                                if(codigo.ToString() != hotel.Codigo)
+                                {
+                                    hotelesFiltrados.Add(hotel);
+                                }
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("El hotel ya existe");
+                        }
+
                     }
 
                 }
+                return hotelesFiltrados;
 
             }
-            return hotelesFiltrados;
+            else
+            {
+                Console.WriteLine("El archivo no existe");
+                return new List<HotelEnt>();
+            }
         }
 
     }

@@ -230,8 +230,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 CodigoCiudad = ciudad,
                 Calificacion = calificacion,
                 Direccion = direccionEnt,
-                Disponibilidad = listaDisponibilidades,
-                HabitacionFecha = habitacionFecha,
+                Disponibilidad = listaDisponibilidades
             };
 
 

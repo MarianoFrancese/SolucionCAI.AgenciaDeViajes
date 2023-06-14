@@ -8,15 +8,13 @@ using System.Threading.Tasks;
 
 namespace SolucionCAI.AgenciaDeViajes.Archivos
 {
-    internal class ArchivoHoteles
+    public class ArchivoHoteles
     {
         public static JArray LeerHoteles()
         {
-            if (File.Exists("HotelesEnt.json"))
+            if (File.Exists("Hoteles.json"))
             {
-                string contenidoDelArchivo = File.ReadAllText("HotelesEnt.json");
-                Console.WriteLine("El archivo existe");
-
+                string contenidoDelArchivo = File.ReadAllText("Hoteles.json");
                 JArray jsonArray = JArray.Parse(contenidoDelArchivo);
                 return jsonArray;
             }
