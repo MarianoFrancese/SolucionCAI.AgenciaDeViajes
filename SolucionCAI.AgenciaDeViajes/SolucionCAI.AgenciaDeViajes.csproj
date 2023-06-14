@@ -47,9 +47,6 @@
     <None Update="Hoteles.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="HotelesEnt.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="Itinerarios.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
