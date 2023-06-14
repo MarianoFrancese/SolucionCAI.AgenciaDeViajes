@@ -54,7 +54,7 @@
         ]
     },
     {
-        "Codigo": "HT001",
+        "Codigo": "HT002",
         "Nombre": "Sheraton",
         "CodigoDeCiudad": "MIA",
         "Calificacion": 5,
@@ -108,7 +108,7 @@
         ]
     },
     {
-        "Codigo": "HT001",
+        "Codigo": "HT003",
         "Nombre": "Sheraton",
         "CodigoDeCiudad": "MIA",
         "Calificacion": 5,
@@ -163,7 +163,7 @@
     },
 
     {
-        "Codigo": "HT002",
+        "Codigo": "HT004",
         "Nombre": "Four Seasons",
         "CodigoDeCiudad": "MAD",
         "Calificacion": 5,
@@ -218,7 +218,7 @@
 
     },
     {
-        "Codigo": "HT002",
+        "Codigo": "HT005",
         "Nombre": "Four Seasons",
         "CodigoDeCiudad": "MAD",
         "Calificacion": 5,
@@ -273,7 +273,7 @@
 
     },
     {
-        "Codigo": "HT002",
+        "Codigo": "HT006",
         "Nombre": "Four Seasons",
         "CodigoDeCiudad": "MAD",
         "Calificacion": 5,
@@ -328,7 +328,7 @@
 
     },
     {
-        "Codigo": "HT003",
+        "Codigo": "HT007",
         "Nombre": "ibis budget Meudon",
         "CodigoDeCiudad": "ROM",
         "Calificacion": 3,
@@ -383,7 +383,7 @@
 
     },
     {
-        "Codigo": "HT003",
+        "Codigo": "HT008",
         "Nombre": "ibis budget Meudon",
         "CodigoDeCiudad": "ROM",
         "Calificacion": 3,
@@ -438,7 +438,7 @@
 
     },
     {
-        "Codigo": "HT003",
+        "Codigo": "HT009",
         "Nombre": "ibis budget Meudon",
         "CodigoDeCiudad": "ROM",
         "Calificacion": 3,
@@ -493,7 +493,7 @@
 
     },
     {
-        "Codigo": "HT004",
+        "Codigo": "HT010",
         "Nombre": "Ibis Paris Tour Eiffel",
         "CodigoDeCiudad": "PAR",
         "Calificacion": 4,
@@ -532,7 +532,7 @@
 
     },
     {
-        "Codigo": "HT004",
+        "Codigo": "HT011",
         "Nombre": "Ibis Paris Tour Eiffel",
         "CodigoDeCiudad": "PAR",
         "Calificacion": 4,
@@ -571,7 +571,7 @@
 
     },
     {
-        "Codigo": "HT004",
+        "Codigo": "HT012",
         "Nombre": "Ibis Paris Tour Eiffel",
         "CodigoDeCiudad": "PAR",
         "Calificacion": 4,
@@ -610,7 +610,7 @@
 
     },
     {
-        "Codigo": "HT005",
+        "Codigo": "HT013",
         "Nombre": "Holiday Inn Santiago",
         "CodigoDeCiudad": "SCL",
         "Calificacion": 4,
@@ -648,7 +648,7 @@
 
     },
     {
-        "Codigo": "HT005",
+        "Codigo": "HT014",
         "Nombre": "Holiday Inn Santiago",
         "CodigoDeCiudad": "SCL",
         "Calificacion": 4,
@@ -686,7 +686,7 @@
 
     },
     {
-        "Codigo": "HT005",
+        "Codigo": "HT015",
         "Nombre": "Holiday Inn Santiago",
         "CodigoDeCiudad": "SCL",
         "Calificacion": 4,
@@ -724,7 +724,7 @@
 
     },
     {
-        "Codigo": "HT006",
+        "Codigo": "HT016",
         "Nombre": "Sofitel",
         "CodigoDeCiudad": "BUE",
         "Calificacion": 5,
@@ -762,7 +762,7 @@
 
     },
     {
-        "Codigo": "HT006",
+        "Codigo": "HT017",
         "Nombre": "Sofitel",
         "CodigoDeCiudad": "BUE",
         "Calificacion": 5,
@@ -800,7 +800,7 @@
 
     },
     {
-        "Codigo": "HT006",
+        "Codigo": "HT018",
         "Nombre": "Sofitel",
         "CodigoDeCiudad": "BUE",
         "Calificacion": 5,

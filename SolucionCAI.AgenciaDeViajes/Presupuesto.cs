@@ -111,8 +111,6 @@ namespace SolucionCAI.AgenciaDeViajes
             vuelosFiltrados = ModuloProductos.ListaVuelos(origen, destino, fechaPartidaFormateada, cantPasajeros, tipoPasajero, clase);
             RellenarTablaVuelos(vuelosFiltrados, cantPasajeros);
 
-            //Q: What should this void do?
-            //A: It should filter the flights by the selected filters and show them in the table
 
         }
 
@@ -207,28 +205,6 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void button11_Click(object sender, EventArgs e) //boton generar presupuesto, deberia generarse con el "confirmar"
         {
-            // groupBox3.Visible = false;
-
-            MessageBox.Show("El Presupuesto ha sido confirmado"); //deberia salir luego de confirmar
-
-            comboBox1.Text = string.Empty;
-            comboBox4.Text = string.Empty;
-            dateTimePicker1.Value = DateTime.Now;
-
-            numericUpDown1.Value = numericUpDown1.Minimum;
-            comboBox2.Text = string.Empty;
-            comboBox3.Text = string.Empty;
-            textBox5.Text = string.Empty;
-
-            dataGridView1.Rows.Clear();
-            dataGridView2.Rows.Clear();
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            groupBox3.Visible = true;
-
             List<ProductoLineaEnt> productosAGrabar = new List<ProductoLineaEnt>();
             ProductoLineaEnt productos;
             foreach (DataGridViewRow fila in dataGridView2.Rows)
@@ -257,6 +233,24 @@ namespace SolucionCAI.AgenciaDeViajes
 
             var listaProd = ModuloPresupuesto.CrearPresupuesto(productosAGrabar, total);
             var presupuesto = ModuloPresupuesto.GrabarPresupuesto(listaProd);
+
+            dataGridView1.Rows.Clear();
+            dataGridView2.Rows.Clear();
+            comboBox1.Text = string.Empty;
+            comboBox4.Text = string.Empty;
+            dateTimePicker1.Value = DateTime.Now;
+            numericUpDown1.Value = numericUpDown1.Minimum;
+            comboBox2.Text = string.Empty;
+            comboBox3.Text = string.Empty;
+            textBox11.Text = string.Empty;
+            textBox5.Text = string.Empty;
+            groupBox3.Visible = false;
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            groupBox3.Visible = true;
 
         }
 
@@ -301,6 +295,7 @@ namespace SolucionCAI.AgenciaDeViajes
                 listaVuelos = ModuloPresupuesto.GenerarListaVuelo(clase, tipoPasajero, tarifa, cantPasajeros, codigo, origen, destino, fechaPartida, fechaArribo, tiempoVuelo, aerolinea);
                 productosAgregados = ModuloPresupuesto.AgregarVueloLinea(listaVuelos);
                 textBox11.Text = ModuloPresupuesto.CrearPresupuesto(productosAgregados, 0)[0].NroSeguimiento.ToString();
+
                 RellenarPresupuestoTabla(productosAgregados);
                 CalcularTotal();
 
@@ -335,7 +330,7 @@ namespace SolucionCAI.AgenciaDeViajes
 
         }
 
-        private void RellenarTablaHoteles(List<HotelEnt> hotelesFiltrados)
+        private void RellenarTablaHoteles(List<HotelEnt> hotelesFiltrados, string fechaEntradaFormateada, string fechaSalidaFormateada)
         {
             dataGridView3.Rows.Clear();
 
@@ -347,7 +342,8 @@ namespace SolucionCAI.AgenciaDeViajes
                     hotel.Codigo,
                     hotel.Nombre,
                     hotel.CodigoCiudad,
-                    hotel.Disponibilidad[0].HabitacionFechaDisp[0].FechaEntHab,
+                    fechaEntradaFormateada,
+                    fechaSalidaFormateada,
                     direccionFormateada,
                     hotel.Calificacion,
                     hotel.Disponibilidad[0].Nombre,
@@ -370,9 +366,18 @@ namespace SolucionCAI.AgenciaDeViajes
             cantHuespedes = (int)numericUpDown2.Value;
             tipoHabitacion = comboBox6.Text;
 
-            hotelesFiltrados = ModuloProductos.ListaHoteles(ciudad, fechaEntradaFormateada, fechaSalidaFormateada, cantHuespedes, tipoHabitacion);
-            RellenarTablaHoteles(hotelesFiltrados);
 
+            hotelesFiltrados = ModuloProductos.ListaHoteles(ciudad, fechaEntradaFormateada, fechaSalidaFormateada, cantHuespedes, tipoHabitacion);
+
+            Console.WriteLine(hotelesFiltrados);
+            if (hotelesFiltrados.Count > 0)
+            {
+                RellenarTablaHoteles(hotelesFiltrados, fechaEntradaFormateada, fechaSalidaFormateada);
+            }
+            else
+            {
+                MessageBox.Show("No se encontraron hoteles disponibles");
+            }
         }
     }
 }

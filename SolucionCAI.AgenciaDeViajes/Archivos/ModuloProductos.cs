@@ -46,7 +46,6 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                             Aerolinea = (string)vueloJson["Aerolinea"],
                             Tarifas = JsonConvert.DeserializeObject<List<TarifaEnt>>(vueloJson["Tarifas"].ToString())
                         };
-                        Console.WriteLine(vuelo.Tarifas);
 
                         vuelosFiltrados.Add(vuelo);
 
@@ -74,7 +73,6 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
                 foreach (JObject hotelJson in jsonArray)
                 {
-                    Console.WriteLine(hotelJson);
                     List<DateTime> fechasJson = new List<DateTime>();
                     List<DateTime> fechasFiltro = new List<DateTime>();
 
@@ -98,7 +96,6 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                     }
 
                     bool compararFechas = fechasFiltro.All(value => fechasJson.Contains(value));
-                    Console.WriteLine(compararFechas);
 
                     if (ciudadJson == ciudad && compararFechas && capacidadJson >= cantHuespedes && tipoHabitacionJson == tipoHabitacion)
                     {
@@ -132,7 +129,6 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                             Direccion = direccion,
                             Disponibilidad = listaDisponibilidad,
                         };
-                        Console.WriteLine(hotel.Disponibilidad);
 
                         if(hotelesFiltrados.Count == 0)
                         {
