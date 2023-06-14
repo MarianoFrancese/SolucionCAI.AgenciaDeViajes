@@ -174,7 +174,6 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             HabitacionFechaEnt habitacionFecha = new HabitacionFechaEnt
             {
                 FechaEntHab = fechaEntrada,
-                FechaSalHab = fechaSalida,
                 CantHab = 1,
             };
 
