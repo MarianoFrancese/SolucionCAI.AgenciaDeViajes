@@ -39,10 +39,6 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductosPres = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button11 = new System.Windows.Forms.Button();
@@ -59,6 +55,19 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.button8 = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductosPres = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nrosegPre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductosPre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TCPre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreFisico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CUIT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalPre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NSegReserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductoReserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,16 +76,6 @@
             this.MedioPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button8 = new System.Windows.Forms.Button();
-            this.nrosegPre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductosPre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreFisico = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CUIT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalPre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TCPre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -216,7 +215,6 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.ProductosPres,
-            this.Column3,
             this.Column29});
             this.dataGridView1.Location = new System.Drawing.Point(4, 46);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -224,26 +222,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(889, 328);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "NroSeguimiento";
-            this.Column1.Name = "Column1";
-            // 
-            // ProductosPres
-            // 
-            this.ProductosPres.HeaderText = "Productos";
-            this.ProductosPres.Name = "ProductosPres";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "FechaCreacion";
-            this.Column3.Name = "Column3";
-            // 
-            // Column29
-            // 
-            this.Column29.HeaderText = "Total Presupuesto";
-            this.Column29.Name = "Column29";
             // 
             // tabPage2
             // 
@@ -361,13 +339,13 @@
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nrosegPre,
             this.ProductosPre,
+            this.TCPre,
             this.NombreFisico,
             this.RazonSocial,
             this.DNI,
             this.CUIT,
             this.dataGridViewTextBoxColumn1,
-            this.TotalPre,
-            this.TCPre});
+            this.TotalPre});
             this.dataGridView2.Location = new System.Drawing.Point(4, 46);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridView2.Name = "dataGridView2";
@@ -456,46 +434,6 @@
             this.dataGridView3.Size = new System.Drawing.Size(889, 327);
             this.dataGridView3.TabIndex = 0;
             // 
-            // NSegReserva
-            // 
-            this.NSegReserva.HeaderText = "Nro Seguimiento";
-            this.NSegReserva.Name = "NSegReserva";
-            // 
-            // ProductoReserva
-            // 
-            this.ProductoReserva.HeaderText = "Productos";
-            this.ProductoReserva.Name = "ProductoReserva";
-            // 
-            // TipoCliente
-            // 
-            this.TipoCliente.HeaderText = "Tipo Cliente";
-            this.TipoCliente.Name = "TipoCliente";
-            // 
-            // NombreCliente
-            // 
-            this.NombreCliente.HeaderText = "Nombre";
-            this.NombreCliente.Name = "NombreCliente";
-            // 
-            // RazSocialRes
-            // 
-            this.RazSocialRes.HeaderText = "Razon Social";
-            this.RazSocialRes.Name = "RazSocialRes";
-            // 
-            // MedioPago
-            // 
-            this.MedioPago.HeaderText = "Medio De Pago";
-            this.MedioPago.Name = "MedioPago";
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total Itinerario";
-            this.Total.Name = "Total";
-            // 
-            // EstadoPago
-            // 
-            this.EstadoPago.HeaderText = "EstadoPago";
-            this.EstadoPago.Name = "EstadoPago";
-            // 
             // button8
             // 
             this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -509,50 +447,125 @@
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click_1);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "NroSeguimiento";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // ProductosPres
+            // 
+            this.ProductosPres.HeaderText = "Productos";
+            this.ProductosPres.Name = "ProductosPres";
+            this.ProductosPres.ReadOnly = true;
+            // 
+            // Column29
+            // 
+            this.Column29.HeaderText = "Total Presupuesto";
+            this.Column29.Name = "Column29";
+            this.Column29.ReadOnly = true;
+            // 
             // nrosegPre
             // 
             this.nrosegPre.HeaderText = "NroSeguimiento";
             this.nrosegPre.Name = "nrosegPre";
+            this.nrosegPre.ReadOnly = true;
             // 
             // ProductosPre
             // 
             this.ProductosPre.HeaderText = "Productos";
             this.ProductosPre.Name = "ProductosPre";
-            // 
-            // NombreFisico
-            // 
-            this.NombreFisico.HeaderText = "Nombre";
-            this.NombreFisico.Name = "NombreFisico";
-            // 
-            // RazonSocial
-            // 
-            this.RazonSocial.HeaderText = "Razon Social";
-            this.RazonSocial.Name = "RazonSocial";
-            // 
-            // DNI
-            // 
-            this.DNI.HeaderText = "DNI";
-            this.DNI.Name = "DNI";
-            // 
-            // CUIT
-            // 
-            this.CUIT.HeaderText = "CUIT";
-            this.CUIT.Name = "CUIT";
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Medio de Pago";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // TotalPre
-            // 
-            this.TotalPre.HeaderText = "Total Itinerario";
-            this.TotalPre.Name = "TotalPre";
+            this.ProductosPre.ReadOnly = true;
             // 
             // TCPre
             // 
             this.TCPre.HeaderText = "Tipo Cliente";
             this.TCPre.Name = "TCPre";
+            this.TCPre.ReadOnly = true;
+            // 
+            // NombreFisico
+            // 
+            this.NombreFisico.HeaderText = "Nombre";
+            this.NombreFisico.Name = "NombreFisico";
+            this.NombreFisico.ReadOnly = true;
+            // 
+            // RazonSocial
+            // 
+            this.RazonSocial.HeaderText = "Razon Social";
+            this.RazonSocial.Name = "RazonSocial";
+            this.RazonSocial.ReadOnly = true;
+            // 
+            // DNI
+            // 
+            this.DNI.HeaderText = "DNI";
+            this.DNI.Name = "DNI";
+            this.DNI.ReadOnly = true;
+            // 
+            // CUIT
+            // 
+            this.CUIT.HeaderText = "CUIT";
+            this.CUIT.Name = "CUIT";
+            this.CUIT.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Medio de Pago";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // TotalPre
+            // 
+            this.TotalPre.HeaderText = "Total Itinerario";
+            this.TotalPre.Name = "TotalPre";
+            this.TotalPre.ReadOnly = true;
+            // 
+            // NSegReserva
+            // 
+            this.NSegReserva.HeaderText = "Nro Seguimiento";
+            this.NSegReserva.Name = "NSegReserva";
+            this.NSegReserva.ReadOnly = true;
+            // 
+            // ProductoReserva
+            // 
+            this.ProductoReserva.HeaderText = "Productos";
+            this.ProductoReserva.Name = "ProductoReserva";
+            this.ProductoReserva.ReadOnly = true;
+            // 
+            // TipoCliente
+            // 
+            this.TipoCliente.HeaderText = "Tipo Cliente";
+            this.TipoCliente.Name = "TipoCliente";
+            this.TipoCliente.ReadOnly = true;
+            // 
+            // NombreCliente
+            // 
+            this.NombreCliente.HeaderText = "Nombre";
+            this.NombreCliente.Name = "NombreCliente";
+            this.NombreCliente.ReadOnly = true;
+            // 
+            // RazSocialRes
+            // 
+            this.RazSocialRes.HeaderText = "Razon Social";
+            this.RazSocialRes.Name = "RazSocialRes";
+            this.RazSocialRes.ReadOnly = true;
+            // 
+            // MedioPago
+            // 
+            this.MedioPago.HeaderText = "Medio De Pago";
+            this.MedioPago.Name = "MedioPago";
+            this.MedioPago.ReadOnly = true;
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total Itinerario";
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            // 
+            // EstadoPago
+            // 
+            this.EstadoPago.HeaderText = "EstadoPago";
+            this.EstadoPago.Name = "EstadoPago";
+            this.EstadoPago.ReadOnly = true;
             // 
             // Reserva
             // 
@@ -615,8 +628,16 @@
         private Label label5;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn ProductosPres;
-        private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column29;
+        private DataGridViewTextBoxColumn nrosegPre;
+        private DataGridViewTextBoxColumn ProductosPre;
+        private DataGridViewTextBoxColumn TCPre;
+        private DataGridViewTextBoxColumn NombreFisico;
+        private DataGridViewTextBoxColumn RazonSocial;
+        private DataGridViewTextBoxColumn DNI;
+        private DataGridViewTextBoxColumn CUIT;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn TotalPre;
         private DataGridViewTextBoxColumn NSegReserva;
         private DataGridViewTextBoxColumn ProductoReserva;
         private DataGridViewTextBoxColumn TipoCliente;
@@ -625,15 +646,6 @@
         private DataGridViewTextBoxColumn MedioPago;
         private DataGridViewTextBoxColumn Total;
         private DataGridViewTextBoxColumn EstadoPago;
-        private DataGridViewTextBoxColumn nrosegPre;
-        private DataGridViewTextBoxColumn ProductosPre;
-        private DataGridViewTextBoxColumn NombreFisico;
-        private DataGridViewTextBoxColumn RazonSocial;
-        private DataGridViewTextBoxColumn DNI;
-        private DataGridViewTextBoxColumn CUIT;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn TotalPre;
-        private DataGridViewTextBoxColumn TCPre;
     }
 }
 

@@ -16,6 +16,7 @@ using System.Collections;
 using Newtonsoft.Json;
 using System.Globalization;
 using System.Net.NetworkInformation;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace SolucionCAI.AgenciaDeViajes
 {
@@ -226,6 +227,7 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            groupBox3.Visible = true;
 
             List<ProductoLineaEnt> productosAGrabar = new List<ProductoLineaEnt>();
             ProductoLineaEnt productos;

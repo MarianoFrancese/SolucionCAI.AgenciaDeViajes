@@ -93,10 +93,13 @@ namespace SolucionCAI.AgenciaDeViajes
            // MessageBox.Show("Se reserva el presupuesto y se piden más datos relativos al cliente");
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e) //muestra form pasajeros
         {
-            groupBox3.Visible = true;
+            // Form pasajerosform = new IngresoPasajeros();
+            // pasajerosform.Show();
             
+            groupBox3.Visible = true;
+
             //MessageBox.Show("Se reserva la prereserva (datos ya cargados)");
         }
 
