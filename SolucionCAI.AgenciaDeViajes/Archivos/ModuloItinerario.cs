@@ -39,7 +39,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                         {
                             PresupuestosList = JsonConvert.DeserializeObject<List<PresupuestoEnt>>(itinerarioJson["Presupuestos"].ToString()),
                             Cliente = JsonConvert.DeserializeObject<List<ClienteEnt>>(itinerarioJson["Cliente"].ToString()),                          
-                            MedioPago = (string)itinerarioJson["MedioPago"],
+                            MedioPago = (string)itinerarioJson["MedioPago"]
                                                        
                         };
                         Console.WriteLine(itinerario.PresupuestosList);
@@ -76,6 +76,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 {
                     string nrosegjson = (string)presupuestoJson["NroSeguimiento"];
                     
+                    
 
                     if (nrosegjson == nroseguimiento)  
                     {
@@ -83,10 +84,10 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                         
                         PresupuestoEnt presupuesto = new PresupuestoEnt
                         {
-                            NroSeguimiento = (string)presupuestoJson["NroSeguimiento"].ToString(),
-                            Productos = JsonConvert.DeserializeObject<List<PresupuestoEnt>>(presupuestoJson["Productos"].ToString()),
+                            NroSeguimiento = Convert.ToInt32(presupuestoJson["NroSeguimiento"]),
+                            Productos = JsonConvert.DeserializeObject<List<ProductoLineaEnt>>(presupuestoJson["Productos"].ToString()),
                             Descripcion = (string)presupuestoJson["Descripcion"],
-                            Total = (string)presupuestoJson["Total"].ToString(),
+                            Total = Convert.ToInt32(presupuestoJson["Total"])
 
                         };
                         Console.WriteLine(presupuesto.Productos);

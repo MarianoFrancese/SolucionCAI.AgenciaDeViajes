@@ -37,34 +37,24 @@ namespace SolucionCAI.AgenciaDeViajes
             dataGridView1.Rows.Clear();
 
 
-            foreach (var itinerario in itinerariosFiltrados)
+            foreach (var presupuesto in presupuestosFiltrados)
             {
-                if (itinerario.Cliente[0].PersonaFisica != null)
+                                
+                 if (presupuesto.Productos[0].ProductoV != null)
                 {
                     dataGridView1.Rows.Add(
-                    itinerario.PresupuestosList[0].NroSeguimiento,
-                    itinerario.PresupuestosList[0].Productos, //ver qué traer de productos, quisiera traer el string que se guarda en el json
-                    itinerario.Cliente[0].PersonaFisica[0].Nombre,
-                    "",
-                    itinerario.Cliente[0].PersonaFisica[0].DNI,
-                    "",
-                    itinerario.MedioPago,
-                    itinerario.PresupuestosList[0].Total, //ver como acceder al total que esta siendo calculado
-                    "Persona Fisica"
+                    presupuesto.NroSeguimiento,
+                    presupuesto.Productos[0].ProductoV,
+                    presupuesto.Total
+                    
                     );
                 }
-                else
+                else if (presupuesto.Productos[0].ProductoH != null)
                 {
-                    dataGridView2.Rows.Add(
-                    itinerario.PresupuestosList[0].NroSeguimiento,
-                    itinerario.PresupuestosList[0].Productos,
-                    "",
-                    itinerario.Cliente[0].PersonaJuridica[0].RazonSocial,
-                    "",
-                    itinerario.Cliente[0].PersonaJuridica[0].CUIT,
-                    itinerario.MedioPago,
-                    itinerario.PresupuestosList[0].Total,
-                    "Persona Juridica"
+                    dataGridView1.Rows.Add(
+                    presupuesto.NroSeguimiento,
+                    presupuesto.Productos[0].ProductoH,
+                    presupuesto.Total
                     );
                 }
 
@@ -102,7 +92,7 @@ namespace SolucionCAI.AgenciaDeViajes
                     "Persona Fisica"
                     );
                 }
-                else
+                else if (itinerario.Cliente[0].PersonaJuridica != null)
                 {
                     dataGridView2.Rows.Add(
                     itinerario.PresupuestosList[0].NroSeguimiento,
