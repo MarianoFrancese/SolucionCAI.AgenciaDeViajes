@@ -115,7 +115,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                         HabitacionFechaEnt habitacionFechaEnt = new HabitacionFechaEnt
                         {
                             FechaEntHab = fechaE,
-                            CantHab = 1
+                            //CantHab = 1
                         };
                         listaHabitaciones.Add(habitacionFechaEnt);
                         listaDisponibilidad[0].HabitacionFechaDisp = listaHabitaciones;

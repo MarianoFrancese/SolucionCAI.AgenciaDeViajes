@@ -12,8 +12,8 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
        
         //public int nroseg { get { return TraerNumSeguimiento; } }
         public string Estado { get; set; }
-        public List <ClienteEnt> Cliente { get; set; }
-        public string MedioPago { get; set; }
+        public List <ClienteEnt> Cliente { get; set; } 
+        public string MedioPago { get; set; } //agregar a cliente
         public string EstadoPago { get; set; }
 
 

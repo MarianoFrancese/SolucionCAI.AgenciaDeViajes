@@ -99,9 +99,9 @@
             this.Column26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TarifaEstadia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoAdulto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoMenor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoInfante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoAdulto = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.TipoMenor = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.TipoInfante = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Column30 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -906,28 +906,46 @@
             // TipoAdulto
             // 
             this.TipoAdulto.HeaderText = "Adultos";
+            this.TipoAdulto.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
             this.TipoAdulto.MinimumWidth = 10;
             this.TipoAdulto.Name = "TipoAdulto";
             this.TipoAdulto.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.TipoAdulto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.TipoAdulto.Width = 200;
             // 
             // TipoMenor
             // 
             this.TipoMenor.HeaderText = "Menores";
+            this.TipoMenor.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
             this.TipoMenor.MinimumWidth = 10;
             this.TipoMenor.Name = "TipoMenor";
             this.TipoMenor.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.TipoMenor.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.TipoMenor.Width = 200;
             // 
             // TipoInfante
             // 
             this.TipoInfante.HeaderText = "Infantes";
+            this.TipoInfante.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
             this.TipoInfante.MinimumWidth = 10;
             this.TipoInfante.Name = "TipoInfante";
             this.TipoInfante.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.TipoInfante.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.TipoInfante.Width = 200;
             // 
             // Column30
@@ -1044,9 +1062,9 @@
         private DataGridViewTextBoxColumn Column26;
         private DataGridViewTextBoxColumn Column28;
         private DataGridViewTextBoxColumn TarifaEstadia;
-        private DataGridViewTextBoxColumn TipoAdulto;
-        private DataGridViewTextBoxColumn TipoMenor;
-        private DataGridViewTextBoxColumn TipoInfante;
+        private DataGridViewComboBoxColumn TipoAdulto;
+        private DataGridViewComboBoxColumn TipoMenor;
+        private DataGridViewComboBoxColumn TipoInfante;
         private DataGridViewButtonColumn Column30;
     }
 }
