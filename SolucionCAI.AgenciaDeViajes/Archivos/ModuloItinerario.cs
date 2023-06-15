@@ -55,10 +55,56 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             }
             else
             {
+                Console.WriteLine("El archivo no existe");
                 return new List<ItinerarioEnt>();
             }
         }
 
+        public static List<PresupuestoEnt> ListaPresupuestos(string nroseguimiento)
+        {
+
+            if (File.Exists("Presupuestos.json"))
+            {
+                Console.WriteLine("El archivo existe");
+                string contenidoDelArchivoP = File.ReadAllText("Presupuestos.json");
+
+                JArray jsonArrayP = JArray.Parse(contenidoDelArchivoP);
+
+                List<PresupuestoEnt> presupuestosFiltrados = new List<PresupuestoEnt>();
+
+                foreach (JObject presupuestoJson in jsonArrayP)
+                {
+                    string nrosegjson = (string)presupuestoJson["NroSeguimiento"];
+                    
+
+                    if (nrosegjson == nroseguimiento)  
+                    {
+                        var productos = JsonConvert.DeserializeObject<List<PresupuestoEnt>>(presupuestoJson["Productos"].ToString());
+                        
+                        PresupuestoEnt presupuesto = new PresupuestoEnt
+                        {
+                            NroSeguimiento = (string)presupuestoJson["NroSeguimiento"].ToString(),
+                            Productos = JsonConvert.DeserializeObject<List<PresupuestoEnt>>(presupuestoJson["Productos"].ToString()),
+                            Descripcion = (string)presupuestoJson["Descripcion"],
+                            Total = (string)presupuestoJson["Total"].ToString(),
+
+                        };
+                        Console.WriteLine(presupuesto.Productos);
+                       
+
+                        presupuestosFiltrados.Add(presupuesto);
+
+                    }
+
+                }
+                return presupuestosFiltrados;
+            }
+            else
+            {
+                Console.WriteLine("El archivo no existe");
+                return new List<PresupuestoEnt>();
+            }
+        }
     }
 }
 

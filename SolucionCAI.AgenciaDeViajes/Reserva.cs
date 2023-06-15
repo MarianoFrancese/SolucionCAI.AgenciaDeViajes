@@ -24,6 +24,54 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private List<ItinerarioEnt> itinerariosFiltrados;
         string nroseguimiento;
+        private List<PresupuestoEnt> presupuestosFiltrados;
+
+        private void buscarPres_Click(object sender, EventArgs e) //boton buscar presupuestos
+        {
+            nroseguimiento = textBox7.Text;
+            presupuestosFiltrados = ModuloItinerario.ListaPresupuestos(nroseguimiento);
+            RellenarTablaPresup(presupuestosFiltrados);
+        }
+        private void RellenarTablaPresup(List<PresupuestoEnt> presupuestosFiltrados)
+        {
+            dataGridView1.Rows.Clear();
+
+
+            foreach (var itinerario in itinerariosFiltrados)
+            {
+                if (itinerario.Cliente[0].PersonaFisica != null)
+                {
+                    dataGridView1.Rows.Add(
+                    itinerario.PresupuestosList[0].NroSeguimiento,
+                    itinerario.PresupuestosList[0].Productos, //ver qué traer de productos, quisiera traer el string que se guarda en el json
+                    itinerario.Cliente[0].PersonaFisica[0].Nombre,
+                    "",
+                    itinerario.Cliente[0].PersonaFisica[0].DNI,
+                    "",
+                    itinerario.MedioPago,
+                    itinerario.PresupuestosList[0].Total, //ver como acceder al total que esta siendo calculado
+                    "Persona Fisica"
+                    );
+                }
+                else
+                {
+                    dataGridView2.Rows.Add(
+                    itinerario.PresupuestosList[0].NroSeguimiento,
+                    itinerario.PresupuestosList[0].Productos,
+                    "",
+                    itinerario.Cliente[0].PersonaJuridica[0].RazonSocial,
+                    "",
+                    itinerario.Cliente[0].PersonaJuridica[0].CUIT,
+                    itinerario.MedioPago,
+                    itinerario.PresupuestosList[0].Total,
+                    "Persona Juridica"
+                    );
+                }
+
+
+            }
+        }
+
         private void buscarPrere_Click(object sender, EventArgs e)
         {
             nroseguimiento = textBox4.Text;
@@ -108,11 +156,7 @@ namespace SolucionCAI.AgenciaDeViajes
             MessageBox.Show("Confirma reserva");
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Busqueda con filtros aplicados");
-        }
-
+        
         private void button3_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Busqueda con filtros aplicados");

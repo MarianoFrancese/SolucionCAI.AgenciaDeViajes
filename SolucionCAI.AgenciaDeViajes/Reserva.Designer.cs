@@ -187,7 +187,7 @@
             this.buscarPres.TabIndex = 10;
             this.buscarPres.Text = "Buscar";
             this.buscarPres.UseVisualStyleBackColor = false;
-            this.buscarPres.Click += new System.EventHandler(this.button4_Click);
+            this.buscarPres.Click += new System.EventHandler(this.buscarPres_Click);
             // 
             // textBox7
             // 

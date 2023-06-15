@@ -203,7 +203,7 @@ namespace SolucionCAI.AgenciaDeViajes
             groupBox3.Visible = false;
         }
 
-        private void button11_Click(object sender, EventArgs e) //boton generar presupuesto, deberia generarse con el "confirmar"
+        private void button11_Click(object sender, EventArgs e) 
         {
             List<ProductoLineaEnt> productosAGrabar = new List<ProductoLineaEnt>();
             ProductoLineaEnt productos;
