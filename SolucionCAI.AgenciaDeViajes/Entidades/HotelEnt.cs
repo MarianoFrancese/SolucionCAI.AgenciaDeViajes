@@ -16,6 +16,7 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
         public int Calificacion { get; set; }
         public DireccionEnt Direccion { get; set; }
         public List<DisponibilidadHabEnt> Disponibilidad { get; set; }
+        public Guid Uid { get; set; }
 
         public string MostrarDescripcion()
         {

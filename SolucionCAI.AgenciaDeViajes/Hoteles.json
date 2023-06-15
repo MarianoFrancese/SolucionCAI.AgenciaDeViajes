@@ -1,58 +1,4 @@
 [
-    {
-        "Codigo": "HT001",
-        "Nombre": "Sheraton",
-        "CodigoDeCiudad": "MIA",
-        "Calificacion": 5,
-        "Direccion": {
-            "Calle": "Collins Ave",
-            "Numero": 1234,
-            "CP": 7000,
-            "Latitud": 25.845362706221916,
-            "Longitud": -80.11993195337358
-
-        },
-        "Disponibilidad": [
-            {
-                "Nombre": "Intermedia",
-                "TarifaHab": 50000,
-                "Capacidad": 4,
-                "Adultos": 4,
-                "Menores": 2,
-                "Infantes": 2,
-                "HabitacionFechaDis": [
-                    {
-                        "FechaHab": "29/06/2023",
-                        "CantHab": 4
-                    },
-                    {
-                        "FechaHab": "30/06/2023",
-                        "CantHab": 4
-                    },
-                    {
-                        "FechaHab": "01/07/2023",
-                        "CantHab": 5
-                    },
-                    {
-                        "FechaHab": "02/07/2023",
-                        "CantHab": 4
-                    },
-                    {
-                        "FechaHab": "03/07/2023",
-                        "CantHab": 7
-                    },
-                    {
-                        "FechaHab": "04/07/2023",
-                        "CantHab": 5
-                    },
-                    {
-                        "FechaHab": "05/07/2023",
-                        "CantHab": 4
-                    }
-                ]
-            }
-        ]
-    },
   {
     "Codigo": "HT001",
     "Nombre": "Sheraton",
@@ -64,7 +10,60 @@
       "CP": 7000,
       "Latitud": 25.845362706221916,
       "Longitud": -80.11993195337358
-
+    },
+    "Disponibilidad": [
+      {
+        "Nombre": "Intermedia",
+        "TarifaHab": 50000,
+        "Capacidad": 4,
+        "Adultos": 4,
+        "Menores": 2,
+        "Infantes": 2,
+        "HabitacionFechaDis": [
+          {
+            "FechaHab": "29/06/2023",
+            "CantHab": 4
+          },
+          {
+            "FechaHab": "30/06/2023",
+            "CantHab": 4
+          },
+          {
+            "FechaHab": "01/07/2023",
+            "CantHab": 5
+          },
+          {
+            "FechaHab": "02/07/2023",
+            "CantHab": 4
+          },
+          {
+            "FechaHab": "03/07/2023",
+            "CantHab": 7
+          },
+          {
+            "FechaHab": "04/07/2023",
+            "CantHab": 5
+          },
+          {
+            "FechaHab": "05/07/2023",
+            "CantHab": 4
+          }
+        ]
+      }
+    ],
+    "Uid": "2b676671-8cf3-452c-b013-c3b904b01958"
+  },
+  {
+    "Codigo": "HT001",
+    "Nombre": "Sheraton",
+    "CodigoDeCiudad": "MIA",
+    "Calificacion": 5,
+    "Direccion": {
+      "Calle": "Collins Ave",
+      "Numero": 1234,
+      "CP": 7000,
+      "Latitud": 25.845362706221916,
+      "Longitud": -80.11993195337358
     },
     "Disponibilidad": [
       {
@@ -105,7 +104,8 @@
           }
         ]
       }
-    ]
+    ],
+    "Uid": "9de80368-6d99-4632-a334-9da142182a17"
   },
   {
     "Codigo": "HT001",
@@ -118,7 +118,6 @@
       "CP": 7000,
       "Latitud": 25.845362706221916,
       "Longitud": -80.11993195337358
-
     },
     "Disponibilidad": [
       {
@@ -159,64 +158,9 @@
           }
         ]
       }
-    ]
+    ],
+    "Uid": "a96000ae-8fa7-4fa0-80b8-62e43ac3353c"
   },
-
-    {
-        "Codigo": "HT002",
-        "Nombre": "Four Seasons",
-        "CodigoDeCiudad": "MAD",
-        "Calificacion": 5,
-        "Direccion": {
-            "Calle": "C. de Sevilla",
-            "Numero": 30,
-            "CP": 28014,
-            "Latitud": 40.41707269127456,
-            "Longitud": -3.7004233112454163
-
-        },
-        "Disponibilidad": [
-            {
-                "Nombre": "Deluxe",
-                "TarifaHab": 75200,
-                "Capacidad": 6,
-                "Adultos": 6,
-                "Menores": 3,
-                "Infantes": 3,
-                "HabitacionFechaDis": [
-                    {
-                        "FechaHab": "07/07/2023",
-                        "CantHab": 3
-                    },
-                    {
-                        "FechaHab": "08/07/2023",
-                        "CantHab": 4
-                    },
-                    {
-                        "FechaHab": "09/07/2023",
-                        "CantHab": 6
-                    },
-                    {
-                        "FechaHab": "10/07/2023",
-                        "CantHab": 6
-                    },
-                    {
-                        "FechaHab": "11/07/2023",
-                        "CantHab": 4
-                    },
-                    {
-                        "FechaHab": "12/07/2023",
-                        "CantHab": 5
-                    },
-                    {
-                        "FechaHab": "13/07/2023",
-                        "CantHab": 6
-                    }
-                ]
-            }
-        ]
-
-    },
   {
     "Codigo": "HT002",
     "Nombre": "Four Seasons",
@@ -228,7 +172,60 @@
       "CP": 28014,
       "Latitud": 40.41707269127456,
       "Longitud": -3.7004233112454163
-
+    },
+    "Disponibilidad": [
+      {
+        "Nombre": "Deluxe",
+        "TarifaHab": 75200,
+        "Capacidad": 6,
+        "Adultos": 6,
+        "Menores": 3,
+        "Infantes": 3,
+        "HabitacionFechaDis": [
+          {
+            "FechaHab": "07/07/2023",
+            "CantHab": 3
+          },
+          {
+            "FechaHab": "08/07/2023",
+            "CantHab": 4
+          },
+          {
+            "FechaHab": "09/07/2023",
+            "CantHab": 6
+          },
+          {
+            "FechaHab": "10/07/2023",
+            "CantHab": 6
+          },
+          {
+            "FechaHab": "11/07/2023",
+            "CantHab": 4
+          },
+          {
+            "FechaHab": "12/07/2023",
+            "CantHab": 5
+          },
+          {
+            "FechaHab": "13/07/2023",
+            "CantHab": 6
+          }
+        ]
+      }
+    ],
+    "Uid": "ba97f7f4-4be1-4ce5-8146-53f47b69f24a"
+  },
+  {
+    "Codigo": "HT002",
+    "Nombre": "Four Seasons",
+    "CodigoDeCiudad": "MAD",
+    "Calificacion": 5,
+    "Direccion": {
+      "Calle": "C. de Sevilla",
+      "Numero": 30,
+      "CP": 28014,
+      "Latitud": 40.41707269127456,
+      "Longitud": -3.7004233112454163
     },
     "Disponibilidad": [
       {
@@ -269,8 +266,8 @@
           }
         ]
       }
-    ]
-
+    ],
+    "Uid": "cb779b29-76c1-4a6f-8f7f-5b3784a72276"
   },
   {
     "Codigo": "HT002",
@@ -283,7 +280,6 @@
       "CP": 28014,
       "Latitud": 40.41707269127456,
       "Longitud": -3.7004233112454163
-
     },
     "Disponibilidad": [
       {
@@ -324,64 +320,9 @@
           }
         ]
       }
-    ]
-
+    ],
+    "Uid": "3e839a59-9808-49c4-9740-c962c8d020f4"
   },
-    {
-        "Codigo": "HT003",
-        "Nombre": "ibis budget Meudon",
-        "CodigoDeCiudad": "ROM",
-        "Calificacion": 3,
-        "Direccion": {
-            "Calle": "Pza Vittorio Emanuele",
-            "Numero": 3,
-            "CP": 92190,
-            "Latitud": 48.81806260303906,
-            "Longitud": 2.2493296544913317
-
-        },
-        "Disponibilidad": [
-            {
-                "Nombre": "Standard",
-                "TarifaHab": 16927,
-                "Capacidad": 2,
-                "Adultos": 2,
-                "Menores": 1,
-                "Infantes": 1,
-                "HabitacionFechaDis": [
-                    {
-                        "FechaHab": "14/07/2023",
-                        "CantHab": 3
-                    },
-                    {
-                        "FechaHab": "15/07/2023",
-                        "CantHab": 4
-                    },
-                    {
-                        "FechaHab": "16/07/2023",
-                        "CantHab": 6
-                    },
-                    {
-                        "FechaHab": "17/07/2023",
-                        "CantHab": 5
-                    },
-                    {
-                        "FechaHab": "18/07/2023",
-                        "CantHab": 4
-                    },
-                    {
-                        "FechaHab": "19/07/2023",
-                        "CantHab": 5
-                    },
-                    {
-                        "FechaHab": "20/07/2023",
-                        "CantHab": 3
-                    }
-                ]
-            }
-        ]
-
-    },
   {
     "Codigo": "HT003",
     "Nombre": "ibis budget Meudon",
@@ -393,7 +334,60 @@
       "CP": 92190,
       "Latitud": 48.81806260303906,
       "Longitud": 2.2493296544913317
-
+    },
+    "Disponibilidad": [
+      {
+        "Nombre": "Standard",
+        "TarifaHab": 16927,
+        "Capacidad": 2,
+        "Adultos": 2,
+        "Menores": 1,
+        "Infantes": 1,
+        "HabitacionFechaDis": [
+          {
+            "FechaHab": "14/07/2023",
+            "CantHab": 3
+          },
+          {
+            "FechaHab": "15/07/2023",
+            "CantHab": 4
+          },
+          {
+            "FechaHab": "16/07/2023",
+            "CantHab": 6
+          },
+          {
+            "FechaHab": "17/07/2023",
+            "CantHab": 5
+          },
+          {
+            "FechaHab": "18/07/2023",
+            "CantHab": 4
+          },
+          {
+            "FechaHab": "19/07/2023",
+            "CantHab": 5
+          },
+          {
+            "FechaHab": "20/07/2023",
+            "CantHab": 3
+          }
+        ]
+      }
+    ],
+    "Uid": "4dd0af4b-1eb0-4625-8d20-1f86e31bc4aa"
+  },
+  {
+    "Codigo": "HT003",
+    "Nombre": "ibis budget Meudon",
+    "CodigoDeCiudad": "ROM",
+    "Calificacion": 3,
+    "Direccion": {
+      "Calle": "Pza Vittorio Emanuele",
+      "Numero": 3,
+      "CP": 92190,
+      "Latitud": 48.81806260303906,
+      "Longitud": 2.2493296544913317
     },
     "Disponibilidad": [
       {
@@ -434,8 +428,8 @@
           }
         ]
       }
-    ]
-
+    ],
+    "Uid": "58b8dd0c-cd74-4b63-b04c-e9d0717d2cfe"
   },
   {
     "Codigo": "HT003",
@@ -448,7 +442,6 @@
       "CP": 92190,
       "Latitud": 48.81806260303906,
       "Longitud": 2.2493296544913317
-
     },
     "Disponibilidad": [
       {
@@ -489,48 +482,9 @@
           }
         ]
       }
-    ]
-
+    ],
+    "Uid": "0963e8a4-d27d-444d-a122-f1343bd1dc8e"
   },
-    {
-        "Codigo": "HT004",
-        "Nombre": "Ibis Paris Tour Eiffel",
-        "CodigoDeCiudad": "PAR",
-        "Calificacion": 4,
-        "Direccion": {
-            "Calle": "Rue Cambronne",
-            "Numero": 2,
-            "CP": 75015,
-            "Latitud": 48.847255201785835,
-            "Longitud": 2.3018222656948266
-
-        },
-        "Disponibilidad": [
-            {
-                "Nombre": "Standard",
-                "TarifaHab": 37000,
-                "Capacidad": 2,
-                "Adultos": 2,
-                "Menores": 1,
-                "Infantes": 1,
-                "HabitacionFechaDis": [
-                    {
-                        "FechaHab": "21/07/2023",
-                        "CantHab": 3
-                    },
-                    {
-                        "FechaHab": "22/07/2023",
-                        "CantHab": 6
-                    },
-                    {
-                        "FechaHab": "23/07/2023",
-                        "CantHab": 2
-                    }
-                ]
-            }
-        ]
-
-    },
   {
     "Codigo": "HT004",
     "Nombre": "Ibis Paris Tour Eiffel",
@@ -542,7 +496,44 @@
       "CP": 75015,
       "Latitud": 48.847255201785835,
       "Longitud": 2.3018222656948266
-
+    },
+    "Disponibilidad": [
+      {
+        "Nombre": "Standard",
+        "TarifaHab": 37000,
+        "Capacidad": 2,
+        "Adultos": 2,
+        "Menores": 1,
+        "Infantes": 1,
+        "HabitacionFechaDis": [
+          {
+            "FechaHab": "21/07/2023",
+            "CantHab": 3
+          },
+          {
+            "FechaHab": "22/07/2023",
+            "CantHab": 6
+          },
+          {
+            "FechaHab": "23/07/2023",
+            "CantHab": 2
+          }
+        ]
+      }
+    ],
+    "Uid": "0e4ee14a-986e-461d-ac26-bd3ad915be9e"
+  },
+  {
+    "Codigo": "HT004",
+    "Nombre": "Ibis Paris Tour Eiffel",
+    "CodigoDeCiudad": "PAR",
+    "Calificacion": 4,
+    "Direccion": {
+      "Calle": "Rue Cambronne",
+      "Numero": 2,
+      "CP": 75015,
+      "Latitud": 48.847255201785835,
+      "Longitud": 2.3018222656948266
     },
     "Disponibilidad": [
       {
@@ -567,8 +558,8 @@
           }
         ]
       }
-    ]
-
+    ],
+    "Uid": "29bb2291-e734-4c6f-a702-911fbbdece06"
   },
   {
     "Codigo": "HT004",
@@ -581,7 +572,6 @@
       "CP": 75015,
       "Latitud": 48.847255201785835,
       "Longitud": 2.3018222656948266
-
     },
     "Disponibilidad": [
       {
@@ -606,47 +596,47 @@
           }
         ]
       }
-    ]
-
+    ],
+    "Uid": "f0a84978-df19-41cd-9d1d-0b4149056df6"
   },
-    {
-        "Codigo": "HT005",
-        "Nombre": "Holiday Inn Santiago",
-        "CodigoDeCiudad": "SCL",
-        "Calificacion": 4,
-        "Direccion": {
-            "Calle": "Armando Cortinez Pte.",
-            "Numero": 2150,
-            "CP": 8320000,
-            "Latitud": -33.396465364152384,
-            "Longitud": -70.79344064755682
-        },
-        "Disponibilidad": [
-            {
-                "Nombre": "Standard",
-                "TarifaHab": 29000,
-                "Capacidad": 2,
-                "Adultos": 2,
-                "Menores": 1,
-                "Infantes": 1,
-                "HabitacionFechaDis": [
-                    {
-                        "FechaHab": "24/07/2023",
-                        "CantHab": 3
-                    },
-                    {
-                        "FechaHab": "25/07/2023",
-                        "CantHab": 8
-                    },
-                    {
-                        "FechaHab": "26/07/2023",
-                        "CantHab": 5
-                    }
-                ]
-            }
-        ]
-
+  {
+    "Codigo": "HT005",
+    "Nombre": "Holiday Inn Santiago",
+    "CodigoDeCiudad": "SCL",
+    "Calificacion": 4,
+    "Direccion": {
+      "Calle": "Armando Cortinez Pte.",
+      "Numero": 2150,
+      "CP": 8320000,
+      "Latitud": -33.396465364152384,
+      "Longitud": -70.79344064755682
     },
+    "Disponibilidad": [
+      {
+        "Nombre": "Standard",
+        "TarifaHab": 29000,
+        "Capacidad": 2,
+        "Adultos": 2,
+        "Menores": 1,
+        "Infantes": 1,
+        "HabitacionFechaDis": [
+          {
+            "FechaHab": "24/07/2023",
+            "CantHab": 3
+          },
+          {
+            "FechaHab": "25/07/2023",
+            "CantHab": 8
+          },
+          {
+            "FechaHab": "26/07/2023",
+            "CantHab": 5
+          }
+        ]
+      }
+    ],
+    "Uid": "ff875135-1207-44b1-bef8-500639cf9de7"
+  },
   {
     "Codigo": "HT005",
     "Nombre": "Holiday Inn Santiago",
@@ -682,8 +672,8 @@
           }
         ]
       }
-    ]
-
+    ],
+    "Uid": "81621523-49d4-44e7-a788-786cfc144690"
   },
   {
     "Codigo": "HT005",
@@ -720,47 +710,47 @@
           }
         ]
       }
-    ]
-
+    ],
+    "Uid": "821b8dc3-218a-46c5-a9df-87a526fcee85"
   },
-    {
-        "Codigo": "HT006",
-        "Nombre": "Sofitel",
-        "CodigoDeCiudad": "BUE",
-        "Calificacion": 5,
-        "Direccion": {
-            "Calle": "Posadas",
-            "Numero": 1232,
-            "CP": 1001,
-            "Latitud": -34.589276818961046,
-            "Longitud": -58.38411528860917
-        },
-        "Disponibilidad": [
-            {
-                "Nombre": "Standard",
-                "TarifaHab": 48000,
-                "Capacidad": 2,
-                "Adultos": 2,
-                "Menores": 1,
-                "Infantes": 1,
-                "HabitacionFechaDis": [
-                    {
-                        "FechaHab": "26/07/2023",
-                        "CantHab": 4
-                    },
-                    {
-                        "FechaHab": "27/07/2023",
-                        "CantHab": 5
-                    },
-                    {
-                        "FechaHab": "28/07/2023",
-                        "CantHab": 6
-                    }
-                ]
-            }
-        ]
-
+  {
+    "Codigo": "HT006",
+    "Nombre": "Sofitel",
+    "CodigoDeCiudad": "BUE",
+    "Calificacion": 5,
+    "Direccion": {
+      "Calle": "Posadas",
+      "Numero": 1232,
+      "CP": 1001,
+      "Latitud": -34.589276818961046,
+      "Longitud": -58.38411528860917
     },
+    "Disponibilidad": [
+      {
+        "Nombre": "Standard",
+        "TarifaHab": 48000,
+        "Capacidad": 2,
+        "Adultos": 2,
+        "Menores": 1,
+        "Infantes": 1,
+        "HabitacionFechaDis": [
+          {
+            "FechaHab": "26/07/2023",
+            "CantHab": 4
+          },
+          {
+            "FechaHab": "27/07/2023",
+            "CantHab": 5
+          },
+          {
+            "FechaHab": "28/07/2023",
+            "CantHab": 6
+          }
+        ]
+      }
+    ],
+    "Uid": "f425593b-7062-42e2-b138-c72db5459a8c"
+  },
   {
     "Codigo": "HT006",
     "Nombre": "Sofitel",
@@ -796,8 +786,8 @@
           }
         ]
       }
-    ]
-
+    ],
+    "Uid": "5512c9e1-dc0d-4b00-92b1-d85af38337fd"
   },
   {
     "Codigo": "HT006",
@@ -834,6 +824,7 @@
           }
         ]
       }
-    ]
+    ],
+    "Uid": "10504173-64d5-4291-bb53-0cebcf5cd6e7"
   }
 ]
