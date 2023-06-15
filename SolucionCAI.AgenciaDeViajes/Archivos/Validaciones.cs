@@ -14,6 +14,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace SolucionCAI.AgenciaDeViajes.Archivos
 {
+    
     internal class Validaciones
     {
         public bool ValidaUsuario(string usuario, string contraseña)
@@ -46,6 +47,28 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
             return flag;
         }
+
+        //para leer de json
+     /*   public bool ValidaUsuario1(string usuario, string contraseña)
+        {
+
+            string usuario = UsuarioLogin.Text;
+            string contraseña = ContraseñaLogin.Text;
+
+            var credenciales = LeerCredencialesDesdeJSON("ruta_al_archivo.json");
+
+            if (credenciales != null && credenciales.Usuario == usuario && credenciales.Contraseña == contraseña)
+            {
+                MenuPrincipal MPrinc = new MenuPrincipal(usuario);
+                MPrinc.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos");
+            }
+        } */
+
 
 
 
