@@ -12,13 +12,13 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 {
     public class ModuloPresupuesto
     {
-        public static List<VueloEnt> GenerarListaVuelo(string clase, string tipoPasajero, decimal tarifa, int cantPasajeros, string codigo, string origen, string destino, DateTime fechaPartida, DateTime fechaArribo, TimeSpan tiempoVuelo, string aerolinea)
+        public static VueloEnt GenerarVuelo(string clase, string tipoPasajero, decimal tarifa, int cantPasajeros, string codigo, string origen, string destino, DateTime fechaPartida, DateTime fechaArribo, TimeSpan tiempoVuelo, string aerolinea)
 
         {
 
             List<TarifaEnt> listaTarifas = new List<TarifaEnt>();
 
-            List<VueloEnt> listaVuelos = new List<VueloEnt>();
+            //List<VueloEnt> listaVuelos = new List<VueloEnt>();
 
 
 
@@ -62,27 +62,29 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
             };
 
-            listaVuelos.Add(vueloSeleccionado);
-            return listaVuelos;
+            return vueloSeleccionado;
 
         }
-        public static List<ProductoLineaEnt> AgregarVueloLinea(List<VueloEnt> vuelosPresupuestados)
+        public static ProductoLineaEnt AgregarVueloLinea(VueloEnt vueloPresupuestado)
         {
 
-            List<ProductoLineaEnt> listaProductos = new List<ProductoLineaEnt>();
+            //List<ProductoLineaEnt> listaProductos = new List<ProductoLineaEnt>();
 
             ProductoLineaEnt producto = new ProductoLineaEnt
             {
-                ProductoV = vuelosPresupuestados[0].Descripcion,
+                ProductoV = vueloPresupuestado,
                 ProductoH = null,
-                PrecioUn = vuelosPresupuestados[0].Tarifas[0].Precio,
-                Cantidad = vuelosPresupuestados[0].Tarifas[0].Disponibilidad,
+                Cantidad = vueloPresupuestado.Tarifas[0].Disponibilidad,
+                Pasajeros = null,
+                TarifaV = vueloPresupuestado.Tarifas[0],
+                DisponibilidadH = null
 
             };
 
-            listaProductos.Add(producto);
+            
+            //listaProductos.Add(producto);
 
-            return listaProductos;
+            return producto;
         }
 
         public static int BuscarUltimoId()
@@ -105,9 +107,9 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             }
         }
 
-        public static List<PresupuestoEnt> CrearPresupuesto(List<ProductoLineaEnt> productosAgregados, decimal total)
+        public static PresupuestoEnt CrearPresupuesto(List<ProductoLineaEnt> productosAgregados, decimal total)
         {
-            List<PresupuestoEnt> listaPresupuestos = new List<PresupuestoEnt>();
+            //List<PresupuestoEnt> listaPresupuestos = new List<PresupuestoEnt>();
 
             PresupuestoEnt presupuesto = new PresupuestoEnt
             {
@@ -116,12 +118,12 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 Total = total,
             };
 
-            listaPresupuestos.Add(presupuesto);
+            //listaPresupuestos.Add(presupuesto);
 
-            return listaPresupuestos;
+            return presupuesto;
         }
 
-        public static DialogResult GrabarPresupuesto(List<PresupuestoEnt> listaPresupuesto)
+        public static DialogResult GrabarPresupuesto(PresupuestoEnt presupuesto)
         {
             if (File.Exists("Presupuestos.json"))
             {
@@ -130,14 +132,6 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 string existingJsonString = File.ReadAllText("Presupuestos.json");
 
                 List<PresupuestoEnt> dataExistente = JsonConvert.DeserializeObject<List<PresupuestoEnt>>(existingJsonString);
-
-                PresupuestoEnt presupuesto = new PresupuestoEnt
-                {
-                    NroSeguimiento = listaPresupuesto[0].NroSeguimiento,
-                    Productos = listaPresupuesto[0].Productos,
-                    Total = listaPresupuesto[0].Total,
-                };
-
                 dataExistente.Add(presupuesto);
                 string jsonString = JsonConvert.SerializeObject(dataExistente, Formatting.Indented);
                 File.WriteAllText("Presupuestos.json", jsonString);
@@ -149,13 +143,6 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             {
                 List<PresupuestoEnt> data = new List<PresupuestoEnt>();
 
-                PresupuestoEnt presupuesto = new PresupuestoEnt
-                {
-                    NroSeguimiento = listaPresupuesto[0].NroSeguimiento,
-                    Productos = listaPresupuesto[0].Productos,
-                    Total = listaPresupuesto[0].Total,
-                };
-
                 data.Add(presupuesto);
                 string jsonString = JsonConvert.SerializeObject(data);
                 File.WriteAllText("Presupuestos.json", jsonString);
@@ -165,9 +152,9 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             }
         }
 
-        public static List<HotelEnt> GenerarListaHotel(string codigo, string hotel, string ciudad, DateTime fechaEntrada, DateTime fechaSalida, string direccion, int calificacion, string tipoHab, int capacidad, decimal tarifa, int adultos, int menores, int infantes)
+        public static HotelEnt GenerarHotel(string codigo, string hotel, string ciudad, DateTime fechaEntrada, DateTime fechaSalida, string direccion, int calificacion, string tipoHab, int capacidad, decimal tarifa, int adultos, int menores, int infantes)
         {
-            List<HotelEnt> listaHoteles = new List<HotelEnt>();
+            //List<HotelEnt> listaHoteles = new List<HotelEnt>();
             DireccionEnt direccionEnt = new DireccionEnt();
             List<DisponibilidadHabEnt> listaDisponibilidades = new List<DisponibilidadHabEnt>();
 
@@ -211,7 +198,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 
             }
 
-            DisponibilidadHabEnt disponibilidades = new DisponibilidadHabEnt
+            DisponibilidadHabEnt disponibilidad = new DisponibilidadHabEnt
             {
 
                 Nombre = hotel,
@@ -221,7 +208,6 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 Menores = menores,
                 Infantes = infantes
             };
-            listaDisponibilidades.Add(disponibilidades);
 
             HotelEnt hotelSeleccionado = new HotelEnt
             {
@@ -230,31 +216,30 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 CodigoCiudad = ciudad,
                 Calificacion = calificacion,
                 Direccion = direccionEnt,
-                Disponibilidad = listaDisponibilidades
+                Disponibilidad = disponibilidad
             };
 
-
-            listaHoteles.Add(hotelSeleccionado);
-            return listaHoteles;
+            return hotelSeleccionado;
 
         }
 
-        public static List<ProductoLineaEnt> AgregarHotelLinea(List<HotelEnt> hotelesPresupuestados)
+        public static ProductoLineaEnt AgregarHotelLinea(HotelEnt hotelPresupuestado)
         {
 
-            List<ProductoLineaEnt> listaProductos = new List<ProductoLineaEnt>();
+            //List<ProductoLineaEnt> listaProductos = new List<ProductoLineaEnt>();
 
             ProductoLineaEnt producto = new ProductoLineaEnt
             {
                 ProductoV = null,
-                ProductoH = hotelesPresupuestados[0].Descripcion,
-                PrecioUn = hotelesPresupuestados[0].Disponibilidad[0].TarifaHab,
-                Cantidad = hotelesPresupuestados[0].Disponibilidad[0].Capacidad,
+                ProductoH = hotelPresupuestado,
+                Cantidad = hotelPresupuestado.Disponibilidad.HabitacionFechaDisp[0].CantHab,
+                Pasajeros = null,
+                TarifaV = null,
+                DisponibilidadH = hotelPresupuestado.Disponibilidad
 
             };
 
-            listaProductos.Add(producto);
-            return listaProductos;
+            return producto;
         }
 
 

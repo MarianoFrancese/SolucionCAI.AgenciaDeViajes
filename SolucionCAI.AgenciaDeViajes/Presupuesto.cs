@@ -22,10 +22,11 @@ namespace SolucionCAI.AgenciaDeViajes
 {
     public partial class Presupuesto : Form
     {
-        private List<VueloEnt> vuelosFiltrados;
-        private List<VueloEnt> listaVuelos = new List<VueloEnt>();
-        private List<ProductoLineaEnt> productosAgregados = new List<ProductoLineaEnt>();
-        private List<HotelEnt> hotelesFiltrados;
+        private List<VueloEnt> vuelosFiltrados = new List<VueloEnt>();
+        private VueloEnt vuelo = new VueloEnt();
+        private ProductoLineaEnt productoAgregado = new ProductoLineaEnt();
+        private List<HotelEnt> hotelesFiltrados = new List<HotelEnt>();
+        private List<ProductoLineaEnt> productosPresupuesto = new List<ProductoLineaEnt>();
         string origen;
         string destino;
         DateTime fechaPartida;
@@ -207,6 +208,7 @@ namespace SolucionCAI.AgenciaDeViajes
         {
             List<ProductoLineaEnt> productosAGrabar = new List<ProductoLineaEnt>();
             ProductoLineaEnt productos;
+            VueloEnt vuelo = ModuloProductos.ObtenerVueloPorID(dataGridView2.Rows.Cells[0]?.Value?.ToString()); //agregar uid a la tabla
             foreach (DataGridViewRow fila in dataGridView2.Rows)
             {
                 if (fila != null)
@@ -219,8 +221,8 @@ namespace SolucionCAI.AgenciaDeViajes
                     total = Convert.ToDecimal(textBox5.Text);
                     productos = new ProductoLineaEnt
                     {
-                        ProductoV = producto,
-                        PrecioUn = precio,
+                        ProductoV = vuelo,
+                        ProductoH = null,
                         Cantidad = cantidad
                     };
                     productosAGrabar.Add(productos);
@@ -292,11 +294,12 @@ namespace SolucionCAI.AgenciaDeViajes
 
                 int disponibilidadVuelo = Convert.ToInt32(row.Cells[11].Value.ToString());
 
-                listaVuelos = ModuloPresupuesto.GenerarListaVuelo(clase, tipoPasajero, tarifa, cantPasajeros, codigo, origen, destino, fechaPartida, fechaArribo, tiempoVuelo, aerolinea);
-                productosAgregados = ModuloPresupuesto.AgregarVueloLinea(listaVuelos);
-                textBox11.Text = ModuloPresupuesto.CrearPresupuesto(productosAgregados, 0)[0].NroSeguimiento.ToString();
+                vuelo = ModuloPresupuesto.GenerarVuelo(clase, tipoPasajero, tarifa, cantPasajeros, codigo, origen, destino, fechaPartida, fechaArribo, tiempoVuelo, aerolinea);
+                productoAgregado = ModuloPresupuesto.AgregarVueloLinea(vuelo);
+                productosPresupuesto.Add(productoAgregado);
+                textBox11.Text = ModuloPresupuesto.CrearPresupuesto(productosPresupuesto, 0).NroSeguimiento.ToString();
 
-                RellenarPresupuestoTabla(productosAgregados);
+                RellenarPresupuestoTabla(productosPresupuesto);
                 CalcularTotal();
 
             }
@@ -346,12 +349,12 @@ namespace SolucionCAI.AgenciaDeViajes
                     fechaSalidaFormateada,
                     direccionFormateada,
                     hotel.Calificacion,
-                    hotel.Disponibilidad[0].Nombre,
-                    hotel.Disponibilidad[0].Capacidad,
-                    hotel.Disponibilidad[0].TarifaHab,
-                    hotel.Disponibilidad[0].Adultos,
-                    hotel.Disponibilidad[0].Menores,
-                    hotel.Disponibilidad[0].Infantes
+                    hotel.Disponibilidad.Nombre,
+                    hotel.Disponibilidad.Capacidad,
+                    hotel.Disponibilidad.TarifaHab,
+                    hotel.Disponibilidad.Adultos,
+                    hotel.Disponibilidad.Menores,
+                    hotel.Disponibilidad.Infantes
                     );
             }
         }

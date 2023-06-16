@@ -60,6 +60,22 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             }
         }
 
+        public static VueloEnt ObtenerVueloPorID(Guid uid)
+        {
+            VueloEnt vuelo = new VueloEnt();
+            JArray jsonArray = ArchivoVuelos.LeerVuelos();
+
+            foreach (JObject vueloJson in jsonArray)
+            {                
+                if (vueloJson["Uid"].ToString() == uid.ToString())
+                {
+                    vuelo = JsonConvert.DeserializeObject<VueloEnt>(vueloJson.ToString());
+                }
+            }
+            return vuelo;
+
+        }
+
         public static List<HotelEnt> ListaHoteles(string ciudad, string fechaEntrada, string fechaSalida, int cantHuespedes, string tipoHabitacion)
         {
             JArray jsonArray = ArchivoHoteles.LeerHoteles();
@@ -99,7 +115,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
                     if (ciudadJson == ciudad && compararFechas && capacidadJson >= cantHuespedes && tipoHabitacionJson == tipoHabitacion)
                     {
-                        var listaDisponibilidad = JsonConvert.DeserializeObject<List<DisponibilidadHabEnt>>(hotelJson["Disponibilidad"].ToString());
+                        var disponibilidad = JsonConvert.DeserializeObject<DisponibilidadHabEnt>(hotelJson["Disponibilidad"].ToString());
                         List<HabitacionFechaEnt> listaHabitaciones = new List<HabitacionFechaEnt>();
                         // Ver como manejar la disponibilidad de la habitacion con la cantidad de habitaciones
                         //IMPORTANTE!!
@@ -118,7 +134,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                             //CantHab = 1
                         };
                         listaHabitaciones.Add(habitacionFechaEnt);
-                        listaDisponibilidad[0].HabitacionFechaDisp = listaHabitaciones;
+                        disponibilidad.HabitacionFechaDisp = listaHabitaciones;
 
                         HotelEnt hotel = new HotelEnt
                         {
@@ -127,7 +143,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                             CodigoCiudad = ciudadJson,
                             Calificacion = Convert.ToInt32(calificacionJson),
                             Direccion = direccion,
-                            Disponibilidad = listaDisponibilidad,
+                            Disponibilidad = disponibilidad,
                         };
 
                         if(hotelesFiltrados.Count == 0)
@@ -160,6 +176,22 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 Console.WriteLine("El archivo no existe");
                 return new List<HotelEnt>();
             }
+        }
+
+        public static HotelEnt ObtenerHotelPorID(Guid uid)
+        {
+            HotelEnt hotel = new HotelEnt();
+            JArray jsonArray = ArchivoHoteles.LeerHoteles();
+
+            foreach (JObject hotelJson in jsonArray)
+            {
+                if (hotelJson["Uid"].ToString() == uid.ToString())
+                {
+                    hotel = JsonConvert.DeserializeObject<HotelEnt>(hotelJson.ToString());
+                }
+            }
+            return hotel;
+
         }
 
     }

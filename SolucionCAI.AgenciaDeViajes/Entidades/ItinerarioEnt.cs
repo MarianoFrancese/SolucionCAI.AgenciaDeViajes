@@ -8,7 +8,7 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
 {
     public class ItinerarioEnt 
     {
-        public List<PresupuestoEnt> PresupuestosList { get; set; } //se agrego presupuesto como atributo de itinerario
+        public PresupuestoEnt PresupuestosList { get; set; } //se agrego presupuesto como atributo de itinerario
        
         //public int nroseg { get { return TraerNumSeguimiento; } }
         public string Estado { get; set; }

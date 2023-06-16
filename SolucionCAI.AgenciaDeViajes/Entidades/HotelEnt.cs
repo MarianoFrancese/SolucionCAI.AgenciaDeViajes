@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SolucionCAI.AgenciaDeViajes.Archivos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -11,16 +12,17 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
     {
         public string Codigo { get; set; }
         public string Nombre { get; set; }
-        public string Descripcion { get { return MostrarDescripcion(); } }
         public string CodigoCiudad { get; set; }
         public int Calificacion { get; set; }
         public DireccionEnt Direccion { get; set; }
-        public List<DisponibilidadHabEnt> Disponibilidad { get; set; }
+        public DisponibilidadHabEnt Disponibilidad { get; set; }
         public Guid Uid { get; set; }
 
-        public string MostrarDescripcion()
+        public HotelEnt ObtenerHotelPorId(Guid uid)
         {
-            return $"Codigo: {Codigo} - Hotel {Nombre}";
+            HotelEnt hotel = new HotelEnt();
+            hotel = ModuloProductos.ObtenerHotel(uid);
+            return hotel;
         }
 
         public List<DisponibilidadHabEnt> Disponibles(DateTime desde, DateTime hasta)

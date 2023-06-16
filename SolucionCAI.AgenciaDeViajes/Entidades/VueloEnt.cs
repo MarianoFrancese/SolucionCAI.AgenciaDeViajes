@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SolucionCAI.AgenciaDeViajes.Archivos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Policy;
@@ -11,7 +12,6 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
     {
         public string Codigo { get; set; }
         public string Origen { get; set; }
-        public string Descripcion { get { return MostrarDescripcion(); } }
         public string Destino { get; set; }
         public DateTime FechaSalida { get; set; }
         public DateTime FechaArribo { get; set; }
@@ -19,11 +19,8 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
         public TimeSpan TiempoVuelo { get; set; } 
         public string Aerolinea { get; set; }
         public List<TarifaEnt> Tarifas { get; set; } //Acá llamar a un método de TarifaEnt que traiga una lista de tarifas
+        public Guid Uid { get; set; }
 
-        public string MostrarDescripcion()
-        {
-            return $"Codigo: {Codigo} - Vuelo de {Origen} a {Destino} con {Aerolinea}";
-        }
 
         //Acá sería crear un método en el que le asignemos una de las variables matcheadas en el filtro de presupuesto
         //public VueloEnt Vuelo(string codigo)

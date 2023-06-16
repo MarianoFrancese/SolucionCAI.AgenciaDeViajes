@@ -13,13 +13,25 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
 {
     public class ProductoLineaEnt
     {
-        public string ProductoH { get; set; } //ver si se puede cambiar a obj
-        public string ProductoV { get; set; } //ver si se puede cambiar a obj
-        public decimal PrecioUn { get; set; }
+        public HotelEnt ProductoH { get; set; } //ver si se puede cambiar a obj
+        public VueloEnt ProductoV { get; set; } //ver si se puede cambiar a obj
         public int Cantidad { get; set; }
-        public Decimal SubTotal { get { return CalcularSubtotal(Cantidad, PrecioUn); } }
+        public List<PasajeroEnt> Pasajeros { get; set; }
+        public TarifaEnt TarifaV { get; set; }
+        public DisponibilidadHabEnt DisponibilidadH { get; set; }
+        public Decimal SubTotal { get { return CalcularSubtotal(Cantidad, ProductoV.Tarifas[0].Precio ); } }
         public Decimal IVA { get { return CalcularIVA(SubTotal); } }
         public Decimal TotalProd { get { return CalcularTotal(SubTotal, IVA); } }
+
+
+        public string MostrarDescripcionHotel(HotelEnt hotel)
+        {
+            return $"Codigo: {hotel.Codigo} - Hotel {hotel.Nombre} en {hotel.CodigoCiudad}";
+        }
+        public string MostrarDescripcionVuelo(VueloEnt vuelo)
+        {
+            return $"Codigo: {vuelo.Codigo} - Vuelo de {vuelo.Origen} a {vuelo.Destino} con {vuelo.Aerolinea}";
+        }
 
         public static string VueloToString(VueloEnt vuelo)
         {
@@ -104,11 +116,11 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
             return vuelo;
         }
 
-        public decimal CalcularSubtotal(int cantidad, decimal precioUnitario)
+        public decimal CalcularSubtotal(int cantidad, decimal precio)
         {
             decimal subtotal;
 
-            subtotal = cantidad * precioUnitario;
+            subtotal = cantidad * precio;
 
             return subtotal;
         }
