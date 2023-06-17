@@ -66,7 +66,7 @@ namespace SolucionCAI.AgenciaDeViajes
         {
             nroseguimiento = textBox4.Text;
 
-            itinerariosFiltrados = ModuloItinerario.ListaItinerario(nroseguimiento);
+            itinerariosFiltrados = ModuloItinerario.ListaItinerarioPre(nroseguimiento);
             
             RellenarTablaPre(itinerariosFiltrados);
 
@@ -114,6 +114,56 @@ namespace SolucionCAI.AgenciaDeViajes
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void buscarRes_Click(object sender, EventArgs e)
+        {
+            nroseguimiento = textBox1.Text;
+
+            itinerariosFiltrados = ModuloItinerario.ListaItinerarioReserva(nroseguimiento);
+
+            RellenarTablaReserva(itinerariosFiltrados);
+        }
+
+        private void RellenarTablaReserva(List<ItinerarioEnt> itinerariosFiltrados)
+        {
+            dataGridView3.Rows.Clear();
+
+
+            foreach (var itinerario in itinerariosFiltrados)
+            {
+                if (itinerario.Cliente.PersonaFisica != null)
+                {
+                    dataGridView3.Rows.Add(
+                    itinerario.PresupuestosList.NroSeguimiento,
+                    itinerario.PresupuestosList.Productos,
+                    "Persona Fisica",
+                    itinerario.Cliente.PersonaFisica[0].Nombre,
+                    "",
+                    
+                    itinerario.Cliente.MedioPago,
+                    itinerario.PresupuestosList.Total, 
+                    itinerario.EstadoPago
+                    );
+                }
+                else if (itinerario.Cliente.PersonaJuridica != null)
+                {
+                    dataGridView2.Rows.Add(
+                    itinerario.PresupuestosList.NroSeguimiento,
+                    itinerario.PresupuestosList.Productos,
+                    "Persona Juridica",
+                    "",
+                    itinerario.Cliente.PersonaJuridica[0].RazonSocial,
+                    
+                    itinerario.Cliente.MedioPago,
+                    itinerario.PresupuestosList.Total,
+                    itinerario.EstadoPago
+                    
+                    );
+                }
+
+
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -229,6 +279,8 @@ namespace SolucionCAI.AgenciaDeViajes
         }
 
         
+
+
 
 
         //private void button3_Click_1(object sender, EventArgs e)
