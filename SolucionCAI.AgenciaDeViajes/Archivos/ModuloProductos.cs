@@ -92,7 +92,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                     List<DateTime> fechasJson = new List<DateTime>();
                     List<DateTime> fechasFiltro = new List<DateTime>();
 
-                    foreach (var habitacionFecha in hotelJson["Disponibilidad"][0]["HabitacionFechaDis"])
+                    foreach (var habitacionFecha in hotelJson["Disponibilidad"]["HabitacionFechaDis"])
                     {
                         DateTime fechaJson = DateTime.ParseExact(habitacionFecha["FechaHab"].ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
                         fechasJson.Add(fechaJson);
@@ -101,8 +101,8 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                     string nombreJson = (string)hotelJson["Nombre"];
                     string ciudadJson = (string)hotelJson["CodigoDeCiudad"];                      
                     string calificacionJson = (string)hotelJson["Calificacion"];
-                    string tipoHabitacionJson = (string)hotelJson["Disponibilidad"][0]["Nombre"];
-                    int capacidadJson = Convert.ToInt32(hotelJson["Disponibilidad"][0]["Capacidad"]);
+                    string tipoHabitacionJson = (string)hotelJson["Disponibilidad"]["Nombre"];
+                    int capacidadJson = Convert.ToInt32(hotelJson["Disponibilidad"]["Capacidad"]);
                     Guid uidJson = (Guid)hotelJson["Uid"];
                         
 

@@ -353,10 +353,10 @@ namespace SolucionCAI.AgenciaDeViajes
                     hotel.Calificacion,
                     hotel.Disponibilidad.Nombre,
                     hotel.Disponibilidad.Capacidad,
-                    hotel.Disponibilidad.TarifaHab,
-                    hotel.Disponibilidad.Adultos,
-                    hotel.Disponibilidad.Menores,
-                    hotel.Disponibilidad.Infantes
+                    hotel.Disponibilidad.TarifaHab
+                    //hotel.Disponibilidad.Adultos,
+                    //hotel.Disponibilidad.Menores,
+                    //hotel.Disponibilidad.Infantes
                     );
             }
         }

@@ -11,46 +11,45 @@
       "Latitud": 25.845362706221916,
       "Longitud": -80.11993195337358
     },
-    "Disponibilidad": 
-      {
-        "Nombre": "Intermedia",
-        "TarifaHab": 50000,
-        "Capacidad": 4,
-        "Adultos": 4,
-        "Menores": 2,
-        "Infantes": 2,
-        "HabitacionFechaDis": [
-          {
-            "FechaHab": "29/06/2023",
-            "CantHab": 4
-          },
-          {
-            "FechaHab": "30/06/2023",
-            "CantHab": 4
-          },
-          {
-            "FechaHab": "01/07/2023",
-            "CantHab": 5
-          },
-          {
-            "FechaHab": "02/07/2023",
-            "CantHab": 4
-          },
-          {
-            "FechaHab": "03/07/2023",
-            "CantHab": 7
-          },
-          {
-            "FechaHab": "04/07/2023",
-            "CantHab": 5
-          },
-          {
-            "FechaHab": "05/07/2023",
-            "CantHab": 4
-          }
-        ]
-      },  
-    "Uid": "2b676671-8cf3-452c-b013-c3b904b01958"
+    "Disponibilidad": {
+      "Nombre": "Intermedia",
+      "TarifaHab": 50000,
+      "Capacidad": 4,
+      "Adultos": 4,
+      "Menores": 2,
+      "Infantes": 2,
+      "HabitacionFechaDis": [
+        {
+          "FechaHab": "29/06/2023",
+          "CantHab": 4
+        },
+        {
+          "FechaHab": "30/06/2023",
+          "CantHab": 4
+        },
+        {
+          "FechaHab": "01/07/2023",
+          "CantHab": 5
+        },
+        {
+          "FechaHab": "02/07/2023",
+          "CantHab": 4
+        },
+        {
+          "FechaHab": "03/07/2023",
+          "CantHab": 7
+        },
+        {
+          "FechaHab": "04/07/2023",
+          "CantHab": 5
+        },
+        {
+          "FechaHab": "05/07/2023",
+          "CantHab": 4
+        }
+      ]
+    },
+    "Uid": "5a089361-acae-4157-8d1e-4779ea51c152"
   },
   {
     "Codigo": "HT001",
@@ -64,46 +63,45 @@
       "Latitud": 25.845362706221916,
       "Longitud": -80.11993195337358
     },
-    "Disponibilidad": 
-      {
-        "Nombre": "Standard",
-        "TarifaHab": 35000,
-        "Capacidad": 2,
-        "Adultos": 2,
-        "Menores": 1,
-        "Infantes": 1,
-        "HabitacionFechaDis": [
-          {
-            "FechaHab": "29/06/2023",
-            "CantHab": 3
-          },
-          {
-            "FechaHab": "30/06/2023",
-            "CantHab": 4
-          },
-          {
-            "FechaHab": "01/07/2023",
-            "CantHab": 4
-          },
-          {
-            "FechaHab": "02/07/2023",
-            "CantHab": 5
-          },
-          {
-            "FechaHab": "03/07/2023",
-            "CantHab": 6
-          },
-          {
-            "FechaHab": "04/07/2023",
-            "CantHab": 3
-          },
-          {
-            "FechaHab": "05/07/2023",
-            "CantHab": 2
-          }
-        ]
-      },   
-    "Uid": "9de80368-6d99-4632-a334-9da142182a17"
+    "Disponibilidad": {
+      "Nombre": "Standard",
+      "TarifaHab": 35000,
+      "Capacidad": 2,
+      "Adultos": 2,
+      "Menores": 1,
+      "Infantes": 1,
+      "HabitacionFechaDis": [
+        {
+          "FechaHab": "29/06/2023",
+          "CantHab": 3
+        },
+        {
+          "FechaHab": "30/06/2023",
+          "CantHab": 4
+        },
+        {
+          "FechaHab": "01/07/2023",
+          "CantHab": 4
+        },
+        {
+          "FechaHab": "02/07/2023",
+          "CantHab": 5
+        },
+        {
+          "FechaHab": "03/07/2023",
+          "CantHab": 6
+        },
+        {
+          "FechaHab": "04/07/2023",
+          "CantHab": 3
+        },
+        {
+          "FechaHab": "05/07/2023",
+          "CantHab": 2
+        }
+      ]
+    },
+    "Uid": "cfba2c9b-280f-4d0d-935c-1671c0071aec"
   },
   {
     "Codigo": "HT001",
@@ -117,46 +115,45 @@
       "Latitud": 25.845362706221916,
       "Longitud": -80.11993195337358
     },
-    "Disponibilidad": 
-      {
-        "Nombre": "Deluxe",
-        "TarifaHab": 65000,
-        "Capacidad": 6,
-        "Adultos": 6,
-        "Menores": 3,
-        "Infantes": 3,
-        "HabitacionFechaDis": [
-          {
-            "FechaHab": "29/06/2023",
-            "CantHab": 5
-          },
-          {
-            "FechaHab": "30/06/2023",
-            "CantHab": 4
-          },
-          {
-            "FechaHab": "01/07/2023",
-            "CantHab": 5
-          },
-          {
-            "FechaHab": "02/07/2023",
-            "CantHab": 6
-          },
-          {
-            "FechaHab": "03/07/2023",
-            "CantHab": 3
-          },
-          {
-            "FechaHab": "04/07/2023",
-            "CantHab": 2
-          },
-          {
-            "FechaHab": "05/07/2023",
-            "CantHab": 4
-          }
-        ]
-      },  
-    "Uid": "a96000ae-8fa7-4fa0-80b8-62e43ac3353c"
+    "Disponibilidad": {
+      "Nombre": "Deluxe",
+      "TarifaHab": 65000,
+      "Capacidad": 6,
+      "Adultos": 6,
+      "Menores": 3,
+      "Infantes": 3,
+      "HabitacionFechaDis": [
+        {
+          "FechaHab": "29/06/2023",
+          "CantHab": 5
+        },
+        {
+          "FechaHab": "30/06/2023",
+          "CantHab": 4
+        },
+        {
+          "FechaHab": "01/07/2023",
+          "CantHab": 5
+        },
+        {
+          "FechaHab": "02/07/2023",
+          "CantHab": 6
+        },
+        {
+          "FechaHab": "03/07/2023",
+          "CantHab": 3
+        },
+        {
+          "FechaHab": "04/07/2023",
+          "CantHab": 2
+        },
+        {
+          "FechaHab": "05/07/2023",
+          "CantHab": 4
+        }
+      ]
+    },
+    "Uid": "50f6a3dc-117f-424c-8966-38704602857e"
   },
   {
     "Codigo": "HT002",
@@ -171,44 +168,44 @@
       "Longitud": -3.7004233112454163
     },
     "Disponibilidad": {
-        "Nombre": "Deluxe",
-        "TarifaHab": 75200,
-        "Capacidad": 6,
-        "Adultos": 6,
-        "Menores": 3,
-        "Infantes": 3,
-        "HabitacionFechaDis": [
-          {
-            "FechaHab": "07/07/2023",
-            "CantHab": 3
-          },
-          {
-            "FechaHab": "08/07/2023",
-            "CantHab": 4
-          },
-          {
-            "FechaHab": "09/07/2023",
-            "CantHab": 6
-          },
-          {
-            "FechaHab": "10/07/2023",
-            "CantHab": 6
-          },
-          {
-            "FechaHab": "11/07/2023",
-            "CantHab": 4
-          },
-          {
-            "FechaHab": "12/07/2023",
-            "CantHab": 5
-          },
-          {
-            "FechaHab": "13/07/2023",
-            "CantHab": 6
-          }
-        ]
-      },   
-    "Uid": "ba97f7f4-4be1-4ce5-8146-53f47b69f24a"
+      "Nombre": "Deluxe",
+      "TarifaHab": 75200,
+      "Capacidad": 6,
+      "Adultos": 6,
+      "Menores": 3,
+      "Infantes": 3,
+      "HabitacionFechaDis": [
+        {
+          "FechaHab": "07/07/2023",
+          "CantHab": 3
+        },
+        {
+          "FechaHab": "08/07/2023",
+          "CantHab": 4
+        },
+        {
+          "FechaHab": "09/07/2023",
+          "CantHab": 6
+        },
+        {
+          "FechaHab": "10/07/2023",
+          "CantHab": 6
+        },
+        {
+          "FechaHab": "11/07/2023",
+          "CantHab": 4
+        },
+        {
+          "FechaHab": "12/07/2023",
+          "CantHab": 5
+        },
+        {
+          "FechaHab": "13/07/2023",
+          "CantHab": 6
+        }
+      ]
+    },
+    "Uid": "8e9cedbf-7457-4794-820d-9818a04dfbd5"
   },
   {
     "Codigo": "HT002",
@@ -222,46 +219,45 @@
       "Latitud": 40.41707269127456,
       "Longitud": -3.7004233112454163
     },
-    "Disponibilidad": 
-      {
-        "Nombre": "Standard",
-        "TarifaHab": 40000,
-        "Capacidad": 2,
-        "Adultos": 2,
-        "Menores": 1,
-        "Infantes": 1,
-        "HabitacionFechaDis": [
-          {
-            "FechaHab": "07/07/2023",
-            "CantHab": 3
-          },
-          {
-            "FechaHab": "08/07/2023",
-            "CantHab": 4
-          },
-          {
-            "FechaHab": "09/07/2023",
-            "CantHab": 3
-          },
-          {
-            "FechaHab": "10/07/2023",
-            "CantHab": 5
-          },
-          {
-            "FechaHab": "11/07/2023",
-            "CantHab": 4
-          },
-          {
-            "FechaHab": "12/07/2023",
-            "CantHab": 2
-          },
-          {
-            "FechaHab": "13/07/2023",
-            "CantHab": 3
-          }
-        ]
-      },  
-    "Uid": "cb779b29-76c1-4a6f-8f7f-5b3784a72276"
+    "Disponibilidad": {
+      "Nombre": "Standard",
+      "TarifaHab": 40000,
+      "Capacidad": 2,
+      "Adultos": 2,
+      "Menores": 1,
+      "Infantes": 1,
+      "HabitacionFechaDis": [
+        {
+          "FechaHab": "07/07/2023",
+          "CantHab": 3
+        },
+        {
+          "FechaHab": "08/07/2023",
+          "CantHab": 4
+        },
+        {
+          "FechaHab": "09/07/2023",
+          "CantHab": 3
+        },
+        {
+          "FechaHab": "10/07/2023",
+          "CantHab": 5
+        },
+        {
+          "FechaHab": "11/07/2023",
+          "CantHab": 4
+        },
+        {
+          "FechaHab": "12/07/2023",
+          "CantHab": 2
+        },
+        {
+          "FechaHab": "13/07/2023",
+          "CantHab": 3
+        }
+      ]
+    },
+    "Uid": "71fef3f2-4b30-49f5-a68b-4d0bf3286c81"
   },
   {
     "Codigo": "HT002",
@@ -275,46 +271,45 @@
       "Latitud": 40.41707269127456,
       "Longitud": -3.7004233112454163
     },
-    "Disponibilidad": 
-      {
-        "Nombre": "Intermedia",
-        "TarifaHab": 55500,
-        "Capacidad": 4,
-        "Adultos": 4,
-        "Menores": 2,
-        "Infantes": 2,
-        "HabitacionFechaDis": [
-          {
-            "FechaHab": "07/07/2023",
-            "CantHab": 6
-          },
-          {
-            "FechaHab": "08/07/2023",
-            "CantHab": 3
-          },
-          {
-            "FechaHab": "09/07/2023",
-            "CantHab": 2
-          },
-          {
-            "FechaHab": "10/07/2023",
-            "CantHab": 4
-          },
-          {
-            "FechaHab": "11/07/2023",
-            "CantHab": 5
-          },
-          {
-            "FechaHab": "12/07/2023",
-            "CantHab": 4
-          },
-          {
-            "FechaHab": "13/07/2023",
-            "CantHab": 3
-          }
-        ]
-      },   
-    "Uid": "3e839a59-9808-49c4-9740-c962c8d020f4"
+    "Disponibilidad": {
+      "Nombre": "Intermedia",
+      "TarifaHab": 55500,
+      "Capacidad": 4,
+      "Adultos": 4,
+      "Menores": 2,
+      "Infantes": 2,
+      "HabitacionFechaDis": [
+        {
+          "FechaHab": "07/07/2023",
+          "CantHab": 6
+        },
+        {
+          "FechaHab": "08/07/2023",
+          "CantHab": 3
+        },
+        {
+          "FechaHab": "09/07/2023",
+          "CantHab": 2
+        },
+        {
+          "FechaHab": "10/07/2023",
+          "CantHab": 4
+        },
+        {
+          "FechaHab": "11/07/2023",
+          "CantHab": 5
+        },
+        {
+          "FechaHab": "12/07/2023",
+          "CantHab": 4
+        },
+        {
+          "FechaHab": "13/07/2023",
+          "CantHab": 3
+        }
+      ]
+    },
+    "Uid": "044c4aa6-2322-4504-b142-e5ba0705e39f"
   },
   {
     "Codigo": "HT003",
@@ -328,46 +323,45 @@
       "Latitud": 48.81806260303906,
       "Longitud": 2.2493296544913317
     },
-    "Disponibilidad": 
-      {
-        "Nombre": "Standard",
-        "TarifaHab": 16927,
-        "Capacidad": 2,
-        "Adultos": 2,
-        "Menores": 1,
-        "Infantes": 1,
-        "HabitacionFechaDis": [
-          {
-            "FechaHab": "14/07/2023",
-            "CantHab": 3
-          },
-          {
-            "FechaHab": "15/07/2023",
-            "CantHab": 4
-          },
-          {
-            "FechaHab": "16/07/2023",
-            "CantHab": 6
-          },
-          {
-            "FechaHab": "17/07/2023",
-            "CantHab": 5
-          },
-          {
-            "FechaHab": "18/07/2023",
-            "CantHab": 4
-          },
-          {
-            "FechaHab": "19/07/2023",
-            "CantHab": 5
-          },
-          {
-            "FechaHab": "20/07/2023",
-            "CantHab": 3
-          }
-        ]
-      },   
-    "Uid": "4dd0af4b-1eb0-4625-8d20-1f86e31bc4aa"
+    "Disponibilidad": {
+      "Nombre": "Standard",
+      "TarifaHab": 16927,
+      "Capacidad": 2,
+      "Adultos": 2,
+      "Menores": 1,
+      "Infantes": 1,
+      "HabitacionFechaDis": [
+        {
+          "FechaHab": "14/07/2023",
+          "CantHab": 3
+        },
+        {
+          "FechaHab": "15/07/2023",
+          "CantHab": 4
+        },
+        {
+          "FechaHab": "16/07/2023",
+          "CantHab": 6
+        },
+        {
+          "FechaHab": "17/07/2023",
+          "CantHab": 5
+        },
+        {
+          "FechaHab": "18/07/2023",
+          "CantHab": 4
+        },
+        {
+          "FechaHab": "19/07/2023",
+          "CantHab": 5
+        },
+        {
+          "FechaHab": "20/07/2023",
+          "CantHab": 3
+        }
+      ]
+    },
+    "Uid": "d7a49100-a9e6-4847-b7c4-30363983f408"
   },
   {
     "Codigo": "HT003",
@@ -381,46 +375,45 @@
       "Latitud": 48.81806260303906,
       "Longitud": 2.2493296544913317
     },
-    "Disponibilidad": 
-      {
-        "Nombre": "Intermedia",
-        "TarifaHab": 25500,
-        "Capacidad": 4,
-        "Adultos": 4,
-        "Menores": 2,
-        "Infantes": 2,
-        "HabitacionFechaDis": [
-          {
-            "FechaHab": "14/07/2023",
-            "CantHab": 3
-          },
-          {
-            "FechaHab": "15/07/2023",
-            "CantHab": 4
-          },
-          {
-            "FechaHab": "16/07/2023",
-            "CantHab": 5
-          },
-          {
-            "FechaHab": "17/07/2023",
-            "CantHab": 4
-          },
-          {
-            "FechaHab": "18/07/2023",
-            "CantHab": 6
-          },
-          {
-            "FechaHab": "19/07/2023",
-            "CantHab": 4
-          },
-          {
-            "FechaHab": "20/07/2023",
-            "CantHab": 3
-          }
-        ]
-      },   
-    "Uid": "58b8dd0c-cd74-4b63-b04c-e9d0717d2cfe"
+    "Disponibilidad": {
+      "Nombre": "Intermedia",
+      "TarifaHab": 25500,
+      "Capacidad": 4,
+      "Adultos": 4,
+      "Menores": 2,
+      "Infantes": 2,
+      "HabitacionFechaDis": [
+        {
+          "FechaHab": "14/07/2023",
+          "CantHab": 3
+        },
+        {
+          "FechaHab": "15/07/2023",
+          "CantHab": 4
+        },
+        {
+          "FechaHab": "16/07/2023",
+          "CantHab": 5
+        },
+        {
+          "FechaHab": "17/07/2023",
+          "CantHab": 4
+        },
+        {
+          "FechaHab": "18/07/2023",
+          "CantHab": 6
+        },
+        {
+          "FechaHab": "19/07/2023",
+          "CantHab": 4
+        },
+        {
+          "FechaHab": "20/07/2023",
+          "CantHab": 3
+        }
+      ]
+    },
+    "Uid": "5a1613e4-026f-494f-8ec4-16d76a7e79f2"
   },
   {
     "Codigo": "HT003",
@@ -434,46 +427,45 @@
       "Latitud": 48.81806260303906,
       "Longitud": 2.2493296544913317
     },
-    "Disponibilidad": 
-      {
-        "Nombre": "Deluxe",
-        "TarifaHab": 48000,
-        "Capacidad": 6,
-        "Adultos": 6,
-        "Menores": 3,
-        "Infantes": 3,
-        "HabitacionFechaDis": [
-          {
-            "FechaHab": "14/07/2023",
-            "CantHab": 3
-          },
-          {
-            "FechaHab": "15/07/2023",
-            "CantHab": 2
-          },
-          {
-            "FechaHab": "16/07/2023",
-            "CantHab": 4
-          },
-          {
-            "FechaHab": "17/07/2023",
-            "CantHab": 5
-          },
-          {
-            "FechaHab": "18/07/2023",
-            "CantHab": 4
-          },
-          {
-            "FechaHab": "19/07/2023",
-            "CantHab": 5
-          },
-          {
-            "FechaHab": "20/07/2023",
-            "CantHab": 3
-          }
-        ]
-      },   
-    "Uid": "0963e8a4-d27d-444d-a122-f1343bd1dc8e"
+    "Disponibilidad": {
+      "Nombre": "Deluxe",
+      "TarifaHab": 48000,
+      "Capacidad": 6,
+      "Adultos": 6,
+      "Menores": 3,
+      "Infantes": 3,
+      "HabitacionFechaDis": [
+        {
+          "FechaHab": "14/07/2023",
+          "CantHab": 3
+        },
+        {
+          "FechaHab": "15/07/2023",
+          "CantHab": 2
+        },
+        {
+          "FechaHab": "16/07/2023",
+          "CantHab": 4
+        },
+        {
+          "FechaHab": "17/07/2023",
+          "CantHab": 5
+        },
+        {
+          "FechaHab": "18/07/2023",
+          "CantHab": 4
+        },
+        {
+          "FechaHab": "19/07/2023",
+          "CantHab": 5
+        },
+        {
+          "FechaHab": "20/07/2023",
+          "CantHab": 3
+        }
+      ]
+    },
+    "Uid": "71a58552-0584-4a09-90ac-5af855ab091d"
   },
   {
     "Codigo": "HT004",
@@ -487,30 +479,29 @@
       "Latitud": 48.847255201785835,
       "Longitud": 2.3018222656948266
     },
-    "Disponibilidad": 
-      {
-        "Nombre": "Standard",
-        "TarifaHab": 37000,
-        "Capacidad": 2,
-        "Adultos": 2,
-        "Menores": 1,
-        "Infantes": 1,
-        "HabitacionFechaDis": [
-          {
-            "FechaHab": "21/07/2023",
-            "CantHab": 3
-          },
-          {
-            "FechaHab": "22/07/2023",
-            "CantHab": 6
-          },
-          {
-            "FechaHab": "23/07/2023",
-            "CantHab": 2
-          }
-        ]
-      },   
-    "Uid": "0e4ee14a-986e-461d-ac26-bd3ad915be9e"
+    "Disponibilidad": {
+      "Nombre": "Standard",
+      "TarifaHab": 37000,
+      "Capacidad": 2,
+      "Adultos": 2,
+      "Menores": 1,
+      "Infantes": 1,
+      "HabitacionFechaDis": [
+        {
+          "FechaHab": "21/07/2023",
+          "CantHab": 3
+        },
+        {
+          "FechaHab": "22/07/2023",
+          "CantHab": 6
+        },
+        {
+          "FechaHab": "23/07/2023",
+          "CantHab": 2
+        }
+      ]
+    },
+    "Uid": "91d8db04-c7a1-4b9b-bb9b-810ba1e50cf0"
   },
   {
     "Codigo": "HT004",
@@ -524,30 +515,29 @@
       "Latitud": 48.847255201785835,
       "Longitud": 2.3018222656948266
     },
-    "Disponibilidad": 
-      {
-        "Nombre": "Intermedia",
-        "TarifaHab": 49000,
-        "Capacidad": 4,
-        "Adultos": 4,
-        "Menores": 2,
-        "Infantes": 2,
-        "HabitacionFechaDis": [
-          {
-            "FechaHab": "21/07/2023",
-            "CantHab": 2
-          },
-          {
-            "FechaHab": "22/07/2023",
-            "CantHab": 4
-          },
-          {
-            "FechaHab": "23/07/2023",
-            "CantHab": 8
-          }
-        ]
-      },    
-    "Uid": "29bb2291-e734-4c6f-a702-911fbbdece06"
+    "Disponibilidad": {
+      "Nombre": "Intermedia",
+      "TarifaHab": 49000,
+      "Capacidad": 4,
+      "Adultos": 4,
+      "Menores": 2,
+      "Infantes": 2,
+      "HabitacionFechaDis": [
+        {
+          "FechaHab": "21/07/2023",
+          "CantHab": 2
+        },
+        {
+          "FechaHab": "22/07/2023",
+          "CantHab": 4
+        },
+        {
+          "FechaHab": "23/07/2023",
+          "CantHab": 8
+        }
+      ]
+    },
+    "Uid": "dcf51451-3ff1-4c6c-b6d4-50c457ee1694"
   },
   {
     "Codigo": "HT004",
@@ -561,30 +551,29 @@
       "Latitud": 48.847255201785835,
       "Longitud": 2.3018222656948266
     },
-    "Disponibilidad": 
-      {
-        "Nombre": "Deluxe",
-        "TarifaHab": 64000,
-        "Capacidad": 6,
-        "Adultos": 6,
-        "Menores": 3,
-        "Infantes": 3,
-        "HabitacionFechaDis": [
-          {
-            "FechaHab": "21/07/2023",
-            "CantHab": 2
-          },
-          {
-            "FechaHab": "22/07/2023",
-            "CantHab": 4
-          },
-          {
-            "FechaHab": "23/07/2023",
-            "CantHab": 8
-          }
-        ]
-      },    
-    "Uid": "f0a84978-df19-41cd-9d1d-0b4149056df6"
+    "Disponibilidad": {
+      "Nombre": "Deluxe",
+      "TarifaHab": 64000,
+      "Capacidad": 6,
+      "Adultos": 6,
+      "Menores": 3,
+      "Infantes": 3,
+      "HabitacionFechaDis": [
+        {
+          "FechaHab": "21/07/2023",
+          "CantHab": 2
+        },
+        {
+          "FechaHab": "22/07/2023",
+          "CantHab": 4
+        },
+        {
+          "FechaHab": "23/07/2023",
+          "CantHab": 8
+        }
+      ]
+    },
+    "Uid": "58e9067f-eb5f-4f50-89a8-07b457a7ea4d"
   },
   {
     "Codigo": "HT005",
@@ -598,30 +587,29 @@
       "Latitud": -33.396465364152384,
       "Longitud": -70.79344064755682
     },
-    "Disponibilidad": 
-      {
-        "Nombre": "Standard",
-        "TarifaHab": 29000,
-        "Capacidad": 2,
-        "Adultos": 2,
-        "Menores": 1,
-        "Infantes": 1,
-        "HabitacionFechaDis": [
-          {
-            "FechaHab": "24/07/2023",
-            "CantHab": 3
-          },
-          {
-            "FechaHab": "25/07/2023",
-            "CantHab": 8
-          },
-          {
-            "FechaHab": "26/07/2023",
-            "CantHab": 5
-          }
-        ]
-      },
-    "Uid": "ff875135-1207-44b1-bef8-500639cf9de7"
+    "Disponibilidad": {
+      "Nombre": "Standard",
+      "TarifaHab": 29000,
+      "Capacidad": 2,
+      "Adultos": 2,
+      "Menores": 1,
+      "Infantes": 1,
+      "HabitacionFechaDis": [
+        {
+          "FechaHab": "24/07/2023",
+          "CantHab": 3
+        },
+        {
+          "FechaHab": "25/07/2023",
+          "CantHab": 8
+        },
+        {
+          "FechaHab": "26/07/2023",
+          "CantHab": 5
+        }
+      ]
+    },
+    "Uid": "b6a087c7-96a5-4fb0-9063-e010cce11d2d"
   },
   {
     "Codigo": "HT005",
@@ -635,30 +623,29 @@
       "Latitud": -33.396465364152384,
       "Longitud": -70.79344064755682
     },
-    "Disponibilidad": 
-      {
-        "Nombre": "Intermedia",
-        "TarifaHab": 38000,
-        "Capacidad": 4,
-        "Adultos": 4,
-        "Menores": 2,
-        "Infantes": 2,
-        "HabitacionFechaDis": [
-          {
-            "FechaHab": "24/07/2023",
-            "CantHab": 7
-          },
-          {
-            "FechaHab": "25/07/2023",
-            "CantHab": 3
-          },
-          {
-            "FechaHab": "26/07/2023",
-            "CantHab": 2
-          }
-        ]
-      },
-    "Uid": "81621523-49d4-44e7-a788-786cfc144690"
+    "Disponibilidad": {
+      "Nombre": "Intermedia",
+      "TarifaHab": 38000,
+      "Capacidad": 4,
+      "Adultos": 4,
+      "Menores": 2,
+      "Infantes": 2,
+      "HabitacionFechaDis": [
+        {
+          "FechaHab": "24/07/2023",
+          "CantHab": 7
+        },
+        {
+          "FechaHab": "25/07/2023",
+          "CantHab": 3
+        },
+        {
+          "FechaHab": "26/07/2023",
+          "CantHab": 2
+        }
+      ]
+    },
+    "Uid": "4190986a-a114-4c47-805f-adc85324bc35"
   },
   {
     "Codigo": "HT005",
@@ -672,30 +659,29 @@
       "Latitud": -33.396465364152384,
       "Longitud": -70.79344064755682
     },
-    "Disponibilidad": 
-      {
-        "Nombre": "Deluxe",
-        "TarifaHab": 79000,
-        "Capacidad": 6,
-        "Adultos": 6,
-        "Menores": 3,
-        "Infantes": 3,
-        "HabitacionFechaDis": [
-          {
-            "FechaHab": "24/07/2023",
-            "CantHab": 4
-          },
-          {
-            "FechaHab": "25/07/2023",
-            "CantHab": 9
-          },
-          {
-            "FechaHab": "26/07/2023",
-            "CantHab": 2
-          }
-        ]
-      },
-    "Uid": "821b8dc3-218a-46c5-a9df-87a526fcee85"
+    "Disponibilidad": {
+      "Nombre": "Deluxe",
+      "TarifaHab": 79000,
+      "Capacidad": 6,
+      "Adultos": 6,
+      "Menores": 3,
+      "Infantes": 3,
+      "HabitacionFechaDis": [
+        {
+          "FechaHab": "24/07/2023",
+          "CantHab": 4
+        },
+        {
+          "FechaHab": "25/07/2023",
+          "CantHab": 9
+        },
+        {
+          "FechaHab": "26/07/2023",
+          "CantHab": 2
+        }
+      ]
+    },
+    "Uid": "d9198e9c-ab74-463a-862d-fdeabb09b052"
   },
   {
     "Codigo": "HT006",
@@ -709,30 +695,29 @@
       "Latitud": -34.589276818961046,
       "Longitud": -58.38411528860917
     },
-    "Disponibilidad": 
-      {
-        "Nombre": "Standard",
-        "TarifaHab": 48000,
-        "Capacidad": 2,
-        "Adultos": 2,
-        "Menores": 1,
-        "Infantes": 1,
-        "HabitacionFechaDis": [
-          {
-            "FechaHab": "26/07/2023",
-            "CantHab": 4
-          },
-          {
-            "FechaHab": "27/07/2023",
-            "CantHab": 5
-          },
-          {
-            "FechaHab": "28/07/2023",
-            "CantHab": 6
-          }
-        ]
-      },
-    "Uid": "f425593b-7062-42e2-b138-c72db5459a8c"
+    "Disponibilidad": {
+      "Nombre": "Standard",
+      "TarifaHab": 48000,
+      "Capacidad": 2,
+      "Adultos": 2,
+      "Menores": 1,
+      "Infantes": 1,
+      "HabitacionFechaDis": [
+        {
+          "FechaHab": "26/07/2023",
+          "CantHab": 4
+        },
+        {
+          "FechaHab": "27/07/2023",
+          "CantHab": 5
+        },
+        {
+          "FechaHab": "28/07/2023",
+          "CantHab": 6
+        }
+      ]
+    },
+    "Uid": "62544313-5c53-47ee-98f5-859cb985cfb1"
   },
   {
     "Codigo": "HT006",
@@ -746,30 +731,29 @@
       "Latitud": -34.589276818961046,
       "Longitud": -58.38411528860917
     },
-    "Disponibilidad": 
-      {
-        "Nombre": "Intermedia",
-        "TarifaHab": 63000,
-        "Capacidad": 4,
-        "Adultos": 4,
-        "Menores": 2,
-        "Infantes": 2,
-        "HabitacionFechaDis": [
-          {
-            "FechaHab": "26/07/2023",
-            "CantHab": 8
-          },
-          {
-            "FechaHab": "27/07/2023",
-            "CantHab": 9
-          },
-          {
-            "FechaHab": "28/07/2023",
-            "CantHab": 4
-          }
-        ]
-      },   
-    "Uid": "5512c9e1-dc0d-4b00-92b1-d85af38337fd"
+    "Disponibilidad": {
+      "Nombre": "Intermedia",
+      "TarifaHab": 63000,
+      "Capacidad": 4,
+      "Adultos": 4,
+      "Menores": 2,
+      "Infantes": 2,
+      "HabitacionFechaDis": [
+        {
+          "FechaHab": "26/07/2023",
+          "CantHab": 8
+        },
+        {
+          "FechaHab": "27/07/2023",
+          "CantHab": 9
+        },
+        {
+          "FechaHab": "28/07/2023",
+          "CantHab": 4
+        }
+      ]
+    },
+    "Uid": "85ba4057-0d94-48fc-a33b-7cce7453f9ac"
   },
   {
     "Codigo": "HT006",
@@ -783,29 +767,28 @@
       "Latitud": -34.589276818961046,
       "Longitud": -58.38411528860917
     },
-    "Disponibilidad": 
-      {
-        "Nombre": "Deluxe",
-        "TarifaHab": 81000,
-        "Capacidad": 6,
-        "Adultos": 6,
-        "Menores": 3,
-        "Infantes": 3,
-        "HabitacionFechaDis": [
-          {
-            "FechaHab": "26/07/2023",
-            "CantHab": 6
-          },
-          {
-            "FechaHab": "27/07/2023",
-            "CantHab": 9
-          },
-          {
-            "FechaHab": "28/07/2023",
-            "CantHab": 7
-          }
-        ]
-      },  
-    "Uid": "10504173-64d5-4291-bb53-0cebcf5cd6e7"
+    "Disponibilidad": {
+      "Nombre": "Deluxe",
+      "TarifaHab": 81000,
+      "Capacidad": 6,
+      "Adultos": 6,
+      "Menores": 3,
+      "Infantes": 3,
+      "HabitacionFechaDis": [
+        {
+          "FechaHab": "26/07/2023",
+          "CantHab": 6
+        },
+        {
+          "FechaHab": "27/07/2023",
+          "CantHab": 9
+        },
+        {
+          "FechaHab": "28/07/2023",
+          "CantHab": 7
+        }
+      ]
+    },
+    "Uid": "e605fa36-b7be-43f2-b659-0b539a9494f5"
   }
 ]
