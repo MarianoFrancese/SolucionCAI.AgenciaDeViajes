@@ -76,15 +76,15 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                     string estadojson = (string)itinerarioJson["Estado"];
                     
 
-                    if (nrosegjson == nroseguimiento && estadojson == "PreReserva") //funciona ok, busca ambas condiciones
+                    if (nrosegjson == nroseguimiento && estadojson == "PreReserva") 
                     {
-                        var presupuestos = JsonConvert.DeserializeObject<PresupuestoEnt>(itinerarioJson["Presupuestos"].ToString());
+                        var presupuestos = JsonConvert.DeserializeObject<PresupuestoEnt>(itinerarioJson["Presupuesto"].ToString());
                         var cliente = JsonConvert.DeserializeObject<ClienteEnt>(itinerarioJson["Cliente"].ToString());
                         
                         ItinerarioEnt itinerario = new ItinerarioEnt
                         {
-                            PresupuestosList = presupuestos, //JsonConvert.DeserializeObject<PresupuestoEnt>(itinerarioJson["Presupuestos"].ToString()),
-                            Cliente = cliente,//JsonConvert.DeserializeObject<List<ClienteEnt>>(itinerarioJson["Cliente"].ToString()),                          
+                            PresupuestosList = JsonConvert.DeserializeObject<PresupuestoEnt>(itinerarioJson["Presupuesto"].ToString()),
+                            Cliente = JsonConvert.DeserializeObject<ClienteEnt>(itinerarioJson["Cliente"].ToString()),                          
                             
                                                        
                         };
@@ -123,9 +123,9 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                     string estadojson = (string)itinerarioJson["Estado"];
                     
 
-                    if (nrosegjson == nroseguimiento && estadojson == "Reserva") //funciona ok, busca ambas condiciones
+                    if (nrosegjson == nroseguimiento && estadojson == "Reserva") 
                     {
-                        var presupuestos = JsonConvert.DeserializeObject<PresupuestoEnt>(itinerarioJson["Presupuestos"].ToString());
+                        var presupuestos = JsonConvert.DeserializeObject<PresupuestoEnt>(itinerarioJson["Presupuesto"].ToString());
                         var cliente = JsonConvert.DeserializeObject<ClienteEnt>(itinerarioJson["Cliente"].ToString());
 
                         ItinerarioEnt itinerario = new ItinerarioEnt

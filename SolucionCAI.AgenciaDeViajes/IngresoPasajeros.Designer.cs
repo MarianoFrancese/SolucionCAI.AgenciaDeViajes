@@ -208,6 +208,7 @@
             this.quitarPasajerobtn.TabIndex = 24;
             this.quitarPasajerobtn.Text = "Quitar Pasajero";
             this.quitarPasajerobtn.UseVisualStyleBackColor = true;
+            this.quitarPasajerobtn.Click += new System.EventHandler(this.quitarPasajerobtn_Click);
             // 
             // IngresoPasajeros
             // 
