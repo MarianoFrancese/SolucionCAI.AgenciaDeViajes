@@ -25,8 +25,9 @@ namespace SolucionCAI.AgenciaDeViajes
         private List<VueloEnt> vuelosFiltrados = new List<VueloEnt>();
         private VueloEnt vuelo = new VueloEnt();
         private ProductoLineaEnt productoAgregado = new ProductoLineaEnt();
-        private List<HotelEnt> hotelesFiltrados = new List<HotelEnt>();
+        private HotelEnt hotelFiltrado = new HotelEnt();
         private List<ProductoLineaEnt> productosPresupuesto = new List<ProductoLineaEnt>();
+        private List<HotelEnt> hotelesFiltrados = new List<HotelEnt>();
         string origen;
         string destino;
         DateTime fechaPartida;
@@ -88,10 +89,11 @@ namespace SolucionCAI.AgenciaDeViajes
                 int menores = Convert.ToInt32(row.Cells[11].Value.ToString());
                 int infantes = Convert.ToInt32(row.Cells[12].Value.ToString());
 
-                hotelesFiltrados = ModuloPresupuesto.GenerarListaHotel(codigo, hotel, ciudad, fechaEntrada, fechaSalida, direccion, calificacion, tipoHab, capacidad, tarifa, adultos, menores, infantes);
-                productosAgregados = ModuloPresupuesto.AgregarHotelLinea(hotelesFiltrados);
-                textBox11.Text = ModuloPresupuesto.CrearPresupuesto(productosAgregados, 0)[0].NroSeguimiento.ToString();
-                RellenarPresupuestoTablaHoteles(productosAgregados);
+                hotelFiltrado = ModuloPresupuesto.GenerarHotel(codigo, hotel, ciudad, fechaEntrada, fechaSalida, direccion, calificacion, tipoHab, capacidad, tarifa, adultos, menores, infantes);
+                productoAgregado = ModuloPresupuesto.AgregarHotelLinea(hotelFiltrado);
+                productosPresupuesto.Add(productoAgregado);
+                textBox11.Text = ModuloPresupuesto.CrearPresupuesto(productosPresupuesto, 0).NroSeguimiento.ToString();
+                RellenarPresupuestoTablaHoteles(productosPresupuesto);
                 CalcularTotal();
 
             }
@@ -147,7 +149,7 @@ namespace SolucionCAI.AgenciaDeViajes
 
                     producto.ProductoV,
 
-                    producto.PrecioUn,
+                    producto.TarifaV.Precio,
 
                     producto.Cantidad,
 
@@ -170,7 +172,7 @@ namespace SolucionCAI.AgenciaDeViajes
 
                     producto.ProductoH,
 
-                    producto.PrecioUn,
+                    producto.DisponibilidadH.TarifaHab,
 
                     producto.Cantidad,
 
@@ -208,7 +210,7 @@ namespace SolucionCAI.AgenciaDeViajes
         {
             List<ProductoLineaEnt> productosAGrabar = new List<ProductoLineaEnt>();
             ProductoLineaEnt productos;
-            VueloEnt vuelo = ModuloProductos.ObtenerVueloPorID(dataGridView2.Rows.Cells[0]?.Value?.ToString()); //agregar uid a la tabla
+            //VueloEnt vuelo = ModuloProductos.ObtenerVueloPorID(dataGridView2.Rows.Cells[0]?.Value?.ToString()); //agregar uid a la tabla
             foreach (DataGridViewRow fila in dataGridView2.Rows)
             {
                 if (fila != null)

@@ -21,7 +21,7 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
         public HotelEnt ObtenerHotelPorId(Guid uid)
         {
             HotelEnt hotel = new HotelEnt();
-            hotel = ModuloProductos.ObtenerHotel(uid);
+            hotel = ModuloProductos.ObtenerHotelPorID(uid);
             return hotel;
         }
 

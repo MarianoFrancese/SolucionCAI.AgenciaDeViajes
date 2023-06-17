@@ -14,11 +14,24 @@ namespace SolucionCAI.AgenciaDeViajes
 {
     public partial class IngresoPasajeros : Form
     {
-        private ItinerarioEnt selectedItinerario;
+        private ItinerarioEnt itinerario;
         public IngresoPasajeros(ItinerarioEnt itinerario)
         {
             InitializeComponent();
-            selectedItinerario = itinerario;
+            this.itinerario = itinerario;
+        }
+
+        class TarifaComboItem
+        {
+            public TarifaEnt Tarifa { get; set; }
+            public string Descripcion { get; set; }
+        }
+
+        class PasajeroListItem
+        {
+            public string Descripcion { get; set; }
+            public PasajeroEnt Pasajero { get; set; }
+            public TarifaEnt Tarifa { get; set; }
         }
 
         private void btnTerminar_Click(object sender, EventArgs e)
@@ -45,12 +58,15 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void IngresoPasajeros_Load(object sender, EventArgs e)
         {
-            //if (selectedItinerario != null)
-            //{
-            //    List<ProductoLineaEnt> producto = selectedItinerario.Productos;
-            //    ProductoPasajero.DataSource = producto;
-            //    ProductoPasajero.DisplayMember = "ProductoV";
-            //}
+            ProductoPasajero.DisplayMember = nameof(TarifaComboItem.Descripcion);
+            listBox1.DisplayMember = nameof(PasajeroListItem.Descripcion);
+
+            //rellenar el combo.
+            foreach (var linea in itinerario.PresupuestosList.Productos)
+            {
+                var descripcion = $"{linea.TarifaV.Clase}-{linea.TarifaV.TipoPasajero} {linea.ProductoV.Aerolinea} {linea.ProductoV.Origen}-{linea.ProductoV.Destino}-{linea.ProductoV.FechaSalida:dd/MM/yy HH:mm}";
+                ProductoPasajero.Items.Add(new TarifaComboItem { Descripcion = descripcion, Tarifa = linea.TarifaV });
+            }
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -83,26 +99,71 @@ namespace SolucionCAI.AgenciaDeViajes
 
             //Acá irían las validaciones , antes de tomar los datos. 
 
-            // Get the values from the text boxes
-            string nombrep = textBox14.Text;
-            string apellidop = textBox15.Text;
-            int dnip = int.Parse(textBox16.Text);
-            DateTime fechapick = dateTimePicker1.Value;
+            var pasajero = ConstruirPasajero();
+            if (pasajero == null)
+            {
+                return;
+            }
 
-            // Format the DateTime value
-            string nacimientop = fechapick.ToString("dd-MM-yyyy");
+            var seleccionCombo = ProductoPasajero.SelectedItem as TarifaComboItem; //es null si no hay nada seleccionado
+            if (seleccionCombo == null)
+            {
+                MessageBox.Show("Seleccione una tarifa");
+                return;
+            }
 
-            // Concatenate the values into a single string
-            string datopasajero = $"{nombrep} - {apellidop} - {dnip} - {nacimientop}";
+            var productoLinea = itinerario.VueloDeTarifa(seleccionCombo.Tarifa);
 
-            // Add the contact information to the ListBox
-            listBox1.Items.Add(datopasajero);
+            //la tarifa corresponde a la edad?
+            if (!seleccionCombo.Tarifa.CorrespondeA(pasajero))
+            {
+                MessageBox.Show("La edad no corresponde a la tarifa.");
+                return;
+            }
 
-            // Clear the text boxes
-            textBox14.Text = "";
-            textBox15.Text = "";
-            textBox16.Text = "";
-            dateTimePicker1.Text = "";
+            //otras....
+
+            if (seleccionCombo.Tarifa.Pasajeros.Count == productoLinea.Cantidad)
+            {
+                MessageBox.Show("Ya ha ingresado todos los pasajeros de este vuelo / tarifa");
+                return;
+            }
+
+
+            seleccionCombo.Tarifa.Pasajeros.Add(pasajero);
+
+            var descripcion = $"{seleccionCombo.Tarifa.Clase}-{seleccionCombo.Tarifa.TipoPasajero} {productoLinea.ProductoV.Aerolinea} {productoLinea.ProductoV.Origen}-{productoLinea.ProductoV.Destino}-{productoLinea.ProductoV.FechaSalida:dd/MM/yy HH:mm}";
+            listBox1.Items.Add(new PasajeroListItem
+            {
+                Descripcion = descripcion,
+                Tarifa = seleccionCombo.Tarifa,
+                Pasajero = pasajero
+            });
+
+
+            
+        }
+        private PasajeroEnt ConstruirPasajero()
+        {
+            //validaciones y etc....
+            //realizar todas las validaciones para poder construir el pasajero (solamente).
+            //si hay algun error podemos mostrar:
+            //MessageBox.Show("Error con tal cosa o tal otra");
+            //return null;
+
+            return new PasajeroEnt
+            {
+                Apellido = textBox15.Text,
+                Nombre = textBox14.Text,
+                DNI = int.Parse(textBox16.Text),
+                FechaNac = DateOnly.Parse(dateTimePicker1.Text) //nose si esto se toma asi porque es un datetimepicker
+            };
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

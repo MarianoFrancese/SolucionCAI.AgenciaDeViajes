@@ -103,6 +103,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                     string calificacionJson = (string)hotelJson["Calificacion"];
                     string tipoHabitacionJson = (string)hotelJson["Disponibilidad"][0]["Nombre"];
                     int capacidadJson = Convert.ToInt32(hotelJson["Disponibilidad"][0]["Capacidad"]);
+                    Guid uidJson = (Guid)hotelJson["Uid"];
                         
 
                     while (fechaE <= fechaS)
@@ -117,6 +118,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                     {
                         var disponibilidad = JsonConvert.DeserializeObject<DisponibilidadHabEnt>(hotelJson["Disponibilidad"].ToString());
                         List<HabitacionFechaEnt> listaHabitaciones = new List<HabitacionFechaEnt>();
+                        bool mismoUid = false;
                         // Ver como manejar la disponibilidad de la habitacion con la cantidad de habitaciones
                         //IMPORTANTE!!
                         DireccionEnt direccion = new DireccionEnt
@@ -144,21 +146,21 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                             Calificacion = Convert.ToInt32(calificacionJson),
                             Direccion = direccion,
                             Disponibilidad = disponibilidad,
+                            Uid = uidJson,
                         };
 
-                        if(hotelesFiltrados.Count == 0)
+                        foreach(var hotelFiltrado in hotelesFiltrados)
+                        {
+                            if (hotel.Uid == hotelFiltrado.Uid)
+                            {
+                                mismoUid = true;
+                                break;
+                            }
+                        }
+
+                        if (!mismoUid)
                         {
                             hotelesFiltrados.Add(hotel);
-                        }
-                        else if(hotelesFiltrados.Count > 0 && hotel.Codigo != hotelesFiltrados[0].Codigo)
-                        {
-                            foreach(var codigo in hotelesFiltrados[0].Codigo)
-                            {
-                                if(codigo.ToString() != hotel.Codigo)
-                                {
-                                    hotelesFiltrados.Add(hotel);
-                                }
-                            }
                         }
                         else
                         {

@@ -12,6 +12,52 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 {
     public class ModuloItinerario
     {
+        public static List<PresupuestoEnt> ListaPresupuestos(string nroseguimiento)
+        {
+
+            if (File.Exists("Presupuestos.json"))
+            {
+                Console.WriteLine("El archivo existe");
+                string contenidoDelArchivoP = File.ReadAllText("Presupuestos.json");
+
+                JArray jsonArrayP = JArray.Parse(contenidoDelArchivoP);
+
+                List<PresupuestoEnt> presupuestosFiltrados = new List<PresupuestoEnt>();
+
+                foreach (JObject presupuestoJson in jsonArrayP)
+                {
+                    string nrosegjson = (string)presupuestoJson["NroSeguimiento"];
+
+
+
+                    if (nrosegjson == nroseguimiento)
+                    {
+                        var productos = JsonConvert.DeserializeObject<List<ProductoLineaEnt>>(presupuestoJson["Productos"].ToString());
+
+                        PresupuestoEnt presupuesto = new PresupuestoEnt
+                        {
+                            NroSeguimiento = Convert.ToInt32(presupuestoJson["NroSeguimiento"]),
+                            Productos = productos, //JsonConvert.DeserializeObject<List<ProductoLineaEnt>>(presupuestoJson["Productos"].ToString()),
+                            Descripcion = (string)presupuestoJson["Descripcion"],
+                            Total = Convert.ToInt32(presupuestoJson["Total"])
+
+                        };
+                        Console.WriteLine(presupuesto.Productos);
+
+
+                        presupuestosFiltrados.Add(presupuesto);
+
+                    }
+
+                }
+                return presupuestosFiltrados;
+            }
+            else
+            {
+                Console.WriteLine("El archivo no existe");
+                return new List<PresupuestoEnt>();
+            }
+        }
         public static List<ItinerarioEnt> ListaItinerarioPre(string nroseguimiento)
         {
 
@@ -106,53 +152,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 return new List<ItinerarioEnt>();
             }
         }
-
-        public static List<PresupuestoEnt> ListaPresupuestos(string nroseguimiento)
-        {
-
-            if (File.Exists("Presupuestos.json"))
-            {
-                Console.WriteLine("El archivo existe");
-                string contenidoDelArchivoP = File.ReadAllText("Presupuestos.json");
-
-                JArray jsonArrayP = JArray.Parse(contenidoDelArchivoP);
-
-                List<PresupuestoEnt> presupuestosFiltrados = new List<PresupuestoEnt>();
-
-                foreach (JObject presupuestoJson in jsonArrayP)
-                {
-                    string nrosegjson = (string)presupuestoJson["NroSeguimiento"];
-                    
-                    
-
-                    if (nrosegjson == nroseguimiento)  
-                    {
-                        var productos = JsonConvert.DeserializeObject<List<ProductoLineaEnt>>(presupuestoJson["Productos"].ToString());
-                        
-                        PresupuestoEnt presupuesto = new PresupuestoEnt
-                        {
-                            NroSeguimiento = Convert.ToInt32(presupuestoJson["NroSeguimiento"]),
-                            Productos = productos, //JsonConvert.DeserializeObject<List<ProductoLineaEnt>>(presupuestoJson["Productos"].ToString()),
-                            Descripcion = (string)presupuestoJson["Descripcion"],
-                            Total = Convert.ToInt32(presupuestoJson["Total"])
-
-                        };
-                        Console.WriteLine(presupuesto.Productos);
-                       
-
-                        presupuestosFiltrados.Add(presupuesto);
-
-                    }
-
-                }
-                return presupuestosFiltrados;
-            }
-            else
-            {
-                Console.WriteLine("El archivo no existe");
-                return new List<PresupuestoEnt>();
-            }
-        }
+               
     }
 }
 
