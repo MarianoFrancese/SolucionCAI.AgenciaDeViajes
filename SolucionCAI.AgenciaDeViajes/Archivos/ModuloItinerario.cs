@@ -26,7 +26,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
                 foreach (JObject itinerarioJson in jsonArray)
                 {
-                    string nrosegjson = (string)itinerarioJson["Presupuestos"][0]["NroSeguimiento"];
+                    string nrosegjson = (string)itinerarioJson["Presupuesto"]["NroSeguimiento"];
                     string estadojson = (string)itinerarioJson["Estado"];
                     
 

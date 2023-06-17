@@ -1,0 +1,66 @@
+[
+  {
+    "Estado": "PreReserva",
+    "Estado de Pago": "Pendiente",
+    "Presupuesto": {
+      "NroSeguimiento": 10020,
+      "Productos": [
+        {
+          "ProductoH": null,
+          "ProductoV": "Codigo: AA006 - Vuelo de MIA a BUE con American Airlines",
+          "PrecioUn": 328000.0,
+          "Cantidad": 1,
+          "SubTotal": 328000.0,
+          "IVA": 68880.00,
+          "TotalProd": 396880.000
+        }
+      ],
+      "Descripcion": null,
+      "Total": 396880.000
+    },
+    "Cliente": {
+      "PersonaFisica": {
+        "Nombre": "Maria Perez",
+        "DNI": 40283812,
+        "CUIL": 23402838124
+      },
+      "PersonaJuridica": null,
+      "CondFiscal": "Consumidor Final",
+      "Telefono": 1123892233,
+      "Email": "mperez@gmail.com",
+      "MedioPago": "TC"
+    }
+  },
+  {
+    "Estado": "Reserva",
+    "Estado de Pago": "Pendiente",
+    "PresupuestosList": {
+      "NroSeguimiento": 10021,
+      "Productos": [
+        {
+          "ProductoH": null,
+          "ProductoV": "Codigo: AA007 - Vuelo de MAD a BUE con KLM",
+          "PrecioUn": 292000.00,
+          "Cantidad": 1,
+          "SubTotal": 292000.0,
+          "IVA": 61320.00,
+          "TotalProd": 353320.000
+        }
+      ],
+      "Descripcion": null,
+      "Total": 353320.000
+    },
+    "Cliente": {
+      "PersonaFisica": {
+        "Nombre": "Juan Rodriguez",
+        "DNI": 38291029,
+        "CUIL": 22382910293
+      },
+      "PersonaJuridica": null,
+      "CondFiscal": "Consumidor Final",
+      "Telefono": 1154673289,
+      "Email": "jrodriguez@gmail.com",
+      "MedioPago": "TD"
+    }
+  }
+]
