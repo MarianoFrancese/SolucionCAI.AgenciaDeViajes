@@ -30,7 +30,16 @@ namespace SolucionCAI.AgenciaDeViajes
         {
             nroseguimiento = textBox7.Text;
             presupuestosFiltrados = ModuloItinerario.ListaPresupuestos(nroseguimiento);
-            RellenarTablaPresup(presupuestosFiltrados);
+           
+            Console.WriteLine(presupuestosFiltrados);
+            if (presupuestosFiltrados.Count > 0)
+            {
+                RellenarTablaPresup(presupuestosFiltrados);
+            }
+            else
+            {
+                MessageBox.Show("No se encontraron Presupuestos para ese Nro de Seguimiento");
+            }
         }
         private void RellenarTablaPresup(List<PresupuestoEnt> presupuestosFiltrados)
         {
@@ -68,7 +77,16 @@ namespace SolucionCAI.AgenciaDeViajes
 
             itinerariosFiltrados = ModuloItinerario.ListaItinerarioPre(nroseguimiento);
             
-            RellenarTablaPre(itinerariosFiltrados);
+            
+            Console.WriteLine(itinerariosFiltrados);
+            if (itinerariosFiltrados.Count > 0)
+            {
+                RellenarTablaPre(itinerariosFiltrados);
+            }
+            else
+            {
+                MessageBox.Show("No se encontraron PreReservas para ese Nro de Seguimiento");
+            }
 
         }
         private void RellenarTablaPre(List<ItinerarioEnt> itinerariosFiltrados)
@@ -122,7 +140,16 @@ namespace SolucionCAI.AgenciaDeViajes
 
             itinerariosFiltrados = ModuloItinerario.ListaItinerarioReserva(nroseguimiento);
 
-            RellenarTablaReserva(itinerariosFiltrados);
+            
+            Console.WriteLine(itinerariosFiltrados);
+            if (itinerariosFiltrados.Count > 0)
+            {
+                RellenarTablaReserva(itinerariosFiltrados);
+            }
+            else
+            {
+                MessageBox.Show("No se encontraron Reservas para ese Nro de Seguimiento");
+            }
         }
 
         private void RellenarTablaReserva(List<ItinerarioEnt> itinerariosFiltrados)
@@ -181,12 +208,13 @@ namespace SolucionCAI.AgenciaDeViajes
            // MessageBox.Show("Se reserva el presupuesto y se piden más datos relativos al cliente");
         }
 
+        private ItinerarioEnt itinerario;
         private void button5_Click(object sender, EventArgs e) //muestra form pasajeros
         {
-            // Form pasajerosform = new IngresoPasajeros();
-            // pasajerosform.Show();
+            Form pasajerosform = new IngresoPasajeros(itinerario);
+            pasajerosform.Show();
             
-            groupBox3.Visible = true;
+            //groupBox3.Visible = true;
 
             //MessageBox.Show("Se reserva la prereserva (datos ya cargados)");
         }

@@ -41,8 +41,15 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            this.Show();
+           
+            var mensajerror = itinerario.PuedeReservar();
+            if (mensajerror != null)
+            {
+                MessageBox.Show(mensajerror);
+                return;
+            }
+
+            //realizar la operacion y zaraza.....
 
         }
 
@@ -164,6 +171,18 @@ namespace SolucionCAI.AgenciaDeViajes
         private void label16_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void quitarPasajerobtn_Click(object sender, EventArgs e)
+        {
+            var item = listBox1.SelectedItem as PasajeroListItem;
+            if (item == null)
+            {
+                return;
+            }
+
+            item.Tarifa.Pasajeros.Remove(item.Pasajero);
+            listBox1.Items.Remove(item);
         }
     }
 }
