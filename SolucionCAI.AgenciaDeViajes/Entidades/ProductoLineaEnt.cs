@@ -16,19 +16,21 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
         public HotelEnt ProductoH { get; set; } //ver si se puede cambiar a obj
         public VueloEnt ProductoV { get; set; } //ver si se puede cambiar a obj
         public int Cantidad { get; set; }
+        public decimal PrecioUn { get; set; }
         public List<PasajeroEnt> Pasajeros { get; set; }
         public TarifaEnt TarifaV { get; set; }
         public DisponibilidadHabEnt DisponibilidadH { get; set; }
-        public Decimal SubTotal { get { return CalcularSubtotal(Cantidad, ProductoV.Tarifas[0].Precio ); } }
+        public Decimal SubTotal { get { return CalcularSubtotal(Cantidad, PrecioUn); } }
         public Decimal IVA { get { return CalcularIVA(SubTotal); } }
         public Decimal TotalProd { get { return CalcularTotal(SubTotal, IVA); } }
+        public Guid Uid { get; set; }
 
 
-        public string MostrarDescripcionHotel(HotelEnt hotel)
+        public static string MostrarDescripcionHotel(HotelEnt hotel)
         {
             return $"Codigo: {hotel.Codigo} - Hotel {hotel.Nombre} en {hotel.CodigoCiudad}";
         }
-        public string MostrarDescripcionVuelo(VueloEnt vuelo)
+        public static string MostrarDescripcionVuelo(VueloEnt vuelo)
         {
             return $"Codigo: {vuelo.Codigo} - Vuelo de {vuelo.Origen} a {vuelo.Destino} con {vuelo.Aerolinea}";
         }

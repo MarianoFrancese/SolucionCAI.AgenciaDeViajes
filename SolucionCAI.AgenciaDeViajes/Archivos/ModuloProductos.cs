@@ -66,7 +66,9 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             JArray jsonArray = ArchivoVuelos.LeerVuelos();
 
             foreach (JObject vueloJson in jsonArray)
-            {                
+            {
+                string uidJson = vueloJson["Uid"].ToString();
+                //Console.WriteLine(uidJson);
                 if (vueloJson["Uid"].ToString() == uid.ToString())
                 {
                     vuelo = JsonConvert.DeserializeObject<VueloEnt>(vueloJson.ToString());
@@ -104,6 +106,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                     string tipoHabitacionJson = (string)hotelJson["Disponibilidad"]["Nombre"];
                     int capacidadJson = Convert.ToInt32(hotelJson["Disponibilidad"]["Capacidad"]);
                     Guid uidJson = (Guid)hotelJson["Uid"];
+                    //Console.WriteLine(uidJson);
                         
 
                     while (fechaE <= fechaS)
@@ -190,6 +193,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 if (hotelJson["Uid"].ToString() == uid.ToString())
                 {
                     hotel = JsonConvert.DeserializeObject<HotelEnt>(hotelJson.ToString());
+                    Console.WriteLine("Hotel Encontrado");
                 }
             }
             return hotel;

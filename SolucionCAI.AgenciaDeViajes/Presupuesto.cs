@@ -26,7 +26,6 @@ namespace SolucionCAI.AgenciaDeViajes
         private VueloEnt vuelo = new VueloEnt();
         private ProductoLineaEnt productoAgregado = new ProductoLineaEnt();
         private HotelEnt hotelFiltrado = new HotelEnt();
-        private List<ProductoLineaEnt> productosPresupuesto = new List<ProductoLineaEnt>();
         private List<HotelEnt> hotelesFiltrados = new List<HotelEnt>();
         string origen;
         string destino;
@@ -74,28 +73,39 @@ namespace SolucionCAI.AgenciaDeViajes
             {
 
                 DataGridViewRow row = this.dataGridView3.Rows[e.RowIndex];
+                List<ProductoLineaEnt> productosPresupuesto = new List<ProductoLineaEnt>();
 
-                string codigo = row.Cells[0].Value.ToString();
-                string hotel = row.Cells[1].Value.ToString();
-                string ciudad = row.Cells[2].Value.ToString();
-                DateTime fechaEntrada = Convert.ToDateTime(row.Cells[3].Value.ToString());
-                DateTime fechaSalida = Convert.ToDateTime(row.Cells[4].Value.ToString());
-                string direccion = row.Cells[5].Value.ToString();
-                int calificacion = Convert.ToInt32(row.Cells[6].Value.ToString());
-                string tipoHab = row.Cells[7].Value.ToString();
-                int capacidad = Convert.ToInt32(row.Cells[8].Value.ToString());
-                decimal tarifa = Convert.ToDecimal(row.Cells[9].Value.ToString());
-                int adultos = Convert.ToInt32(row.Cells[10].Value.ToString());
-                int menores = Convert.ToInt32(row.Cells[11].Value.ToString());
-                int infantes = Convert.ToInt32(row.Cells[12].Value.ToString());
+                Guid uid = (Guid)row.Cells[0].Value;
+                string codigo = row.Cells[1].Value.ToString();
+                string hotel = row.Cells[2].Value.ToString();
+                string ciudad = row.Cells[3].Value.ToString();
+                DateTime fechaEntrada = Convert.ToDateTime(row.Cells[4].Value.ToString());
+                DateTime fechaSalida = Convert.ToDateTime(row.Cells[5].Value.ToString());
+                string direccion = row.Cells[6].Value.ToString();
+                int calificacion = Convert.ToInt32(row.Cells[7].Value.ToString());
+                string tipoHab = row.Cells[8].Value.ToString();
+                int capacidad = Convert.ToInt32(row.Cells[9].Value.ToString());
+                decimal tarifa = Convert.ToDecimal(row.Cells[10].Value.ToString());
+                int adultos = Convert.ToInt32(row.Cells[11]?.Value?.ToString());
+                int menores = Convert.ToInt32(row.Cells[12]?.Value?.ToString());
+                int infantes = Convert.ToInt32(row.Cells[13]?.Value?.ToString());
 
-                hotelFiltrado = ModuloPresupuesto.GenerarHotel(codigo, hotel, ciudad, fechaEntrada, fechaSalida, direccion, calificacion, tipoHab, capacidad, tarifa, adultos, menores, infantes);
-                productoAgregado = ModuloPresupuesto.AgregarHotelLinea(hotelFiltrado);
-                productosPresupuesto.Add(productoAgregado);
-                textBox11.Text = ModuloPresupuesto.CrearPresupuesto(productosPresupuesto, 0).NroSeguimiento.ToString();
-                RellenarPresupuestoTablaHoteles(productosPresupuesto);
-                CalcularTotal();
+                bool pasajerosValidados = Validaciones.ValidarTipoPasajero(adultos, menores, infantes, capacidad);
+                Console.WriteLine(pasajerosValidados);
+                if (pasajerosValidados != true)
+                {
+                    MessageBox.Show("Por favor revise la cantidad de pasajeros por tipo");
+                }
+                else
+                {
+                    hotelFiltrado = ModuloPresupuesto.GenerarHotel(uid, codigo, hotel, ciudad, fechaEntrada, fechaSalida, direccion, calificacion, tipoHab, capacidad, tarifa, adultos, menores, infantes);
+                    productoAgregado = ModuloPresupuesto.AgregarHotelLinea(hotelFiltrado);
+                    productosPresupuesto.Add(productoAgregado);
+                    textBox11.Text = ModuloPresupuesto.CrearPresupuesto(productosPresupuesto, 0).NroSeguimiento.ToString();
+                    RellenarPresupuestoTablaHoteles(productosPresupuesto);
+                    CalcularTotal();
 
+                }
             }
         }
 
@@ -146,6 +156,7 @@ namespace SolucionCAI.AgenciaDeViajes
             {
 
                 dataGridView2.Rows.Add(
+                    producto.Uid,
 
                     producto.ProductoV,
 
@@ -165,12 +176,15 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void RellenarPresupuestoTablaHoteles(List<ProductoLineaEnt> productosAgregados)
         {
+            string descripcionH = ProductoLineaEnt.MostrarDescripcionHotel(productosAgregados[0].ProductoH);
+
             foreach (var producto in productosAgregados)
             {
 
                 dataGridView2.Rows.Add(
+                    producto.Uid,
 
-                    producto.ProductoH,
+                    descripcionH,
 
                     producto.DisponibilidadH.TarifaHab,
 
@@ -206,7 +220,7 @@ namespace SolucionCAI.AgenciaDeViajes
             groupBox3.Visible = false;
         }
 
-        private void button11_Click(object sender, EventArgs e) 
+        private void button11_Click(object sender, EventArgs e)
         {
             List<ProductoLineaEnt> productosAGrabar = new List<ProductoLineaEnt>();
             ProductoLineaEnt productos;
@@ -215,24 +229,49 @@ namespace SolucionCAI.AgenciaDeViajes
             {
                 if (fila != null)
                 {
-                    producto = fila.Cells[0]?.Value?.ToString();
-                    precio = Convert.ToDecimal(fila.Cells[1]?.Value?.ToString());
-                    cantidad = Convert.ToInt32(fila.Cells[2]?.Value?.ToString());
-                    //subtotal = Convert.ToDecimal(fila.Cells[3]?.Value?.ToString());
-                    //iva = Convert.ToDecimal(fila.Cells[4]?.Value?.ToString());
+                    string uidProductoString = fila.Cells[0]?.Value?.ToString();
+                    bool uidProducto = Guid.TryParse(uidProductoString, out Guid uidProductoGuid);
+                    producto = fila.Cells[1]?.Value?.ToString();
+                    precio = Convert.ToDecimal(fila.Cells[2]?.Value?.ToString());
+                    cantidad = Convert.ToInt32(fila.Cells[3]?.Value?.ToString());
                     total = Convert.ToDecimal(textBox5.Text);
-                    productos = new ProductoLineaEnt
-                    {
-                        ProductoV = vuelo,
-                        ProductoH = null,
-                        Cantidad = cantidad
-                    };
-                    productosAGrabar.Add(productos);
-                }
 
+                    if (uidProductoGuid != null)
+                    {
+                        try
+                        {
+                            VueloEnt vuelo = ModuloProductos.ObtenerVueloPorID(uidProductoGuid);
+
+                            productos = new ProductoLineaEnt
+                            {
+                                ProductoV = vuelo,
+                                ProductoH = null,
+                                Cantidad = cantidad
+                            };
+                            productosAGrabar.Add(productos);
+                        }
+                        catch (Exception)
+                        {
+                            HotelEnt hotel = ModuloProductos.ObtenerHotelPorID(uidProductoGuid);
+
+                            productos = new ProductoLineaEnt
+                            {
+                                ProductoV = null,
+                                ProductoH = hotel,
+                                Cantidad = cantidad
+                            };
+                            productosAGrabar.Add(productos);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo obtener el producto");
+                    }                   
+                }
             }
-            productosAGrabar.RemoveAt(productosAGrabar.Count - 1);
             Console.WriteLine(productosAGrabar);
+            productosAGrabar.RemoveAt(productosAGrabar.Count - 1);
+
 
 
             var listaProd = ModuloPresupuesto.CrearPresupuesto(productosAGrabar, total);
@@ -271,6 +310,8 @@ namespace SolucionCAI.AgenciaDeViajes
             {
 
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+                List<ProductoLineaEnt> productosPresupuesto = new List<ProductoLineaEnt>();
+
 
                 string codigo = row.Cells[0].Value.ToString();
 
@@ -316,7 +357,7 @@ namespace SolucionCAI.AgenciaDeViajes
             {
                 if (fila.Cells[columnIndex].Value != null)
                 {
-                    DataGridViewCell cell = fila.Cells[5];
+                    DataGridViewCell cell = fila.Cells[6];
                     string cellValue = cell.Value?.ToString();
                     if (decimal.TryParse(cellValue, out decimal total))
                     {
@@ -344,6 +385,7 @@ namespace SolucionCAI.AgenciaDeViajes
             foreach (var hotel in hotelesFiltrados)
             {
                 dataGridView3.Rows.Add(
+                    hotel.Uid,
                     hotel.Codigo,
                     hotel.Nombre,
                     hotel.CodigoCiudad,

@@ -14,7 +14,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace SolucionCAI.AgenciaDeViajes.Archivos
 {
-    
+
     internal class Validaciones
     {
         public bool ValidaUsuario(string usuario, string contraseña)
@@ -49,25 +49,25 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
         }
 
         //para leer de json
-     /*   public bool ValidaUsuario1(string usuario, string contraseña)
-        {
+        /*   public bool ValidaUsuario1(string usuario, string contraseña)
+           {
 
-            string usuario = UsuarioLogin.Text;
-            string contraseña = ContraseñaLogin.Text;
+               string usuario = UsuarioLogin.Text;
+               string contraseña = ContraseñaLogin.Text;
 
-            var credenciales = LeerCredencialesDesdeJSON("ruta_al_archivo.json");
+               var credenciales = LeerCredencialesDesdeJSON("ruta_al_archivo.json");
 
-            if (credenciales != null && credenciales.Usuario == usuario && credenciales.Contraseña == contraseña)
-            {
-                MenuPrincipal MPrinc = new MenuPrincipal(usuario);
-                MPrinc.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Usuario o contraseña incorrectos");
-            }
-        } */
+               if (credenciales != null && credenciales.Usuario == usuario && credenciales.Contraseña == contraseña)
+               {
+                   MenuPrincipal MPrinc = new MenuPrincipal(usuario);
+                   MPrinc.Show();
+                   this.Hide();
+               }
+               else
+               {
+                   MessageBox.Show("Usuario o contraseña incorrectos");
+               }
+           } */
 
 
 
@@ -98,7 +98,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             {
                 return false;
             }
-            else if (fechaEntrada < DateTime.Now) 
+            else if (fechaEntrada < DateTime.Now)
             {
                 return false;
             }
@@ -227,9 +227,9 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
 
         //Valida email
-       
 
-        
+
+
         public static bool ValidateEmail(string email)
         {
             bool isValid = false;
@@ -248,11 +248,32 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 return true;
             }
         }
-    }
 
+        public static bool ValidarTipoPasajero(int adultos, int menores, int infantes, int cantHuespedes)
+        {
+            if (cantHuespedes >= adultos + menores + infantes)
+            {
+                if (menores > 0 && adultos > 0 || infantes > 0 && adultos > 0)
+                {
+                    return true;
+                }
+                else if (adultos > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }    
 
-    
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
+}
     
 
 

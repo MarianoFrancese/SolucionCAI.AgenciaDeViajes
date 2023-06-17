@@ -94,12 +94,20 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             {
                 Console.WriteLine("El archivo existe");
                 string contenidoDelArchivo = File.ReadAllText("Presupuestos.json");
-                JArray jsonArray = JArray.Parse(contenidoDelArchivo);
-                JObject lastObject = (JObject)jsonArray.Last;
 
-                id = (int)lastObject["NroSeguimiento"];
+                if(string.IsNullOrEmpty(contenidoDelArchivo))
+                {
+                    return id;
+                }
+                else
+                {
+                    JArray jsonArray = JArray.Parse(contenidoDelArchivo);
+                    JObject lastObject = (JObject)jsonArray.Last;
 
+                    id = (int)lastObject["NroSeguimiento"];
+                }
                 return id;
+
             }
             else
             {
@@ -131,11 +139,21 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 //string filePath = Path.Combine(Directory.GetCurrentDirectory(), "Presupuestos.json");
                 string existingJsonString = File.ReadAllText("Presupuestos.json");
 
-                List<PresupuestoEnt> dataExistente = JsonConvert.DeserializeObject<List<PresupuestoEnt>>(existingJsonString);
-                dataExistente.Add(presupuesto);
-                string jsonString = JsonConvert.SerializeObject(dataExistente, Formatting.Indented);
-                File.WriteAllText("Presupuestos.json", jsonString);
-                Console.WriteLine(jsonString);
+                if(string.IsNullOrEmpty(existingJsonString))
+                {
+                    List<PresupuestoEnt> dataExistente = new List<PresupuestoEnt>();
+                    dataExistente.Add(presupuesto);
+                    string jsonString = JsonConvert.SerializeObject(dataExistente, Formatting.Indented);
+                    File.WriteAllText("Presupuestos.json", jsonString);
+                }
+                else
+                {
+                    List<PresupuestoEnt> dataExistente = JsonConvert.DeserializeObject<List<PresupuestoEnt>>(existingJsonString);
+                    dataExistente.Add(presupuesto);
+                    string jsonString = JsonConvert.SerializeObject(dataExistente, Formatting.Indented);
+                    File.WriteAllText("Presupuestos.json", jsonString);
+                    Console.WriteLine(jsonString);
+                }
 
                 return MessageBox.Show("Presupuesto generado con éxito", "Confirmation");
             }
@@ -152,17 +170,18 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             }
         }
 
-        public static HotelEnt GenerarHotel(string codigo, string hotel, string ciudad, DateTime fechaEntrada, DateTime fechaSalida, string direccion, int calificacion, string tipoHab, int capacidad, decimal tarifa, int adultos, int menores, int infantes)
+        public static HotelEnt GenerarHotel(Guid uid, string codigo, string hotel, string ciudad, DateTime fechaEntrada, DateTime fechaSalida, string direccion, int calificacion, string tipoHab, int capacidad, decimal tarifa, int adultos, int menores, int infantes)
         {
             //List<HotelEnt> listaHoteles = new List<HotelEnt>();
             DireccionEnt direccionEnt = new DireccionEnt();
-            List<DisponibilidadHabEnt> listaDisponibilidades = new List<DisponibilidadHabEnt>();
+            List<HabitacionFechaEnt> listaHabitaciones = new List<HabitacionFechaEnt>();
 
             HabitacionFechaEnt habitacionFecha = new HabitacionFechaEnt
             {
                 FechaEntHab = fechaEntrada,
                 CantHab = 1,
             };
+            listaHabitaciones.Add(habitacionFecha);
 
             string[] keysDireccion = direccion.Split(',');
             foreach (string key in keysDireccion)
@@ -206,11 +225,13 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 Capacidad = capacidad,
                 Adultos = adultos,
                 Menores = menores,
-                Infantes = infantes
+                Infantes = infantes,
+                HabitacionFechaDisp = listaHabitaciones
             };
 
             HotelEnt hotelSeleccionado = new HotelEnt
             {
+                Uid = uid,
                 Codigo = codigo,
                 Nombre = hotel,
                 CodigoCiudad = ciudad,
@@ -230,9 +251,11 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
             ProductoLineaEnt producto = new ProductoLineaEnt
             {
+                Uid = hotelPresupuestado.Uid,
                 ProductoV = null,
                 ProductoH = hotelPresupuestado,
                 Cantidad = hotelPresupuestado.Disponibilidad.HabitacionFechaDisp[0].CantHab,
+                PrecioUn = hotelPresupuestado.Disponibilidad.TarifaHab,
                 Pasajeros = null,
                 TarifaV = null,
                 DisponibilidadH = hotelPresupuestado.Disponibilidad
