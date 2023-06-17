@@ -14,5 +14,6 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
         public string CondFiscal { get; set; }
         public int Telefono { get; set; }
         public string Email { get; set; }
+        public string MedioPago { get; set; }
     }
 }

@@ -32,14 +32,14 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
                     if (nrosegjson == nroseguimiento && estadojson == "PreReserva") //funciona ok, busca ambas condiciones
                     {
-                        var presupuestos = JsonConvert.DeserializeObject<List<PresupuestoEnt>>(itinerarioJson["Presupuestos"].ToString());
-                        var cliente = JsonConvert.DeserializeObject<List<ClienteEnt>>(itinerarioJson["Cliente"].ToString());
+                        var presupuestos = JsonConvert.DeserializeObject<PresupuestoEnt>(itinerarioJson["Presupuestos"].ToString());
+                        var cliente = JsonConvert.DeserializeObject<ClienteEnt>(itinerarioJson["Cliente"].ToString());
                         
                         ItinerarioEnt itinerario = new ItinerarioEnt
                         {
-                            PresupuestosList = JsonConvert.DeserializeObject<List<PresupuestoEnt>>(itinerarioJson["Presupuestos"].ToString()),
-                            Cliente = JsonConvert.DeserializeObject<List<ClienteEnt>>(itinerarioJson["Cliente"].ToString()),                          
-                            MedioPago = (string)itinerarioJson["MedioPago"]
+                            PresupuestosList = presupuestos, //JsonConvert.DeserializeObject<PresupuestoEnt>(itinerarioJson["Presupuestos"].ToString()),
+                            Cliente = cliente,//JsonConvert.DeserializeObject<List<ClienteEnt>>(itinerarioJson["Cliente"].ToString()),                          
+                            
                                                        
                         };
                         Console.WriteLine(itinerario.PresupuestosList);
@@ -80,12 +80,12 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
                     if (nrosegjson == nroseguimiento)  
                     {
-                        var productos = JsonConvert.DeserializeObject<List<PresupuestoEnt>>(presupuestoJson["Productos"].ToString());
+                        var productos = JsonConvert.DeserializeObject<List<ProductoLineaEnt>>(presupuestoJson["Productos"].ToString());
                         
                         PresupuestoEnt presupuesto = new PresupuestoEnt
                         {
                             NroSeguimiento = Convert.ToInt32(presupuestoJson["NroSeguimiento"]),
-                            Productos = JsonConvert.DeserializeObject<List<ProductoLineaEnt>>(presupuestoJson["Productos"].ToString()),
+                            Productos = productos, //JsonConvert.DeserializeObject<List<ProductoLineaEnt>>(presupuestoJson["Productos"].ToString()),
                             Descripcion = (string)presupuestoJson["Descripcion"],
                             Total = Convert.ToInt32(presupuestoJson["Total"])
 

@@ -78,31 +78,31 @@ namespace SolucionCAI.AgenciaDeViajes
             
             foreach (var itinerario in itinerariosFiltrados)
             {
-                if (itinerario.Cliente[0].PersonaFisica != null)
+                if (itinerario.Cliente.PersonaFisica != null)
                 {
                     dataGridView2.Rows.Add(
-                    itinerario.PresupuestosList[0].NroSeguimiento,
-                    itinerario.PresupuestosList[0].Productos, //ver qué traer de productos, quisiera traer el string que se guarda en el json
-                    itinerario.Cliente[0].PersonaFisica[0].Nombre,
+                    itinerario.PresupuestosList.NroSeguimiento,
+                    itinerario.PresupuestosList.Productos, //ver qué traer de productos, quisiera traer el string que se guarda en el json
+                    itinerario.Cliente.PersonaFisica[0].Nombre,
                     "",
-                    itinerario.Cliente[0].PersonaFisica[0].DNI,
+                    itinerario.Cliente.PersonaFisica[0].DNI,
                     "",
-                    itinerario.MedioPago,
-                    itinerario.PresupuestosList[0].Total, //ver como acceder al total que esta siendo calculado
+                    itinerario.Cliente.MedioPago,
+                    itinerario.PresupuestosList.Total, //ver como acceder al total que esta siendo calculado
                     "Persona Fisica"
                     );
                 }
-                else if (itinerario.Cliente[0].PersonaJuridica != null)
+                else if (itinerario.Cliente.PersonaJuridica != null)
                 {
                     dataGridView2.Rows.Add(
-                    itinerario.PresupuestosList[0].NroSeguimiento,
-                    itinerario.PresupuestosList[0].Productos,
+                    itinerario.PresupuestosList.NroSeguimiento,
+                    itinerario.PresupuestosList.Productos,
                     "",
-                    itinerario.Cliente[0].PersonaJuridica[0].RazonSocial,
+                    itinerario.Cliente.PersonaJuridica[0].RazonSocial,
                     "",
-                    itinerario.Cliente[0].PersonaJuridica[0].CUIT,
-                    itinerario.MedioPago,
-                    itinerario.PresupuestosList[0].Total,
+                    itinerario.Cliente.PersonaJuridica[0].CUIT,
+                    itinerario.Cliente.MedioPago,
+                    itinerario.PresupuestosList.Total,
                     "Persona Juridica"
                     );
                 }

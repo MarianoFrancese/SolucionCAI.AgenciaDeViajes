@@ -8,29 +8,14 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
 {
     public class ItinerarioEnt 
     {
-        public PresupuestoEnt PresupuestosList { get; set; } //se agrego presupuesto como atributo de itinerario
-       
-        //public int nroseg { get { return TraerNumSeguimiento; } }
+        public PresupuestoEnt PresupuestosList { get; set; } 
+               
         public string Estado { get; set; }
-        public List <ClienteEnt> Cliente { get; set; } 
-        public string MedioPago { get; set; } //agregar a cliente
+        public ClienteEnt Cliente { get; set; } 
+        
         public string EstadoPago { get; set; }
 
-
-        //public PersonaFisicaEnt PersonaFisica { get; set;}
-        //public PersonaJuridicaEnt PersonaJuridica { get; set; }
-
-        // public List<PasajeroEnt> Pasajeros { get; set; } //los pasajeros estarian dentro de vuelo, no de itinerario
-
-
-        //public decimal DescuentoMP { get; }
-
-
-        //public int TraerNumSeguimiento (PresupuestoEnt presupuesto) 
-        //{
-        //    int nroseguimiento = presupuesto.NroSeguimiento;
-        //    return nroseguimiento;
-        //}
+               
 
     }
 }
