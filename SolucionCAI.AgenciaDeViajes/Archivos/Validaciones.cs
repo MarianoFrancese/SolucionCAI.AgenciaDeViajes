@@ -7,6 +7,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using System.Text.Json;
 using SolucionCAI.AgenciaDeViajes.Entidades;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using static System.Windows.Forms.DataFormats;
@@ -48,26 +49,42 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             return flag;
         }
 
-        //para leer de json
-        /*   public bool ValidaUsuario1(string usuario, string contraseña)
-           {
+        //Usuarios
+        public bool ValidarUsuarios(string usuario, string contraseña)
+        {
+            string contenidoJSON = File.ReadAllText("C:\\Users\\anto_\\source\\repos\\SolucionCAI.AgenciaDeViajes2\\SolucionCAI.AgenciaDeViajes\\bin\\Usuarios.json");
 
-               string usuario = UsuarioLogin.Text;
-               string contraseña = ContraseñaLogin.Text;
+            try
+            {
+                var jsonData = System.Text.Json.JsonSerializer.Deserialize<JsonDocument>(contenidoJSON);
+                var usuarios = jsonData.RootElement.GetProperty("usuarios").EnumerateArray();
 
-               var credenciales = LeerCredencialesDesdeJSON("ruta_al_archivo.json");
+                foreach (var usuarioJson in usuarios)
+                {
+                    string usuarioActual = usuarioJson.GetProperty("usuario").GetString();
+                    string contraseñaActual = usuarioJson.GetProperty("contraseña").GetString();
 
-               if (credenciales != null && credenciales.Usuario == usuario && credenciales.Contraseña == contraseña)
-               {
-                   MenuPrincipal MPrinc = new MenuPrincipal(usuario);
-                   MPrinc.Show();
-                   this.Hide();
-               }
-               else
-               {
-                   MessageBox.Show("Usuario o contraseña incorrectos");
-               }
-           } */
+                    if (usuario == usuarioActual && contraseña == contraseñaActual)
+                    {
+                        return true; // Usuario y contraseña válidos
+                    }
+                }
+            }
+            catch (System.Text.Json.JsonException ex)
+            {
+                Console.WriteLine($"Error al leer el archivo JSON: {ex.Message}");
+            }
+
+            return false; // Usuario o contraseña incorrectos
+        }
+
+
+
+
+
+
+
+
 
 
 

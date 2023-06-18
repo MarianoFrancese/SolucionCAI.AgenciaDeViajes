@@ -10,18 +10,14 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
 {
     public class Credenciales
     {
-        public string Usuario { get; set; }
-        public string Contraseña { get; set; }
+        public string usuario { get; set; }
+        public string contraseña { get; set; }
 
-        public Credenciales LeerCredencialesDesdeJSON(string rutaArchivo)
-        {
-            string contenidoJSON = File.ReadAllText(rutaArchivo);
-            return JsonSerializer.Deserialize<Credenciales>(contenidoJSON);
-        }
+       
     }
 
     
 
-
+  
 }
 

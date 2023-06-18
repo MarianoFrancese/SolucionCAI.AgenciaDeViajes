@@ -12,6 +12,9 @@ using System.Windows.Forms;
 using static System.Windows.Forms.DataFormats;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
+
+
+
 namespace SolucionCAI.AgenciaDeViajes
 {
     public partial class Login : Form
@@ -25,6 +28,29 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            
+                string usuario = UsuarioLogin.Text;
+                string contraseña = ContraseñaLogin.Text;
+
+            var validador = new Validaciones();
+            bool esValido = validador.ValidarUsuarios(usuario, contraseña);
+
+                if (esValido)
+                {
+                    // Usuario y contraseña válidos
+                    MenuPrincipal MPrinc = new MenuPrincipal(usuario);
+                //MPrinc.Customusuario = usuario; // Assign the TextBox value to the Customusuario property
+                MPrinc.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    // Usuario o contraseña incorrectos
+                    MessageBox.Show("Usuario o contraseña incorrectos");
+                }
+           
+
+        } /*{
             string usuario = UsuarioLogin.Text;
             string contraseña = ContraseñaLogin.Text;
 
@@ -45,7 +71,10 @@ namespace SolucionCAI.AgenciaDeViajes
             }
             //revisar la nueva que hice a ver si sirve o no (Anto)
             
-        }
+        } */
+
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
