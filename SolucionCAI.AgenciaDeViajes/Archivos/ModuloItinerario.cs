@@ -23,24 +23,28 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 JArray jsonArrayP = JArray.Parse(contenidoDelArchivoP);
 
                 List<PresupuestoEnt> presupuestosFiltrados = new List<PresupuestoEnt>();
+                //DateTime fechaS = DateTime.ParseExact(FechaSalida, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                //DateTime fechaA = DateTime.ParseExact(FechaArribo, "dd/MM/yyyy", CultureInfo.InvariantCulture);
 
                 foreach (JObject presupuestoJson in jsonArrayP)
                 {
                     string nrosegjson = (string)presupuestoJson["NroSeguimiento"];
-
-
+                    //DateTime fechaSjson = DateTime.ParseExact((string)presupuestoJson["Productos"][0]["ProductoV"]["FechaSalida"], "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                    //DateTime fechaAjson = DateTime.ParseExact((string)presupuestoJson["Productos"][0]["ProductoV"]["FechaArribo"], "dd/MM/yyyy", CultureInfo.InvariantCulture);
 
                     if (nrosegjson == nroseguimiento)
                     {
-                        var productos = JsonConvert.DeserializeObject<List<ProductoLineaEnt>>(presupuestoJson["Productos"].ToString());
 
+                        //var productos = JsonConvert.DeserializeObject<List<ProductoLineaEnt>>(presupuestoJson["Productos"].ToString());
+                        
+                                                                       
                         PresupuestoEnt presupuesto = new PresupuestoEnt
                         {
                             NroSeguimiento = Convert.ToInt32(presupuestoJson["NroSeguimiento"]),
-                            Productos = productos, //JsonConvert.DeserializeObject<List<ProductoLineaEnt>>(presupuestoJson["Productos"].ToString()),
+                            Productos = JsonConvert.DeserializeObject<List<ProductoLineaEnt>>(presupuestoJson["Productos"].ToString()),
                             Descripcion = (string)presupuestoJson["Descripcion"],
                             Total = Convert.ToInt32(presupuestoJson["Total"])
-
+                        
                         };
                         Console.WriteLine(presupuesto.Productos);
 

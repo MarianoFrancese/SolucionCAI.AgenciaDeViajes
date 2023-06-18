@@ -25,6 +25,8 @@ namespace SolucionCAI.AgenciaDeViajes
         private List<ItinerarioEnt> itinerariosFiltrados;
         string nroseguimiento;
         private List<PresupuestoEnt> presupuestosFiltrados;
+        string descripcion;
+
 
         private void buscarPres_Click(object sender, EventArgs e) //boton buscar presupuestos
         {
@@ -41,32 +43,43 @@ namespace SolucionCAI.AgenciaDeViajes
                 MessageBox.Show("No se encontraron Presupuestos para ese Nro de Seguimiento");
             }
         }
+
+      
+
         private void RellenarTablaPresup(List<PresupuestoEnt> presupuestosFiltrados)
         {
             dataGridView1.Rows.Clear();
 
+           
 
             foreach (var presupuesto in presupuestosFiltrados)
             {
-                                
-                 if (presupuesto.Productos[0].ProductoV != null)
+                
+                VueloEnt vuelo = presupuestosFiltrados[0].Productos[0].ProductoV;
+                HotelEnt hotel = presupuestosFiltrados[0].Productos[0].ProductoH;
+
+                if (vuelo != null && hotel != null)
                 {
-                    dataGridView1.Rows.Add(
-                    presupuesto.NroSeguimiento,
-                    presupuesto.Productos[0].ProductoV,
-                    presupuesto.Total
-                    
-                    );
+                    descripcion = $"Codigo Vuelo: {vuelo.Codigo} - Origen: {vuelo.Origen} - Destino: {vuelo.Destino} - Aerolinea: {vuelo.Aerolinea} - Clase: {vuelo.Tarifas[0].Clase} - Tipo Pasajero: {vuelo.Tarifas[0].TipoPasajero} / Codigo Hotel: {hotel.Codigo} - Nombre Hotel: {hotel.Nombre} - Ciudad: {hotel.CodigoCiudad} - Nombre Habitacion: {hotel.Disponibilidad.Nombre}";
+
                 }
-                else if (presupuesto.Productos[0].ProductoH != null)
+                else if (vuelo != null)
                 {
-                    dataGridView1.Rows.Add(
-                    presupuesto.NroSeguimiento,
-                    presupuesto.Productos[0].ProductoH,
-                    presupuesto.Total
-                    );
+                    descripcion = $"Codigo Vuelo: {vuelo.Codigo} - Origen: {vuelo.Origen} - Destino: {vuelo.Destino} - Aerolinea: {vuelo.Aerolinea} - Clase: {vuelo.Tarifas[0].Clase} - Tipo Pasajero: {vuelo.Tarifas[0].TipoPasajero}";
+                }
+                else if (hotel != null)
+                {
+                    descripcion = $"Codigo Hotel: {hotel.Codigo} - Nombre Hotel: {hotel.Nombre} - Ciudad: {hotel.CodigoCiudad} - Nombre Habitacion: {hotel.Disponibilidad.Nombre}";
                 }
 
+                
+                dataGridView1.Rows.Add(
+                presupuesto.NroSeguimiento,
+                descripcion,
+                presupuesto.Total
+                    
+                );
+               
 
             }
         }
