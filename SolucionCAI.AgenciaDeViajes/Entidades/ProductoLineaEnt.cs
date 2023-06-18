@@ -18,12 +18,9 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
         public int Cantidad { get; set; }
         public decimal PrecioUn { get; set; }
         public List<PasajeroEnt> Pasajeros { get; set; }
-        public TarifaEnt TarifaV { get; set; }
-        public DisponibilidadHabEnt DisponibilidadH { get; set; }
         public Decimal SubTotal { get { return CalcularSubtotal(Cantidad, PrecioUn); } }
         public Decimal IVA { get { return CalcularIVA(SubTotal); } }
         public Decimal TotalProd { get { return CalcularTotal(SubTotal, IVA); } }
-        public Guid Uid { get; set; }
 
 
         public static string MostrarDescripcionHotel(HotelEnt hotel)

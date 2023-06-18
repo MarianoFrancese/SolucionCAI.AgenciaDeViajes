@@ -19,7 +19,7 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
         {
             foreach (var productoLinea in Presupuesto.Productos)
             {
-                if (productoLinea.TarifaV == tarifa)
+                if (productoLinea.ProductoV.Tarifas[0] == tarifa)
                 {
                     return productoLinea;
                 }
@@ -33,7 +33,7 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
         {
             foreach (var productoLinea in Presupuesto.Productos)
             {
-                if (productoLinea.TarifaV.Pasajeros.Count != productoLinea.Cantidad)
+                if (productoLinea.ProductoV.Tarifas[0].Pasajeros.Count != productoLinea.Cantidad)
                 {
                     return "La tarifa ... del vuelo ... no tiene todos sus pasajeros asignados.";
                 }

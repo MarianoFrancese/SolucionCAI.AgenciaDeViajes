@@ -71,8 +71,8 @@ namespace SolucionCAI.AgenciaDeViajes
             //rellenar el combo.
             foreach (var linea in itinerario.Presupuesto.Productos)
             {
-                var descripcion = $"{linea.TarifaV.Clase}-{linea.TarifaV.TipoPasajero} {linea.ProductoV.Aerolinea} {linea.ProductoV.Origen}-{linea.ProductoV.Destino}-{linea.ProductoV.FechaSalida:dd/MM/yy HH:mm}";
-                ProductoPasajero.Items.Add(new TarifaComboItem { Descripcion = descripcion, Tarifa = linea.TarifaV });
+                var descripcion = $"{linea.ProductoV.Tarifas[0].Clase}-{linea.ProductoV.Tarifas[0].TipoPasajero} {linea.ProductoV.Aerolinea} {linea.ProductoV.Origen}-{linea.ProductoV.Destino}-{linea.ProductoV.FechaSalida:dd/MM/yy HH:mm}";
+                ProductoPasajero.Items.Add(new TarifaComboItem { Descripcion = descripcion, Tarifa = linea.ProductoV.Tarifas[0] });
             }
         }
 

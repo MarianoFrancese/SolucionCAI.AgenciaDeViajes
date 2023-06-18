@@ -98,11 +98,11 @@ namespace SolucionCAI.AgenciaDeViajes
                 }
                 else
                 {
-                    hotelFiltrado = ModuloPresupuesto.GenerarHotel(uid, codigo, hotel, ciudad, fechaEntrada, fechaSalida, direccion, calificacion, tipoHab, capacidad, tarifa, adultos, menores, infantes);
+                    hotelFiltrado = ModuloPresupuesto.GenerarHotel(uid, codigo, hotel, ciudad, fechaEntrada, direccion, calificacion, tipoHab, capacidad, tarifa, adultos, menores, infantes);
                     productoAgregado = ModuloPresupuesto.AgregarHotelLinea(hotelFiltrado);
                     productosPresupuesto.Add(productoAgregado);
                     textBox11.Text = ModuloPresupuesto.CrearPresupuesto(productosPresupuesto, 0).NroSeguimiento.ToString();
-                    RellenarPresupuestoTablaHoteles(productosPresupuesto);
+                    RellenarPresupuestoTablaHoteles(productosPresupuesto, fechaSalida);
                     CalcularTotal();
 
                 }
@@ -156,11 +156,10 @@ namespace SolucionCAI.AgenciaDeViajes
             {
 
                 dataGridView2.Rows.Add(
-                    producto.Uid,
 
                     producto.ProductoV,
 
-                    producto.TarifaV.Precio,
+                    producto.ProductoV.Tarifas[0].Precio,
 
                     producto.Cantidad,
 
@@ -174,19 +173,20 @@ namespace SolucionCAI.AgenciaDeViajes
             }
         }
 
-        private void RellenarPresupuestoTablaHoteles(List<ProductoLineaEnt> productosAgregados)
+        private void RellenarPresupuestoTablaHoteles(List<ProductoLineaEnt> productosAgregados, DateTime fechaSalida)
         {
             string descripcionH = ProductoLineaEnt.MostrarDescripcionHotel(productosAgregados[0].ProductoH);
+            descripcionH += " - Fecha de Entrada: " + productosAgregados[0].ProductoH.Disponibilidad.HabitacionFechaDisp[0].FechaEntHab + " - Fecha de Salida: " + fechaSalida.Date.ToString();
 
             foreach (var producto in productosAgregados)
             {
 
                 dataGridView2.Rows.Add(
-                    producto.Uid,
+                    producto.ProductoH.Uid,
 
                     descripcionH,
 
-                    producto.DisponibilidadH.TarifaHab,
+                    producto.ProductoH.Disponibilidad.TarifaHab,
 
                     producto.Cantidad,
 
@@ -227,50 +227,70 @@ namespace SolucionCAI.AgenciaDeViajes
             //VueloEnt vuelo = ModuloProductos.ObtenerVueloPorID(dataGridView2.Rows.Cells[0]?.Value?.ToString()); //agregar uid a la tabla
             foreach (DataGridViewRow fila in dataGridView2.Rows)
             {
+                string filaString = fila.ToString();
                 if (fila != null)
                 {
-                    string uidProductoString = fila.Cells[0]?.Value?.ToString();
-                    bool uidProducto = Guid.TryParse(uidProductoString, out Guid uidProductoGuid);
-                    producto = fila.Cells[1]?.Value?.ToString();
-                    precio = Convert.ToDecimal(fila.Cells[2]?.Value?.ToString());
-                    cantidad = Convert.ToInt32(fila.Cells[3]?.Value?.ToString());
-                    total = Convert.ToDecimal(textBox5.Text);
-
-                    if (uidProductoGuid != null)
+                    if (fila.Cells[1].Value != null)
                     {
-                        try
-                        {
-                            VueloEnt vuelo = ModuloProductos.ObtenerVueloPorID(uidProductoGuid);
+                        string uidProductoString = fila.Cells[0]?.Value?.ToString();
+                        bool uidProducto = Guid.TryParse(uidProductoString, out Guid uidProductoGuid);
+                        producto = fila.Cells[1]?.Value?.ToString();
+                        int indexEntrada = producto.IndexOf("Fecha de Entrada: ") + "Fecha de Entrada: ".Length;
+                        int indexSalida = producto.IndexOf(" - Fecha de Salida:");
+                        DateTime entradaFecha = DateTime.ParseExact(producto.Substring(indexEntrada, producto.IndexOf(" 0:00:00 - Fecha de S") - indexEntrada).Trim(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                        DateTime salidaFecha = DateTime.ParseExact(producto.Substring(indexSalida + " - Fecha de Salida:".Length).Trim(), "dd/MM/yyyy H:mm:ss", CultureInfo.InvariantCulture).Date;
+                        precio = Convert.ToDecimal(fila.Cells[2]?.Value?.ToString());
+                        cantidad = Convert.ToInt32(fila.Cells[3]?.Value?.ToString());
+                        //decimal subtotal = Convert.ToDecimal(fila.Cells[4]?.Value?.ToString());
+                        //decimal iva = Convert.ToDecimal(fila.Cells[5]?.Value?.ToString());
+                        //decimal totalprod = Convert.ToDecimal(fila.Cells[6]?.Value?.ToString());
+                        total = Convert.ToDecimal(textBox5.Text);
 
-                            productos = new ProductoLineaEnt
+                        if (uidProductoGuid != null)
+                        {
+                            try
                             {
-                                ProductoV = vuelo,
-                                ProductoH = null,
-                                Cantidad = cantidad
-                            };
-                            productosAGrabar.Add(productos);
+                                VueloEnt vuelo = ModuloProductos.ObtenerVueloPorID(uidProductoGuid);
+
+                                productos = new ProductoLineaEnt
+                                {
+                                    ProductoV = vuelo,
+                                    ProductoH = null,
+                                    PrecioUn = precio,
+                                    Cantidad = cantidad,
+                                    Pasajeros = null,
+                                };
+                                productosAGrabar.Add(productos);
+                            }
+                            catch (Exception)
+                            {
+                                HotelEnt hotel = ModuloProductos.ObtenerHotelPorID(uidProductoGuid, entradaFecha, salidaFecha);
+
+                                productos = new ProductoLineaEnt
+                                {
+                                    ProductoV = null,
+                                    ProductoH = hotel,
+                                    PrecioUn = precio,
+                                    Cantidad = cantidad,
+                                    Pasajeros = null
+                                };
+                                productosAGrabar.Add(productos);
+                            }
                         }
-                        catch (Exception)
+                        else
                         {
-                            HotelEnt hotel = ModuloProductos.ObtenerHotelPorID(uidProductoGuid);
-
-                            productos = new ProductoLineaEnt
-                            {
-                                ProductoV = null,
-                                ProductoH = hotel,
-                                Cantidad = cantidad
-                            };
-                            productosAGrabar.Add(productos);
+                            MessageBox.Show("No se pudo obtener el producto");
                         }
                     }
                     else
                     {
-                        MessageBox.Show("No se pudo obtener el producto");
-                    }                   
+                        Console.WriteLine("No hay productos");
+                    }
                 }
+                Console.WriteLine(productosAGrabar);
             }
-            Console.WriteLine(productosAGrabar);
-            productosAGrabar.RemoveAt(productosAGrabar.Count - 1);
+            
+            //productosAGrabar.RemoveAt(productosAGrabar.Count - 1);
 
 
 
@@ -396,9 +416,6 @@ namespace SolucionCAI.AgenciaDeViajes
                     hotel.Disponibilidad.Nombre,
                     hotel.Disponibilidad.Capacidad,
                     hotel.Disponibilidad.TarifaHab
-                    //hotel.Disponibilidad.Adultos,
-                    //hotel.Disponibilidad.Menores,
-                    //hotel.Disponibilidad.Infantes
                     );
             }
         }

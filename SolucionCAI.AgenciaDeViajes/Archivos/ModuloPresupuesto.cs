@@ -76,9 +76,6 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 ProductoH = null,
                 Cantidad = vueloPresupuestado.Tarifas[0].Disponibilidad,
                 Pasajeros = null,
-                TarifaV = vueloPresupuestado.Tarifas[0],
-                DisponibilidadH = null
-
             };
 
             
@@ -89,7 +86,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
         public static int BuscarUltimoId()
         {
-            int id = 0;
+            int id = 1000;
             if (File.Exists("Presupuestos.json"))
             {
                 Console.WriteLine("El archivo existe");
@@ -170,7 +167,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             }
         }
 
-        public static HotelEnt GenerarHotel(Guid uid, string codigo, string hotel, string ciudad, DateTime fechaEntrada, DateTime fechaSalida, string direccion, int calificacion, string tipoHab, int capacidad, decimal tarifa, int adultos, int menores, int infantes)
+        public static HotelEnt GenerarHotel(Guid uid, string codigo, string hotel, string ciudad, DateTime fechaEntrada, string direccion, int calificacion, string tipoHab, int capacidad, decimal tarifa, int adultos, int menores, int infantes)
         {
             //List<HotelEnt> listaHoteles = new List<HotelEnt>();
             DireccionEnt direccionEnt = new DireccionEnt();
@@ -251,15 +248,11 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
             ProductoLineaEnt producto = new ProductoLineaEnt
             {
-                Uid = hotelPresupuestado.Uid,
                 ProductoV = null,
                 ProductoH = hotelPresupuestado,
                 Cantidad = hotelPresupuestado.Disponibilidad.HabitacionFechaDisp[0].CantHab,
                 PrecioUn = hotelPresupuestado.Disponibilidad.TarifaHab,
                 Pasajeros = null,
-                TarifaV = null,
-                DisponibilidadH = hotelPresupuestado.Disponibilidad
-
             };
 
             return producto;

@@ -2,7 +2,7 @@
   {
     "Codigo": "HT001",
     "Nombre": "Sheraton",
-    "CodigoDeCiudad": "MIA",
+    "CodigoCiudad": "MIA",
     "Calificacion": 5,
     "Direccion": {
       "Calle": "Collins Ave",
@@ -18,7 +18,7 @@
       "Adultos": 4,
       "Menores": 2,
       "Infantes": 2,
-      "HabitacionFechaDis": [
+      "HabitacionFechaDisp": [
         {
           "FechaHab": "29/06/2023",
           "CantHab": 4
@@ -49,12 +49,12 @@
         }
       ]
     },
-    "Uid": "4f0997ec-7e54-4d0b-b180-288f784dc0a3"
+    "Uid": "e9037540-a8ff-4f6c-b571-9b0d4ef3ccc1"
   },
   {
     "Codigo": "HT001",
     "Nombre": "Sheraton",
-    "CodigoDeCiudad": "MIA",
+    "CodigoCiudad": "MIA",
     "Calificacion": 5,
     "Direccion": {
       "Calle": "Collins Ave",
@@ -70,7 +70,7 @@
       "Adultos": 2,
       "Menores": 1,
       "Infantes": 1,
-      "HabitacionFechaDis": [
+      "HabitacionFechaDisp": [
         {
           "FechaHab": "29/06/2023",
           "CantHab": 3
@@ -101,12 +101,12 @@
         }
       ]
     },
-    "Uid": "ea5a18da-85c8-4fb9-b863-a728af32bbe6"
+    "Uid": "b40c80a9-dee5-48bd-827d-2e4dfbd64e1c"
   },
   {
     "Codigo": "HT001",
     "Nombre": "Sheraton",
-    "CodigoDeCiudad": "MIA",
+    "CodigoCiudad": "MIA",
     "Calificacion": 5,
     "Direccion": {
       "Calle": "Collins Ave",
@@ -122,7 +122,7 @@
       "Adultos": 6,
       "Menores": 3,
       "Infantes": 3,
-      "HabitacionFechaDis": [
+      "HabitacionFechaDisp": [
         {
           "FechaHab": "29/06/2023",
           "CantHab": 5
@@ -153,12 +153,12 @@
         }
       ]
     },
-    "Uid": "1c15df3e-c93d-469c-8acd-9ab0bd2d3690"
+    "Uid": "8c1589c8-6e12-48dc-8cc4-abd3353f1611"
   },
   {
     "Codigo": "HT002",
     "Nombre": "Four Seasons",
-    "CodigoDeCiudad": "MAD",
+    "CodigoCiudad": "MAD",
     "Calificacion": 5,
     "Direccion": {
       "Calle": "C. de Sevilla",
@@ -174,7 +174,7 @@
       "Adultos": 6,
       "Menores": 3,
       "Infantes": 3,
-      "HabitacionFechaDis": [
+      "HabitacionFechaDisp": [
         {
           "FechaHab": "07/07/2023",
           "CantHab": 3
@@ -205,12 +205,12 @@
         }
       ]
     },
-    "Uid": "2ce8b629-aede-4089-8b36-62c172c0a547"
+    "Uid": "434ca706-3e5d-4e35-9cee-a8429286f990"
   },
   {
     "Codigo": "HT002",
     "Nombre": "Four Seasons",
-    "CodigoDeCiudad": "MAD",
+    "CodigoCiudad": "MAD",
     "Calificacion": 5,
     "Direccion": {
       "Calle": "C. de Sevilla",
@@ -226,7 +226,7 @@
       "Adultos": 2,
       "Menores": 1,
       "Infantes": 1,
-      "HabitacionFechaDis": [
+      "HabitacionFechaDisp": [
         {
           "FechaHab": "07/07/2023",
           "CantHab": 3
@@ -257,12 +257,12 @@
         }
       ]
     },
-    "Uid": "0baf0b3f-7956-4971-9ed8-0cb9aab0bc0e"
+    "Uid": "7ddabac2-638c-4117-a7dc-af06e516e0da"
   },
   {
     "Codigo": "HT002",
     "Nombre": "Four Seasons",
-    "CodigoDeCiudad": "MAD",
+    "CodigoCiudad": "MAD",
     "Calificacion": 5,
     "Direccion": {
       "Calle": "C. de Sevilla",
@@ -278,7 +278,7 @@
       "Adultos": 4,
       "Menores": 2,
       "Infantes": 2,
-      "HabitacionFechaDis": [
+      "HabitacionFechaDisp": [
         {
           "FechaHab": "07/07/2023",
           "CantHab": 6
@@ -309,12 +309,12 @@
         }
       ]
     },
-    "Uid": "792a1bfe-1a57-4088-bbdf-4468acb4784f"
+    "Uid": "6fc25353-bc12-4d49-970e-2162df23d67f"
   },
   {
     "Codigo": "HT003",
     "Nombre": "ibis budget Meudon",
-    "CodigoDeCiudad": "ROM",
+    "CodigoCiudad": "ROM",
     "Calificacion": 3,
     "Direccion": {
       "Calle": "Pza Vittorio Emanuele",
@@ -330,7 +330,7 @@
       "Adultos": 2,
       "Menores": 1,
       "Infantes": 1,
-      "HabitacionFechaDis": [
+      "HabitacionFechaDisp": [
         {
           "FechaHab": "14/07/2023",
           "CantHab": 3
@@ -361,12 +361,12 @@
         }
       ]
     },
-    "Uid": "0f247124-e325-436f-9f58-ac8eb1b1f412"
+    "Uid": "e868ce98-05ec-4e07-8c1e-76b15161f7e6"
   },
   {
     "Codigo": "HT003",
     "Nombre": "ibis budget Meudon",
-    "CodigoDeCiudad": "ROM",
+    "CodigoCiudad": "ROM",
     "Calificacion": 3,
     "Direccion": {
       "Calle": "Pza Vittorio Emanuele",
@@ -382,7 +382,7 @@
       "Adultos": 4,
       "Menores": 2,
       "Infantes": 2,
-      "HabitacionFechaDis": [
+      "HabitacionFechaDisp": [
         {
           "FechaHab": "14/07/2023",
           "CantHab": 3
@@ -413,12 +413,12 @@
         }
       ]
     },
-    "Uid": "4d87560f-1b82-4012-8eae-9b9b6bdf6148"
+    "Uid": "862eb73b-e0c5-4fb8-b10d-2cf510f09c3b"
   },
   {
     "Codigo": "HT003",
     "Nombre": "ibis budget Meudon",
-    "CodigoDeCiudad": "ROM",
+    "CodigoCiudad": "ROM",
     "Calificacion": 3,
     "Direccion": {
       "Calle": "Pza Vittorio Emanuele",
@@ -434,7 +434,7 @@
       "Adultos": 6,
       "Menores": 3,
       "Infantes": 3,
-      "HabitacionFechaDis": [
+      "HabitacionFechaDisp": [
         {
           "FechaHab": "14/07/2023",
           "CantHab": 3
@@ -465,12 +465,12 @@
         }
       ]
     },
-    "Uid": "f0b2ce1f-c034-4c5e-b050-5d487700cce6"
+    "Uid": "a6845e07-9a1b-430b-9bfd-cbfe9a43de5d"
   },
   {
     "Codigo": "HT004",
     "Nombre": "Ibis Paris Tour Eiffel",
-    "CodigoDeCiudad": "PAR",
+    "CodigoCiudad": "PAR",
     "Calificacion": 4,
     "Direccion": {
       "Calle": "Rue Cambronne",
@@ -486,7 +486,7 @@
       "Adultos": 2,
       "Menores": 1,
       "Infantes": 1,
-      "HabitacionFechaDis": [
+      "HabitacionFechaDisp": [
         {
           "FechaHab": "21/07/2023",
           "CantHab": 3
@@ -501,12 +501,12 @@
         }
       ]
     },
-    "Uid": "c7847ca9-744b-476b-b172-21dfd218180e"
+    "Uid": "7969d1af-9b7d-45a9-8fb0-f32de4169ce3"
   },
   {
     "Codigo": "HT004",
     "Nombre": "Ibis Paris Tour Eiffel",
-    "CodigoDeCiudad": "PAR",
+    "CodigoCiudad": "PAR",
     "Calificacion": 4,
     "Direccion": {
       "Calle": "Rue Cambronne",
@@ -522,7 +522,7 @@
       "Adultos": 4,
       "Menores": 2,
       "Infantes": 2,
-      "HabitacionFechaDis": [
+      "HabitacionFechaDisp": [
         {
           "FechaHab": "21/07/2023",
           "CantHab": 2
@@ -537,12 +537,12 @@
         }
       ]
     },
-    "Uid": "99401ae4-bbbe-4dfb-80ef-8500cf431a1a"
+    "Uid": "1bf34edc-a621-433c-98ef-ed706c35e5e5"
   },
   {
     "Codigo": "HT004",
     "Nombre": "Ibis Paris Tour Eiffel",
-    "CodigoDeCiudad": "PAR",
+    "CodigoCiudad": "PAR",
     "Calificacion": 4,
     "Direccion": {
       "Calle": "Rue Cambronne",
@@ -558,7 +558,7 @@
       "Adultos": 6,
       "Menores": 3,
       "Infantes": 3,
-      "HabitacionFechaDis": [
+      "HabitacionFechaDisp": [
         {
           "FechaHab": "21/07/2023",
           "CantHab": 2
@@ -573,12 +573,12 @@
         }
       ]
     },
-    "Uid": "67340f72-c548-4a00-92a2-ce9b8f4f237d"
+    "Uid": "d28fc8f4-76d7-4b2e-8d9c-ea62e031ad9e"
   },
   {
     "Codigo": "HT005",
     "Nombre": "Holiday Inn Santiago",
-    "CodigoDeCiudad": "SCL",
+    "CodigoCiudad": "SCL",
     "Calificacion": 4,
     "Direccion": {
       "Calle": "Armando Cortinez Pte.",
@@ -594,7 +594,7 @@
       "Adultos": 2,
       "Menores": 1,
       "Infantes": 1,
-      "HabitacionFechaDis": [
+      "HabitacionFechaDisp": [
         {
           "FechaHab": "24/07/2023",
           "CantHab": 3
@@ -609,12 +609,12 @@
         }
       ]
     },
-    "Uid": "3b8e8476-79a1-440a-ae45-e888deb5f4bc"
+    "Uid": "81c8dd9c-2e60-4937-b96c-d42ecdeb3d9a"
   },
   {
     "Codigo": "HT005",
     "Nombre": "Holiday Inn Santiago",
-    "CodigoDeCiudad": "SCL",
+    "CodigoCiudad": "SCL",
     "Calificacion": 4,
     "Direccion": {
       "Calle": "Armando Cortinez Pte.",
@@ -630,7 +630,7 @@
       "Adultos": 4,
       "Menores": 2,
       "Infantes": 2,
-      "HabitacionFechaDis": [
+      "HabitacionFechaDisp": [
         {
           "FechaHab": "24/07/2023",
           "CantHab": 7
@@ -645,12 +645,12 @@
         }
       ]
     },
-    "Uid": "57daa205-10f0-4164-892b-130be351bbad"
+    "Uid": "7d129465-48f1-4880-9a26-ff1fe13fd880"
   },
   {
     "Codigo": "HT005",
     "Nombre": "Holiday Inn Santiago",
-    "CodigoDeCiudad": "SCL",
+    "CodigoCiudad": "SCL",
     "Calificacion": 4,
     "Direccion": {
       "Calle": "Armando Cortinez Pte.",
@@ -666,7 +666,7 @@
       "Adultos": 6,
       "Menores": 3,
       "Infantes": 3,
-      "HabitacionFechaDis": [
+      "HabitacionFechaDisp": [
         {
           "FechaHab": "24/07/2023",
           "CantHab": 4
@@ -681,12 +681,12 @@
         }
       ]
     },
-    "Uid": "431fcf02-f448-4662-afd3-8ce843b36417"
+    "Uid": "c8c3629f-241c-4ca9-ae69-fcd2ff329db3"
   },
   {
     "Codigo": "HT006",
     "Nombre": "Sofitel",
-    "CodigoDeCiudad": "BUE",
+    "CodigoCiudad": "BUE",
     "Calificacion": 5,
     "Direccion": {
       "Calle": "Posadas",
@@ -702,7 +702,7 @@
       "Adultos": 2,
       "Menores": 1,
       "Infantes": 1,
-      "HabitacionFechaDis": [
+      "HabitacionFechaDisp": [
         {
           "FechaHab": "26/07/2023",
           "CantHab": 4
@@ -717,12 +717,12 @@
         }
       ]
     },
-    "Uid": "a0c1a693-33d2-417e-9b47-f1fcbfb87e2b"
+    "Uid": "cd8cfbfc-effe-490d-b640-44da1a005a1f"
   },
   {
     "Codigo": "HT006",
     "Nombre": "Sofitel",
-    "CodigoDeCiudad": "BUE",
+    "CodigoCiudad": "BUE",
     "Calificacion": 5,
     "Direccion": {
       "Calle": "Posadas",
@@ -738,7 +738,7 @@
       "Adultos": 4,
       "Menores": 2,
       "Infantes": 2,
-      "HabitacionFechaDis": [
+      "HabitacionFechaDisp": [
         {
           "FechaHab": "26/07/2023",
           "CantHab": 8
@@ -753,12 +753,12 @@
         }
       ]
     },
-    "Uid": "71e2ac22-9fa9-4fcb-a7ee-75ebde4adca8"
+    "Uid": "065381c0-1246-458f-b475-16f5c0ae0a4b"
   },
   {
     "Codigo": "HT006",
     "Nombre": "Sofitel",
-    "CodigoDeCiudad": "BUE",
+    "CodigoCiudad": "BUE",
     "Calificacion": 5,
     "Direccion": {
       "Calle": "Posadas",
@@ -774,7 +774,7 @@
       "Adultos": 6,
       "Menores": 3,
       "Infantes": 3,
-      "HabitacionFechaDis": [
+      "HabitacionFechaDisp": [
         {
           "FechaHab": "26/07/2023",
           "CantHab": 6
@@ -789,6 +789,6 @@
         }
       ]
     },
-    "Uid": "8be8396d-b7e8-464c-aa03-d1e8dabf8a62"
+    "Uid": "84b5b21b-f90e-4cde-b357-c09db55c85f0"
   }
 ]

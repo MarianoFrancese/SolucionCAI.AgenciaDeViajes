@@ -18,10 +18,10 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
         public DisponibilidadHabEnt Disponibilidad { get; set; }
         public Guid Uid { get; set; }
 
-        public HotelEnt ObtenerHotelPorId(Guid uid)
+        public HotelEnt ObtenerHotelPorId(Guid uid, DateTime fechaEntrada, DateTime fechaSalida)
         {
             HotelEnt hotel = new HotelEnt();
-            hotel = ModuloProductos.ObtenerHotelPorID(uid);
+            hotel = ModuloProductos.ObtenerHotelPorID(uid, fechaEntrada, fechaSalida);
             return hotel;
         }
 

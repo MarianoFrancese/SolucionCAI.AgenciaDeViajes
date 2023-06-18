@@ -253,18 +253,14 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
         {
             if (cantHuespedes >= adultos + menores + infantes)
             {
-                if (menores > 0 && adultos > 0 || infantes > 0 && adultos > 0)
-                {
-                    return true;
-                }
-                else if (adultos > 0)
+                if (adultos > 0)
                 {
                     return true;
                 }
                 else
                 {
                     return false;
-                }    
+                }
 
             }
             else
