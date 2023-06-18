@@ -3,6 +3,56 @@
     "Estado": "PreReserva",
     "EstadoPago": "Pendiente",
     "Presupuesto": {
+      "NroSeguimiento": 1003,
+      "Productos": [
+        {
+          "ProductoH": null,
+          "ProductoV": {
+            "Codigo": "AA005",
+            "Origen": "BUE",
+            "Destino": "SCL",
+            "FechaSalida": "24/07/2023",
+            "FechaArribo": "24/07/2023",
+            "TiempoVuelo": "2:00:00",
+            "Aerolinea": "Aerolineas Argentinas",
+            "Tarifas": {
+              "Clase": "Economy",
+              "TipoPasajero": "Adulto",
+              "Precio": 90000.00,
+              "Disponibilidad": 6
+            },
+            "Cantidad": 1,
+            "PrecioUn": 0.0,
+            "Pasajeros": null,
+            "TarifaV": null,
+            "DisponibilidadH": null,
+            "SubTotal": 0.0,
+            "IVA": 0.00,
+            "TotalProd": 0.00,
+            "Uid": "00000000-0000-0000-0000-000000000000"
+          }
+        }
+      ],
+      "Descripcion": null,
+      "Total": 90992.00
+    },
+    "Cliente": {
+      "PersonaFisica": {
+        "Nombre": "Maria Perez",
+        "DNI": 40283812,
+        "CUIL": 23402838124
+      },
+      "PersonaJuridica": null,
+      "CondFiscal": "Consumidor Final",
+      "Telefono": 1123892233,
+      "Email": "mperez@gmail.com",
+      "MedioPago": "TC"
+    }
+  },
+  {
+    "Estado": "PreReserva",
+    "EstadoPago": "Pendiente",
+    "Presupuesto": {
       "NroSeguimiento": 1002,
       "Productos": [
         {

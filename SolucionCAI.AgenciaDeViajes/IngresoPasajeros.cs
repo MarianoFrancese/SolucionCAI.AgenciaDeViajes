@@ -15,10 +15,10 @@ namespace SolucionCAI.AgenciaDeViajes
     public partial class IngresoPasajeros : Form
     {
         private ItinerarioEnt itinerario;
-        public IngresoPasajeros(ItinerarioEnt itinerario)
+        public IngresoPasajeros(ItinerarioEnt selectedItinerario)
         {
             InitializeComponent();
-            this.itinerario = itinerario;
+            this.itinerario = selectedItinerario;
         }
 
         class TarifaComboItem

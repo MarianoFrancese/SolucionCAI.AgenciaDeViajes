@@ -248,13 +248,35 @@ namespace SolucionCAI.AgenciaDeViajes
            // MessageBox.Show("Se reserva el presupuesto y se piden más datos relativos al cliente");
         }
 
-        private ItinerarioEnt itinerario;
+        //public ItinerarioEnt SelectedItinerario { get; set; }
         private void button5_Click(object sender, EventArgs e) //muestra form pasajeros
         {
-            Form pasajerosform = new IngresoPasajeros(itinerario);
-            pasajerosform.Show();
-            
-            
+            // Check if any row is currently selected in the datagrid
+            if (dataGridView2.SelectedRows.Count > 0)
+            {
+                // Get the index of the selected row
+                int rowIndex = dataGridView2.SelectedRows[0].Index;
+
+                // Retrieve the corresponding Itinerario object from the list based on the row index
+                ItinerarioEnt selectedItinerario = itinerariosFiltrados[rowIndex];
+                if (selectedItinerario.Presupuesto.Productos[0].ProductoV != null)
+                {
+                    Form pasajerosform = new IngresoPasajeros(selectedItinerario);
+                    pasajerosform.Show();
+                }
+                else
+                {
+                    //acá en realidad hay que reservar de una.
+                    MessageBox.Show("El itinerario no tiene vuelos.");
+                }
+                
+            }
+            else
+            {
+                // No row is currently selected, display an error message or take appropriate action
+                MessageBox.Show("Por favor seleccione un itinerario.");
+            }
+
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -280,11 +302,7 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void button8_Click(object sender, EventArgs e)
         {
-            if (selectedItinerario != null)
-            {
-                Form IngresoPasajeros = new IngresoPasajeros(selectedItinerario);
-                IngresoPasajeros.ShowDialog();
-            }
+            
                         
         }
 
@@ -337,7 +355,7 @@ namespace SolucionCAI.AgenciaDeViajes
             groupBox3.Visible = false;
         }
 
-        private ItinerarioEnt selectedItinerario;
+        
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
