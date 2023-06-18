@@ -18,7 +18,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
     internal class Validaciones
     {
-        public bool ValidaUsuario(string usuario, string contraseña)
+       /* public bool ValidaUsuario(string usuario, string contraseña)
         {
             if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(contraseña))
             {
@@ -30,9 +30,9 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             }
         }
 
-        //Este devolvería mensaje de error, es igual a la de arriba
+        //Este devolvería mensaje de error, es igual a la de arriba */
 
-        public bool ValidaUsuario2(string usuario, string contraseña)
+      /*  public bool ValidaUsuario2(string usuario, string contraseña)
         {
             bool flag = false;
 
@@ -47,7 +47,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             }
 
             return flag;
-        }
+        } */
 
         //Usuarios
         public bool ValidarUsuarios(string usuario, string contraseña)
