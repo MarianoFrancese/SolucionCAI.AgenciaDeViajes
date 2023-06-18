@@ -281,8 +281,47 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void button6_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Confirma reserva");
+            bool contieneFilasVacias = false;
+
+            for (int rowIndex = 0; rowIndex < dataGridView3.Rows.Count; rowIndex++)
+            {
+                DataGridViewRow fila = dataGridView3.Rows[rowIndex];
+                bool filaNoVacia = false;
+
+                for (int i = 0; i < dataGridView3.Columns.Count; i++)
+                {
+                    if (fila.Cells[i].Value != null && !string.IsNullOrEmpty(fila.Cells[i].Value.ToString()))
+                    {
+                        filaNoVacia = true;
+                        break;
+                    }
+                }
+
+                if (filaNoVacia)
+                {
+                    contieneFilasVacias = false;
+                    break;
+                }
+                else
+                {
+                    contieneFilasVacias = true;
+                }
+            }
+
+
+            if (contieneFilasVacias)
+            {
+                //Console.WriteLine("El DataGridView contiene filas vacías");
+                MessageBox.Show("No existe Reserva para confirmar");
+            }
+            else
+            {
+                //Console.WriteLine("El DataGridView no contiene filas vacías");
+                MessageBox.Show("La reserva ha sido confirmada con éxito");
+            }
         }
+
+        
 
         
         private void button3_Click(object sender, EventArgs e)

@@ -12,6 +12,7 @@ using SolucionCAI.AgenciaDeViajes.Entidades;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using static System.Windows.Forms.DataFormats;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Windows.Forms;
 
 namespace SolucionCAI.AgenciaDeViajes.Archivos
 {
@@ -78,13 +79,8 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             return false; // Usuario o contraseña incorrectos
         }
 
-
-
-
-
-
-
-
+      
+       
 
 
 
