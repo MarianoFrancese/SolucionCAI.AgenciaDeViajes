@@ -52,7 +52,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
         //Usuarios
         public bool ValidarUsuarios(string usuario, string contraseña)
         {
-            string contenidoJSON = File.ReadAllText("C:\\Users\\anto_\\source\\repos\\SolucionCAI.AgenciaDeViajes2\\SolucionCAI.AgenciaDeViajes\\bin\\Usuarios.json");
+            string contenidoJSON = File.ReadAllText("Usuarios.json");
 
             try
             {

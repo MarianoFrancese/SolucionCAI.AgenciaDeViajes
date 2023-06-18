@@ -1,10 +1,12 @@
-[
-  {
-    "usuario": "admin",
-    "contrasena": "Cai1234"
-  },
-  {
-    "usuario": "apanitsch",
-    "contrasena": "Pass1234"
-  }
-]
+{
+  "usuarios": [
+    {
+      "usuario": "admin",
+      "contraseña": "Pass1234"
+    },
+    {
+      "usuario": "apanitsch",
+      "contraseña": "Pass1234"
+    }
+  ]
+}
