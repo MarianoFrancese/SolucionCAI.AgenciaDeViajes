@@ -53,7 +53,7 @@
     "Estado": "PreReserva",
     "EstadoPago": "Pendiente",
     "Presupuesto": {
-      "NroSeguimiento": 1002,
+      "NroSeguimiento": 1001,
       "Productos": [
         {
           "ProductoH": {
@@ -164,6 +164,67 @@
       "Email": "jrodriguez@gmail.com",
       "MedioPago": "TD"
     }
+  },
+
+  {
+    "Estado": "Reserva",
+    "EstadoPago": "Confirmado",
+    "Presupuesto": {
+      "NroSeguimiento": 1010,
+      "Productos": [
+        {
+          "ProductoH": {
+            "Codigo": "HT002",
+            "Nombre": "Four Seasons",
+            "CodigoCiudad": null,
+            "Calificacion": 5,
+            "Direccion": {
+              "Calle": "C. de Sevilla",
+              "Numero": 30,
+              "CP": 28014,
+              "Latitud": 40.41707269127456,
+              "Longitud": -3.7004233112454163
+            },
+            "Disponibilidad": {
+              "Nombre": "Deluxe",
+              "TarifaHab": 75200.0,
+              "Capacidad": 6,
+              "Adultos": 6,
+              "Menores": 3,
+              "Infantes": 3,
+              "HabitacionFechaDisp": null
+            },
+            "Uid": "434ca706-3e5d-4e35-9cee-a8429286f990"
+          },
+          "ProductoV": null,
+          "Cantidad": 1,
+          "PrecioUn": 0.0,
+          "Pasajeros": null,
+          "TarifaV": null,
+          "DisponibilidadH": null,
+          "SubTotal": 0.0,
+          "IVA": 0.00,
+          "TotalProd": 0.00,
+          "Uid": "00000000-0000-0000-0000-000000000000"
+        }
+      ],
+      "Descripcion": null,
+      "Total": 90992.00
+    },
+    "Cliente": {
+      "PersonaFisica": {
+        "Nombre": "Juan Rodriguez",
+        "DNI": 38291029,
+        "CUIL": 22382910293
+      },
+      "PersonaJuridica": null,
+      "CondFiscal": "Consumidor Final",
+      "Telefono": 1154673289,
+      "Email": "jrodriguez@gmail.com",
+      "MedioPago": "TD"
+    }
   }
+
+
 
 ]
