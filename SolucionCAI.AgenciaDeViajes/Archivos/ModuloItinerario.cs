@@ -87,12 +87,12 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                         
                         ItinerarioEnt itinerario = new ItinerarioEnt
                         {
-                            PresupuestosList = JsonConvert.DeserializeObject<PresupuestoEnt>(itinerarioJson["Presupuesto"].ToString()),
+                            Presupuesto = JsonConvert.DeserializeObject<PresupuestoEnt>(itinerarioJson["Presupuesto"].ToString()),
                             Cliente = JsonConvert.DeserializeObject<ClienteEnt>(itinerarioJson["Cliente"].ToString()),                          
                             
                                                        
                         };
-                        Console.WriteLine(itinerario.PresupuestosList);
+                        Console.WriteLine(itinerario.Presupuesto);
                         Console.WriteLine(itinerario.Cliente);
                         
 
@@ -134,12 +134,12 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
                         ItinerarioEnt itinerario = new ItinerarioEnt
                         {
-                            PresupuestosList = presupuestos, //JsonConvert.DeserializeObject<PresupuestoEnt>(itinerarioJson["Presupuestos"].ToString()),
+                            Presupuesto = presupuestos, //JsonConvert.DeserializeObject<PresupuestoEnt>(itinerarioJson["Presupuestos"].ToString()),
                             Cliente = cliente,//JsonConvert.DeserializeObject<List<ClienteEnt>>(itinerarioJson["Cliente"].ToString()),                          
-                            EstadoPago = (string)itinerarioJson["Estado de Pago"],
+                            EstadoPago = (string)itinerarioJson["EstadoPago"],
 
                         };
-                        Console.WriteLine(itinerario.PresupuestosList);
+                        Console.WriteLine(itinerario.Presupuesto);
                         Console.WriteLine(itinerario.Cliente);
 
 

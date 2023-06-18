@@ -1,22 +1,48 @@
 [
   {
     "Estado": "PreReserva",
-    "Estado de Pago": "Pendiente",
+    "EstadoPago": "Pendiente",
     "Presupuesto": {
-      "NroSeguimiento": 10020,
+      "NroSeguimiento": 1002,
       "Productos": [
         {
-          "ProductoH": null,
-          "ProductoV": "Codigo: AA006 - Vuelo de MIA a BUE con American Airlines",
-          "PrecioUn": 328000.0,
+          "ProductoH": {
+            "Codigo": "HT002",
+            "Nombre": "Four Seasons",
+            "CodigoCiudad": null,
+            "Calificacion": 5,
+            "Direccion": {
+              "Calle": "C. de Sevilla",
+              "Numero": 30,
+              "CP": 28014,
+              "Latitud": 40.41707269127456,
+              "Longitud": -3.7004233112454163
+            },
+            "Disponibilidad": {
+              "Nombre": "Deluxe",
+              "TarifaHab": 75200.0,
+              "Capacidad": 6,
+              "Adultos": 6,
+              "Menores": 3,
+              "Infantes": 3,
+              "HabitacionFechaDisp": null
+            },
+            "Uid": "434ca706-3e5d-4e35-9cee-a8429286f990"
+          },
+          "ProductoV": null,
           "Cantidad": 1,
-          "SubTotal": 328000.0,
-          "IVA": 68880.00,
-          "TotalProd": 396880.000
+          "PrecioUn": 0.0,
+          "Pasajeros": null,
+          "TarifaV": null,
+          "DisponibilidadH": null,
+          "SubTotal": 0.0,
+          "IVA": 0.00,
+          "TotalProd": 0.00,
+          "Uid": "00000000-0000-0000-0000-000000000000"
         }
       ],
       "Descripcion": null,
-      "Total": 396880.000
+      "Total": 90992.00
     },
     "Cliente": {
       "PersonaFisica": {
@@ -33,22 +59,48 @@
   },
   {
     "Estado": "Reserva",
-    "Estado de Pago": "Pendiente",
-    "PresupuestosList": {
-      "NroSeguimiento": 10021,
+    "EstadoPago": "Pendiente",
+    "Presupuesto": {
+      "NroSeguimiento": 1002,
       "Productos": [
         {
-          "ProductoH": null,
-          "ProductoV": "Codigo: AA007 - Vuelo de MAD a BUE con KLM",
-          "PrecioUn": 292000.00,
+          "ProductoH": {
+            "Codigo": "HT002",
+            "Nombre": "Four Seasons",
+            "CodigoCiudad": null,
+            "Calificacion": 5,
+            "Direccion": {
+              "Calle": "C. de Sevilla",
+              "Numero": 30,
+              "CP": 28014,
+              "Latitud": 40.41707269127456,
+              "Longitud": -3.7004233112454163
+            },
+            "Disponibilidad": {
+              "Nombre": "Deluxe",
+              "TarifaHab": 75200.0,
+              "Capacidad": 6,
+              "Adultos": 6,
+              "Menores": 3,
+              "Infantes": 3,
+              "HabitacionFechaDisp": null
+            },
+            "Uid": "434ca706-3e5d-4e35-9cee-a8429286f990"
+          },
+          "ProductoV": null,
           "Cantidad": 1,
-          "SubTotal": 292000.0,
-          "IVA": 61320.00,
-          "TotalProd": 353320.000
+          "PrecioUn": 0.0,
+          "Pasajeros": null,
+          "TarifaV": null,
+          "DisponibilidadH": null,
+          "SubTotal": 0.0,
+          "IVA": 0.00,
+          "TotalProd": 0.00,
+          "Uid": "00000000-0000-0000-0000-000000000000"
         }
       ],
       "Descripcion": null,
-      "Total": 353320.000
+      "Total": 90992.00
     },
     "Cliente": {
       "PersonaFisica": {

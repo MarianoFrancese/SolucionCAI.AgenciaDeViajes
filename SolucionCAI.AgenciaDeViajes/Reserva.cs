@@ -26,7 +26,7 @@ namespace SolucionCAI.AgenciaDeViajes
         string nroseguimiento;
         private List<PresupuestoEnt> presupuestosFiltrados;
         string descripcion;
-
+        string cliente;
 
         private void buscarPres_Click(object sender, EventArgs e) //boton buscar presupuestos
         {
@@ -43,15 +43,13 @@ namespace SolucionCAI.AgenciaDeViajes
                 MessageBox.Show("No se encontraron Presupuestos para ese Nro de Seguimiento");
             }
         }
-
-      
+             
 
         private void RellenarTablaPresup(List<PresupuestoEnt> presupuestosFiltrados)
         {
             dataGridView1.Rows.Clear();
 
            
-
             foreach (var presupuesto in presupuestosFiltrados)
             {
                 
@@ -109,34 +107,50 @@ namespace SolucionCAI.AgenciaDeViajes
             
             foreach (var itinerario in itinerariosFiltrados)
             {
-                if (itinerario.Cliente.PersonaFisica != null)
+                VueloEnt vuelo = itinerariosFiltrados[0].Presupuesto.Productos[0].ProductoV;
+                HotelEnt hotel = itinerariosFiltrados[0].Presupuesto.Productos[0].ProductoH;
+
+                if (vuelo != null && hotel != null)
                 {
-                    dataGridView2.Rows.Add(
-                    itinerario.PresupuestosList.NroSeguimiento,
-                    itinerario.PresupuestosList.Productos, //ver qué traer de productos, quisiera traer el string que se guarda en el json
-                    itinerario.Cliente.PersonaFisica[0].Nombre,
-                    "",
-                    itinerario.Cliente.PersonaFisica[0].DNI,
-                    "",
-                    itinerario.Cliente.MedioPago,
-                    itinerario.PresupuestosList.Total, //ver como acceder al total que esta siendo calculado
-                    "Persona Fisica"
-                    );
+                    descripcion = $"Codigo Vuelo: {vuelo.Codigo} - Origen: {vuelo.Origen} - Destino: {vuelo.Destino} - Aerolinea: {vuelo.Aerolinea} - Clase: {vuelo.Tarifas[0].Clase} - Tipo Pasajero: {vuelo.Tarifas[0].TipoPasajero} / Codigo Hotel: {hotel.Codigo} - Nombre Hotel: {hotel.Nombre} - Ciudad: {hotel.CodigoCiudad} - Nombre Habitacion: {hotel.Disponibilidad.Nombre}";
+
                 }
-                else if (itinerario.Cliente.PersonaJuridica != null)
+                else if (vuelo != null)
                 {
-                    dataGridView2.Rows.Add(
-                    itinerario.PresupuestosList.NroSeguimiento,
-                    itinerario.PresupuestosList.Productos,
-                    "",
-                    itinerario.Cliente.PersonaJuridica[0].RazonSocial,
-                    "",
-                    itinerario.Cliente.PersonaJuridica[0].CUIT,
-                    itinerario.Cliente.MedioPago,
-                    itinerario.PresupuestosList.Total,
-                    "Persona Juridica"
-                    );
+                    descripcion = $"Codigo Vuelo: {vuelo.Codigo} - Origen: {vuelo.Origen} - Destino: {vuelo.Destino} - Aerolinea: {vuelo.Aerolinea} - Clase: {vuelo.Tarifas[0].Clase} - Tipo Pasajero: {vuelo.Tarifas[0].TipoPasajero}";
                 }
+                else if (hotel != null)
+                {
+                    descripcion = $"Codigo Hotel: {hotel.Codigo} - Nombre Hotel: {hotel.Nombre} - Ciudad: {hotel.CodigoCiudad} - Nombre Habitacion: {hotel.Disponibilidad.Nombre}";
+                }
+
+                PersonaFisicaEnt pFisica = itinerariosFiltrados[0].Cliente.PersonaFisica;
+                PersonaJuridicaEnt pJuridica = itinerariosFiltrados[0].Cliente.PersonaJuridica;
+
+                if (pFisica != null && pJuridica != null)
+                {
+                    cliente = $"Nombre: {pFisica.Nombre} - DNI: {pFisica.DNI} / Razon Social: {pJuridica.RazonSocial} - CUIT: {pJuridica.CUIT}";
+
+                }
+                else if (pFisica != null)
+                {
+                    cliente = $"Persona Fisica: Nombre: {pFisica.Nombre} - DNI: {pFisica.DNI} ";
+                }
+                else if (pJuridica != null)
+                {
+                    cliente = $"Persona Juridica: Razon Social: {pJuridica.RazonSocial} - CUIT: {pJuridica.CUIT} ";
+                }
+
+               
+                    dataGridView2.Rows.Add(
+                    itinerario.Presupuesto.NroSeguimiento,
+                    descripcion, //ver qué traer de productos, quisiera traer el string que se guarda en el json
+                    cliente,
+                    itinerario.Cliente.MedioPago,
+                    itinerario.Presupuesto.Total 
+                    
+                    );
+                
                 
                                     
             }
@@ -172,37 +186,50 @@ namespace SolucionCAI.AgenciaDeViajes
 
             foreach (var itinerario in itinerariosFiltrados)
             {
-                if (itinerario.Cliente.PersonaFisica != null)
+                VueloEnt vuelo = itinerariosFiltrados[0].Presupuesto.Productos[0].ProductoV;
+                HotelEnt hotel = itinerariosFiltrados[0].Presupuesto.Productos[0].ProductoH;
+
+                if (vuelo != null && hotel != null)
                 {
+                    descripcion = $"Codigo Vuelo: {vuelo.Codigo} - Origen: {vuelo.Origen} - Destino: {vuelo.Destino} - Aerolinea: {vuelo.Aerolinea} - Clase: {vuelo.Tarifas[0].Clase} - Tipo Pasajero: {vuelo.Tarifas[0].TipoPasajero} / Codigo Hotel: {hotel.Codigo} - Nombre Hotel: {hotel.Nombre} - Ciudad: {hotel.CodigoCiudad} - Nombre Habitacion: {hotel.Disponibilidad.Nombre}";
+
+                }
+                else if (vuelo != null)
+                {
+                    descripcion = $"Codigo Vuelo: {vuelo.Codigo} - Origen: {vuelo.Origen} - Destino: {vuelo.Destino} - Aerolinea: {vuelo.Aerolinea} - Clase: {vuelo.Tarifas[0].Clase} - Tipo Pasajero: {vuelo.Tarifas[0].TipoPasajero}";
+                }
+                else if (hotel != null)
+                {
+                    descripcion = $"Codigo Hotel: {hotel.Codigo} - Nombre Hotel: {hotel.Nombre} - Ciudad: {hotel.CodigoCiudad} - Nombre Habitacion: {hotel.Disponibilidad.Nombre}";
+                }
+
+                PersonaFisicaEnt pFisica = itinerariosFiltrados[0].Cliente.PersonaFisica;
+                PersonaJuridicaEnt pJuridica = itinerariosFiltrados[0].Cliente.PersonaJuridica;
+
+                if (pFisica != null && pJuridica != null)
+                {
+                    cliente = $"Nombre: {pFisica.Nombre} - DNI: {pFisica.DNI} / Razon Social: {pJuridica.RazonSocial} - CUIT: {pJuridica.CUIT}";
+
+                }
+                else if (pFisica != null)
+                {
+                    cliente = $"Persona Fisica: Nombre: {pFisica.Nombre} - DNI: {pFisica.DNI} ";
+                }
+                else if (pJuridica != null)
+                {
+                    cliente = $"Persona Juridica: Razon Social: {pJuridica.RazonSocial} - CUIT: {pJuridica.CUIT} ";
+                }
+
+               
                     dataGridView3.Rows.Add(
-                    itinerario.PresupuestosList.NroSeguimiento,
-                    itinerario.PresupuestosList.Productos,
-                    "Persona Fisica",
-                    itinerario.Cliente.PersonaFisica[0].Nombre,
-                    "",
-                    
+                    itinerario.Presupuesto.NroSeguimiento,
+                    descripcion,
+                    cliente,
                     itinerario.Cliente.MedioPago,
-                    itinerario.PresupuestosList.Total, 
+                    itinerario.Presupuesto.Total, 
                     itinerario.EstadoPago
                     );
-                }
-                else if (itinerario.Cliente.PersonaJuridica != null)
-                {
-                    dataGridView2.Rows.Add(
-                    itinerario.PresupuestosList.NroSeguimiento,
-                    itinerario.PresupuestosList.Productos,
-                    "Persona Juridica",
-                    "",
-                    itinerario.Cliente.PersonaJuridica[0].RazonSocial,
-                    
-                    itinerario.Cliente.MedioPago,
-                    itinerario.PresupuestosList.Total,
-                    itinerario.EstadoPago
-                    
-                    );
-                }
-
-
+               
             }
         }
 
@@ -227,9 +254,7 @@ namespace SolucionCAI.AgenciaDeViajes
             Form pasajerosform = new IngresoPasajeros(itinerario);
             pasajerosform.Show();
             
-            //groupBox3.Visible = true;
-
-            //MessageBox.Show("Se reserva la prereserva (datos ya cargados)");
+            
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -315,20 +340,9 @@ namespace SolucionCAI.AgenciaDeViajes
         private ItinerarioEnt selectedItinerario;
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Get the selected Itinerario object from the selected row
-            selectedItinerario = dataGridView2.Rows[e.RowIndex].DataBoundItem as ItinerarioEnt;
+            
         }
 
-        
-
-
-
-
-        //private void button3_Click_1(object sender, EventArgs e)
-        //{
-        //    Form loginform = new Login();
-        //    loginform.Show();
-        //    this.Hide();
-        //}
+                
     }
 }

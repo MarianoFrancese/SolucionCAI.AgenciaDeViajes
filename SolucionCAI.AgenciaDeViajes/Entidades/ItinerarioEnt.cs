@@ -8,7 +8,7 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
 {
     public class ItinerarioEnt 
     {
-        public PresupuestoEnt PresupuestosList { get; set; } 
+        public PresupuestoEnt Presupuesto { get; set; } 
                
         public string Estado { get; set; }
         public ClienteEnt Cliente { get; set; } 
@@ -17,7 +17,7 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
 
         internal ProductoLineaEnt VueloDeTarifa(TarifaEnt tarifa)
         {
-            foreach (var productoLinea in PresupuestosList.Productos)
+            foreach (var productoLinea in Presupuesto.Productos)
             {
                 if (productoLinea.TarifaV == tarifa)
                 {
@@ -31,7 +31,7 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
 
         internal string PuedeReservar()
         {
-            foreach (var productoLinea in PresupuestosList.Productos)
+            foreach (var productoLinea in Presupuesto.Productos)
             {
                 if (productoLinea.TarifaV.Pasajeros.Count != productoLinea.Cantidad)
                 {
