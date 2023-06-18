@@ -300,30 +300,39 @@ namespace SolucionCAI.AgenciaDeViajes
                 if (filaNoVacia)
                 {
                     contieneFilasVacias = false;
+                    if (dataGridView3.Rows.Count > 0 && dataGridView3.Rows[0].Cells[5].Value != null && dataGridView3.Rows[0].Cells[5].Value.ToString() == "Pendiente")
+                    {
+                        MessageBox.Show("No se puede confirmar una Reserva con Pago Pendiente");
+                    }
+
                     break;
                 }
+
                 else
                 {
                     contieneFilasVacias = true;
                 }
+
+                if (contieneFilasVacias)
+                {
+                    //Console.WriteLine("El DataGridView contiene filas vacías");
+                    MessageBox.Show("No existe Reserva para confirmar");
+                    break;
+                }
+                else
+                {
+                    //Console.WriteLine("El DataGridView no contiene filas vacías");
+                    MessageBox.Show("La reserva ha sido confirmada con éxito");
+                }
             }
 
 
-            if (contieneFilasVacias)
-            {
-                //Console.WriteLine("El DataGridView contiene filas vacías");
-                MessageBox.Show("No existe Reserva para confirmar");
-            }
-            else
-            {
-                //Console.WriteLine("El DataGridView no contiene filas vacías");
-                MessageBox.Show("La reserva ha sido confirmada con éxito");
-            }
+            
         }
 
-        
 
-        
+
+
         private void button3_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Busqueda con filtros aplicados");
