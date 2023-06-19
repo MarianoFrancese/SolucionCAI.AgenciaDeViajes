@@ -10,8 +10,8 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
     {
         public string Nombre { get; set; }
         
-        public string DNI { get; set; }
-        public string CUIL { get; set; }
+        public long DNI { get; set; }
+        public long CUIL { get; set; }
         
         //public CuilEnt CUIL { get; set; }
     }

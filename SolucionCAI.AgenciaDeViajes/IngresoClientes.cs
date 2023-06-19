@@ -11,6 +11,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using SolucionCAI.AgenciaDeViajes.Archivos;
 using SolucionCAI.AgenciaDeViajes.Entidades;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Net;
 
 namespace SolucionCAI.AgenciaDeViajes
 {
@@ -75,6 +78,7 @@ namespace SolucionCAI.AgenciaDeViajes
 
         }
 
+
         private void buttonCliente_Click(object sender, EventArgs e)
         {
             if (tipoCliente.SelectedItem == null)
@@ -84,12 +88,12 @@ namespace SolucionCAI.AgenciaDeViajes
             }
             else if (tipoCliente.SelectedItem.ToString() == "Persona Fisica")
             {
-                if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text) || string.IsNullOrWhiteSpace(textBox4.Text) || comboBox2.SelectedItem == null || string.IsNullOrWhiteSpace(textBox5.Text) || string.IsNullOrWhiteSpace(textBox6.Text))
+                if (comboBox1.SelectedItem == null || string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text) || string.IsNullOrWhiteSpace(textBox4.Text) || comboBox2.SelectedItem == null || string.IsNullOrWhiteSpace(textBox5.Text) || string.IsNullOrWhiteSpace(textBox6.Text))
                 {
                     MessageBox.Show("Debe completar todos los campos");
                     return;
                 }
-                else if (!string.IsNullOrWhiteSpace(textBox1.Text) && !string.IsNullOrWhiteSpace(textBox2.Text) && !string.IsNullOrWhiteSpace(textBox3.Text) && !string.IsNullOrWhiteSpace(textBox4.Text) && comboBox2.SelectedItem != null && !string.IsNullOrWhiteSpace(textBox5.Text) && !string.IsNullOrWhiteSpace(textBox6.Text))
+                else if (comboBox2.SelectedItem != null && !string.IsNullOrWhiteSpace(textBox1.Text) && !string.IsNullOrWhiteSpace(textBox2.Text) && !string.IsNullOrWhiteSpace(textBox3.Text) && !string.IsNullOrWhiteSpace(textBox4.Text) && comboBox2.SelectedItem != null && !string.IsNullOrWhiteSpace(textBox5.Text) && !string.IsNullOrWhiteSpace(textBox6.Text))
                 {
                     string nombre = textBox1.Text;
                     string apellido = textBox2.Text;
@@ -98,8 +102,9 @@ namespace SolucionCAI.AgenciaDeViajes
                     string condFiscal = comboBox2.Text;
                     string telefono = textBox5.Text;
                     string email = textBox6.Text;
+                    string medioPago = comboBox1.Text;
 
-                    ClienteEnt cliente = ModuloItinerario.CrearCliente(nombre, apellido, dni, cuil, condFiscal, telefono, email);
+                    ClienteEnt cliente = ModuloItinerario.CrearCliente(nombre, apellido, dni, cuil, condFiscal, telefono, email, medioPago);
                     PresupuestoEnt presupuesto = ModuloPresupuesto.TraerPresupuesto(Convert.ToInt32(numeroSeguimiento));
                     ItinerarioEnt prereserva = ModuloItinerario.CrearPrereserva(presupuesto, cliente);
                     ModuloItinerario.GrabarPrereserva(prereserva);
@@ -107,12 +112,12 @@ namespace SolucionCAI.AgenciaDeViajes
             }
             else if (tipoCliente.SelectedItem.ToString() == "Persona Juridica")
             {
-                if (string.IsNullOrWhiteSpace(textBox12.Text) || string.IsNullOrWhiteSpace(textBox11.Text) || string.IsNullOrWhiteSpace(textBox9.Text) || comboBox3.SelectedItem == null || string.IsNullOrWhiteSpace(textBox8.Text) || string.IsNullOrWhiteSpace(textBox7.Text))
+                if (comboBox4.SelectedItem ==null || string.IsNullOrWhiteSpace(textBox12.Text) || string.IsNullOrWhiteSpace(textBox11.Text) || string.IsNullOrWhiteSpace(textBox9.Text) || comboBox3.SelectedItem == null || string.IsNullOrWhiteSpace(textBox8.Text) || string.IsNullOrWhiteSpace(textBox7.Text))
                 {
                     MessageBox.Show("Debe completar todos los campos");
                     return;
                 }
-                else if (!string.IsNullOrWhiteSpace(textBox12.Text) && !string.IsNullOrWhiteSpace(textBox11.Text) && !string.IsNullOrWhiteSpace(textBox9.Text) && comboBox3.SelectedItem != null && !string.IsNullOrWhiteSpace(textBox8.Text) && !string.IsNullOrWhiteSpace(textBox7.Text))
+                else if (comboBox4.SelectedItem != null && !string.IsNullOrWhiteSpace(textBox12.Text) && !string.IsNullOrWhiteSpace(textBox11.Text) && !string.IsNullOrWhiteSpace(textBox9.Text) && comboBox3.SelectedItem != null && !string.IsNullOrWhiteSpace(textBox8.Text) && !string.IsNullOrWhiteSpace(textBox7.Text))
                 {
                     string razonSocial = textBox12.Text;
                     string cuit = textBox11.Text;
@@ -120,8 +125,13 @@ namespace SolucionCAI.AgenciaDeViajes
                     string condFiscalE = comboBox3.Text;
                     string telefonoE = textBox8.Text;
                     string emailE = textBox7.Text;
+                    string medioPago = comboBox4.Text;
 
-                    MessageBox.Show("Bien!");
+                    ClienteEnt cliente = ModuloItinerario.CrearClienteEmpresa(razonSocial, domicilio, cuit, condFiscalE, telefonoE, emailE, medioPago);
+                    PresupuestoEnt presupuesto = ModuloPresupuesto.TraerPresupuesto(Convert.ToInt32(numeroSeguimiento));
+                    ItinerarioEnt prereserva = ModuloItinerario.CrearPrereserva(presupuesto, cliente);
+                    ModuloItinerario.GrabarPrereserva(prereserva);
+
                 }
             }
 

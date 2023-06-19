@@ -12,7 +12,7 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
         public PersonaJuridicaEnt PersonaJuridica { get; set; }
         
         public string CondFiscal { get; set; }
-        public string Telefono { get; set; }
+        public int Telefono { get; set; }
         public string Email { get; set; }
         public string MedioPago { get; set; }
     }

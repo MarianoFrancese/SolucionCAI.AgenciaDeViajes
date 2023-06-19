@@ -109,6 +109,16 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 if (Convert.ToInt32(presupuesto["NroSeguimiento"]) == nroSeguimiento)
                 {
                     PresupuestoEnt presupuestoEncontrado = JsonConvert.DeserializeObject<PresupuestoEnt>(presupuesto.ToString());
+                    //foreach (var fecha in presupuesto["Presupuesto"]["Productos"][0]["ProductoH"]["Disponibilidad"]["HabitacionFechaDisp"])
+                    //{
+                    //    DateTime fechaJsonParsed = DateTime.ParseExact(fecha["FechaEntHab"].ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                    //    Guid uidJson = Guid.Parse(fecha["Uid"].ToString());
+                    //    if (uidJson == presupuestoEncontrado.Productos[0].ProductoH.Disponibilidad.HabitacionFechaDisp[0].Uid)
+                    //    {
+                    //        presupuestoEncontrado.Productos[0].ProductoH.Disponibilidad.HabitacionFechaDisp[0].FechaEntHab = fechaJsonParsed;
+                    //    }
+                    //}
+                    
                     return presupuestoEncontrado;
                 }
             }

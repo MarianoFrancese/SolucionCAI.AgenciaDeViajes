@@ -60,12 +60,18 @@
             label15 = new Label();
             button1 = new Button();
             buttonCliente = new Button();
+            comboBox1 = new ComboBox();
+            label13 = new Label();
+            comboBox4 = new ComboBox();
+            label16 = new Label();
             personaFisica.SuspendLayout();
             personaJuridica.SuspendLayout();
             SuspendLayout();
             // 
             // personaFisica
             // 
+            personaFisica.Controls.Add(comboBox1);
+            personaFisica.Controls.Add(label13);
             personaFisica.Controls.Add(comboBox2);
             personaFisica.Controls.Add(textBox6);
             personaFisica.Controls.Add(textBox5);
@@ -80,11 +86,11 @@
             personaFisica.Controls.Add(label4);
             personaFisica.Controls.Add(label3);
             personaFisica.Controls.Add(label2);
-            personaFisica.Location = new Point(243, 143);
+            personaFisica.Location = new Point(243, 117);
             personaFisica.Margin = new Padding(3, 4, 3, 4);
             personaFisica.Name = "personaFisica";
             personaFisica.Padding = new Padding(3, 4, 3, 4);
-            personaFisica.Size = new Size(319, 349);
+            personaFisica.Size = new Size(319, 375);
             personaFisica.TabIndex = 0;
             personaFisica.TabStop = false;
             personaFisica.Text = "Persona Fisica";
@@ -234,6 +240,8 @@
             // 
             // personaJuridica
             // 
+            personaJuridica.Controls.Add(comboBox4);
+            personaJuridica.Controls.Add(label16);
             personaJuridica.Controls.Add(comboBox3);
             personaJuridica.Controls.Add(textBox7);
             personaJuridica.Controls.Add(textBox8);
@@ -246,11 +254,11 @@
             personaJuridica.Controls.Add(label12);
             personaJuridica.Controls.Add(label14);
             personaJuridica.Controls.Add(label15);
-            personaJuridica.Location = new Point(237, 143);
+            personaJuridica.Location = new Point(237, 117);
             personaJuridica.Margin = new Padding(3, 4, 3, 4);
             personaJuridica.Name = "personaJuridica";
             personaJuridica.Padding = new Padding(3, 4, 3, 4);
-            personaJuridica.Size = new Size(319, 349);
+            personaJuridica.Size = new Size(319, 375);
             personaJuridica.TabIndex = 14;
             personaJuridica.TabStop = false;
             personaJuridica.Text = "Persona Juridica";
@@ -390,6 +398,44 @@
             buttonCliente.UseVisualStyleBackColor = false;
             buttonCliente.Click += buttonCliente_Click;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "TC", "TD", "EF" });
+            comboBox1.Location = new Point(123, 336);
+            comboBox1.Margin = new Padding(3, 4, 3, 4);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(114, 28);
+            comboBox1.TabIndex = 15;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(7, 336);
+            label13.Name = "label13";
+            label13.Size = new Size(112, 20);
+            label13.TabIndex = 14;
+            label13.Text = "Medio de pago";
+            // 
+            // comboBox4
+            // 
+            comboBox4.FormattingEnabled = true;
+            comboBox4.Items.AddRange(new object[] { "TC", "TD", "EF" });
+            comboBox4.Location = new Point(131, 328);
+            comboBox4.Margin = new Padding(3, 4, 3, 4);
+            comboBox4.Name = "comboBox4";
+            comboBox4.Size = new Size(114, 28);
+            comboBox4.TabIndex = 15;
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Location = new Point(15, 328);
+            label16.Name = "label16";
+            label16.Size = new Size(112, 20);
+            label16.TabIndex = 14;
+            label16.Text = "Medio de pago";
+            // 
             // IngresoClientes
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -447,5 +493,9 @@
         private Label label15;
         private Button button1;
         private Button buttonCliente;
+        private ComboBox comboBox1;
+        private Label label13;
+        private ComboBox comboBox4;
+        private Label label16;
     }
 }

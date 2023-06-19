@@ -323,6 +323,7 @@ namespace SolucionCAI.AgenciaDeViajes
             else
             {
                 MessageBox.Show("No se pudo crear el presupuesto");
+
             }
 
         }

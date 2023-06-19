@@ -7,6 +7,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 
 namespace SolucionCAI.AgenciaDeViajes.Archivos
 {
@@ -162,13 +163,13 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             }
         }
 
-        public static ClienteEnt CrearCliente(string nombre, string apellido, string dni, string cuil, string condFiscal, string telefono, string email)
+        public static ClienteEnt CrearCliente(string nombre, string apellido, string dni, string cuil, string condFiscal, string telefono, string email, string medioPago)
         {
             PersonaFisicaEnt persona = new PersonaFisicaEnt
             {
                 Nombre = nombre + " " + apellido,
-                DNI = dni,
-                CUIL = cuil,
+                DNI = long.Parse(dni),
+                CUIL = long.Parse(cuil),
             };
 
             ClienteEnt cliente = new ClienteEnt
@@ -176,9 +177,32 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 PersonaFisica = persona,
                 PersonaJuridica = null,
                 CondFiscal = condFiscal,
-                Telefono = telefono,
+                Telefono = Convert.ToInt32(telefono),
                 Email = email,
-                MedioPago = null
+                MedioPago = medioPago
+            };
+
+            return cliente;
+
+        }
+
+        public static ClienteEnt CrearClienteEmpresa (string razonSocial, string domicilio, string cuit, string condFiscal, string telefono, string email, string medioPago)
+        {
+            PersonaJuridicaEnt persona = new PersonaJuridicaEnt
+            {
+                RazonSocial = razonSocial,
+                Domicilio = domicilio,
+                CUIT = long.Parse(cuit),
+            };
+
+            ClienteEnt cliente = new ClienteEnt
+            {
+                PersonaFisica = null,
+                PersonaJuridica = persona,
+                CondFiscal = condFiscal,
+                Telefono = int.Parse(telefono),
+                Email = email,
+                MedioPago = medioPago
             };
 
             return cliente;
