@@ -122,12 +122,39 @@ namespace SolucionCAI.AgenciaDeViajes
             clase = comboBox3.Text;
 
 
-            if (numericUpDown1.Value <= 0)
+            
+
+         if (string.IsNullOrEmpty(comboBox1.Text))
+                {
+                MessageBox.Show("Debe completar el campo Origen");
+                }
+
+           
+            else if (string.IsNullOrEmpty(comboBox4.Text))
+            {
+                MessageBox.Show("Debe completar el campo Destino");
+
+            }
+            else if (dateTimePicker1.Value < DateTime.Now)
+            {
+                MessageBox.Show("La fecha no puede ser anterior a la fecha de hoy");
+
+            }
+
+            else if (numericUpDown1.Value <= 0)
             {
                 MessageBox.Show("La cantidad de pasajeros no puede ser cero (0)");
 
             }
+            else if (string.IsNullOrEmpty(comboBox2.Text))
+            {
+                MessageBox.Show("Debe seleccionar el tipo de Pasajero");
+            }
 
+            else if (string.IsNullOrEmpty(comboBox3.Text))
+            {
+                MessageBox.Show("Debe seleccionar una Clase");
+            }
             else
             {
                 vuelosFiltrados = ModuloProductos.ListaVuelos(origen, destino, fechaPartidaFormateada, cantPasajeros, tipoPasajero, clase);
@@ -323,7 +350,7 @@ namespace SolucionCAI.AgenciaDeViajes
             else
             {
                 MessageBox.Show("No se pudo crear el presupuesto");
-
+                groupBox3.Hide();
             }
 
         }
