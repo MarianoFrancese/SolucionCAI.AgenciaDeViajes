@@ -122,14 +122,14 @@ namespace SolucionCAI.AgenciaDeViajes
             clase = comboBox3.Text;
 
 
-            
 
-         if (string.IsNullOrEmpty(comboBox1.Text))
-                {
+
+            if (string.IsNullOrEmpty(comboBox1.Text))
+            {
                 MessageBox.Show("Debe completar el campo Origen");
-                }
+            }
 
-           
+
             else if (string.IsNullOrEmpty(comboBox4.Text))
             {
                 MessageBox.Show("Debe completar el campo Destino");
@@ -163,29 +163,29 @@ namespace SolucionCAI.AgenciaDeViajes
         }
 
 
-            private void RellenarTablaVuelos(List<VueloEnt> vuelosFiltrados, int cantPasajeros)
-                {
-                    dataGridView1.Rows.Clear();
+        private void RellenarTablaVuelos(List<VueloEnt> vuelosFiltrados, int cantPasajeros)
+        {
+            dataGridView1.Rows.Clear();
 
-                    foreach (var vuelo in vuelosFiltrados)
-                    {
-                        dataGridView1.Rows.Add(
-                            vuelo.Uid,
-                            vuelo.Codigo,
-                            vuelo.Origen,
-                            vuelo.Destino,
-                            vuelo.FechaSalida,
-                            vuelo.FechaArribo,
-                            vuelo.TiempoVuelo,
-                            vuelo.Aerolinea,
-                            cantPasajeros,
-                            vuelo.Tarifas[0].TipoPasajero,
-                            vuelo.Tarifas[0].Clase,
-                            vuelo.Tarifas[0].Precio,
-                            vuelo.Tarifas[0].Disponibilidad
-                            );
-                    }
-                }
+            foreach (var vuelo in vuelosFiltrados)
+            {
+                dataGridView1.Rows.Add(
+                    vuelo.Uid,
+                    vuelo.Codigo,
+                    vuelo.Origen,
+                    vuelo.Destino,
+                    vuelo.FechaSalida,
+                    vuelo.FechaArribo,
+                    vuelo.TiempoVuelo,
+                    vuelo.Aerolinea,
+                    cantPasajeros,
+                    vuelo.Tarifas[0].TipoPasajero,
+                    vuelo.Tarifas[0].Clase,
+                    vuelo.Tarifas[0].Precio,
+                    vuelo.Tarifas[0].Disponibilidad
+                    );
+            }
+        }
 
         private void RellenarPresupuestoTabla(List<ProductoLineaEnt> productosAgregados)
         {
@@ -281,7 +281,7 @@ namespace SolucionCAI.AgenciaDeViajes
                         int indexArriboVuelo = producto.IndexOf(" - Fecha de Arribo:");
                         string uidProductoString = fila.Cells[0]?.Value?.ToString();
                         bool uidProducto = Guid.TryParse(uidProductoString, out Guid uidProductoGuid);
-                        
+
                         if (uidProductoGuid != null)
                         {
                             try
@@ -504,8 +504,8 @@ namespace SolucionCAI.AgenciaDeViajes
             {
                 MessageBox.Show("La Fecha Salida debe ser mayor a la Fecha Entrada");
             }
-           
-            else 
+
+            else
             {
                 MessageBox.Show("No se encontraron hoteles disponibles");
 

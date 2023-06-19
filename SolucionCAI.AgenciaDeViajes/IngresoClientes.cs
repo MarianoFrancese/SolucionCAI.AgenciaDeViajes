@@ -113,7 +113,7 @@ namespace SolucionCAI.AgenciaDeViajes
             }
             else if (tipoCliente.SelectedItem.ToString() == "Persona Juridica")
             {
-                if (comboBox4.SelectedItem ==null || string.IsNullOrWhiteSpace(textBox12.Text) || string.IsNullOrWhiteSpace(textBox11.Text) || string.IsNullOrWhiteSpace(textBox9.Text) || comboBox3.SelectedItem == null || string.IsNullOrWhiteSpace(textBox8.Text) || string.IsNullOrWhiteSpace(textBox7.Text))
+                if (comboBox4.SelectedItem == null || string.IsNullOrWhiteSpace(textBox12.Text) || string.IsNullOrWhiteSpace(textBox11.Text) || string.IsNullOrWhiteSpace(textBox9.Text) || comboBox3.SelectedItem == null || string.IsNullOrWhiteSpace(textBox8.Text) || string.IsNullOrWhiteSpace(textBox7.Text))
                 {
                     MessageBox.Show("Debe completar todos los campos");
                     return;

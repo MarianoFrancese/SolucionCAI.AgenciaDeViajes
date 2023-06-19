@@ -153,6 +153,7 @@
             // 
             // comboBox6
             // 
+            comboBox6.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox6.FormattingEnabled = true;
             comboBox6.Items.AddRange(new object[] { "Standard", "Intermedia", "Deluxe" });
             comboBox6.Location = new Point(682, 53);
@@ -218,6 +219,7 @@
             // 
             // comboBox5
             // 
+            comboBox5.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox5.FormattingEnabled = true;
             comboBox5.Items.AddRange(new object[] { "BUE", "PAR", "MAD", "MIA", "ROM", "SCL" });
             comboBox5.Location = new Point(14, 48);
@@ -433,6 +435,7 @@
             // 
             // comboBox4
             // 
+            comboBox4.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox4.FormattingEnabled = true;
             comboBox4.Items.AddRange(new object[] { "BUE", "CDG", "MAD", "MIA", "ROM", "SCL" });
             comboBox4.Location = new Point(178, 39);
@@ -443,6 +446,7 @@
             // 
             // comboBox1
             // 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "BUE", "CDG", "MAD", "MIA", "ROM", "SCL" });
             comboBox1.Location = new Point(21, 39);
@@ -450,7 +454,6 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(92, 28);
             comboBox1.TabIndex = 34;
-          
             // 
             // dateTimePicker1
             // 
@@ -476,6 +479,7 @@
             // 
             // comboBox3
             // 
+            comboBox3.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox3.FormattingEnabled = true;
             comboBox3.Items.AddRange(new object[] { "Economy", "Premium", "Business", "First" });
             comboBox3.Location = new Point(768, 32);
@@ -487,6 +491,7 @@
             // comboBox2
             // 
             comboBox2.DisplayMember = "Clase";
+            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { "Adulto", "Menor", "Infante" });
             comboBox2.Location = new Point(641, 33);
@@ -596,7 +601,7 @@
             IdProductoVuelo.MinimumWidth = 10;
             IdProductoVuelo.Name = "IdProductoVuelo";
             IdProductoVuelo.ReadOnly = true;
-            IdProductoVuelo.Width = 125;
+            IdProductoVuelo.Width = 149;
             // 
             // Column1
             // 
