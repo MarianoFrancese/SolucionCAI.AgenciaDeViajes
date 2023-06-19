@@ -253,18 +253,26 @@ namespace SolucionCAI.AgenciaDeViajes
             // MessageBox.Show("Se reserva el presupuesto y se piden más datos relativos al cliente");
         }
 
-        //public ItinerarioEnt SelectedItinerario { get; set; }
+       
         private void button5_Click(object sender, EventArgs e) //muestra form pasajeros
         {
-            // Check if any row is currently selected in the datagrid
+            
             if (dataGridView2.SelectedRows.Count > 0)
             {
-                // Get the index of the selected row
+                
                 int rowIndex = dataGridView2.SelectedRows[0].Index;
 
-                // Retrieve the corresponding Itinerario object from the list based on the row index
+                bool tieneVuelo = false;
                 ItinerarioEnt selectedItinerario = itinerariosFiltrados[rowIndex];
-                if (selectedItinerario.Presupuesto.Productos[0].ProductoV != null)
+                foreach (var producto in selectedItinerario.Presupuesto.Productos)
+                {
+                    if (producto.ProductoV != null)
+                    {
+                        tieneVuelo = true;
+                        break;
+                    }
+                }
+                if (tieneVuelo)
                 {
                     Form pasajerosform = new IngresoPasajeros(selectedItinerario);
                     pasajerosform.Show();
