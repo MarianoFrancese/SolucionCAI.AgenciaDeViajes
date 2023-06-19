@@ -19,9 +19,12 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
         {
             foreach (var productoLinea in Presupuesto.Productos)
             {
-                if (productoLinea.ProductoV.Tarifas[0] == tarifa)
+                if (productoLinea.ProductoV != null)
                 {
-                    return productoLinea;
+                    if (productoLinea.ProductoV.Tarifas[0] == tarifa)
+                    {
+                        return productoLinea;
+                    }
                 }
             }
 

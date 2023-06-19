@@ -1,0 +1,187 @@
+[
+  {
+    "Presupuesto": {
+      "NroSeguimiento": 1001,
+      "Productos": [
+        {
+          "ProductoH": {
+            "Codigo": "HT001",
+            "Nombre": "Sheraton",
+            "CodigoCiudad": "MIA",
+            "Calificacion": 5,
+            "Direccion": {
+              "Calle": "Collins Ave",
+              "Numero": 1234,
+              "CP": 7000,
+              "Latitud": 25.845362706221916,
+              "Longitud": -80.11993195337358
+            },
+            "Disponibilidad": {
+              "Nombre": "Standard",
+              "TarifaHab": 35000.0,
+              "Capacidad": 2,
+              "Adultos": 2,
+              "Menores": 1,
+              "Infantes": 1,
+              "HabitacionFechaDisp": [
+                {
+                  "FechaEntHab": "0001-01-01T00:00:00",
+                  "CantHab": 3,
+                  "Uid": "f5af627a-3ddd-4860-a1e9-c861cb508d0f"
+                },
+                {
+                  "FechaEntHab": "0001-01-01T00:00:00",
+                  "CantHab": 4,
+                  "Uid": "c7897475-b9e1-4fa0-a33f-7d2284e8cdf6"
+                },
+                {
+                  "FechaEntHab": "0001-01-01T00:00:00",
+                  "CantHab": 4,
+                  "Uid": "2685d7db-ddc3-4df2-933d-0c9d39fed97b"
+                },
+                {
+                  "FechaEntHab": "0001-01-01T00:00:00",
+                  "CantHab": 5,
+                  "Uid": "66369798-a91d-4db9-b89f-4cc1f4e03794"
+                },
+                {
+                  "FechaEntHab": "0001-01-01T00:00:00",
+                  "CantHab": 6,
+                  "Uid": "ab21040f-044f-43ee-b316-e65d534984fd"
+                },
+                {
+                  "FechaEntHab": "0001-01-01T00:00:00",
+                  "CantHab": 3,
+                  "Uid": "35eb655d-cfca-4877-bf8a-1b89c555d247"
+                },
+                {
+                  "FechaEntHab": "0001-01-01T00:00:00",
+                  "CantHab": 2,
+                  "Uid": "2e35a4d0-443f-4334-8f78-dd483b622b50"
+                }
+              ]
+            },
+            "Uid": "b40c80a9-dee5-48bd-827d-2e4dfbd64e1c"
+          },
+          "ProductoV": null,
+          "Cantidad": 1,
+          "PrecioUn": 35000.0,
+          "SubTotal": 35000.0,
+          "IVA": 7350.0,
+          "TotalProd": 42350.0
+        },
+        {
+          "ProductoH": {
+            "Codigo": "HT002",
+            "Nombre": "Four Seasons",
+            "CodigoCiudad": "MAD",
+            "Calificacion": 5,
+            "Direccion": {
+              "Calle": "C. de Sevilla",
+              "Numero": 30,
+              "CP": 28014,
+              "Latitud": 40.41707269127456,
+              "Longitud": -3.7004233112454163
+            },
+            "Disponibilidad": {
+              "Nombre": "Deluxe",
+              "TarifaHab": 75200.0,
+              "Capacidad": 6,
+              "Adultos": 6,
+              "Menores": 3,
+              "Infantes": 3,
+              "HabitacionFechaDisp": [
+                {
+                  "FechaEntHab": "0001-01-01T00:00:00",
+                  "CantHab": 3,
+                  "Uid": "0887ce84-31bf-4421-b47a-c80406a44be0"
+                },
+                {
+                  "FechaEntHab": "0001-01-01T00:00:00",
+                  "CantHab": 4,
+                  "Uid": "638b85a9-8453-4000-a54c-00e62c564f76"
+                },
+                {
+                  "FechaEntHab": "0001-01-01T00:00:00",
+                  "CantHab": 6,
+                  "Uid": "68d05e5a-0e4f-404f-bed1-860c16d323b2"
+                },
+                {
+                  "FechaEntHab": "0001-01-01T00:00:00",
+                  "CantHab": 6,
+                  "Uid": "d2be359a-0868-4115-a05e-7db635c75365"
+                },
+                {
+                  "FechaEntHab": "0001-01-01T00:00:00",
+                  "CantHab": 4,
+                  "Uid": "2759df33-6c1a-4af6-850f-c76ee9ecb827"
+                },
+                {
+                  "FechaEntHab": "0001-01-01T00:00:00",
+                  "CantHab": 5,
+                  "Uid": "85e83d6d-fefb-4849-9593-6a783f2e3800"
+                },
+                {
+                  "FechaEntHab": "0001-01-01T00:00:00",
+                  "CantHab": 6,
+                  "Uid": "3ed0e89a-56b9-40a0-b6b1-21f0ce34328a"
+                }
+              ]
+            },
+            "Uid": "434ca706-3e5d-4e35-9cee-a8429286f990"
+          },
+          "ProductoV": null,
+          "Cantidad": 1,
+          "PrecioUn": 75200.0,
+          "SubTotal": 75200.0,
+          "IVA": 15792.0,
+          "TotalProd": 90992.0
+        },
+        {
+          "ProductoH": null,
+          "ProductoV": {
+            "Codigo": "AA000",
+            "Origen": "BUE",
+            "Destino": "MIA",
+            "FechaSalida": "2023-06-28T00:00:00",
+            "FechaArribo": "2023-06-29T00:00:00",
+            "TiempoVuelo": "09:30:00",
+            "Aerolinea": "American Airlines",
+            "Tarifas": [
+              {
+                "Clase": "Economy",
+                "TipoPasajero": "Adulto",
+                "Precio": 348000.0,
+                "Disponibilidad": 2,
+                "Pasajeros": null,
+                "Uid": "7f328963-6f38-410e-9415-9bee0571c07b"
+              }
+            ],
+            "Uid": "e4722cf2-a24b-4861-b7ae-3ac3a2511c31"
+          },
+          "Cantidad": 2,
+          "PrecioUn": 348000.0,
+          "SubTotal": 696000.0,
+          "IVA": 146160.0,
+          "TotalProd": 842160.0
+        }
+      ],
+      "Descripcion": null,
+      "Total": 975502.0
+    },
+    "Estado": "PreReserva",
+    "Cliente": {
+      "PersonaFisica": {
+        "Nombre": "Mariano Francese",
+        "DNI": 40998773,
+        "CUIL": 20409987735
+      },
+      "PersonaJuridica": null,
+      "CondFiscal": "Consumidor Final",
+      "Telefono": 1133567865,
+      "Email": "francese.prueba@gmail.com",
+      "MedioPago": "TC"
+    },
+    "EstadoPago": "Pendiente"
+  }
+]

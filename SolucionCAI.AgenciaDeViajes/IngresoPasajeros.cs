@@ -111,9 +111,9 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void button1_Click(object sender, EventArgs e)
         {
+                       
 
-
-            var pasajero = ConstruirPasajero();
+                var pasajero = ConstruirPasajero();
             if (pasajero == null)
             {
                 return;
@@ -126,34 +126,43 @@ namespace SolucionCAI.AgenciaDeViajes
                 return;
             }
 
-            var productoLinea = itinerario.VueloDeTarifa(seleccionCombo.Tarifa);
-
-            //la tarifa corresponde a la edad?
-            if (!seleccionCombo.Tarifa.CorrespondeA(pasajero))
+            foreach (var productoL in itinerario.Presupuesto.Productos)
             {
-                MessageBox.Show("La edad no corresponde a la tarifa.");
-                return;
-            }
-
-            //otras....
-
-            if (seleccionCombo.Tarifa.Pasajeros.Count == productoLinea.Cantidad)
-            {
-                MessageBox.Show("Ya ha ingresado todos los pasajeros de este vuelo / tarifa");
-                return;
-            }
-            else
-            {
-                seleccionCombo.Tarifa.Pasajeros.Add(pasajero);
-
-                var descripcion = $"{seleccionCombo.Tarifa.Clase}-{seleccionCombo.Tarifa.TipoPasajero}-{productoLinea.ProductoV.Aerolinea}-{productoLinea.ProductoV.Origen}-{productoLinea.ProductoV.Destino}-{productoLinea.ProductoV.FechaSalida:dd/MM/yyyy HH:mm}";
-                listBox1.Items.Add(new PasajeroListItem
+                if (productoL.ProductoV != null)
                 {
-                    Descripcion = descripcion,
-                    Tarifa = seleccionCombo.Tarifa,
-                    Pasajero = pasajero
-                });
+                    var productoLinea = itinerario.VueloDeTarifa(seleccionCombo.Tarifa);
+
+                    //la tarifa corresponde a la edad?
+                    if (!seleccionCombo.Tarifa.CorrespondeA(pasajero))
+                    {
+                        MessageBox.Show("La edad no corresponde a la tarifa.");
+                        return;
+                    }
+
+                    //otras....
+
+                    if (seleccionCombo.Tarifa.Pasajeros.Count == productoLinea.Cantidad)
+                    {
+                        MessageBox.Show("Ya ha ingresado todos los pasajeros de este vuelo / tarifa");
+                        return;
+                    }
+                    else
+                    {
+                        seleccionCombo.Tarifa.Pasajeros.Add(pasajero);
+
+                        var descripcion = $"{seleccionCombo.Tarifa.Clase}-{seleccionCombo.Tarifa.TipoPasajero}-{productoLinea.ProductoV.Aerolinea}-{productoLinea.ProductoV.Origen}-{productoLinea.ProductoV.Destino}-{productoLinea.ProductoV.FechaSalida:dd/MM/yyyy HH:mm}";
+                        listBox1.Items.Add(new PasajeroListItem
+                        {
+                            Descripcion = descripcion,
+                            Tarifa = seleccionCombo.Tarifa,
+                            Pasajero = pasajero
+                        });
+                    }
+                }
+
+                    
             }
+            
 
 
         }
