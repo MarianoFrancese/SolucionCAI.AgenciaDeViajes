@@ -174,9 +174,13 @@ namespace SolucionCAI.AgenciaDeViajes
             {
                 RellenarTablaReserva(itinerariosFiltrados);
             }
-            else
+            else if (string.IsNullOrEmpty(textBox1.Text))
             {
                 MessageBox.Show("El campo no puede estar vacío");
+            }
+            else
+            {
+                MessageBox.Show("El número de reserva no existe");
             }
         }
 

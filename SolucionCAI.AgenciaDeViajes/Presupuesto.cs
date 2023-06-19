@@ -111,7 +111,6 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void button2_Click(object sender, EventArgs e)
         {
-
             //MessageBox.Show("Este botón filtra por características de los vuelos");
 
             origen = comboBox1.Text;
@@ -126,20 +125,18 @@ namespace SolucionCAI.AgenciaDeViajes
             if (numericUpDown1.Value <= 0)
             {
                 MessageBox.Show("La cantidad de pasajeros no puede ser cero (0)");
-            }
 
+            }
 
             else
             {
                 vuelosFiltrados = ModuloProductos.ListaVuelos(origen, destino, fechaPartidaFormateada, cantPasajeros, tipoPasajero, clase);
                 RellenarTablaVuelos(vuelosFiltrados, cantPasajeros);
-
-
-
             }
         }
 
-                private void RellenarTablaVuelos(List<VueloEnt> vuelosFiltrados, int cantPasajeros)
+
+            private void RellenarTablaVuelos(List<VueloEnt> vuelosFiltrados, int cantPasajeros)
                 {
                     dataGridView1.Rows.Clear();
 
@@ -450,15 +447,28 @@ namespace SolucionCAI.AgenciaDeViajes
             tipoHabitacion = comboBox6.Text;
 
 
+
+
             hotelesFiltrados = ModuloProductos.ListaHoteles(ciudad, fechaEntradaFormateada, fechaSalidaFormateada, cantHuespedes, tipoHabitacion);
 
             Console.WriteLine(hotelesFiltrados);
-            if (hotelesFiltrados.Count > 0)
+            if (hotelesFiltrados.Count > 0 && numericUpDown2.Value > 0)
             {
                 RellenarTablaHoteles(hotelesFiltrados, fechaEntradaFormateada, fechaSalidaFormateada);
             }
+            else if (numericUpDown2.Value <= 0)
+            {
+
+                MessageBox.Show("La cantidad de huéspedes no puede ser cero (0)");
+            }
+            else if (string.IsNullOrEmpty(comboBox6.Text))
+            {
+
+                MessageBox.Show("Debe completar el tipo de habitación");
+            }
             else
             {
+
                 MessageBox.Show("No se encontraron hoteles disponibles");
             }
         }
