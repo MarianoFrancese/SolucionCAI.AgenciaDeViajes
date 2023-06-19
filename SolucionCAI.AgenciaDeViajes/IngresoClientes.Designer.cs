@@ -86,7 +86,7 @@
             personaFisica.Controls.Add(label4);
             personaFisica.Controls.Add(label3);
             personaFisica.Controls.Add(label2);
-            personaFisica.Location = new Point(243, 117);
+            personaFisica.Location = new Point(237, 117);
             personaFisica.Margin = new Padding(3, 4, 3, 4);
             personaFisica.Name = "personaFisica";
             personaFisica.Padding = new Padding(3, 4, 3, 4);

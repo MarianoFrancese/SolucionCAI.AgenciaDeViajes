@@ -14,6 +14,9 @@ using static System.Windows.Forms.DataFormats;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Microsoft.VisualBasic.Logging;
+using System.ComponentModel.DataAnnotations;
+using System.Security.AccessControl;
 
 namespace SolucionCAI.AgenciaDeViajes.Archivos
 {
@@ -185,6 +188,42 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
             return true;
         }
+
+
+        public bool ValidaTextoNumero(string texto)
+        {
+            foreach (char c in texto)
+            {
+                if (!char.IsLetterOrDigit(c))
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        public bool ValidaTextoNumeroEsp(string texto)
+        {
+            foreach (char c in texto)
+            {
+                if (!char.IsLetterOrDigit(c) && c != '-' && !char.IsWhiteSpace(c))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        
+
+
+
+
+
+
+
+
+
         public bool ValidaCampoVacio(string input, string nombreCampo)
         {
             if (string.IsNullOrWhiteSpace(input))
@@ -235,17 +274,17 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
 
 
-        //ValidaCUIL
+        //ValidaCUIT
 
-        public static bool ValidarCUIT(string cuit)
+        public bool ValidarCUIT(string cuit)
         {
             {
-                string cleanedcuil = cuit;
+                string cleanedcuit = cuit;
 
                 // Verificar longitud del CUIT
                 if (cuit.Length != 11)
                 {
-                    MessageBox.Show("El CUIL no es válido");
+                    MessageBox.Show("El CUIT no es válido");
                     return false;
                 }
                 // Verificar que todos los caracteres sean dígitos numéricos
@@ -253,20 +292,20 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 {
                     if (!char.IsDigit(c))
                     {
-                        MessageBox.Show("El CUIL no es válido");
+                        MessageBox.Show("El CUIT no es válido");
                         return false;
                     }
                 }
 
                 // Obtener los dos primeros dígitos
-                string firstTwoDigits = cleanedcuil.Substring(0, 2);
+                string firstTwoDigits = cleanedcuit.Substring(0, 2);
 
                 // Verificar que los dos primeros dígitos sean válidos
                 int firstTwoDigitsValue = Convert.ToInt32(firstTwoDigits);
 
                 if (firstTwoDigitsValue != 30 && firstTwoDigitsValue != 33 && firstTwoDigitsValue != 34)
                 {
-                    Console.WriteLine("El CUIT es inválido");
+                    MessageBox.Show("El CUIT no es válido");
                 }
 
                 else
@@ -279,16 +318,30 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             return true;
         }
 
-        //Valida CUIT
+        //Valida CUIL
 
         public  bool ValidarCUIL(string cuil)
         {
-
+            string cleanedcuil = cuil;
             // Verificar longitud del CUIL
             if (cuil.Length != 11)
             {
+                MessageBox.Show("El CUIL no es válido");
                 return false;
             }
+
+            // Verificar que los dos primeros dígitos sean válidos
+            string firstTwoDigits = cleanedcuil.Substring(0, 2);
+            int firstTwoDigitsValue = Convert.ToInt32(firstTwoDigits);
+
+            if (firstTwoDigitsValue != 27 && firstTwoDigitsValue != 20 && firstTwoDigitsValue != 24 && firstTwoDigitsValue != 23 )
+            {
+                MessageBox.Show("El CUIL no es válido");
+            }
+
+            else
+
+            { return true; }
 
 
             // Verificar que todos los caracteres sean dígitos numéricos
@@ -296,7 +349,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             {
                 if (!char.IsDigit(c))
                 {
-                    MessageBox.Show("El CUIL es inválido");
+                    MessageBox.Show("El CUIL no es válido");
                     return false;
                 }
 
