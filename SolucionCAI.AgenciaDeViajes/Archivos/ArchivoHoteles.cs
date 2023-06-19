@@ -15,10 +15,10 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
     {
         public static JArray LeerHoteles()
         {
-            if (File.Exists("C:\\Users\\mfrancese\\source\\repos\\SolucionCAI.AgenciaDeViajes\\SolucionCAI.AgenciaDeViajes\\Hoteles.json"))
+            if (File.Exists("Hoteles.json"))
             {
                 List<HotelEnt> hoteles = new List<HotelEnt>();
-                string contenidoDelArchivo = File.ReadAllText("C:\\Users\\mfrancese\\source\\repos\\SolucionCAI.AgenciaDeViajes\\SolucionCAI.AgenciaDeViajes\\Hoteles.json");
+                string contenidoDelArchivo = File.ReadAllText("Hoteles.json");
                 JArray jsonArray = JArray.Parse(contenidoDelArchivo);
                 //foreach (JObject json in jsonArray)
                 //{
@@ -32,7 +32,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
                 //}
                 //string contenido = JsonConvert.SerializeObject(jsonArray, Formatting.Indented);
-                //File.WriteAllText("C:\\Users\\mfrancese\\source\\repos\\SolucionCAI.AgenciaDeViajes\\SolucionCAI.AgenciaDeViajes\\Hoteles.json", contenido);
+                //File.WriteAllText("Hoteles.json", contenido);
                 //var mensaje = "Grabado";
                 return jsonArray;
 

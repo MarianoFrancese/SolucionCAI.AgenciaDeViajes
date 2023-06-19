@@ -126,25 +126,28 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
         }
 
         //ValidaDNI del pasajero
-        public bool ValidaDNI(int dni)
+        public bool ValidaDNI(string dni)
         {
             const int longitudDNI = 8;
 
-            string dniString = dni.ToString();
+            //string dniString = dni.ToString();
+
+            // Remove any whitespace from dni
+            dni = dni.Trim();
 
             // Verificar la longitud del DNI
-            if (dniString.Length != longitudDNI)
+            if (dni.Length != longitudDNI)
             {
-                Console.WriteLine("El DNI ingresado no es válido.");
+                MessageBox.Show("El DNI ingresado no es válido.");
                 return false;
             }
 
             // Verificar que el DNI esté compuesto solo por dígitos
-            foreach (char c in dniString)
+            foreach (char c in dni)
             {
                 if (!Char.IsDigit(c))
                 {
-                    Console.WriteLine("El DNI ingresado no es válido.");
+                    MessageBox.Show("El DNI ingresado no es válido.");
                     return false;
                 }
             }
@@ -153,6 +156,29 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             return true;
         }
 
+        public bool ValidaTexto(string texto)
+        {
+            foreach (char c in texto)
+            {
+                if (!char.IsLetter(c))
+                {
+                    
+                    return false;
+                }
+            }
+
+            return true;
+        }
+        public bool ValidaCampoVacio(string input, string nombreCampo)
+        {
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                MessageBox.Show($"El campo {nombreCampo} no puede estar vacío.");
+                return false;
+            }
+
+            return true;
+        }
 
         /* Para llamar a esta validación mas tarde
           PasajeroEnt pasajero = new PasajeroEnt();

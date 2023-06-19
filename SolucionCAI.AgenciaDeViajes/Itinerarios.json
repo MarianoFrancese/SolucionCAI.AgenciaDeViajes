@@ -15,22 +15,25 @@
             "FechaArribo": "24/07/2023",
             "TiempoVuelo": "2:00:00",
             "Aerolinea": "Aerolineas Argentinas",
-            "Tarifas": {
-              "Clase": "Economy",
-              "TipoPasajero": "Adulto",
-              "Precio": 90000.00,
-              "Disponibilidad": 6
-            },
-            "Cantidad": 1,
-            "PrecioUn": 0.0,
-            "Pasajeros": null,
-            "TarifaV": null,
-            "DisponibilidadH": null,
-            "SubTotal": 0.0,
-            "IVA": 0.00,
-            "TotalProd": 0.00,
+            "Tarifas": [
+              {
+                "Clase": "Economy",
+                "TipoPasajero": "Adulto",
+                "Precio": 90000.00,
+                "Disponibilidad": 6,
+                "Pasajeros": [
+                ]
+              }
+            ],
             "Uid": "00000000-0000-0000-0000-000000000000"
-          }
+          },
+          "Cantidad": 1,
+          "PrecioUn": 0.0,
+          "Pasajeros": null,
+          "SubTotal": 0.0,
+          "IVA": 0.00,
+          "TotalProd": 0.00
+          
         }
       ],
       "Descripcion": null,

@@ -82,13 +82,18 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
                     if (nrosegjson == nroseguimiento && estadojson == "PreReserva") 
                     {
-                        var presupuestos = JsonConvert.DeserializeObject<PresupuestoEnt>(itinerarioJson["Presupuesto"].ToString());
+                        var formatoFecha = new JsonSerializerSettings
+                        {
+                            DateFormatString = "dd/MM/yyyy", // Specify the custom date format
+                        };
+
+                        var presupuestos = JsonConvert.DeserializeObject<PresupuestoEnt>(itinerarioJson["Presupuesto"].ToString(), formatoFecha);
                         var cliente = JsonConvert.DeserializeObject<ClienteEnt>(itinerarioJson["Cliente"].ToString());
                         
                         ItinerarioEnt itinerario = new ItinerarioEnt
                         {
-                            Presupuesto = JsonConvert.DeserializeObject<PresupuestoEnt>(itinerarioJson["Presupuesto"].ToString()),
-                            Cliente = JsonConvert.DeserializeObject<ClienteEnt>(itinerarioJson["Cliente"].ToString()),                          
+                            Presupuesto = presupuestos, //JsonConvert.DeserializeObject<PresupuestoEnt>(itinerarioJson["Presupuesto"].ToString()),
+                            Cliente = cliente //JsonConvert.DeserializeObject<ClienteEnt>(itinerarioJson["Cliente"].ToString()),                          
                             
                                                        
                         };

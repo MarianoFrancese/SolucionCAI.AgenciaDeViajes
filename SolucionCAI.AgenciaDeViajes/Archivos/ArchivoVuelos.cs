@@ -18,7 +18,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             if (File.Exists("Vuelos.json"))
             {
                 List<VueloEnt> vuelos = new List<VueloEnt>();
-                string contenidoDelArchivo = File.ReadAllText("C:\\Users\\mfrancese\\source\\repos\\SolucionCAI.AgenciaDeViajes\\SolucionCAI.AgenciaDeViajes\\Vuelos.json");
+                string contenidoDelArchivo = File.ReadAllText("Vuelos.json");
                 JArray jsonArray = JArray.Parse(contenidoDelArchivo);
                 //foreach (JObject json in jsonArray)
                 //{
