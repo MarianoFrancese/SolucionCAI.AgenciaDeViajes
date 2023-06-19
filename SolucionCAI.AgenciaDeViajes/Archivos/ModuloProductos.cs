@@ -226,16 +226,25 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 {
                     hotel = JsonConvert.DeserializeObject<HotelEnt>(hotelJson.ToString());
                     List<HabitacionFechaEnt> habitaciones = new List<HabitacionFechaEnt>();
-                    foreach (var fecha in fechasElegidas)
+                    foreach (var fechaJson in hotelJson["Disponibilidad"]["HabitacionFechaDisp"])
                     {
-                        HabitacionFechaEnt habitacion = new HabitacionFechaEnt();
-                        habitacion.FechaEntHab = fecha;
-                        habitacion.CantHab = 1;
-                        habitaciones.Add(habitacion);
+                        DateTime fechaJsonParsed = DateTime.ParseExact(fechaJson["FechaHab"].ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                        if (fechasElegidas.Contains(fechaJsonParsed))
+                        {
+                            HabitacionFechaEnt habitacion = new HabitacionFechaEnt();
+                            habitacion.FechaEntHab = fechaJsonParsed.Date;
+                            habitacion.CantHab = 1;
+                            habitacion.Uid = Guid.Parse(fechaJson["Uid"].ToString());
+                            habitaciones.Add(habitacion);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Fecha no encontrada");
+                        }
                     }
-                    hotel.Disponibilidad.HabitacionFechaDisp = habitaciones;
-                    Console.WriteLine("Hotel Encontrado");
+
                 }
+
             }
             return hotel;
 

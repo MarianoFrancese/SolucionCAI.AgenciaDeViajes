@@ -262,7 +262,6 @@ namespace SolucionCAI.AgenciaDeViajes
                                     ProductoH = hotel,
                                     PrecioUn = precio,
                                     Cantidad = cantidad,
-                                    Pasajeros = null
                                 };
                                 productosAGrabar.Add(productos);
                             }
@@ -279,7 +278,6 @@ namespace SolucionCAI.AgenciaDeViajes
                                     ProductoH = null,
                                     PrecioUn = precio,
                                     Cantidad = cantidad,
-                                    Pasajeros = null,
                                 };
                                 productosAGrabar.Add(productos);
 
@@ -291,52 +289,9 @@ namespace SolucionCAI.AgenciaDeViajes
                         Console.WriteLine("No hay productos");
                     }
 
-
-
-
-
-                    ////DateTime entradaFecha = DateTime.ParseExact(producto.Substring(indexEntrada, producto.IndexOf(" 0:00:00 - Fecha de S") - indexEntrada).Trim(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
-
-
-
-
-                    //    try
-                    //    {
-                    //        VueloEnt vuelo = ModuloProductos.ObtenerVueloPorID(uidProductoGuid);
-
-                    //        productos = new ProductoLineaEnt
-                    //        {
-                    //            ProductoV = vuelo,
-                    //            ProductoH = null,
-                    //            PrecioUn = precio,
-                    //            Cantidad = cantidad,
-                    //            Pasajeros = null,
-                    //        };
-                    //        productosAGrabar.Add(productos);
-                    //    }
-                    //    catch (Exception)
-                    //    {
-                    //        HotelEnt hotel = ModuloProductos.ObtenerHotelPorID(uidProductoGuid, entradaFecha, salidaFecha);
-
-                    //        productos = new ProductoLineaEnt
-                    //        {
-                    //            ProductoV = null,
-                    //            ProductoH = hotel,
-                    //            PrecioUn = precio,
-                    //            Cantidad = cantidad,
-                    //            Pasajeros = null
-                    //        };
-                    //        productosAGrabar.Add(productos);
-                    //    }
-                    //}
-                    //else
-                    //{
-                    //    MessageBox.Show("No se pudo obtener el producto");
-                    //}
                 }
             }
 
-            //productosAGrabar.RemoveAt(productosAGrabar.Count - 1);
 
 
             if (productosAGrabar.Count > 0)

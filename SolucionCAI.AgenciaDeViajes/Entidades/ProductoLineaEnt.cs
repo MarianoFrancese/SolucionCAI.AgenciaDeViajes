@@ -17,7 +17,6 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
         public VueloEnt ProductoV { get; set; } //ver si se puede cambiar a obj
         public int Cantidad { get; set; }
         public decimal PrecioUn { get; set; }
-        public List<PasajeroEnt> Pasajeros { get; set; }
         public Decimal SubTotal { get { return CalcularSubtotal(Cantidad, PrecioUn); } }
         public Decimal IVA { get { return CalcularIVA(SubTotal); } }
         public Decimal TotalProd { get { return CalcularTotal(SubTotal, IVA); } }

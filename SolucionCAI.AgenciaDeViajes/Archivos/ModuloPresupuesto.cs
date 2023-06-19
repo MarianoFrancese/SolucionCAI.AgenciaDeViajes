@@ -33,6 +33,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 Precio = tarifa,
 
                 Disponibilidad = cantPasajeros,
+                Pasajeros = null,
 
             };
 
@@ -69,7 +70,6 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
         public static ProductoLineaEnt AgregarVueloLinea(VueloEnt vueloPresupuestado)
         {
 
-            //List<ProductoLineaEnt> listaProductos = new List<ProductoLineaEnt>();
 
             ProductoLineaEnt producto = new ProductoLineaEnt
             {
@@ -77,11 +77,8 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 ProductoH = null,
                 PrecioUn = vueloPresupuestado.Tarifas[0].Precio,
                 Cantidad = vueloPresupuestado.Tarifas[0].Disponibilidad,
-                Pasajeros = null,
             };
 
-            
-            //listaProductos.Add(producto);
 
             return producto;
         }
@@ -179,6 +176,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             {
                 FechaEntHab = fechaEntrada,
                 CantHab = 1,
+                //Uid = uidHabitacion,
             };
             listaHabitaciones.Add(habitacionFecha);
 
@@ -254,7 +252,6 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 ProductoH = hotelPresupuestado,
                 Cantidad = hotelPresupuestado.Disponibilidad.HabitacionFechaDisp[0].CantHab,
                 PrecioUn = hotelPresupuestado.Disponibilidad.TarifaHab,
-                Pasajeros = null,
             };
 
             return producto;

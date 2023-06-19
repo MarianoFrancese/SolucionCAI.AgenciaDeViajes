@@ -13,6 +13,8 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
         public decimal Precio { get; set; }
         public int Disponibilidad { get; set; }
         public List<PasajeroEnt> Pasajeros { get; set; }
+        public Guid Uid { get; set; }
+
         public bool CorrespondeA(PasajeroEnt pasajero)
         {
             var edad = DateTime.Now.Year - pasajero.FechaNac.Year;
