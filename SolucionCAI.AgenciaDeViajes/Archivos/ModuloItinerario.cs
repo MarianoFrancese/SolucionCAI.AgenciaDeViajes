@@ -18,10 +18,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
             if (File.Exists("Presupuestos.json"))
             {
-                Console.WriteLine("El archivo existe");
-                string contenidoDelArchivoP = File.ReadAllText("Presupuestos.json");
-
-                JArray jsonArrayP = JArray.Parse(contenidoDelArchivoP);
+                JArray jsonArrayP = ArchivoPresupuesto.LeerPresupuesto();
 
                 List<PresupuestoEnt> presupuestosFiltrados = new List<PresupuestoEnt>();
                 //DateTime fechaS = DateTime.ParseExact(FechaSalida, "dd/MM/yyyy", CultureInfo.InvariantCulture);
@@ -68,10 +65,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
             if (File.Exists("Itinerarios.json"))
             {
-                Console.WriteLine("El archivo existe");
-                string contenidoDelArchivo = File.ReadAllText("Itinerarios.json");
-
-                JArray jsonArray = JArray.Parse(contenidoDelArchivo);
+                JArray jsonArray = ArchivoItinerario.LeerItinerario();
 
                 List<ItinerarioEnt> itinerariosFiltrados = new List<ItinerarioEnt>();
 
@@ -120,10 +114,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
             if (File.Exists("Itinerarios.json"))
             {
-                Console.WriteLine("El archivo existe");
-                string contenidoDelArchivo = File.ReadAllText("Itinerarios.json");
-
-                JArray jsonArray = JArray.Parse(contenidoDelArchivo);
+                JArray jsonArray = ArchivoItinerario.LeerItinerario();
 
                 List<ItinerarioEnt> itinerariosFiltrados = new List<ItinerarioEnt>();
 
@@ -246,7 +237,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
                     jsonArray.Add(JObject.Parse(itinerarioJson));
 
-                    File.WriteAllText("Itinerarios.json", jsonArray.ToString());
+                    ArchivoItinerario.GrabarItinerario(jsonArray);
 
                     MessageBox.Show("La pre-reserva se grabó correctamente", "Grabar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

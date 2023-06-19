@@ -108,6 +108,7 @@ namespace SolucionCAI.AgenciaDeViajes
                     PresupuestoEnt presupuesto = ModuloPresupuesto.TraerPresupuesto(Convert.ToInt32(numeroSeguimiento));
                     ItinerarioEnt prereserva = ModuloItinerario.CrearPrereserva(presupuesto, cliente);
                     ModuloItinerario.GrabarPrereserva(prereserva);
+                    this.Close();
                 }
             }
             else if (tipoCliente.SelectedItem.ToString() == "Persona Juridica")
@@ -131,6 +132,7 @@ namespace SolucionCAI.AgenciaDeViajes
                     PresupuestoEnt presupuesto = ModuloPresupuesto.TraerPresupuesto(Convert.ToInt32(numeroSeguimiento));
                     ItinerarioEnt prereserva = ModuloItinerario.CrearPrereserva(presupuesto, cliente);
                     ModuloItinerario.GrabarPrereserva(prereserva);
+                    this.Close();
 
                 }
             }
