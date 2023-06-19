@@ -44,7 +44,7 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
+
             var mensajerror = itinerario.PuedeReservar();
             if (mensajerror != null)
             {
@@ -106,7 +106,7 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void button1_Click(object sender, EventArgs e)
         {
-                                  
+
 
             var pasajero = ConstruirPasajero();
             if (pasajero == null)
@@ -150,18 +150,18 @@ namespace SolucionCAI.AgenciaDeViajes
                 });
             }
 
-                        
+
         }
         private PasajeroEnt ConstruirPasajero()
         {
-            
+
             var validador = new Validaciones();
             string dniP = textBox16.Text;
             string nombreP = textBox14.Text;
             string apellidoP = textBox15.Text;
             if (!validador.ValidaCampoVacio(nombreP, "Nombre"))
             {
-                
+
                 return null;
             }
             else if (!validador.ValidaTexto(nombreP))
@@ -171,7 +171,7 @@ namespace SolucionCAI.AgenciaDeViajes
             }
             if (!validador.ValidaCampoVacio(apellidoP, "Apellido"))
             {
-                
+
                 return null;
             }
             else if (!validador.ValidaTexto(apellidoP))
@@ -182,17 +182,17 @@ namespace SolucionCAI.AgenciaDeViajes
 
             if (!validador.ValidaCampoVacio(dniP, "DNI"))
             {
-                
+
                 return null;
             }
             else if (!validador.ValidaDNI(dniP))
             {
-               return null;
+                return null;
             }
-              
-                
-            
-           
+
+
+
+
             DateTime selectedDateTime = dateTimePicker1.Value;
             DateOnly dateOnly = new DateOnly(selectedDateTime.Date.Year, selectedDateTime.Date.Month, selectedDateTime.Date.Day);
             return new PasajeroEnt
@@ -200,7 +200,7 @@ namespace SolucionCAI.AgenciaDeViajes
                 Apellido = nombreP,
                 Nombre = apellidoP,
                 DNI = int.Parse(dniP),
-                FechaNac = dateOnly 
+                FechaNac = dateOnly
             };
 
         }

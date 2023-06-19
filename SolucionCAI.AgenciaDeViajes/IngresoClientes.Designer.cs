@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             personaFisica = new GroupBox();
+            comboBox1 = new ComboBox();
+            label13 = new Label();
             comboBox2 = new ComboBox();
             textBox6 = new TextBox();
             textBox5 = new TextBox();
@@ -46,6 +48,8 @@
             tipoCliente = new ComboBox();
             label1 = new Label();
             personaJuridica = new GroupBox();
+            comboBox4 = new ComboBox();
+            label16 = new Label();
             comboBox3 = new ComboBox();
             textBox7 = new TextBox();
             textBox8 = new TextBox();
@@ -60,10 +64,6 @@
             label15 = new Label();
             button1 = new Button();
             buttonCliente = new Button();
-            comboBox1 = new ComboBox();
-            label13 = new Label();
-            comboBox4 = new ComboBox();
-            label16 = new Label();
             personaFisica.SuspendLayout();
             personaJuridica.SuspendLayout();
             SuspendLayout();
@@ -96,8 +96,29 @@
             personaFisica.Text = "Persona Fisica";
             personaFisica.Visible = false;
             // 
+            // comboBox1
+            // 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "TC", "TD", "EF" });
+            comboBox1.Location = new Point(123, 336);
+            comboBox1.Margin = new Padding(3, 4, 3, 4);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(114, 28);
+            comboBox1.TabIndex = 15;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(7, 336);
+            label13.Name = "label13";
+            label13.Size = new Size(112, 20);
+            label13.TabIndex = 14;
+            label13.Text = "Medio de pago";
+            // 
             // comboBox2
             // 
+            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { "Responsable Inscripto", "Monotributista", "Exento", "No Categorizado", "Consumidor Final" });
             comboBox2.Location = new Point(123, 215);
@@ -219,6 +240,7 @@
             // 
             // tipoCliente
             // 
+            tipoCliente.DropDownStyle = ComboBoxStyle.DropDownList;
             tipoCliente.FormattingEnabled = true;
             tipoCliente.Items.AddRange(new object[] { "Persona Fisica", "Persona Juridica" });
             tipoCliente.Location = new Point(355, 81);
@@ -264,6 +286,25 @@
             personaJuridica.Text = "Persona Juridica";
             personaJuridica.Visible = false;
             personaJuridica.Enter += personaJuridica_Enter;
+            // 
+            // comboBox4
+            // 
+            comboBox4.FormattingEnabled = true;
+            comboBox4.Items.AddRange(new object[] { "TC", "TD", "EF" });
+            comboBox4.Location = new Point(131, 328);
+            comboBox4.Margin = new Padding(3, 4, 3, 4);
+            comboBox4.Name = "comboBox4";
+            comboBox4.Size = new Size(114, 28);
+            comboBox4.TabIndex = 15;
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Location = new Point(15, 328);
+            label16.Name = "label16";
+            label16.Size = new Size(112, 20);
+            label16.TabIndex = 14;
+            label16.Text = "Medio de pago";
             // 
             // comboBox3
             // 
@@ -397,44 +438,6 @@
             buttonCliente.Text = "Guardar Cliente y Pre-Reservar";
             buttonCliente.UseVisualStyleBackColor = false;
             buttonCliente.Click += buttonCliente_Click;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "TC", "TD", "EF" });
-            comboBox1.Location = new Point(123, 336);
-            comboBox1.Margin = new Padding(3, 4, 3, 4);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(114, 28);
-            comboBox1.TabIndex = 15;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Location = new Point(7, 336);
-            label13.Name = "label13";
-            label13.Size = new Size(112, 20);
-            label13.TabIndex = 14;
-            label13.Text = "Medio de pago";
-            // 
-            // comboBox4
-            // 
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Items.AddRange(new object[] { "TC", "TD", "EF" });
-            comboBox4.Location = new Point(131, 328);
-            comboBox4.Margin = new Padding(3, 4, 3, 4);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(114, 28);
-            comboBox4.TabIndex = 15;
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Location = new Point(15, 328);
-            label16.Name = "label16";
-            label16.Size = new Size(112, 20);
-            label16.TabIndex = 14;
-            label16.Text = "Medio de pago";
             // 
             // IngresoClientes
             // 

@@ -28,212 +28,219 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnTerminar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.ProductoPasajero = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.quitarPasajerobtn = new System.Windows.Forms.Button();
-            this.groupBox3.SuspendLayout();
-            this.SuspendLayout();
+            btnTerminar = new Button();
+            button2 = new Button();
+            groupBox3 = new GroupBox();
+            ProductoPasajero = new ComboBox();
+            label15 = new Label();
+            button1 = new Button();
+            dateTimePicker1 = new DateTimePicker();
+            label16 = new Label();
+            label17 = new Label();
+            label18 = new Label();
+            label20 = new Label();
+            textBox14 = new TextBox();
+            textBox15 = new TextBox();
+            textBox16 = new TextBox();
+            listBox1 = new ListBox();
+            quitarPasajerobtn = new Button();
+            groupBox3.SuspendLayout();
+            SuspendLayout();
             // 
             // btnTerminar
             // 
-            this.btnTerminar.Location = new System.Drawing.Point(203, 434);
-            this.btnTerminar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnTerminar.Name = "btnTerminar";
-            this.btnTerminar.Size = new System.Drawing.Size(88, 27);
-            this.btnTerminar.TabIndex = 0;
-            this.btnTerminar.Text = "Salir";
-            this.btnTerminar.UseVisualStyleBackColor = true;
-            this.btnTerminar.Click += new System.EventHandler(this.btnTerminar_Click);
+            btnTerminar.Location = new Point(232, 579);
+            btnTerminar.Margin = new Padding(5, 4, 5, 4);
+            btnTerminar.Name = "btnTerminar";
+            btnTerminar.Size = new Size(101, 36);
+            btnTerminar.TabIndex = 0;
+            btnTerminar.Text = "Salir";
+            btnTerminar.UseVisualStyleBackColor = true;
+            btnTerminar.Click += btnTerminar_Click;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(362, 424);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(110, 46);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Guardar Pasajeros y Reservar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            button2.Location = new Point(414, 565);
+            button2.Margin = new Padding(5, 4, 5, 4);
+            button2.Name = "button2";
+            button2.Size = new Size(126, 61);
+            button2.TabIndex = 1;
+            button2.Text = "Guardar Pasajeros y Reservar";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.ProductoPasajero);
-            this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Controls.Add(this.dateTimePicker1);
-            this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.label20);
-            this.groupBox3.Controls.Add(this.textBox14);
-            this.groupBox3.Controls.Add(this.textBox15);
-            this.groupBox3.Controls.Add(this.textBox16);
-            this.groupBox3.Location = new System.Drawing.Point(24, 38);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(691, 216);
-            this.groupBox3.TabIndex = 22;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Pasajeros";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+            groupBox3.Controls.Add(ProductoPasajero);
+            groupBox3.Controls.Add(label15);
+            groupBox3.Controls.Add(button1);
+            groupBox3.Controls.Add(dateTimePicker1);
+            groupBox3.Controls.Add(label16);
+            groupBox3.Controls.Add(label17);
+            groupBox3.Controls.Add(label18);
+            groupBox3.Controls.Add(label20);
+            groupBox3.Controls.Add(textBox14);
+            groupBox3.Controls.Add(textBox15);
+            groupBox3.Controls.Add(textBox16);
+            groupBox3.Location = new Point(27, 51);
+            groupBox3.Margin = new Padding(3, 4, 3, 4);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Padding = new Padding(3, 4, 3, 4);
+            groupBox3.Size = new Size(790, 288);
+            groupBox3.TabIndex = 22;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Pasajeros";
+            groupBox3.Enter += groupBox3_Enter;
             // 
             // ProductoPasajero
             // 
-            this.ProductoPasajero.FormattingEnabled = true;
-            this.ProductoPasajero.Location = new System.Drawing.Point(84, 154);
-            this.ProductoPasajero.Name = "ProductoPasajero";
-            this.ProductoPasajero.Size = new System.Drawing.Size(457, 23);
-            this.ProductoPasajero.TabIndex = 21;
+            ProductoPasajero.DropDownStyle = ComboBoxStyle.DropDownList;
+            ProductoPasajero.FormattingEnabled = true;
+            ProductoPasajero.Location = new Point(96, 205);
+            ProductoPasajero.Margin = new Padding(3, 4, 3, 4);
+            ProductoPasajero.Name = "ProductoPasajero";
+            ProductoPasajero.Size = new Size(522, 28);
+            ProductoPasajero.TabIndex = 21;
             // 
             // label15
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(16, 136);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(89, 15);
-            this.label15.TabIndex = 20;
-            this.label15.Text = "Asignar a tarifa:";
+            label15.AutoSize = true;
+            label15.Location = new Point(18, 181);
+            label15.Name = "label15";
+            label15.Size = new Size(113, 20);
+            label15.TabIndex = 20;
+            label15.Text = "Asignar a tarifa:";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(572, 187);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 23);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Agregar Pasajero";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Location = new Point(654, 249);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(119, 31);
+            button1.TabIndex = 19;
+            button1.Text = "Agregar Pasajero";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(386, 82);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(132, 23);
-            this.dateTimePicker1.TabIndex = 18;
-            this.dateTimePicker1.Value = new System.DateTime(2023, 6, 4, 21, 51, 24, 0);
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.Location = new Point(441, 109);
+            dateTimePicker1.Margin = new Padding(3, 4, 3, 4);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(150, 27);
+            dateTimePicker1.TabIndex = 18;
+            dateTimePicker1.Value = new DateTime(2023, 6, 4, 21, 51, 24, 0);
             // 
             // label16
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(276, 84);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(103, 15);
-            this.label16.TabIndex = 13;
-            this.label16.Text = "Fecha Nacimiento";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
+            label16.AutoSize = true;
+            label16.Location = new Point(315, 112);
+            label16.Margin = new Padding(5, 0, 5, 0);
+            label16.Name = "label16";
+            label16.Size = new Size(128, 20);
+            label16.TabIndex = 13;
+            label16.Text = "Fecha Nacimiento";
+            label16.Click += label16_Click;
             // 
             // label17
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(26, 39);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(51, 15);
-            this.label17.TabIndex = 13;
-            this.label17.Text = "Nombre";
+            label17.AutoSize = true;
+            label17.Location = new Point(30, 52);
+            label17.Margin = new Padding(5, 0, 5, 0);
+            label17.Name = "label17";
+            label17.Size = new Size(64, 20);
+            label17.TabIndex = 13;
+            label17.Text = "Nombre";
             // 
             // label18
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(39, 87);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(27, 15);
-            this.label18.TabIndex = 14;
-            this.label18.Text = "DNI";
+            label18.AutoSize = true;
+            label18.Location = new Point(45, 116);
+            label18.Margin = new Padding(5, 0, 5, 0);
+            label18.Name = "label18";
+            label18.Size = new Size(35, 20);
+            label18.TabIndex = 14;
+            label18.Text = "DNI";
             // 
             // label20
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(315, 39);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(51, 15);
-            this.label20.TabIndex = 15;
-            this.label20.Text = "Apellido";
+            label20.AutoSize = true;
+            label20.Location = new Point(360, 52);
+            label20.Margin = new Padding(5, 0, 5, 0);
+            label20.Name = "label20";
+            label20.Size = new Size(66, 20);
+            label20.TabIndex = 15;
+            label20.Text = "Apellido";
             // 
             // textBox14
             // 
-            this.textBox14.Location = new System.Drawing.Point(85, 36);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(131, 23);
-            this.textBox14.TabIndex = 7;
+            textBox14.Location = new Point(97, 48);
+            textBox14.Margin = new Padding(5, 4, 5, 4);
+            textBox14.Name = "textBox14";
+            textBox14.Size = new Size(149, 27);
+            textBox14.TabIndex = 7;
             // 
             // textBox15
             // 
-            this.textBox15.Location = new System.Drawing.Point(386, 36);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(132, 23);
-            this.textBox15.TabIndex = 9;
+            textBox15.Location = new Point(441, 48);
+            textBox15.Margin = new Padding(5, 4, 5, 4);
+            textBox15.Name = "textBox15";
+            textBox15.Size = new Size(150, 27);
+            textBox15.TabIndex = 9;
             // 
             // textBox16
             // 
-            this.textBox16.Location = new System.Drawing.Point(84, 84);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(132, 23);
-            this.textBox16.TabIndex = 17;
+            textBox16.Location = new Point(96, 112);
+            textBox16.Margin = new Padding(5, 4, 5, 4);
+            textBox16.Name = "textBox16";
+            textBox16.Size = new Size(150, 27);
+            textBox16.TabIndex = 17;
             // 
             // listBox1
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(109, 276);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(502, 94);
-            this.listBox1.TabIndex = 23;
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 20;
+            listBox1.Location = new Point(125, 368);
+            listBox1.Margin = new Padding(3, 4, 3, 4);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(573, 124);
+            listBox1.TabIndex = 23;
             // 
             // quitarPasajerobtn
             // 
-            this.quitarPasajerobtn.Location = new System.Drawing.Point(497, 376);
-            this.quitarPasajerobtn.Name = "quitarPasajerobtn";
-            this.quitarPasajerobtn.Size = new System.Drawing.Size(114, 23);
-            this.quitarPasajerobtn.TabIndex = 24;
-            this.quitarPasajerobtn.Text = "Quitar Pasajero";
-            this.quitarPasajerobtn.UseVisualStyleBackColor = true;
-            this.quitarPasajerobtn.Click += new System.EventHandler(this.quitarPasajerobtn_Click);
+            quitarPasajerobtn.Location = new Point(568, 501);
+            quitarPasajerobtn.Margin = new Padding(3, 4, 3, 4);
+            quitarPasajerobtn.Name = "quitarPasajerobtn";
+            quitarPasajerobtn.Size = new Size(130, 31);
+            quitarPasajerobtn.TabIndex = 24;
+            quitarPasajerobtn.Text = "Quitar Pasajero";
+            quitarPasajerobtn.UseVisualStyleBackColor = true;
+            quitarPasajerobtn.Click += quitarPasajerobtn_Click;
             // 
             // IngresoPasajeros
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 492);
-            this.Controls.Add(this.quitarPasajerobtn);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btnTerminar);
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Name = "IngresoPasajeros";
-            this.Text = "IngresoPasajeros";
-            this.Load += new System.EventHandler(this.IngresoPasajeros_Load);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(881, 656);
+            Controls.Add(quitarPasajerobtn);
+            Controls.Add(listBox1);
+            Controls.Add(groupBox3);
+            Controls.Add(button2);
+            Controls.Add(btnTerminar);
+            Margin = new Padding(5, 4, 5, 4);
+            Name = "IngresoPasajeros";
+            Text = "IngresoPasajeros";
+            Load += IngresoPasajeros_Load;
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnTerminar;
-        private System.Windows.Forms.Button button2;
+        private Button btnTerminar;
+        private Button button2;
         private GroupBox groupBox3;
         private DateTimePicker dateTimePicker1;
         private Label label16;
