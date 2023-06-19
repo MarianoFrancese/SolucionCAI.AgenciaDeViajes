@@ -1,13 +1,16 @@
-﻿using SolucionCAI.AgenciaDeViajes.Entidades;
+﻿using SolucionCAI.AgenciaDeViajes.Archivos;
+using SolucionCAI.AgenciaDeViajes.Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SolucionCAI.AgenciaDeViajes
@@ -105,6 +108,7 @@ namespace SolucionCAI.AgenciaDeViajes
         {
 
             //Acá irían las validaciones , antes de tomar los datos. 
+            
 
             var pasajero = ConstruirPasajero();
             if (pasajero == null)
@@ -135,20 +139,20 @@ namespace SolucionCAI.AgenciaDeViajes
                 MessageBox.Show("Ya ha ingresado todos los pasajeros de este vuelo / tarifa");
                 return;
             }
-
-
-            seleccionCombo.Tarifa.Pasajeros.Add(pasajero);
-
-            var descripcion = $"{seleccionCombo.Tarifa.Clase}-{seleccionCombo.Tarifa.TipoPasajero} {productoLinea.ProductoV.Aerolinea} {productoLinea.ProductoV.Origen}-{productoLinea.ProductoV.Destino}-{productoLinea.ProductoV.FechaSalida:dd/MM/yy HH:mm}";
-            listBox1.Items.Add(new PasajeroListItem
+            else
             {
-                Descripcion = descripcion,
-                Tarifa = seleccionCombo.Tarifa,
-                Pasajero = pasajero
-            });
+                seleccionCombo.Tarifa.Pasajeros.Add(pasajero);
 
+                var descripcion = $"{seleccionCombo.Tarifa.Clase}-{seleccionCombo.Tarifa.TipoPasajero} {productoLinea.ProductoV.Aerolinea} {productoLinea.ProductoV.Origen}-{productoLinea.ProductoV.Destino}-{productoLinea.ProductoV.FechaSalida:dd/MM/yyyy HH:mm}";
+                listBox1.Items.Add(new PasajeroListItem
+                {
+                    Descripcion = descripcion,
+                    Tarifa = seleccionCombo.Tarifa,
+                    Pasajero = pasajero
+                });
+            }
 
-            
+                        
         }
         private PasajeroEnt ConstruirPasajero()
         {
@@ -157,13 +161,26 @@ namespace SolucionCAI.AgenciaDeViajes
             //si hay algun error podemos mostrar:
             //MessageBox.Show("Error con tal cosa o tal otra");
             //return null;
+            var Apellido = textBox15.Text;
+            var Nombre = textBox14.Text;
+            var DNI = int.Parse(textBox16.Text);
 
+            var validador = new Validaciones();
+            bool dniok = validador.ValidaDNI(DNI);
+            if (dniok)
+            {
+                return DNI;
+            }
+            bool nombreok = validador
+
+            DateTime selectedDateTime = dateTimePicker1.Value;
+            DateOnly dateOnly = new DateOnly(selectedDateTime.Date.Year, selectedDateTime.Date.Month, selectedDateTime.Date.Day);
             return new PasajeroEnt
             {
                 Apellido = textBox15.Text,
                 Nombre = textBox14.Text,
                 DNI = int.Parse(textBox16.Text),
-                FechaNac = DateOnly.Parse(dateTimePicker1.Text) //nose si esto se toma asi porque es un datetimepicker
+                FechaNac = dateOnly 
             };
 
         }

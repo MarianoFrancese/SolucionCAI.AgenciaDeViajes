@@ -24,6 +24,11 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
             {
                 return edad < 12;
             }
+            else if (TipoPasajero == "Adulto")
+            {
+                return edad > 12;
+                
+            }
             else
             {
                 return true;
