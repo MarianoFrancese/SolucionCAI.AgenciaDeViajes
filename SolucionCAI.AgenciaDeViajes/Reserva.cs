@@ -34,6 +34,9 @@ namespace SolucionCAI.AgenciaDeViajes
             nroseguimiento = textBox7.Text;
             presupuestosFiltrados = ModuloItinerario.ListaPresupuestos(nroseguimiento);
 
+            // Clear the data grid
+            dataGridView1.Rows.Clear();
+
             Console.WriteLine(presupuestosFiltrados);
             if (presupuestosFiltrados.Count > 0)
             {
@@ -88,7 +91,8 @@ namespace SolucionCAI.AgenciaDeViajes
             nroseguimiento = textBox4.Text;
 
             itinerariosFiltrados = ModuloItinerario.ListaItinerarioPre(nroseguimiento);
-
+            // Clear the data grid
+            dataGridView2.Rows.Clear();
 
             Console.WriteLine(itinerariosFiltrados);
             if (itinerariosFiltrados.Count > 0)
@@ -167,7 +171,8 @@ namespace SolucionCAI.AgenciaDeViajes
             nroseguimiento = textBox1.Text;
 
             itinerariosFiltrados = ModuloItinerario.ListaItinerarioReserva(nroseguimiento);
-
+            // Clear the data grid
+            dataGridView3.Rows.Clear();
 
             Console.WriteLine(itinerariosFiltrados);
             if (itinerariosFiltrados.Count > 0)
@@ -240,7 +245,7 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //  groupBox1.Visible = true;
+           
             IngresoClientes ingresoClientes = new IngresoClientes(nroseguimiento);
             ingresoClientes.Show();
 
@@ -321,9 +326,12 @@ namespace SolucionCAI.AgenciaDeViajes
 
                     else
                     {
-                        //Console.WriteLine("El DataGridView no contiene filas vacías");
+                        
                         MessageBox.Show("La reserva ha sido confirmada con éxito");
+                        // Clear the data grid
+                        dataGridView3.Rows.Clear();
                         break;
+                        
                     }
 
                 }
@@ -333,7 +341,7 @@ namespace SolucionCAI.AgenciaDeViajes
                     contieneFilasVacias = true;
 
                     //Console.WriteLine("El DataGridView contiene filas vacías");
-                    MessageBox.Show("No existe Reserva para confirmar");
+                    MessageBox.Show("No hay Reserva para confirmar");
                     break;
                 }
 
