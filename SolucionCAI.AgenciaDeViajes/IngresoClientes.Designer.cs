@@ -28,378 +28,390 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.personaFisica = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tipoCliente = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.personaJuridica = new System.Windows.Forms.GroupBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.personaFisica.SuspendLayout();
-            this.personaJuridica.SuspendLayout();
-            this.SuspendLayout();
+            personaFisica = new GroupBox();
+            comboBox2 = new ComboBox();
+            textBox6 = new TextBox();
+            textBox5 = new TextBox();
+            textBox4 = new TextBox();
+            textBox3 = new TextBox();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            tipoCliente = new ComboBox();
+            label1 = new Label();
+            personaJuridica = new GroupBox();
+            comboBox3 = new ComboBox();
+            textBox7 = new TextBox();
+            textBox8 = new TextBox();
+            textBox9 = new TextBox();
+            textBox11 = new TextBox();
+            textBox12 = new TextBox();
+            label9 = new Label();
+            label10 = new Label();
+            label11 = new Label();
+            label12 = new Label();
+            label14 = new Label();
+            label15 = new Label();
+            button1 = new Button();
+            buttonCliente = new Button();
+            personaFisica.SuspendLayout();
+            personaJuridica.SuspendLayout();
+            SuspendLayout();
             // 
             // personaFisica
             // 
-            this.personaFisica.Controls.Add(this.comboBox2);
-            this.personaFisica.Controls.Add(this.textBox6);
-            this.personaFisica.Controls.Add(this.textBox5);
-            this.personaFisica.Controls.Add(this.textBox4);
-            this.personaFisica.Controls.Add(this.textBox3);
-            this.personaFisica.Controls.Add(this.textBox2);
-            this.personaFisica.Controls.Add(this.textBox1);
-            this.personaFisica.Controls.Add(this.label8);
-            this.personaFisica.Controls.Add(this.label7);
-            this.personaFisica.Controls.Add(this.label6);
-            this.personaFisica.Controls.Add(this.label5);
-            this.personaFisica.Controls.Add(this.label4);
-            this.personaFisica.Controls.Add(this.label3);
-            this.personaFisica.Controls.Add(this.label2);
-            this.personaFisica.Location = new System.Drawing.Point(213, 107);
-            this.personaFisica.Name = "personaFisica";
-            this.personaFisica.Size = new System.Drawing.Size(279, 262);
-            this.personaFisica.TabIndex = 0;
-            this.personaFisica.TabStop = false;
-            this.personaFisica.Text = "Persona Fisica";
-            this.personaFisica.Visible = false;
+            personaFisica.Controls.Add(comboBox2);
+            personaFisica.Controls.Add(textBox6);
+            personaFisica.Controls.Add(textBox5);
+            personaFisica.Controls.Add(textBox4);
+            personaFisica.Controls.Add(textBox3);
+            personaFisica.Controls.Add(textBox2);
+            personaFisica.Controls.Add(textBox1);
+            personaFisica.Controls.Add(label8);
+            personaFisica.Controls.Add(label7);
+            personaFisica.Controls.Add(label6);
+            personaFisica.Controls.Add(label5);
+            personaFisica.Controls.Add(label4);
+            personaFisica.Controls.Add(label3);
+            personaFisica.Controls.Add(label2);
+            personaFisica.Location = new Point(243, 143);
+            personaFisica.Margin = new Padding(3, 4, 3, 4);
+            personaFisica.Name = "personaFisica";
+            personaFisica.Padding = new Padding(3, 4, 3, 4);
+            personaFisica.Size = new Size(319, 349);
+            personaFisica.TabIndex = 0;
+            personaFisica.TabStop = false;
+            personaFisica.Text = "Persona Fisica";
+            personaFisica.Visible = false;
             // 
             // comboBox2
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Responsable Inscripto",
-            "Monotributista",
-            "Exento",
-            "No Categorizado",
-            "Consumidor Final"});
-            this.comboBox2.Location = new System.Drawing.Point(108, 161);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(100, 23);
-            this.comboBox2.TabIndex = 13;
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "Responsable Inscripto", "Monotributista", "Exento", "No Categorizado", "Consumidor Final" });
+            comboBox2.Location = new Point(123, 215);
+            comboBox2.Margin = new Padding(3, 4, 3, 4);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(114, 28);
+            comboBox2.TabIndex = 13;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(108, 226);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 23);
-            this.textBox6.TabIndex = 12;
+            textBox6.Location = new Point(123, 301);
+            textBox6.Margin = new Padding(3, 4, 3, 4);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(114, 27);
+            textBox6.TabIndex = 12;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(108, 195);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 23);
-            this.textBox5.TabIndex = 11;
+            textBox5.Location = new Point(123, 260);
+            textBox5.Margin = new Padding(3, 4, 3, 4);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(114, 27);
+            textBox5.TabIndex = 11;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(108, 131);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 23);
-            this.textBox4.TabIndex = 10;
+            textBox4.Location = new Point(123, 175);
+            textBox4.Margin = new Padding(3, 4, 3, 4);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(114, 27);
+            textBox4.TabIndex = 10;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(108, 98);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 23);
-            this.textBox3.TabIndex = 9;
+            textBox3.Location = new Point(123, 131);
+            textBox3.Margin = new Padding(3, 4, 3, 4);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(114, 27);
+            textBox3.TabIndex = 9;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(108, 66);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
-            this.textBox2.TabIndex = 8;
+            textBox2.Location = new Point(123, 88);
+            textBox2.Margin = new Padding(3, 4, 3, 4);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(114, 27);
+            textBox2.TabIndex = 8;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(108, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 7;
+            textBox1.Location = new Point(123, 45);
+            textBox1.Margin = new Padding(3, 4, 3, 4);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(114, 27);
+            textBox1.TabIndex = 7;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(18, 226);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(36, 15);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Email";
+            label8.AutoSize = true;
+            label8.Location = new Point(21, 301);
+            label8.Name = "label8";
+            label8.Size = new Size(46, 20);
+            label8.TabIndex = 6;
+            label8.Text = "Email";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(18, 195);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 15);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Teléfono";
+            label7.AutoSize = true;
+            label7.Location = new Point(21, 260);
+            label7.Name = "label7";
+            label7.Size = new Size(67, 20);
+            label7.TabIndex = 5;
+            label7.Text = "Teléfono";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 161);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 15);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Condición Fiscal";
+            label6.AutoSize = true;
+            label6.Location = new Point(7, 215);
+            label6.Name = "label6";
+            label6.Size = new Size(116, 20);
+            label6.TabIndex = 4;
+            label6.Text = "Condición Fiscal";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(22, 134);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 15);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "CUIL";
+            label5.AutoSize = true;
+            label5.Location = new Point(25, 179);
+            label5.Name = "label5";
+            label5.Size = new Size(39, 20);
+            label5.TabIndex = 3;
+            label5.Text = "CUIL";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 98);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(27, 15);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "DNI";
+            label4.AutoSize = true;
+            label4.Location = new Point(25, 131);
+            label4.Name = "label4";
+            label4.Size = new Size(35, 20);
+            label4.TabIndex = 2;
+            label4.Text = "DNI";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 66);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 15);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Apellido";
+            label3.AutoSize = true;
+            label3.Location = new Point(18, 88);
+            label3.Name = "label3";
+            label3.Size = new Size(66, 20);
+            label3.TabIndex = 1;
+            label3.Text = "Apellido";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 15);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Nombre";
+            label2.AutoSize = true;
+            label2.Location = new Point(21, 49);
+            label2.Name = "label2";
+            label2.Size = new Size(64, 20);
+            label2.TabIndex = 0;
+            label2.Text = "Nombre";
             // 
             // tipoCliente
             // 
-            this.tipoCliente.FormattingEnabled = true;
-            this.tipoCliente.Items.AddRange(new object[] {
-            "Persona Fisica",
-            "Persona Juridica"});
-            this.tipoCliente.Location = new System.Drawing.Point(311, 61);
-            this.tipoCliente.Name = "tipoCliente";
-            this.tipoCliente.Size = new System.Drawing.Size(121, 23);
-            this.tipoCliente.TabIndex = 1;
-            this.tipoCliente.TabStop = false;
-            this.tipoCliente.SelectedIndexChanged += new System.EventHandler(this.tipoCliente_SelectedIndexChanged);
+            tipoCliente.FormattingEnabled = true;
+            tipoCliente.Items.AddRange(new object[] { "Persona Fisica", "Persona Juridica" });
+            tipoCliente.Location = new Point(355, 81);
+            tipoCliente.Margin = new Padding(3, 4, 3, 4);
+            tipoCliente.Name = "tipoCliente";
+            tipoCliente.Size = new Size(138, 28);
+            tipoCliente.TabIndex = 1;
+            tipoCliente.TabStop = false;
+            tipoCliente.SelectedIndexChanged += tipoCliente_SelectedIndexChanged;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(213, 64);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 15);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Tipo Cliente";
+            label1.AutoSize = true;
+            label1.Location = new Point(243, 85);
+            label1.Name = "label1";
+            label1.Size = new Size(89, 20);
+            label1.TabIndex = 2;
+            label1.Text = "Tipo Cliente";
             // 
             // personaJuridica
             // 
-            this.personaJuridica.Controls.Add(this.comboBox3);
-            this.personaJuridica.Controls.Add(this.textBox7);
-            this.personaJuridica.Controls.Add(this.textBox8);
-            this.personaJuridica.Controls.Add(this.textBox9);
-            this.personaJuridica.Controls.Add(this.textBox11);
-            this.personaJuridica.Controls.Add(this.textBox12);
-            this.personaJuridica.Controls.Add(this.label9);
-            this.personaJuridica.Controls.Add(this.label10);
-            this.personaJuridica.Controls.Add(this.label11);
-            this.personaJuridica.Controls.Add(this.label12);
-            this.personaJuridica.Controls.Add(this.label14);
-            this.personaJuridica.Controls.Add(this.label15);
-            this.personaJuridica.Location = new System.Drawing.Point(207, 107);
-            this.personaJuridica.Name = "personaJuridica";
-            this.personaJuridica.Size = new System.Drawing.Size(279, 262);
-            this.personaJuridica.TabIndex = 14;
-            this.personaJuridica.TabStop = false;
-            this.personaJuridica.Text = "Persona Juridica";
-            this.personaJuridica.Visible = false;
+            personaJuridica.Controls.Add(comboBox3);
+            personaJuridica.Controls.Add(textBox7);
+            personaJuridica.Controls.Add(textBox8);
+            personaJuridica.Controls.Add(textBox9);
+            personaJuridica.Controls.Add(textBox11);
+            personaJuridica.Controls.Add(textBox12);
+            personaJuridica.Controls.Add(label9);
+            personaJuridica.Controls.Add(label10);
+            personaJuridica.Controls.Add(label11);
+            personaJuridica.Controls.Add(label12);
+            personaJuridica.Controls.Add(label14);
+            personaJuridica.Controls.Add(label15);
+            personaJuridica.Location = new Point(237, 143);
+            personaJuridica.Margin = new Padding(3, 4, 3, 4);
+            personaJuridica.Name = "personaJuridica";
+            personaJuridica.Padding = new Padding(3, 4, 3, 4);
+            personaJuridica.Size = new Size(319, 349);
+            personaJuridica.TabIndex = 14;
+            personaJuridica.TabStop = false;
+            personaJuridica.Text = "Persona Juridica";
+            personaJuridica.Visible = false;
+            personaJuridica.Enter += personaJuridica_Enter;
             // 
             // comboBox3
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Responsable Inscripto",
-            "Monotributista",
-            "Exento",
-            "No Categorizado",
-            "Consumidor Final"});
-            this.comboBox3.Location = new System.Drawing.Point(108, 139);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(100, 23);
-            this.comboBox3.TabIndex = 13;
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Items.AddRange(new object[] { "Responsable Inscripto", "Monotributista", "Exento", "No Categorizado", "Consumidor Final" });
+            comboBox3.Location = new Point(123, 185);
+            comboBox3.Margin = new Padding(3, 4, 3, 4);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(114, 28);
+            comboBox3.TabIndex = 13;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(108, 208);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 23);
-            this.textBox7.TabIndex = 12;
+            textBox7.Location = new Point(123, 277);
+            textBox7.Margin = new Padding(3, 4, 3, 4);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(114, 27);
+            textBox7.TabIndex = 12;
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(108, 172);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 23);
-            this.textBox8.TabIndex = 11;
+            textBox8.Location = new Point(123, 229);
+            textBox8.Margin = new Padding(3, 4, 3, 4);
+            textBox8.Name = "textBox8";
+            textBox8.Size = new Size(114, 27);
+            textBox8.TabIndex = 11;
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(108, 101);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 23);
-            this.textBox9.TabIndex = 10;
+            textBox9.Location = new Point(123, 135);
+            textBox9.Margin = new Padding(3, 4, 3, 4);
+            textBox9.Name = "textBox9";
+            textBox9.Size = new Size(114, 27);
+            textBox9.TabIndex = 10;
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(108, 66);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 23);
-            this.textBox11.TabIndex = 8;
+            textBox11.Location = new Point(123, 88);
+            textBox11.Margin = new Padding(3, 4, 3, 4);
+            textBox11.Name = "textBox11";
+            textBox11.Size = new Size(114, 27);
+            textBox11.TabIndex = 8;
             // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(108, 34);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 23);
-            this.textBox12.TabIndex = 7;
+            textBox12.Location = new Point(123, 45);
+            textBox12.Margin = new Padding(3, 4, 3, 4);
+            textBox12.Name = "textBox12";
+            textBox12.Size = new Size(114, 27);
+            textBox12.TabIndex = 7;
+            textBox12.TextChanged += textBox12_TextChanged;
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(18, 208);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(36, 15);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Email";
+            label9.AutoSize = true;
+            label9.Location = new Point(21, 277);
+            label9.Name = "label9";
+            label9.Size = new Size(46, 20);
+            label9.TabIndex = 6;
+            label9.Text = "Email";
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(18, 175);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 15);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "Teléfono";
+            label10.AutoSize = true;
+            label10.Location = new Point(21, 233);
+            label10.Name = "label10";
+            label10.Size = new Size(67, 20);
+            label10.TabIndex = 5;
+            label10.Text = "Teléfono";
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 139);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(94, 15);
-            this.label11.TabIndex = 4;
-            this.label11.Text = "Condición Fiscal";
+            label11.AutoSize = true;
+            label11.Location = new Point(7, 185);
+            label11.Name = "label11";
+            label11.Size = new Size(116, 20);
+            label11.TabIndex = 4;
+            label11.Text = "Condición Fiscal";
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(38, 69);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(32, 15);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "CUIT";
+            label12.AutoSize = true;
+            label12.Location = new Point(43, 92);
+            label12.Name = "label12";
+            label12.Size = new Size(40, 20);
+            label12.TabIndex = 3;
+            label12.Text = "CUIT";
             // 
             // label14
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(18, 104);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(58, 15);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "Domicilio";
+            label14.AutoSize = true;
+            label14.Location = new Point(21, 139);
+            label14.Name = "label14";
+            label14.Size = new Size(74, 20);
+            label14.TabIndex = 1;
+            label14.Text = "Domicilio";
             // 
             // label15
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(18, 37);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(73, 15);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Razón Social";
+            label15.AutoSize = true;
+            label15.Location = new Point(21, 49);
+            label15.Name = "label15";
+            label15.Size = new Size(94, 20);
+            label15.TabIndex = 0;
+            label15.Text = "Razón Social";
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(245, 402);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 28);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.BackColor = Color.FromArgb(255, 128, 0);
+            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(280, 536);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(86, 37);
+            button1.TabIndex = 15;
+            button1.Text = "Cancelar";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
-            // button2
+            // buttonCliente
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(362, 388);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 50);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Guardar Cliente y Pre-Reservar";
-            this.button2.UseVisualStyleBackColor = false;
+            buttonCliente.BackColor = Color.FromArgb(255, 128, 0);
+            buttonCliente.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonCliente.ForeColor = Color.White;
+            buttonCliente.Location = new Point(414, 517);
+            buttonCliente.Margin = new Padding(3, 4, 3, 4);
+            buttonCliente.Name = "buttonCliente";
+            buttonCliente.Size = new Size(128, 67);
+            buttonCliente.TabIndex = 16;
+            buttonCliente.Text = "Guardar Cliente y Pre-Reservar";
+            buttonCliente.UseVisualStyleBackColor = false;
+            buttonCliente.Click += buttonCliente_Click;
             // 
             // IngresoClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.personaJuridica);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.tipoCliente);
-            this.Controls.Add(this.personaFisica);
-            this.Name = "IngresoClientes";
-            this.Text = "IngresoClientes";
-            this.personaFisica.ResumeLayout(false);
-            this.personaFisica.PerformLayout();
-            this.personaJuridica.ResumeLayout(false);
-            this.personaJuridica.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(914, 600);
+            Controls.Add(buttonCliente);
+            Controls.Add(button1);
+            Controls.Add(label1);
+            Controls.Add(tipoCliente);
+            Controls.Add(personaFisica);
+            Controls.Add(personaJuridica);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "IngresoClientes";
+            Text = "IngresoClientes";
+            personaFisica.ResumeLayout(false);
+            personaFisica.PerformLayout();
+            personaJuridica.ResumeLayout(false);
+            personaJuridica.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
+
 
         #endregion
 
@@ -434,6 +446,6 @@
         private Label label14;
         private Label label15;
         private Button button1;
-        private Button button2;
+        private Button buttonCliente;
     }
 }

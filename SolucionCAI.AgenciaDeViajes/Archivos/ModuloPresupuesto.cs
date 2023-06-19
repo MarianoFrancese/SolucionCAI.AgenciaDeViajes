@@ -86,29 +86,34 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
         public static int BuscarUltimoId()
         {
             int id = 1000;
-            if (File.Exists("Presupuestos.json"))
+            JArray jsonPresupuestos = ArchivoPresupuesto.LeerPresupuesto();
+            if (jsonPresupuestos == null)
             {
-                Console.WriteLine("El archivo existe");
-                string contenidoDelArchivo = File.ReadAllText("Presupuestos.json");
-
-                if(string.IsNullOrEmpty(contenidoDelArchivo))
-                {
-                    return id;
-                }
-                else
-                {
-                    JArray jsonArray = JArray.Parse(contenidoDelArchivo);
-                    JObject lastObject = (JObject)jsonArray.Last;
-
-                    id = (int)lastObject["NroSeguimiento"];
-                }
                 return id;
-
             }
             else
             {
-                return id;
+                JObject lastObject = (JObject)jsonPresupuestos.Last;
+                id = (int)lastObject["NroSeguimiento"];
             }
+            return id;
+
+        }
+
+        public static PresupuestoEnt TraerPresupuesto(int nroSeguimiento)
+        {
+            JArray jsonPresupuestos = ArchivoPresupuesto.LeerPresupuesto();
+
+            foreach (JObject presupuesto in jsonPresupuestos)
+            {
+                if (Convert.ToInt32(presupuesto["NroSeguimiento"]) == nroSeguimiento)
+                {
+                    PresupuestoEnt presupuestoEncontrado = JsonConvert.DeserializeObject<PresupuestoEnt>(presupuesto.ToString());
+                    return presupuestoEncontrado;
+                }
+            }
+            return null;
+
         }
 
         public static PresupuestoEnt CrearPresupuesto(List<ProductoLineaEnt> productosAgregados, decimal total)

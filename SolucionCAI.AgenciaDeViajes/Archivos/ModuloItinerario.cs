@@ -36,15 +36,15 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                     {
 
                         //var productos = JsonConvert.DeserializeObject<List<ProductoLineaEnt>>(presupuestoJson["Productos"].ToString());
-                        
-                                                                       
+
+
                         PresupuestoEnt presupuesto = new PresupuestoEnt
                         {
                             NroSeguimiento = Convert.ToInt32(presupuestoJson["NroSeguimiento"]),
                             Productos = JsonConvert.DeserializeObject<List<ProductoLineaEnt>>(presupuestoJson["Productos"].ToString()),
                             Descripcion = (string)presupuestoJson["Descripcion"],
                             Total = Convert.ToInt32(presupuestoJson["Total"])
-                        
+
                         };
                         Console.WriteLine(presupuesto.Productos);
 
@@ -78,9 +78,9 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 {
                     string nrosegjson = (string)itinerarioJson["Presupuesto"]["NroSeguimiento"];
                     string estadojson = (string)itinerarioJson["Estado"];
-                    
 
-                    if (nrosegjson == nroseguimiento && estadojson == "PreReserva") 
+
+                    if (nrosegjson == nroseguimiento && estadojson == "PreReserva")
                     {
                         var formatoFecha = new JsonSerializerSettings
                         {
@@ -89,17 +89,17 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
                         var presupuestos = JsonConvert.DeserializeObject<PresupuestoEnt>(itinerarioJson["Presupuesto"].ToString(), formatoFecha);
                         var cliente = JsonConvert.DeserializeObject<ClienteEnt>(itinerarioJson["Cliente"].ToString());
-                        
+
                         ItinerarioEnt itinerario = new ItinerarioEnt
                         {
                             Presupuesto = presupuestos, //JsonConvert.DeserializeObject<PresupuestoEnt>(itinerarioJson["Presupuesto"].ToString()),
                             Cliente = cliente //JsonConvert.DeserializeObject<ClienteEnt>(itinerarioJson["Cliente"].ToString()),                          
-                            
-                                                       
+
+
                         };
                         Console.WriteLine(itinerario.Presupuesto);
                         Console.WriteLine(itinerario.Cliente);
-                        
+
 
                         itinerariosFiltrados.Add(itinerario);
 
@@ -130,9 +130,9 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 {
                     string nrosegjson = (string)itinerarioJson["Presupuesto"]["NroSeguimiento"];
                     string estadojson = (string)itinerarioJson["Estado"];
-                    
 
-                    if (nrosegjson == nroseguimiento && estadojson == "Reserva") 
+
+                    if (nrosegjson == nroseguimiento && estadojson == "Reserva")
                     {
                         var presupuestos = JsonConvert.DeserializeObject<PresupuestoEnt>(itinerarioJson["Presupuesto"].ToString());
                         var cliente = JsonConvert.DeserializeObject<ClienteEnt>(itinerarioJson["Cliente"].ToString());
@@ -161,7 +161,75 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 return new List<ItinerarioEnt>();
             }
         }
-               
+
+        public static ClienteEnt CrearCliente(string nombre, string apellido, string dni, string cuil, string condFiscal, string telefono, string email)
+        {
+            PersonaFisicaEnt persona = new PersonaFisicaEnt
+            {
+                Nombre = nombre + " " + apellido,
+                DNI = dni,
+                CUIL = cuil,
+            };
+
+            ClienteEnt cliente = new ClienteEnt
+            {
+                PersonaFisica = persona,
+                PersonaJuridica = null,
+                CondFiscal = condFiscal,
+                Telefono = telefono,
+                Email = email,
+                MedioPago = null
+            };
+
+            return cliente;
+
+        }
+
+        public static ItinerarioEnt CrearPrereserva(PresupuestoEnt presupuesto, ClienteEnt cliente)
+        {
+            ItinerarioEnt prereserva = new ItinerarioEnt
+            {
+                Presupuesto = presupuesto,
+                Cliente = cliente,
+                Estado = "PreReserva",
+                EstadoPago = "Pendiente"
+            };
+            return prereserva;
+        }
+
+        public static DialogResult GrabarPrereserva(ItinerarioEnt prereserva)
+        {
+            DialogResult result = MessageBox.Show("¿Desea grabar la pre-reserva?", "Grabar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                if (File.Exists("Itinerarios.json"))
+                {
+                    JArray jsonArray = ArchivoItinerario.LeerItinerario();
+
+                    var itinerarioJson = JsonConvert.SerializeObject(prereserva, Formatting.Indented);
+
+                    jsonArray.Add(JObject.Parse(itinerarioJson));
+
+                    ArchivoItinerario.GrabarItinerario(jsonArray);
+
+                    MessageBox.Show("La pre-reserva se grabó correctamente", "Grabar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    JArray jsonArray = new JArray();
+
+                    var itinerarioJson = JsonConvert.SerializeObject(prereserva, Formatting.Indented);
+
+                    jsonArray.Add(JObject.Parse(itinerarioJson));
+
+                    File.WriteAllText("Itinerarios.json", jsonArray.ToString());
+
+                    MessageBox.Show("La pre-reserva se grabó correctamente", "Grabar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            return result;
+
+        }
     }
 }
 

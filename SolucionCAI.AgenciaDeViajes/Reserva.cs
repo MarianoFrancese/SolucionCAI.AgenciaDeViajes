@@ -33,7 +33,7 @@ namespace SolucionCAI.AgenciaDeViajes
         {
             nroseguimiento = textBox7.Text;
             presupuestosFiltrados = ModuloItinerario.ListaPresupuestos(nroseguimiento);
-           
+
             Console.WriteLine(presupuestosFiltrados);
             if (presupuestosFiltrados.Count > 0)
             {
@@ -44,16 +44,16 @@ namespace SolucionCAI.AgenciaDeViajes
                 MessageBox.Show("No se encontraron Presupuestos para ese Nro de Seguimiento");
             }
         }
-             
+
 
         private void RellenarTablaPresup(List<PresupuestoEnt> presupuestosFiltrados)
         {
             dataGridView1.Rows.Clear();
 
-           
+
             foreach (var presupuesto in presupuestosFiltrados)
             {
-                
+
                 VueloEnt vuelo = presupuestosFiltrados[0].Productos[0].ProductoV;
                 HotelEnt hotel = presupuestosFiltrados[0].Productos[0].ProductoH;
 
@@ -71,14 +71,14 @@ namespace SolucionCAI.AgenciaDeViajes
                     descripcion = $"Codigo Hotel: {hotel.Codigo} - Nombre Hotel: {hotel.Nombre} - Ciudad: {hotel.CodigoCiudad} - Nombre Habitacion: {hotel.Disponibilidad.Nombre}";
                 }
 
-                
+
                 dataGridView1.Rows.Add(
                 presupuesto.NroSeguimiento,
                 descripcion,
                 presupuesto.Total
-                    
+
                 );
-               
+
 
             }
         }
@@ -88,8 +88,8 @@ namespace SolucionCAI.AgenciaDeViajes
             nroseguimiento = textBox4.Text;
 
             itinerariosFiltrados = ModuloItinerario.ListaItinerarioPre(nroseguimiento);
-            
-            
+
+
             Console.WriteLine(itinerariosFiltrados);
             if (itinerariosFiltrados.Count > 0)
             {
@@ -104,8 +104,8 @@ namespace SolucionCAI.AgenciaDeViajes
         private void RellenarTablaPre(List<ItinerarioEnt> itinerariosFiltrados)
         {
             dataGridView2.Rows.Clear();
-             
-            
+
+
             foreach (var itinerario in itinerariosFiltrados)
             {
                 VueloEnt vuelo = itinerariosFiltrados[0].Presupuesto.Productos[0].ProductoV;
@@ -142,18 +142,18 @@ namespace SolucionCAI.AgenciaDeViajes
                     cliente = $"Persona Juridica: Razon Social: {pJuridica.RazonSocial} - CUIT: {pJuridica.CUIT} ";
                 }
 
-               
-                    dataGridView2.Rows.Add(
-                    itinerario.Presupuesto.NroSeguimiento,
-                    descripcion, //ver qué traer de productos, quisiera traer el string que se guarda en el json
-                    cliente,
-                    itinerario.Cliente.MedioPago,
-                    itinerario.Presupuesto.Total 
-                    
-                    );
-                
-                
-                                    
+
+                dataGridView2.Rows.Add(
+                itinerario.Presupuesto.NroSeguimiento,
+                descripcion, //ver qué traer de productos, quisiera traer el string que se guarda en el json
+                cliente,
+                itinerario.Cliente.MedioPago,
+                itinerario.Presupuesto.Total
+
+                );
+
+
+
             }
         }
 
@@ -168,7 +168,7 @@ namespace SolucionCAI.AgenciaDeViajes
 
             itinerariosFiltrados = ModuloItinerario.ListaItinerarioReserva(nroseguimiento);
 
-            
+
             Console.WriteLine(itinerariosFiltrados);
             if (itinerariosFiltrados.Count > 0)
             {
@@ -221,23 +221,23 @@ namespace SolucionCAI.AgenciaDeViajes
                     cliente = $"Persona Juridica: Razon Social: {pJuridica.RazonSocial} - CUIT: {pJuridica.CUIT} ";
                 }
 
-               
-                    dataGridView3.Rows.Add(
-                    itinerario.Presupuesto.NroSeguimiento,
-                    descripcion,
-                    cliente,
-                    itinerario.Cliente.MedioPago,
-                    itinerario.Presupuesto.Total, 
-                    itinerario.EstadoPago
-                    );
-               
+
+                dataGridView3.Rows.Add(
+                itinerario.Presupuesto.NroSeguimiento,
+                descripcion,
+                cliente,
+                itinerario.Cliente.MedioPago,
+                itinerario.Presupuesto.Total,
+                itinerario.EstadoPago
+                );
+
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             //  groupBox1.Visible = true;
-            IngresoClientes ingresoClientes = new IngresoClientes();
+            IngresoClientes ingresoClientes = new IngresoClientes(nroseguimiento);
             ingresoClientes.Show();
 
         }
@@ -245,8 +245,8 @@ namespace SolucionCAI.AgenciaDeViajes
         private void button7_Click(object sender, EventArgs e)
         {
             groupBox1.Visible = true;
-            
-           // MessageBox.Show("Se reserva el presupuesto y se piden más datos relativos al cliente");
+
+            // MessageBox.Show("Se reserva el presupuesto y se piden más datos relativos al cliente");
         }
 
         //public ItinerarioEnt SelectedItinerario { get; set; }
@@ -270,7 +270,7 @@ namespace SolucionCAI.AgenciaDeViajes
                     //acá en realidad hay que reservar de una.
                     MessageBox.Show("El itinerario no tiene vuelos.");
                 }
-                
+
             }
             else
             {
@@ -314,9 +314,9 @@ namespace SolucionCAI.AgenciaDeViajes
                         break;
                     }
 
-                } 
+                }
 
-                else 
+                else
                 {
                     contieneFilasVacias = true;
 
@@ -325,11 +325,11 @@ namespace SolucionCAI.AgenciaDeViajes
                     break;
                 }
 
-               
+
             }
 
 
-            
+
         }
 
 
@@ -352,8 +352,8 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void button8_Click(object sender, EventArgs e)
         {
-            
-                        
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -376,7 +376,7 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void button10_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button3_Click_1(object sender, EventArgs e)
@@ -386,8 +386,8 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void button9_Click(object sender, EventArgs e)
         {
-            
-            
+
+
         }
 
         private void button4_Click_1(object sender, EventArgs e)
@@ -405,12 +405,15 @@ namespace SolucionCAI.AgenciaDeViajes
             groupBox3.Visible = false;
         }
 
-        
+
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
-                
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

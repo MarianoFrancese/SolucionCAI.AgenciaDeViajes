@@ -111,6 +111,7 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             //MessageBox.Show("Este botón filtra por características de los vuelos");
 
             origen = comboBox1.Text;
@@ -121,35 +122,46 @@ namespace SolucionCAI.AgenciaDeViajes
             tipoPasajero = comboBox2.Text;
             clase = comboBox3.Text;
 
-            vuelosFiltrados = ModuloProductos.ListaVuelos(origen, destino, fechaPartidaFormateada, cantPasajeros, tipoPasajero, clase);
-            RellenarTablaVuelos(vuelosFiltrados, cantPasajeros);
 
-
-        }
-
-        private void RellenarTablaVuelos(List<VueloEnt> vuelosFiltrados, int cantPasajeros)
-        {
-            dataGridView1.Rows.Clear();
-            
-            foreach (var vuelo in vuelosFiltrados)
+            if (numericUpDown1.Value <= 0)
             {
-                dataGridView1.Rows.Add(
-                    vuelo.Uid,
-                    vuelo.Codigo,
-                    vuelo.Origen,
-                    vuelo.Destino,
-                    vuelo.FechaSalida,
-                    vuelo.FechaArribo,
-                    vuelo.TiempoVuelo,
-                    vuelo.Aerolinea,
-                    cantPasajeros,
-                    vuelo.Tarifas[0].TipoPasajero,
-                    vuelo.Tarifas[0].Clase,
-                    vuelo.Tarifas[0].Precio,
-                    vuelo.Tarifas[0].Disponibilidad
-                    );
+                MessageBox.Show("La cantidad de pasajeros no puede ser cero (0)");
+            }
+
+
+            else
+            {
+                vuelosFiltrados = ModuloProductos.ListaVuelos(origen, destino, fechaPartidaFormateada, cantPasajeros, tipoPasajero, clase);
+                RellenarTablaVuelos(vuelosFiltrados, cantPasajeros);
+
+
+
             }
         }
+
+                private void RellenarTablaVuelos(List<VueloEnt> vuelosFiltrados, int cantPasajeros)
+                {
+                    dataGridView1.Rows.Clear();
+
+                    foreach (var vuelo in vuelosFiltrados)
+                    {
+                        dataGridView1.Rows.Add(
+                            vuelo.Uid,
+                            vuelo.Codigo,
+                            vuelo.Origen,
+                            vuelo.Destino,
+                            vuelo.FechaSalida,
+                            vuelo.FechaArribo,
+                            vuelo.TiempoVuelo,
+                            vuelo.Aerolinea,
+                            cantPasajeros,
+                            vuelo.Tarifas[0].TipoPasajero,
+                            vuelo.Tarifas[0].Clase,
+                            vuelo.Tarifas[0].Precio,
+                            vuelo.Tarifas[0].Disponibilidad
+                            );
+                    }
+                }
 
         private void RellenarPresupuestoTabla(List<ProductoLineaEnt> productosAgregados)
         {

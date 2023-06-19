@@ -221,5 +221,6 @@ namespace SolucionCAI.AgenciaDeViajes
             item.Tarifa.Pasajeros.Remove(item.Pasajero);
             listBox1.Items.Remove(item);
         }
+
     }
 }
