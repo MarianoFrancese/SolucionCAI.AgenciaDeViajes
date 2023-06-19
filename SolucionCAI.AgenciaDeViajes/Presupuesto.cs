@@ -466,10 +466,21 @@ namespace SolucionCAI.AgenciaDeViajes
 
                 MessageBox.Show("Debe completar el tipo de habitación");
             }
-            else
+            else if (string.IsNullOrEmpty(comboBox5.Text))
             {
 
+                MessageBox.Show("Debe seleccionar una ciudad");
+            }
+            else if (dateTimePicker3.Value <= dateTimePicker2.Value)
+
+            {
+                MessageBox.Show("La Fecha Salida debe ser mayor a la Fecha Entrada");
+            }
+           
+            else 
+            {
                 MessageBox.Show("No se encontraron hoteles disponibles");
+
             }
         }
     }
