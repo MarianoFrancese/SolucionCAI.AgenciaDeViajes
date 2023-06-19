@@ -513,7 +513,7 @@ namespace SolucionCAI.AgenciaDeViajes
 
             }
 
-            else if (dateTimePicker2.Value >= DateTime.Now)
+            else if (dateTimePicker2.Value <= DateTime.Now)
 
             {
                 MessageBox.Show("La Fecha de Entrada no puede ser inferior al día de la fecha");
