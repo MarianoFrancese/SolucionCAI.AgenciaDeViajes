@@ -513,16 +513,13 @@ namespace SolucionCAI.AgenciaDeViajes
 
             }
 
-            else if (dateTimePicker2.Value <= DateTime.Now)
+            else if (dateTimePicker2.Value < DateTime.Now && dateTimePicker3.Value <= dateTimePicker2.Value)
 
             {
-                MessageBox.Show("La Fecha de Entrada no puede ser inferior al día de la fecha");
+            MessageBox.Show("La Fecha de Entrada no puede ser inferior a hoy" 
+             + Environment.NewLine + "La fecha de salida no puede ser menor a la fecha de Entrada");
             }
-            else if (dateTimePicker3.Value <= dateTimePicker2.Value)
-
-            {
-                MessageBox.Show("La Fecha Salida debe ser mayor a la Fecha Entrada");
-            }
+          
 
             else
             {
