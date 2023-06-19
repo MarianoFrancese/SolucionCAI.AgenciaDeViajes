@@ -123,12 +123,17 @@ namespace SolucionCAI.AgenciaDeViajes
 
 
 
+            if ((string.IsNullOrEmpty(comboBox1.Text)) && (string.IsNullOrEmpty(comboBox4.Text)) && (dateTimePicker1.Value < DateTime.Now)
+                && (numericUpDown1.Value <= 0) && (string.IsNullOrEmpty(comboBox2.Text)) && (string.IsNullOrEmpty(comboBox3.Text))
+                )
+            {
+                MessageBox.Show("Debe completar los campos");
+            }
 
-            if (string.IsNullOrEmpty(comboBox1.Text))
+            else if (string.IsNullOrEmpty(comboBox1.Text))
             {
                 MessageBox.Show("Debe completar el campo Origen");
             }
-
 
             else if (string.IsNullOrEmpty(comboBox4.Text))
             {
