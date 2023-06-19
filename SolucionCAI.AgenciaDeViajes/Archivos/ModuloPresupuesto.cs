@@ -12,7 +12,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 {
     public class ModuloPresupuesto
     {
-        public static VueloEnt GenerarVuelo(string clase, string tipoPasajero, decimal tarifa, int cantPasajeros, string codigo, string origen, string destino, DateTime fechaPartida, DateTime fechaArribo, TimeSpan tiempoVuelo, string aerolinea)
+        public static VueloEnt GenerarVuelo(Guid uid, string clase, string tipoPasajero, decimal tarifa, int cantPasajeros, string codigo, string origen, string destino, DateTime fechaPartida, DateTime fechaArribo, TimeSpan tiempoVuelo, string aerolinea)
 
         {
 
@@ -43,6 +43,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             VueloEnt vueloSeleccionado = new VueloEnt
 
             {
+                Uid = uid,
 
                 Codigo = codigo,
 
@@ -74,6 +75,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             {
                 ProductoV = vueloPresupuestado,
                 ProductoH = null,
+                PrecioUn = vueloPresupuestado.Tarifas[0].Precio,
                 Cantidad = vueloPresupuestado.Tarifas[0].Disponibilidad,
                 Pasajeros = null,
             };

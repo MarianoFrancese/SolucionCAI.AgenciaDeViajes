@@ -56,6 +56,9 @@
     <None Update="Presupuestos.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Usuarios.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Vuelos.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

@@ -26,9 +26,9 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
                 //    json["Uid"] = Uid.ToString();
                 //}
-                string contenido = JsonConvert.SerializeObject(jsonArray, Formatting.Indented);
-                File.WriteAllText("Vuelos.json", contenido);
-                var mensaje = "Grabado";
+                //string contenido = JsonConvert.SerializeObject(jsonArray, Formatting.Indented);
+                //File.WriteAllText("Vuelos.json", contenido);
+                //var mensaje = "Grabado";
                 return jsonArray;
 
             }

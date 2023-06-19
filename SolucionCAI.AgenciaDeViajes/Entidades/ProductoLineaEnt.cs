@@ -29,7 +29,7 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
         }
         public static string MostrarDescripcionVuelo(VueloEnt vuelo)
         {
-            return $"Codigo: {vuelo.Codigo} - Vuelo de {vuelo.Origen} a {vuelo.Destino} con {vuelo.Aerolinea}";
+            return $"Codigo: {vuelo.Codigo} - Vuelo de {vuelo.Origen} a {vuelo.Destino} con {vuelo.Aerolinea} - Fecha de Salida: {vuelo.FechaSalida} - Fecha de Arribo: {vuelo.FechaArribo}";
         }
 
         public static string VueloToString(VueloEnt vuelo)

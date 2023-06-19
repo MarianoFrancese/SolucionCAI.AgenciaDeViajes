@@ -130,10 +130,11 @@ namespace SolucionCAI.AgenciaDeViajes
         private void RellenarTablaVuelos(List<VueloEnt> vuelosFiltrados, int cantPasajeros)
         {
             dataGridView1.Rows.Clear();
-
+            
             foreach (var vuelo in vuelosFiltrados)
             {
                 dataGridView1.Rows.Add(
+                    vuelo.Uid,
                     vuelo.Codigo,
                     vuelo.Origen,
                     vuelo.Destino,
@@ -152,14 +153,17 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void RellenarPresupuestoTabla(List<ProductoLineaEnt> productosAgregados)
         {
+            string descripcionV = ProductoLineaEnt.MostrarDescripcionVuelo(productosAgregados[0].ProductoV);
+
             foreach (var producto in productosAgregados)
             {
 
                 dataGridView2.Rows.Add(
+                    producto.ProductoV.Uid,
 
-                    producto.ProductoV,
+                    descripcionV,
 
-                    producto.ProductoV.Tarifas[0].Precio,
+                    producto.PrecioUn,
 
                     producto.Cantidad,
 
@@ -224,7 +228,6 @@ namespace SolucionCAI.AgenciaDeViajes
         {
             List<ProductoLineaEnt> productosAGrabar = new List<ProductoLineaEnt>();
             ProductoLineaEnt productos;
-            //VueloEnt vuelo = ModuloProductos.ObtenerVueloPorID(dataGridView2.Rows.Cells[0]?.Value?.ToString()); //agregar uid a la tabla
             foreach (DataGridViewRow fila in dataGridView2.Rows)
             {
                 string filaString = fila.ToString();
@@ -232,82 +235,135 @@ namespace SolucionCAI.AgenciaDeViajes
                 {
                     if (fila.Cells[1].Value != null)
                     {
-                        string uidProductoString = fila.Cells[0]?.Value?.ToString();
-                        bool uidProducto = Guid.TryParse(uidProductoString, out Guid uidProductoGuid);
-                        producto = fila.Cells[1]?.Value?.ToString();
-                        int indexEntrada = producto.IndexOf("Fecha de Entrada: ") + "Fecha de Entrada: ".Length;
-                        int indexSalida = producto.IndexOf(" - Fecha de Salida:");
-                        DateTime entradaFecha = DateTime.ParseExact(producto.Substring(indexEntrada, producto.IndexOf(" 0:00:00 - Fecha de S") - indexEntrada).Trim(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
-                        DateTime salidaFecha = DateTime.ParseExact(producto.Substring(indexSalida + " - Fecha de Salida:".Length).Trim(), "dd/MM/yyyy H:mm:ss", CultureInfo.InvariantCulture).Date;
                         precio = Convert.ToDecimal(fila.Cells[2]?.Value?.ToString());
                         cantidad = Convert.ToInt32(fila.Cells[3]?.Value?.ToString());
-                        //decimal subtotal = Convert.ToDecimal(fila.Cells[4]?.Value?.ToString());
-                        //decimal iva = Convert.ToDecimal(fila.Cells[5]?.Value?.ToString());
-                        //decimal totalprod = Convert.ToDecimal(fila.Cells[6]?.Value?.ToString());
-                        total = Convert.ToDecimal(textBox5.Text);
-
-                        if (uidProductoGuid != null)
+                        producto = fila.Cells[1]?.Value?.ToString();
+                        string uidProductoString = fila.Cells[0]?.Value?.ToString();
+                        bool uidProducto = Guid.TryParse(uidProductoString, out Guid uidProductoGuid);
+                        try
                         {
-                            try
+                            Console.WriteLine("Hola");
+                            DateTime entradaFecha;
+                            if (DateTime.TryParseExact(producto.Substring(producto.IndexOf("Fecha de Entrada: ") + "Fecha de Entrada: ".Length, producto.IndexOf(" 0:00:00 - Fecha de S") - producto.IndexOf("Fecha de Entrada: ") + "Fecha de Entrada: ".Length).Trim(), "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out entradaFecha))
                             {
-                                VueloEnt vuelo = ModuloProductos.ObtenerVueloPorID(uidProductoGuid);
-
-                                productos = new ProductoLineaEnt
+                                // Parsing successful
+                                DateTime salidaFecha;
+                                if (DateTime.TryParseExact(producto.Substring(producto.IndexOf(" - Fecha de Salida:") + " - Fecha de Salida:".Length).Trim(), "dd/MM/yyyy H:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.None, out salidaFecha))
                                 {
-                                    ProductoV = vuelo,
-                                    ProductoH = null,
-                                    PrecioUn = precio,
-                                    Cantidad = cantidad,
-                                    Pasajeros = null,
-                                };
-                                productosAGrabar.Add(productos);
-                            }
-                            catch (Exception)
-                            {
-                                HotelEnt hotel = ModuloProductos.ObtenerHotelPorID(uidProductoGuid, entradaFecha, salidaFecha);
+                                    HotelEnt hotel = ModuloProductos.ObtenerHotelPorID(uidProductoGuid, entradaFecha, salidaFecha);
 
-                                productos = new ProductoLineaEnt
-                                {
-                                    ProductoV = null,
-                                    ProductoH = hotel,
-                                    PrecioUn = precio,
-                                    Cantidad = cantidad,
-                                    Pasajeros = null
-                                };
-                                productosAGrabar.Add(productos);
+                                    productos = new ProductoLineaEnt
+                                    {
+                                        ProductoV = null,
+                                        ProductoH = hotel,
+                                        PrecioUn = precio,
+                                        Cantidad = cantidad,
+                                        Pasajeros = null
+                                    };
+                                    productosAGrabar.Add(productos);
+                                }
                             }
                         }
-                        else
+                        catch (Exception)
                         {
-                            MessageBox.Show("No se pudo obtener el producto");
+                            DateTime salidaFechaVuelo;
+                            if (DateTime.TryParseExact(producto.Substring(producto.IndexOf("Fecha de Salida: ") + "Fecha de Salida: ".Length, producto.IndexOf(" 0:00:00 - Fecha de A") - producto.IndexOf("Fecha de Salida: ") + "Fecha de Salida: ".Length).Trim(), "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out salidaFechaVuelo))
+                            {
+                                DateTime arriboFechaVuelo;
+                                if (DateTime.TryParseExact(producto.Substring(producto.IndexOf(" - Fecha de Arribo:") + " - Fecha de Arribo:".Length).Trim(), "dd/MM/yyyy H:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.None, out arriboFechaVuelo))
+                                {
+                                    VueloEnt vuelo = ModuloProductos.ObtenerVueloPorID(uidProductoGuid, salidaFechaVuelo, arriboFechaVuelo);
+
+                                    productos = new ProductoLineaEnt
+                                    {
+                                        ProductoV = vuelo,
+                                        ProductoH = null,
+                                        PrecioUn = precio,
+                                        Cantidad = cantidad,
+                                        Pasajeros = null,
+                                    };
+                                    productosAGrabar.Add(productos);
+                                }
+                            }
+                            else
+                            {
+                                Console.WriteLine("Producto no encontrado");
+                            }
                         }
+
+
+
+
+                        ////DateTime entradaFecha = DateTime.ParseExact(producto.Substring(indexEntrada, producto.IndexOf(" 0:00:00 - Fecha de S") - indexEntrada).Trim(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
+
+
+
+
+                        //    try
+                        //    {
+                        //        VueloEnt vuelo = ModuloProductos.ObtenerVueloPorID(uidProductoGuid);
+
+                        //        productos = new ProductoLineaEnt
+                        //        {
+                        //            ProductoV = vuelo,
+                        //            ProductoH = null,
+                        //            PrecioUn = precio,
+                        //            Cantidad = cantidad,
+                        //            Pasajeros = null,
+                        //        };
+                        //        productosAGrabar.Add(productos);
+                        //    }
+                        //    catch (Exception)
+                        //    {
+                        //        HotelEnt hotel = ModuloProductos.ObtenerHotelPorID(uidProductoGuid, entradaFecha, salidaFecha);
+
+                        //        productos = new ProductoLineaEnt
+                        //        {
+                        //            ProductoV = null,
+                        //            ProductoH = hotel,
+                        //            PrecioUn = precio,
+                        //            Cantidad = cantidad,
+                        //            Pasajeros = null
+                        //        };
+                        //        productosAGrabar.Add(productos);
+                        //    }
+                        //}
+                        //else
+                        //{
+                        //    MessageBox.Show("No se pudo obtener el producto");
+                        //}
                     }
                     else
                     {
                         Console.WriteLine("No hay productos");
                     }
                 }
-                Console.WriteLine(productosAGrabar);
             }
-            
+
             //productosAGrabar.RemoveAt(productosAGrabar.Count - 1);
 
 
+            if (productosAGrabar.Count > 0)
+            {
+                var listaProd = ModuloPresupuesto.CrearPresupuesto(productosAGrabar, total);
+                var presupuesto = ModuloPresupuesto.GrabarPresupuesto(listaProd);
 
-            var listaProd = ModuloPresupuesto.CrearPresupuesto(productosAGrabar, total);
-            var presupuesto = ModuloPresupuesto.GrabarPresupuesto(listaProd);
-
-            dataGridView1.Rows.Clear();
-            dataGridView2.Rows.Clear();
-            comboBox1.Text = string.Empty;
-            comboBox4.Text = string.Empty;
-            dateTimePicker1.Value = DateTime.Now;
-            numericUpDown1.Value = numericUpDown1.Minimum;
-            comboBox2.Text = string.Empty;
-            comboBox3.Text = string.Empty;
-            textBox11.Text = string.Empty;
-            textBox5.Text = string.Empty;
-            groupBox3.Visible = false;
+                dataGridView1.Rows.Clear();
+                dataGridView2.Rows.Clear();
+                comboBox1.Text = string.Empty;
+                comboBox4.Text = string.Empty;
+                dateTimePicker1.Value = DateTime.Now;
+                numericUpDown1.Value = numericUpDown1.Minimum;
+                comboBox2.Text = string.Empty;
+                comboBox3.Text = string.Empty;
+                textBox11.Text = string.Empty;
+                textBox5.Text = string.Empty;
+                groupBox3.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("No se pudo crear el presupuesto");
+            }
 
         }
 
@@ -332,32 +388,32 @@ namespace SolucionCAI.AgenciaDeViajes
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
                 List<ProductoLineaEnt> productosPresupuesto = new List<ProductoLineaEnt>();
 
+                Guid uid = Guid.Parse(row.Cells[0].Value.ToString());
+                string codigo = row.Cells[1].Value.ToString();
 
-                string codigo = row.Cells[0].Value.ToString();
+                string origen = row.Cells[2].Value.ToString();
 
-                string origen = row.Cells[1].Value.ToString();
+                string destino = row.Cells[3].Value.ToString();
 
-                string destino = row.Cells[2].Value.ToString();
+                DateTime fechaPartida = Convert.ToDateTime(row.Cells[4].Value.ToString());
 
-                DateTime fechaPartida = Convert.ToDateTime(row.Cells[3].Value.ToString());
+                DateTime fechaArribo = Convert.ToDateTime(row.Cells[5].Value.ToString());
 
-                DateTime fechaArribo = Convert.ToDateTime(row.Cells[4].Value.ToString());
+                TimeSpan tiempoVuelo = TimeSpan.Parse(row.Cells[6].Value.ToString());
 
-                TimeSpan tiempoVuelo = TimeSpan.Parse(row.Cells[5].Value.ToString());
+                string aerolinea = row.Cells[7].Value.ToString();
 
-                string aerolinea = row.Cells[6].Value.ToString();
+                int cantPasajeros = Convert.ToInt32(row.Cells[8].Value.ToString());
 
-                int cantPasajeros = Convert.ToInt32(row.Cells[7].Value.ToString());
+                string tipoPasajero = row.Cells[9].Value.ToString();
 
-                string tipoPasajero = row.Cells[8].Value.ToString();
+                string clase = row.Cells[10].Value.ToString();
 
-                string clase = row.Cells[9].Value.ToString();
+                decimal tarifa = Convert.ToDecimal(row.Cells[11].Value.ToString());
 
-                decimal tarifa = Convert.ToDecimal(row.Cells[10].Value.ToString());
+                int disponibilidadVuelo = Convert.ToInt32(row.Cells[12].Value.ToString());
 
-                int disponibilidadVuelo = Convert.ToInt32(row.Cells[11].Value.ToString());
-
-                vuelo = ModuloPresupuesto.GenerarVuelo(clase, tipoPasajero, tarifa, cantPasajeros, codigo, origen, destino, fechaPartida, fechaArribo, tiempoVuelo, aerolinea);
+                vuelo = ModuloPresupuesto.GenerarVuelo(uid, clase, tipoPasajero, tarifa, cantPasajeros, codigo, origen, destino, fechaPartida, fechaArribo, tiempoVuelo, aerolinea);
                 productoAgregado = ModuloPresupuesto.AgregarVueloLinea(vuelo);
                 productosPresupuesto.Add(productoAgregado);
                 textBox11.Text = ModuloPresupuesto.CrearPresupuesto(productosPresupuesto, 0).NroSeguimiento.ToString();

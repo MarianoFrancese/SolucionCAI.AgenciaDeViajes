@@ -14,17 +14,15 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
     {
         public static List<VueloEnt> ListaVuelos(string origen, string destino, string fechaPartida, int cantPasajeros, string tipoPasajero, string clase)
         {
-
-            if (File.Exists("Vuelos.json"))
+            JArray jsonArray = ArchivoVuelos.LeerVuelos();
+            if (jsonArray.Count > 0)
             {
-                string contenidoDelArchivo = File.ReadAllText("Vuelos.json");
-                Console.WriteLine("El archivo existe");
-                JArray jsonArray = JArray.Parse(contenidoDelArchivo);
 
                 List<VueloEnt> vuelosFiltrados = new List<VueloEnt>();
 
                 foreach (JObject vueloJson in jsonArray)
                 {
+                    string uid = (string)vueloJson["Uid"];
                     string origenjson = (string)vueloJson["Origen"];
                     string destinojson = (string)vueloJson["Destino"];
                     string fechapartidajson = (string)vueloJson["FechaSalida"];
@@ -35,9 +33,11 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
                     if (origenjson == origen && destinojson == destino && fechapartidajson == fechaPartida && Int64.Parse(cantpjson) >= cantPasajeros && tipopjson == tipoPasajero && clasejson == clase)
                     {
+                        Console.WriteLine(uid);
                         var tarifas = JsonConvert.DeserializeObject<List<TarifaEnt>>(vueloJson["Tarifas"].ToString());
                         VueloEnt vuelo = new VueloEnt
                         {
+                            Uid = Guid.Parse(uid),
                             Codigo = (string)vueloJson["Codigo"],
                             Origen = origenjson,
                             Destino = destinojson,
@@ -61,7 +61,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             }
         }
 
-        public static VueloEnt ObtenerVueloPorID(Guid uid)
+        public static VueloEnt ObtenerVueloPorID(Guid uid, DateTime fechaSalida, DateTime fechaArribo)
         {
             VueloEnt vuelo = new VueloEnt();
             JArray jsonArray = ArchivoVuelos.LeerVuelos();
@@ -72,6 +72,8 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 //Console.WriteLine(uidJson);
                 if (vueloJson["Uid"].ToString() == uid.ToString())
                 {
+                    vueloJson["FechaSalida"] = fechaSalida;
+                    vueloJson["FechaArribo"] = fechaArribo;
                     vuelo = JsonConvert.DeserializeObject<VueloEnt>(vueloJson.ToString());
                 }
             }

@@ -42,6 +42,21 @@
             label7 = new Label();
             label6 = new Label();
             dataGridView3 = new DataGridView();
+            IdProductoHotel = new DataGridViewTextBoxColumn();
+            CodHotel = new DataGridViewTextBoxColumn();
+            Column22 = new DataGridViewTextBoxColumn();
+            CodCiudad = new DataGridViewTextBoxColumn();
+            Column31 = new DataGridViewTextBoxColumn();
+            Column32 = new DataGridViewTextBoxColumn();
+            Column24 = new DataGridViewTextBoxColumn();
+            Column25 = new DataGridViewTextBoxColumn();
+            Column26 = new DataGridViewTextBoxColumn();
+            Column28 = new DataGridViewTextBoxColumn();
+            TarifaEstadia = new DataGridViewTextBoxColumn();
+            TipoAdulto = new DataGridViewComboBoxColumn();
+            TipoMenor = new DataGridViewComboBoxColumn();
+            TipoInfante = new DataGridViewComboBoxColumn();
+            Column30 = new DataGridViewButtonColumn();
             tabPage2 = new TabPage();
             comboBox4 = new ComboBox();
             comboBox1 = new ComboBox();
@@ -57,6 +72,7 @@
             label2 = new Label();
             label1 = new Label();
             dataGridView1 = new DataGridView();
+            IdProductoVuelo = new DataGridViewTextBoxColumn();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
@@ -90,21 +106,6 @@
             button11 = new Button();
             button12 = new Button();
             label14 = new Label();
-            IdProductoHotel = new DataGridViewTextBoxColumn();
-            CodHotel = new DataGridViewTextBoxColumn();
-            Column22 = new DataGridViewTextBoxColumn();
-            CodCiudad = new DataGridViewTextBoxColumn();
-            Column31 = new DataGridViewTextBoxColumn();
-            Column32 = new DataGridViewTextBoxColumn();
-            Column24 = new DataGridViewTextBoxColumn();
-            Column25 = new DataGridViewTextBoxColumn();
-            Column26 = new DataGridViewTextBoxColumn();
-            Column28 = new DataGridViewTextBoxColumn();
-            TarifaEstadia = new DataGridViewTextBoxColumn();
-            TipoAdulto = new DataGridViewComboBoxColumn();
-            TipoMenor = new DataGridViewComboBoxColumn();
-            TipoInfante = new DataGridViewComboBoxColumn();
-            Column30 = new DataGridViewButtonColumn();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
@@ -284,6 +285,127 @@
             dataGridView3.TabIndex = 0;
             dataGridView3.CellContentClick += dataGridView3_CellContentClick;
             // 
+            // IdProductoHotel
+            // 
+            IdProductoHotel.HeaderText = "IdProductoHotel";
+            IdProductoHotel.MinimumWidth = 6;
+            IdProductoHotel.Name = "IdProductoHotel";
+            IdProductoHotel.Width = 125;
+            // 
+            // CodHotel
+            // 
+            CodHotel.HeaderText = "Código Hotel";
+            CodHotel.MinimumWidth = 10;
+            CodHotel.Name = "CodHotel";
+            CodHotel.ReadOnly = true;
+            CodHotel.Width = 200;
+            // 
+            // Column22
+            // 
+            Column22.HeaderText = "Nombre";
+            Column22.MinimumWidth = 10;
+            Column22.Name = "Column22";
+            Column22.ReadOnly = true;
+            Column22.Width = 200;
+            // 
+            // CodCiudad
+            // 
+            CodCiudad.HeaderText = "Ciudad";
+            CodCiudad.MinimumWidth = 10;
+            CodCiudad.Name = "CodCiudad";
+            CodCiudad.ReadOnly = true;
+            CodCiudad.Width = 200;
+            // 
+            // Column31
+            // 
+            Column31.HeaderText = "Fecha Entrada";
+            Column31.MinimumWidth = 10;
+            Column31.Name = "Column31";
+            Column31.ReadOnly = true;
+            Column31.Width = 200;
+            // 
+            // Column32
+            // 
+            Column32.HeaderText = "Fecha Salida";
+            Column32.MinimumWidth = 10;
+            Column32.Name = "Column32";
+            Column32.ReadOnly = true;
+            Column32.Width = 200;
+            // 
+            // Column24
+            // 
+            Column24.HeaderText = "Dirección";
+            Column24.MinimumWidth = 10;
+            Column24.Name = "Column24";
+            Column24.ReadOnly = true;
+            Column24.Width = 200;
+            // 
+            // Column25
+            // 
+            Column25.HeaderText = "Calificación";
+            Column25.MinimumWidth = 10;
+            Column25.Name = "Column25";
+            Column25.ReadOnly = true;
+            Column25.Width = 200;
+            // 
+            // Column26
+            // 
+            Column26.HeaderText = "Tipo Habitación";
+            Column26.MinimumWidth = 10;
+            Column26.Name = "Column26";
+            Column26.ReadOnly = true;
+            Column26.Width = 200;
+            // 
+            // Column28
+            // 
+            Column28.HeaderText = "Capacidad";
+            Column28.MinimumWidth = 10;
+            Column28.Name = "Column28";
+            Column28.ReadOnly = true;
+            Column28.Width = 200;
+            // 
+            // TarifaEstadia
+            // 
+            TarifaEstadia.HeaderText = "Tarifa Estadia";
+            TarifaEstadia.MinimumWidth = 10;
+            TarifaEstadia.Name = "TarifaEstadia";
+            TarifaEstadia.ReadOnly = true;
+            TarifaEstadia.Width = 200;
+            // 
+            // TipoAdulto
+            // 
+            TipoAdulto.HeaderText = "Adultos";
+            TipoAdulto.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6" });
+            TipoAdulto.MinimumWidth = 10;
+            TipoAdulto.Name = "TipoAdulto";
+            TipoAdulto.Resizable = DataGridViewTriState.True;
+            TipoAdulto.Width = 200;
+            // 
+            // TipoMenor
+            // 
+            TipoMenor.HeaderText = "Menores";
+            TipoMenor.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6" });
+            TipoMenor.MinimumWidth = 10;
+            TipoMenor.Name = "TipoMenor";
+            TipoMenor.Resizable = DataGridViewTriState.True;
+            TipoMenor.Width = 200;
+            // 
+            // TipoInfante
+            // 
+            TipoInfante.HeaderText = "Infantes";
+            TipoInfante.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6" });
+            TipoInfante.MinimumWidth = 10;
+            TipoInfante.Name = "TipoInfante";
+            TipoInfante.Resizable = DataGridViewTriState.True;
+            TipoInfante.Width = 200;
+            // 
+            // Column30
+            // 
+            Column30.HeaderText = "Agregar";
+            Column30.MinimumWidth = 10;
+            Column30.Name = "Column30";
+            Column30.Width = 200;
+            // 
             // tabPage2
             // 
             tabPage2.Controls.Add(comboBox4);
@@ -456,7 +578,7 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, FechaPartida, FechaArribo, TiempoVuelo, Column7, cantPasajero, TipoPasajero, Column8, Tarifa, disponibilidadVuelo, Column12 });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { IdProductoVuelo, Column1, Column2, Column3, FechaPartida, FechaArribo, TiempoVuelo, Column7, cantPasajero, TipoPasajero, Column8, Tarifa, disponibilidadVuelo, Column12 });
             dataGridView1.EditMode = DataGridViewEditMode.EditOnKeystroke;
             dataGridView1.Location = new Point(5, 113);
             dataGridView1.Margin = new Padding(5, 4, 5, 4);
@@ -465,6 +587,15 @@
             dataGridView1.Size = new Size(991, 184);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
+            // 
+            // IdProductoVuelo
+            // 
+            IdProductoVuelo.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            IdProductoVuelo.HeaderText = "IdProductoVuelo";
+            IdProductoVuelo.MinimumWidth = 10;
+            IdProductoVuelo.Name = "IdProductoVuelo";
+            IdProductoVuelo.ReadOnly = true;
+            IdProductoVuelo.Width = 125;
             // 
             // Column1
             // 
@@ -775,127 +906,6 @@
             label14.TabIndex = 0;
             label14.Text = "¿Desea generar un Presupuesto?";
             // 
-            // IdProductoHotel
-            // 
-            IdProductoHotel.HeaderText = "IdProductoHotel";
-            IdProductoHotel.MinimumWidth = 6;
-            IdProductoHotel.Name = "IdProductoHotel";
-            IdProductoHotel.Width = 125;
-            // 
-            // CodHotel
-            // 
-            CodHotel.HeaderText = "Código Hotel";
-            CodHotel.MinimumWidth = 10;
-            CodHotel.Name = "CodHotel";
-            CodHotel.ReadOnly = true;
-            CodHotel.Width = 200;
-            // 
-            // Column22
-            // 
-            Column22.HeaderText = "Nombre";
-            Column22.MinimumWidth = 10;
-            Column22.Name = "Column22";
-            Column22.ReadOnly = true;
-            Column22.Width = 200;
-            // 
-            // CodCiudad
-            // 
-            CodCiudad.HeaderText = "Ciudad";
-            CodCiudad.MinimumWidth = 10;
-            CodCiudad.Name = "CodCiudad";
-            CodCiudad.ReadOnly = true;
-            CodCiudad.Width = 200;
-            // 
-            // Column31
-            // 
-            Column31.HeaderText = "Fecha Entrada";
-            Column31.MinimumWidth = 10;
-            Column31.Name = "Column31";
-            Column31.ReadOnly = true;
-            Column31.Width = 200;
-            // 
-            // Column32
-            // 
-            Column32.HeaderText = "Fecha Salida";
-            Column32.MinimumWidth = 10;
-            Column32.Name = "Column32";
-            Column32.ReadOnly = true;
-            Column32.Width = 200;
-            // 
-            // Column24
-            // 
-            Column24.HeaderText = "Dirección";
-            Column24.MinimumWidth = 10;
-            Column24.Name = "Column24";
-            Column24.ReadOnly = true;
-            Column24.Width = 200;
-            // 
-            // Column25
-            // 
-            Column25.HeaderText = "Calificación";
-            Column25.MinimumWidth = 10;
-            Column25.Name = "Column25";
-            Column25.ReadOnly = true;
-            Column25.Width = 200;
-            // 
-            // Column26
-            // 
-            Column26.HeaderText = "Tipo Habitación";
-            Column26.MinimumWidth = 10;
-            Column26.Name = "Column26";
-            Column26.ReadOnly = true;
-            Column26.Width = 200;
-            // 
-            // Column28
-            // 
-            Column28.HeaderText = "Capacidad";
-            Column28.MinimumWidth = 10;
-            Column28.Name = "Column28";
-            Column28.ReadOnly = true;
-            Column28.Width = 200;
-            // 
-            // TarifaEstadia
-            // 
-            TarifaEstadia.HeaderText = "Tarifa Estadia";
-            TarifaEstadia.MinimumWidth = 10;
-            TarifaEstadia.Name = "TarifaEstadia";
-            TarifaEstadia.ReadOnly = true;
-            TarifaEstadia.Width = 200;
-            // 
-            // TipoAdulto
-            // 
-            TipoAdulto.HeaderText = "Adultos";
-            TipoAdulto.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6" });
-            TipoAdulto.MinimumWidth = 10;
-            TipoAdulto.Name = "TipoAdulto";
-            TipoAdulto.Resizable = DataGridViewTriState.True;
-            TipoAdulto.Width = 200;
-            // 
-            // TipoMenor
-            // 
-            TipoMenor.HeaderText = "Menores";
-            TipoMenor.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6" });
-            TipoMenor.MinimumWidth = 10;
-            TipoMenor.Name = "TipoMenor";
-            TipoMenor.Resizable = DataGridViewTriState.True;
-            TipoMenor.Width = 200;
-            // 
-            // TipoInfante
-            // 
-            TipoInfante.HeaderText = "Infantes";
-            TipoInfante.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6" });
-            TipoInfante.MinimumWidth = 10;
-            TipoInfante.Name = "TipoInfante";
-            TipoInfante.Resizable = DataGridViewTriState.True;
-            TipoInfante.Width = 200;
-            // 
-            // Column30
-            // 
-            Column30.HeaderText = "Agregar";
-            Column30.MinimumWidth = 10;
-            Column30.Name = "Column30";
-            Column30.Width = 200;
-            // 
             // Presupuesto
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -972,6 +982,7 @@
         private Button button11;
         private Button button12;
         private Label label14;
+        private DataGridViewTextBoxColumn IdProductoVuelo;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
