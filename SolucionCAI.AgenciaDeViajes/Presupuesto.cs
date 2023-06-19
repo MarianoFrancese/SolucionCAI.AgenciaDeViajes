@@ -238,105 +238,101 @@ namespace SolucionCAI.AgenciaDeViajes
                         precio = Convert.ToDecimal(fila.Cells[2]?.Value?.ToString());
                         cantidad = Convert.ToInt32(fila.Cells[3]?.Value?.ToString());
                         producto = fila.Cells[1]?.Value?.ToString();
+                        total = Convert.ToDecimal(textBox5.Text);
+                        int indexEntrada = producto.IndexOf("Fecha de Entrada: ") + "Fecha de Entrada: ".Length;
+                        int indexSalida = producto.IndexOf(" - Fecha de Salida:");
+                        int indexSalidaVuelo = producto.IndexOf("Fecha de Salida: ") + "Fecha de Salida: ".Length;
+                        int indexArriboVuelo = producto.IndexOf(" - Fecha de Arribo:");
                         string uidProductoString = fila.Cells[0]?.Value?.ToString();
                         bool uidProducto = Guid.TryParse(uidProductoString, out Guid uidProductoGuid);
-                        try
+                        
+                        if (uidProductoGuid != null)
                         {
-                            Console.WriteLine("Hola");
-                            DateTime entradaFecha;
-                            if (DateTime.TryParseExact(producto.Substring(producto.IndexOf("Fecha de Entrada: ") + "Fecha de Entrada: ".Length, producto.IndexOf(" 0:00:00 - Fecha de S") - producto.IndexOf("Fecha de Entrada: ") + "Fecha de Entrada: ".Length).Trim(), "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out entradaFecha))
+                            try
                             {
-                                // Parsing successful
-                                DateTime salidaFecha;
-                                if (DateTime.TryParseExact(producto.Substring(producto.IndexOf(" - Fecha de Salida:") + " - Fecha de Salida:".Length).Trim(), "dd/MM/yyyy H:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.None, out salidaFecha))
-                                {
-                                    HotelEnt hotel = ModuloProductos.ObtenerHotelPorID(uidProductoGuid, entradaFecha, salidaFecha);
 
-                                    productos = new ProductoLineaEnt
-                                    {
-                                        ProductoV = null,
-                                        ProductoH = hotel,
-                                        PrecioUn = precio,
-                                        Cantidad = cantidad,
-                                        Pasajeros = null
-                                    };
-                                    productosAGrabar.Add(productos);
-                                }
+                                DateTime entradaFecha = DateTime.ParseExact(producto.Substring(indexEntrada, producto.IndexOf(" 0:00:00 - Fecha de S") - indexEntrada).Trim(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                                DateTime salidaFecha = DateTime.ParseExact(producto.Substring(indexSalida + " - Fecha de Salida:".Length).Trim(), "dd/MM/yyyy H:mm:ss", CultureInfo.InvariantCulture).Date;
+
+                                HotelEnt hotel = ModuloProductos.ObtenerHotelPorID(uidProductoGuid, entradaFecha, salidaFecha);
+
+                                productos = new ProductoLineaEnt
+                                {
+                                    ProductoV = null,
+                                    ProductoH = hotel,
+                                    PrecioUn = precio,
+                                    Cantidad = cantidad,
+                                    Pasajeros = null
+                                };
+                                productosAGrabar.Add(productos);
+                            }
+                            catch (Exception)
+                            {
+                                DateTime salidaFechaVuelo = DateTime.ParseExact(producto.Substring(indexSalidaVuelo, producto.IndexOf(" 0:00:00 - Fecha de A") - indexSalidaVuelo).Trim(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                                DateTime arriboFechaVuelo = DateTime.ParseExact(producto.Substring(indexArriboVuelo + " - Fecha de Arribo:".Length).Trim(), "dd/MM/yyyy H:mm:ss", CultureInfo.InvariantCulture).Date;
+
+                                VueloEnt vuelo = ModuloProductos.ObtenerVueloPorID(uidProductoGuid, salidaFechaVuelo, arriboFechaVuelo, precio, cantidad);
+
+                                productos = new ProductoLineaEnt
+                                {
+                                    ProductoV = vuelo,
+                                    ProductoH = null,
+                                    PrecioUn = precio,
+                                    Cantidad = cantidad,
+                                    Pasajeros = null,
+                                };
+                                productosAGrabar.Add(productos);
+
                             }
                         }
-                        catch (Exception)
-                        {
-                            DateTime salidaFechaVuelo;
-                            if (DateTime.TryParseExact(producto.Substring(producto.IndexOf("Fecha de Salida: ") + "Fecha de Salida: ".Length, producto.IndexOf(" 0:00:00 - Fecha de A") - producto.IndexOf("Fecha de Salida: ") + "Fecha de Salida: ".Length).Trim(), "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out salidaFechaVuelo))
-                            {
-                                DateTime arriboFechaVuelo;
-                                if (DateTime.TryParseExact(producto.Substring(producto.IndexOf(" - Fecha de Arribo:") + " - Fecha de Arribo:".Length).Trim(), "dd/MM/yyyy H:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.None, out arriboFechaVuelo))
-                                {
-                                    VueloEnt vuelo = ModuloProductos.ObtenerVueloPorID(uidProductoGuid, salidaFechaVuelo, arriboFechaVuelo);
-
-                                    productos = new ProductoLineaEnt
-                                    {
-                                        ProductoV = vuelo,
-                                        ProductoH = null,
-                                        PrecioUn = precio,
-                                        Cantidad = cantidad,
-                                        Pasajeros = null,
-                                    };
-                                    productosAGrabar.Add(productos);
-                                }
-                            }
-                            else
-                            {
-                                Console.WriteLine("Producto no encontrado");
-                            }
-                        }
-
-
-
-
-                        ////DateTime entradaFecha = DateTime.ParseExact(producto.Substring(indexEntrada, producto.IndexOf(" 0:00:00 - Fecha de S") - indexEntrada).Trim(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
-
-
-
-
-                        //    try
-                        //    {
-                        //        VueloEnt vuelo = ModuloProductos.ObtenerVueloPorID(uidProductoGuid);
-
-                        //        productos = new ProductoLineaEnt
-                        //        {
-                        //            ProductoV = vuelo,
-                        //            ProductoH = null,
-                        //            PrecioUn = precio,
-                        //            Cantidad = cantidad,
-                        //            Pasajeros = null,
-                        //        };
-                        //        productosAGrabar.Add(productos);
-                        //    }
-                        //    catch (Exception)
-                        //    {
-                        //        HotelEnt hotel = ModuloProductos.ObtenerHotelPorID(uidProductoGuid, entradaFecha, salidaFecha);
-
-                        //        productos = new ProductoLineaEnt
-                        //        {
-                        //            ProductoV = null,
-                        //            ProductoH = hotel,
-                        //            PrecioUn = precio,
-                        //            Cantidad = cantidad,
-                        //            Pasajeros = null
-                        //        };
-                        //        productosAGrabar.Add(productos);
-                        //    }
-                        //}
-                        //else
-                        //{
-                        //    MessageBox.Show("No se pudo obtener el producto");
-                        //}
                     }
                     else
                     {
                         Console.WriteLine("No hay productos");
                     }
+
+
+
+
+
+                    ////DateTime entradaFecha = DateTime.ParseExact(producto.Substring(indexEntrada, producto.IndexOf(" 0:00:00 - Fecha de S") - indexEntrada).Trim(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
+
+
+
+
+                    //    try
+                    //    {
+                    //        VueloEnt vuelo = ModuloProductos.ObtenerVueloPorID(uidProductoGuid);
+
+                    //        productos = new ProductoLineaEnt
+                    //        {
+                    //            ProductoV = vuelo,
+                    //            ProductoH = null,
+                    //            PrecioUn = precio,
+                    //            Cantidad = cantidad,
+                    //            Pasajeros = null,
+                    //        };
+                    //        productosAGrabar.Add(productos);
+                    //    }
+                    //    catch (Exception)
+                    //    {
+                    //        HotelEnt hotel = ModuloProductos.ObtenerHotelPorID(uidProductoGuid, entradaFecha, salidaFecha);
+
+                    //        productos = new ProductoLineaEnt
+                    //        {
+                    //            ProductoV = null,
+                    //            ProductoH = hotel,
+                    //            PrecioUn = precio,
+                    //            Cantidad = cantidad,
+                    //            Pasajeros = null
+                    //        };
+                    //        productosAGrabar.Add(productos);
+                    //    }
+                    //}
+                    //else
+                    //{
+                    //    MessageBox.Show("No se pudo obtener el producto");
+                    //}
                 }
             }
 

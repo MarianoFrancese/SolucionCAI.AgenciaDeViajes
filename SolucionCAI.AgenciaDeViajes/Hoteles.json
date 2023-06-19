@@ -21,31 +21,38 @@
       "HabitacionFechaDisp": [
         {
           "FechaHab": "29/06/2023",
-          "CantHab": 4
+          "CantHab": 4,
+          "Uid": "b1ac977b-9869-416d-8cdc-0d4390d77c5f"
         },
         {
           "FechaHab": "30/06/2023",
-          "CantHab": 4
+          "CantHab": 4,
+          "Uid": "eb7eedf0-f917-4e3e-a8a9-1883f2437ecf"
         },
         {
           "FechaHab": "01/07/2023",
-          "CantHab": 5
+          "CantHab": 5,
+          "Uid": "1be49874-2144-47ad-a9ca-3976a14c17f5"
         },
         {
           "FechaHab": "02/07/2023",
-          "CantHab": 4
+          "CantHab": 4,
+          "Uid": "7c700eb9-8ff8-4ed5-aa33-10050e0a5654"
         },
         {
           "FechaHab": "03/07/2023",
-          "CantHab": 7
+          "CantHab": 7,
+          "Uid": "47fbbf8c-35ed-4ba0-b0f5-2bfb75a83a3d"
         },
         {
           "FechaHab": "04/07/2023",
-          "CantHab": 5
+          "CantHab": 5,
+          "Uid": "ef502127-3aa0-4bc8-a2a7-0f9d4109cf82"
         },
         {
           "FechaHab": "05/07/2023",
-          "CantHab": 4
+          "CantHab": 4,
+          "Uid": "503d9f9d-e393-4eb2-aad7-2af67574b0a2"
         }
       ]
     },
@@ -73,31 +80,38 @@
       "HabitacionFechaDisp": [
         {
           "FechaHab": "29/06/2023",
-          "CantHab": 3
+          "CantHab": 3,
+          "Uid": "6fd89927-1a66-45e1-80d5-34a139d6d7af"
         },
         {
           "FechaHab": "30/06/2023",
-          "CantHab": 4
+          "CantHab": 4,
+          "Uid": "64b77c0a-278a-408b-9af7-9a875bf53df9"
         },
         {
           "FechaHab": "01/07/2023",
-          "CantHab": 4
+          "CantHab": 4,
+          "Uid": "4063cd7b-16a1-428e-ae87-6c32db90ac6e"
         },
         {
           "FechaHab": "02/07/2023",
-          "CantHab": 5
+          "CantHab": 5,
+          "Uid": "45c7d684-f94a-4e23-84c7-a319d862f215"
         },
         {
           "FechaHab": "03/07/2023",
-          "CantHab": 6
+          "CantHab": 6,
+          "Uid": "59a5d523-3ed0-4f27-b12c-9faa3bf99cb1"
         },
         {
           "FechaHab": "04/07/2023",
-          "CantHab": 3
+          "CantHab": 3,
+          "Uid": "9f123ce8-f855-4697-8e44-57ab2e103ca3"
         },
         {
           "FechaHab": "05/07/2023",
-          "CantHab": 2
+          "CantHab": 2,
+          "Uid": "00107b03-7b31-455d-991d-9b2d3940090e"
         }
       ]
     },
@@ -125,31 +139,38 @@
       "HabitacionFechaDisp": [
         {
           "FechaHab": "29/06/2023",
-          "CantHab": 5
+          "CantHab": 5,
+          "Uid": "605909aa-909b-4ba6-aa51-3e9f627c3e0f"
         },
         {
           "FechaHab": "30/06/2023",
-          "CantHab": 4
+          "CantHab": 4,
+          "Uid": "c32172e4-f46f-4b9c-aa9e-af4e88d77233"
         },
         {
           "FechaHab": "01/07/2023",
-          "CantHab": 5
+          "CantHab": 5,
+          "Uid": "a7d339aa-7fd9-488c-a940-0de85d5395a7"
         },
         {
           "FechaHab": "02/07/2023",
-          "CantHab": 6
+          "CantHab": 6,
+          "Uid": "f5bf9198-01db-4c38-afb5-3d80fd365746"
         },
         {
           "FechaHab": "03/07/2023",
-          "CantHab": 3
+          "CantHab": 3,
+          "Uid": "566943af-85c3-49ed-8ab8-97a053fc932b"
         },
         {
           "FechaHab": "04/07/2023",
-          "CantHab": 2
+          "CantHab": 2,
+          "Uid": "1ee81c13-5c69-4751-9840-3ceb0c57d9b9"
         },
         {
           "FechaHab": "05/07/2023",
-          "CantHab": 4
+          "CantHab": 4,
+          "Uid": "4484f24d-27b2-4ef1-b161-f9155c9cfbdc"
         }
       ]
     },
@@ -177,31 +198,38 @@
       "HabitacionFechaDisp": [
         {
           "FechaHab": "07/07/2023",
-          "CantHab": 3
+          "CantHab": 3,
+          "Uid": "5194c97d-4133-4df0-b0b1-7e0d79de93ec"
         },
         {
           "FechaHab": "08/07/2023",
-          "CantHab": 4
+          "CantHab": 4,
+          "Uid": "50027c70-5108-49e9-8173-7613ac13612d"
         },
         {
           "FechaHab": "09/07/2023",
-          "CantHab": 6
+          "CantHab": 6,
+          "Uid": "186b4910-70a1-4e38-8b0a-802cfede6283"
         },
         {
           "FechaHab": "10/07/2023",
-          "CantHab": 6
+          "CantHab": 6,
+          "Uid": "1f079057-67b2-471b-97b7-6b221bf74b77"
         },
         {
           "FechaHab": "11/07/2023",
-          "CantHab": 4
+          "CantHab": 4,
+          "Uid": "202a4a84-f5da-4ee0-8516-a6ca54105ff2"
         },
         {
           "FechaHab": "12/07/2023",
-          "CantHab": 5
+          "CantHab": 5,
+          "Uid": "b3c8b6b3-c6bf-44a6-b716-56977c5f20b1"
         },
         {
           "FechaHab": "13/07/2023",
-          "CantHab": 6
+          "CantHab": 6,
+          "Uid": "a03debf7-35e7-4305-9647-c31bbd79e1b7"
         }
       ]
     },
@@ -229,31 +257,38 @@
       "HabitacionFechaDisp": [
         {
           "FechaHab": "07/07/2023",
-          "CantHab": 3
+          "CantHab": 3,
+          "Uid": "3291f4e2-f285-4813-bf1e-f31279fefe27"
         },
         {
           "FechaHab": "08/07/2023",
-          "CantHab": 4
+          "CantHab": 4,
+          "Uid": "19a46e73-550e-43f6-9fd7-a17b1eccaa64"
         },
         {
           "FechaHab": "09/07/2023",
-          "CantHab": 3
+          "CantHab": 3,
+          "Uid": "45c61e98-c01b-467e-8ad1-1d130c6397b3"
         },
         {
           "FechaHab": "10/07/2023",
-          "CantHab": 5
+          "CantHab": 5,
+          "Uid": "fd1cbd69-1df1-415f-bb10-a5dbf01d71a7"
         },
         {
           "FechaHab": "11/07/2023",
-          "CantHab": 4
+          "CantHab": 4,
+          "Uid": "eeda7952-4f00-4225-8b92-eee342e7a6ff"
         },
         {
           "FechaHab": "12/07/2023",
-          "CantHab": 2
+          "CantHab": 2,
+          "Uid": "09deec1c-2410-4790-b64d-5a3a416a3bdb"
         },
         {
           "FechaHab": "13/07/2023",
-          "CantHab": 3
+          "CantHab": 3,
+          "Uid": "09399905-851f-4d2d-a8c9-3d4075fbad7f"
         }
       ]
     },
@@ -281,31 +316,38 @@
       "HabitacionFechaDisp": [
         {
           "FechaHab": "07/07/2023",
-          "CantHab": 6
+          "CantHab": 6,
+          "Uid": "97ceb362-3cdb-404e-8fba-307f9fd896fc"
         },
         {
           "FechaHab": "08/07/2023",
-          "CantHab": 3
+          "CantHab": 3,
+          "Uid": "da0aaf44-3bdd-43d2-a17c-f18df0f4285b"
         },
         {
           "FechaHab": "09/07/2023",
-          "CantHab": 2
+          "CantHab": 2,
+          "Uid": "9ec751b5-98b9-4b75-9387-4aabed9440f8"
         },
         {
           "FechaHab": "10/07/2023",
-          "CantHab": 4
+          "CantHab": 4,
+          "Uid": "feea11d1-10aa-4589-b0ad-3c3e520f47e4"
         },
         {
           "FechaHab": "11/07/2023",
-          "CantHab": 5
+          "CantHab": 5,
+          "Uid": "a20589a5-0c37-4d97-8ced-f3f798c680e9"
         },
         {
           "FechaHab": "12/07/2023",
-          "CantHab": 4
+          "CantHab": 4,
+          "Uid": "2585545c-114d-44e1-8239-ed58b45e590b"
         },
         {
           "FechaHab": "13/07/2023",
-          "CantHab": 3
+          "CantHab": 3,
+          "Uid": "9d3a8c6e-f300-43a9-99d2-a9f811cbfa73"
         }
       ]
     },
@@ -333,31 +375,38 @@
       "HabitacionFechaDisp": [
         {
           "FechaHab": "14/07/2023",
-          "CantHab": 3
+          "CantHab": 3,
+          "Uid": "8e011d74-4274-44b2-95ea-19bcfc072f66"
         },
         {
           "FechaHab": "15/07/2023",
-          "CantHab": 4
+          "CantHab": 4,
+          "Uid": "e18b2d4c-68c9-4ef1-a0c3-d2cd96281f86"
         },
         {
           "FechaHab": "16/07/2023",
-          "CantHab": 6
+          "CantHab": 6,
+          "Uid": "93e9c88b-1d06-44c7-91e5-ff30666cac41"
         },
         {
           "FechaHab": "17/07/2023",
-          "CantHab": 5
+          "CantHab": 5,
+          "Uid": "e47cf762-e664-426d-ac67-3433209f889f"
         },
         {
           "FechaHab": "18/07/2023",
-          "CantHab": 4
+          "CantHab": 4,
+          "Uid": "a9f78df5-12e2-4d2c-8c71-0cd16a730a55"
         },
         {
           "FechaHab": "19/07/2023",
-          "CantHab": 5
+          "CantHab": 5,
+          "Uid": "57ac87d6-d37b-4d8c-bd29-2da9c8564dac"
         },
         {
           "FechaHab": "20/07/2023",
-          "CantHab": 3
+          "CantHab": 3,
+          "Uid": "6b89425d-61ae-44b6-abda-1cc1d28f45e5"
         }
       ]
     },
@@ -385,31 +434,38 @@
       "HabitacionFechaDisp": [
         {
           "FechaHab": "14/07/2023",
-          "CantHab": 3
+          "CantHab": 3,
+          "Uid": "78ca31bf-964e-47b5-81f2-41ea2906047a"
         },
         {
           "FechaHab": "15/07/2023",
-          "CantHab": 4
+          "CantHab": 4,
+          "Uid": "e84a62fb-557f-4a54-95e7-8a27993d29b1"
         },
         {
           "FechaHab": "16/07/2023",
-          "CantHab": 5
+          "CantHab": 5,
+          "Uid": "f059e6c6-c279-4f97-8576-6ec5b6adddb7"
         },
         {
           "FechaHab": "17/07/2023",
-          "CantHab": 4
+          "CantHab": 4,
+          "Uid": "30fa5fa7-420b-4ff3-8f61-c0693ef060e2"
         },
         {
           "FechaHab": "18/07/2023",
-          "CantHab": 6
+          "CantHab": 6,
+          "Uid": "1a5bad69-90ba-4a29-a3ee-5e1c0b3341cb"
         },
         {
           "FechaHab": "19/07/2023",
-          "CantHab": 4
+          "CantHab": 4,
+          "Uid": "672ea917-95f4-4cc1-98b6-7adbf4696a6b"
         },
         {
           "FechaHab": "20/07/2023",
-          "CantHab": 3
+          "CantHab": 3,
+          "Uid": "be1b82dd-ffa7-4e65-b427-bdc07420eb73"
         }
       ]
     },
@@ -437,31 +493,38 @@
       "HabitacionFechaDisp": [
         {
           "FechaHab": "14/07/2023",
-          "CantHab": 3
+          "CantHab": 3,
+          "Uid": "6bc53377-9b13-4cf8-a56c-7dc6c664f756"
         },
         {
           "FechaHab": "15/07/2023",
-          "CantHab": 2
+          "CantHab": 2,
+          "Uid": "9dac3419-4f60-4ce1-967c-c1c6e43f2e18"
         },
         {
           "FechaHab": "16/07/2023",
-          "CantHab": 4
+          "CantHab": 4,
+          "Uid": "453795f8-b449-4e08-8027-d27237f7403f"
         },
         {
           "FechaHab": "17/07/2023",
-          "CantHab": 5
+          "CantHab": 5,
+          "Uid": "e0b7d4a1-46f3-47de-8761-3074e321e923"
         },
         {
           "FechaHab": "18/07/2023",
-          "CantHab": 4
+          "CantHab": 4,
+          "Uid": "06a51c83-4a2c-4afd-9679-ebe80d31dbf9"
         },
         {
           "FechaHab": "19/07/2023",
-          "CantHab": 5
+          "CantHab": 5,
+          "Uid": "a8b75736-1ab2-417f-8bfc-023d91b2fa52"
         },
         {
           "FechaHab": "20/07/2023",
-          "CantHab": 3
+          "CantHab": 3,
+          "Uid": "0eb438d2-eb87-4d5d-8d8a-2a41118675b3"
         }
       ]
     },
@@ -489,15 +552,18 @@
       "HabitacionFechaDisp": [
         {
           "FechaHab": "21/07/2023",
-          "CantHab": 3
+          "CantHab": 3,
+          "Uid": "d27428b4-ceff-459a-b56c-ed57d2a2d55f"
         },
         {
           "FechaHab": "22/07/2023",
-          "CantHab": 6
+          "CantHab": 6,
+          "Uid": "b89cefad-00c0-4d11-918a-f6d05ff8e900"
         },
         {
           "FechaHab": "23/07/2023",
-          "CantHab": 2
+          "CantHab": 2,
+          "Uid": "c4577665-1cff-4884-b331-a0b7732d80cb"
         }
       ]
     },
@@ -525,15 +591,18 @@
       "HabitacionFechaDisp": [
         {
           "FechaHab": "21/07/2023",
-          "CantHab": 2
+          "CantHab": 2,
+          "Uid": "27afdda5-96ae-4d51-95a4-150d35c36b4d"
         },
         {
           "FechaHab": "22/07/2023",
-          "CantHab": 4
+          "CantHab": 4,
+          "Uid": "11f69db9-877e-42f4-91c7-bffb44513270"
         },
         {
           "FechaHab": "23/07/2023",
-          "CantHab": 8
+          "CantHab": 8,
+          "Uid": "25628a6a-1899-432d-b345-46940597ff5b"
         }
       ]
     },
@@ -561,15 +630,18 @@
       "HabitacionFechaDisp": [
         {
           "FechaHab": "21/07/2023",
-          "CantHab": 2
+          "CantHab": 2,
+          "Uid": "ea7f1298-d693-4b09-8644-d723be81f4a7"
         },
         {
           "FechaHab": "22/07/2023",
-          "CantHab": 4
+          "CantHab": 4,
+          "Uid": "150edaa3-a0d1-4b00-9e44-44bb61ba26f8"
         },
         {
           "FechaHab": "23/07/2023",
-          "CantHab": 8
+          "CantHab": 8,
+          "Uid": "5b282349-49f2-4661-b81e-80ef47aafc82"
         }
       ]
     },
@@ -597,15 +669,18 @@
       "HabitacionFechaDisp": [
         {
           "FechaHab": "24/07/2023",
-          "CantHab": 3
+          "CantHab": 3,
+          "Uid": "24790d61-67f1-4737-8d00-ad2773f8e7b2"
         },
         {
           "FechaHab": "25/07/2023",
-          "CantHab": 8
+          "CantHab": 8,
+          "Uid": "0b39ed42-7b72-497b-9c5c-588ba10a301e"
         },
         {
           "FechaHab": "26/07/2023",
-          "CantHab": 5
+          "CantHab": 5,
+          "Uid": "df9e9f55-254c-4bc6-bf14-4133a2c57ec7"
         }
       ]
     },
@@ -633,15 +708,18 @@
       "HabitacionFechaDisp": [
         {
           "FechaHab": "24/07/2023",
-          "CantHab": 7
+          "CantHab": 7,
+          "Uid": "7e1669e9-7541-4cfd-9d41-d61b09cde6cc"
         },
         {
           "FechaHab": "25/07/2023",
-          "CantHab": 3
+          "CantHab": 3,
+          "Uid": "8f60b430-4c8e-49b9-8452-3810a419bacf"
         },
         {
           "FechaHab": "26/07/2023",
-          "CantHab": 2
+          "CantHab": 2,
+          "Uid": "0fe1d4a5-9d09-42cf-8546-2649ad393a4b"
         }
       ]
     },
@@ -669,15 +747,18 @@
       "HabitacionFechaDisp": [
         {
           "FechaHab": "24/07/2023",
-          "CantHab": 4
+          "CantHab": 4,
+          "Uid": "eef63a72-b29a-45f6-9a5a-dd32b70a5a25"
         },
         {
           "FechaHab": "25/07/2023",
-          "CantHab": 9
+          "CantHab": 9,
+          "Uid": "fb974a41-e3ae-4d2d-9078-80174a19040e"
         },
         {
           "FechaHab": "26/07/2023",
-          "CantHab": 2
+          "CantHab": 2,
+          "Uid": "4fcfc432-d758-41ff-9d97-bedd705ac870"
         }
       ]
     },
@@ -705,15 +786,18 @@
       "HabitacionFechaDisp": [
         {
           "FechaHab": "26/07/2023",
-          "CantHab": 4
+          "CantHab": 4,
+          "Uid": "f75b9cf6-dba1-419c-9d72-702af1582ac9"
         },
         {
           "FechaHab": "27/07/2023",
-          "CantHab": 5
+          "CantHab": 5,
+          "Uid": "e55d81ac-ba7f-49d7-8921-cfd8f5c04721"
         },
         {
           "FechaHab": "28/07/2023",
-          "CantHab": 6
+          "CantHab": 6,
+          "Uid": "214e019c-1656-48ff-9e07-efaf719e9e7a"
         }
       ]
     },
@@ -741,15 +825,18 @@
       "HabitacionFechaDisp": [
         {
           "FechaHab": "26/07/2023",
-          "CantHab": 8
+          "CantHab": 8,
+          "Uid": "1f3a8cfb-b512-4947-b089-fc3f614d7f9e"
         },
         {
           "FechaHab": "27/07/2023",
-          "CantHab": 9
+          "CantHab": 9,
+          "Uid": "a910edb1-5e2e-4574-be95-98dc4719383c"
         },
         {
           "FechaHab": "28/07/2023",
-          "CantHab": 4
+          "CantHab": 4,
+          "Uid": "a14c13e1-6174-4c1c-a6f1-4be9bd5a30b9"
         }
       ]
     },
@@ -777,15 +864,18 @@
       "HabitacionFechaDisp": [
         {
           "FechaHab": "26/07/2023",
-          "CantHab": 6
+          "CantHab": 6,
+          "Uid": "d14532ac-9767-4135-b9ef-9d812dc65fd3"
         },
         {
           "FechaHab": "27/07/2023",
-          "CantHab": 9
+          "CantHab": 9,
+          "Uid": "c55bebb0-8056-4542-b14f-1dcb0f5c8a7f"
         },
         {
           "FechaHab": "28/07/2023",
-          "CantHab": 7
+          "CantHab": 7,
+          "Uid": "be27a3a3-32b3-491e-a51f-5dfbd4e4fdff"
         }
       ]
     },

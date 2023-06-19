@@ -20,15 +20,20 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 List<HotelEnt> hoteles = new List<HotelEnt>();
                 string contenidoDelArchivo = File.ReadAllText("C:\\Users\\mfrancese\\source\\repos\\SolucionCAI.AgenciaDeViajes\\SolucionCAI.AgenciaDeViajes\\Hoteles.json");
                 JArray jsonArray = JArray.Parse(contenidoDelArchivo);
-                //foreach (JObject json in jsonArray)
-                //{
-                //    Guid Uid = Guid.NewGuid();
+                foreach (JObject json in jsonArray)
+                {
+                    foreach (JObject disponibilidad in json["Disponibilidad"]["HabitacionFechaDisp"])
+                    {
+                        Guid Uid = Guid.NewGuid();
 
-                //    json["Uid"] = Uid.ToString();
-                //}
-                //string contenido = JsonConvert.SerializeObject(jsonArray, Formatting.Indented);
-                //File.WriteAllText("C:\\Users\\mfrancese\\source\\repos\\SolucionCAI.AgenciaDeViajes\\SolucionCAI.AgenciaDeViajes\\Hoteles.json", contenido);
-                //var mensaje = "Grabado";
+                        disponibilidad["Uid"] = Uid.ToString();
+
+                    }
+
+                }
+                string contenido = JsonConvert.SerializeObject(jsonArray, Formatting.Indented);
+                File.WriteAllText("C:\\Users\\mfrancese\\source\\repos\\SolucionCAI.AgenciaDeViajes\\SolucionCAI.AgenciaDeViajes\\Hoteles.json", contenido);
+                var mensaje = "Grabado";
                 return jsonArray;
 
             }

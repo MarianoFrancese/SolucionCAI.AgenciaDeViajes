@@ -61,7 +61,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             }
         }
 
-        public static VueloEnt ObtenerVueloPorID(Guid uid, DateTime fechaSalida, DateTime fechaArribo)
+        public static VueloEnt ObtenerVueloPorID(Guid uid, DateTime fechaSalida, DateTime fechaArribo, decimal precio, int cantidad)
         {
             VueloEnt vuelo = new VueloEnt();
             JArray jsonArray = ArchivoVuelos.LeerVuelos();
@@ -72,9 +72,20 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 //Console.WriteLine(uidJson);
                 if (vueloJson["Uid"].ToString() == uid.ToString())
                 {
+
                     vueloJson["FechaSalida"] = fechaSalida;
                     vueloJson["FechaArribo"] = fechaArribo;
                     vuelo = JsonConvert.DeserializeObject<VueloEnt>(vueloJson.ToString());
+                    List<TarifaEnt> tarifas = new List<TarifaEnt>();
+                    foreach (var tarifa in vuelo.Tarifas)
+                    {
+                        if (tarifa.Precio == precio)
+                        {
+                            tarifa.Disponibilidad = cantidad;
+                            tarifas.Add(tarifa);
+                        }
+                    }
+                    vuelo.Tarifas = tarifas;
                 }
             }
             return vuelo;
