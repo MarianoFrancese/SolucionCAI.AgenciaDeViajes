@@ -95,6 +95,9 @@ namespace SolucionCAI.AgenciaDeViajes
                 }
                 else if (comboBox2.SelectedItem != null && !string.IsNullOrWhiteSpace(textBox1.Text) && !string.IsNullOrWhiteSpace(textBox2.Text) && !string.IsNullOrWhiteSpace(textBox3.Text) && !string.IsNullOrWhiteSpace(textBox4.Text) && comboBox2.SelectedItem != null && !string.IsNullOrWhiteSpace(textBox5.Text) && !string.IsNullOrWhiteSpace(textBox6.Text))
                 {
+                   Validaciones validacion = new Validaciones();
+
+
                     string nombre = textBox1.Text;
                     string apellido = textBox2.Text;
                     string dni = textBox3.Text;
@@ -104,11 +107,33 @@ namespace SolucionCAI.AgenciaDeViajes
                     string email = textBox6.Text;
                     string medioPago = comboBox1.Text;
 
+
+                    if (!validacion.ValidaTexto(nombre))
+                    {
+                        MessageBox.Show("El Nombre no tiene formato válido");
+                        return;
+
+                    }
+                    if (!validacion.ValidaTexto(apellido))
+                    {
+                        MessageBox.Show("El Apellido no tiene formato válido");
+                        return;
+
+                    }
+                   
+                    validacion.ValidaDNI(dni);
+                    validacion.ValidarCUIL(cuil);
+                    validacion.ValidaEmail(email);
+                    validacion.ValidaTelefono(telefono);
+
+
+
+
                     ClienteEnt cliente = ModuloItinerario.CrearCliente(nombre, apellido, dni, cuil, condFiscal, telefono, email, medioPago);
                     PresupuestoEnt presupuesto = ModuloPresupuesto.TraerPresupuesto(Convert.ToInt32(numeroSeguimiento));
                     ItinerarioEnt prereserva = ModuloItinerario.CrearPrereserva(presupuesto, cliente);
                     ModuloItinerario.GrabarPrereserva(prereserva);
-                    this.Close();
+                    //this.Close();
                 }
             }
             else if (tipoCliente.SelectedItem.ToString() == "Persona Juridica")

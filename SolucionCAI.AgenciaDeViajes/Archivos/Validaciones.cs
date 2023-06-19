@@ -13,6 +13,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 using static System.Windows.Forms.DataFormats;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SolucionCAI.AgenciaDeViajes.Archivos
 {
@@ -79,8 +80,23 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             return false; // Usuario o contraseña incorrectos
         }
 
-      
-       
+
+
+        public bool ValidaEmail(string email)
+        {
+            string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+            Regex regex = new Regex(pattern);
+
+            if (regex.IsMatch(email))
+            {
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("El mail ingresado no es válido.");
+                return false;
+            }
+        }
 
 
 
@@ -180,19 +196,40 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             return true;
         }
 
-        /* Para llamar a esta validación mas tarde
-          PasajeroEnt pasajero = new PasajeroEnt();
-            pasajero.DNI = 12345678;
 
-            bool dniValido = ValidaDNI(pasajero.DN);
-                if (dniValido)
+
+        //ValidaTelefono
+        public bool ValidaTelefono(string telefono)
+        {
+            const int longitudTelefono = 10;
+
+            // Remove any whitespace from telefono
+            telefono = telefono.Trim();
+
+            // Verificar la longitud del Telefono
+            if (telefono.Length != longitudTelefono)
+            {
+                MessageBox.Show("El Teléfono ingresado no es válido.");
+                return false;
+            }
+
+            // Verificar que el teléfono esté compuesto solo por dígitos
+            foreach (char c in telefono)
+            {
+                if (!Char.IsDigit(c))
                 {
-                Console.WriteLine("El DNI es válido.");
-                            }
-                        else
-                {
-                    Console.WriteLine("El DNI no es válido.");
-                }*/
+                    MessageBox.Show("El teléfono ingresado no es válido.");
+                    return false;
+                }
+            }
+
+            // Si todas las validaciones son exitosas, se asume que el Teléfono es válido
+            return true;
+        }
+
+
+      
+
 
 
 
@@ -208,6 +245,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 // Verificar longitud del CUIT
                 if (cuit.Length != 11)
                 {
+                    MessageBox.Show("El CUIL no es válido");
                     return false;
                 }
                 // Verificar que todos los caracteres sean dígitos numéricos
@@ -215,6 +253,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                 {
                     if (!char.IsDigit(c))
                     {
+                        MessageBox.Show("El CUIL no es válido");
                         return false;
                     }
                 }
@@ -242,7 +281,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
         //Valida CUIT
 
-        public static bool ValidarCUIL(string cuil)
+        public  bool ValidarCUIL(string cuil)
         {
 
             // Verificar longitud del CUIL
@@ -257,6 +296,7 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             {
                 if (!char.IsDigit(c))
                 {
+                    MessageBox.Show("El CUIL es inválido");
                     return false;
                 }
 
@@ -280,8 +320,9 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
             return Regex.IsMatch(email, pattern);
 
             if (isValid == false)
-
-                Console.WriteLine("El correo electrónico es inválido");
+            { 
+                MessageBox.Show("El correo electrónico es inválido");
+            }
             else
             {
                 return true;
