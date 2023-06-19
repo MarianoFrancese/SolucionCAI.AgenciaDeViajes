@@ -106,9 +106,7 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            //Acá irían las validaciones , antes de tomar los datos. 
-            
+                                  
 
             var pasajero = ConstruirPasajero();
             if (pasajero == null)
@@ -143,7 +141,7 @@ namespace SolucionCAI.AgenciaDeViajes
             {
                 seleccionCombo.Tarifa.Pasajeros.Add(pasajero);
 
-                var descripcion = $"{seleccionCombo.Tarifa.Clase}-{seleccionCombo.Tarifa.TipoPasajero} {productoLinea.ProductoV.Aerolinea} {productoLinea.ProductoV.Origen}-{productoLinea.ProductoV.Destino}-{productoLinea.ProductoV.FechaSalida:dd/MM/yyyy HH:mm}";
+                var descripcion = $"{seleccionCombo.Tarifa.Clase}-{seleccionCombo.Tarifa.TipoPasajero}-{productoLinea.ProductoV.Aerolinea}-{productoLinea.ProductoV.Origen}-{productoLinea.ProductoV.Destino}-{productoLinea.ProductoV.FechaSalida:dd/MM/yyyy HH:mm}";
                 listBox1.Items.Add(new PasajeroListItem
                 {
                     Descripcion = descripcion,
@@ -156,30 +154,52 @@ namespace SolucionCAI.AgenciaDeViajes
         }
         private PasajeroEnt ConstruirPasajero()
         {
-            //validaciones y etc....
-            //realizar todas las validaciones para poder construir el pasajero (solamente).
-            //si hay algun error podemos mostrar:
-            //MessageBox.Show("Error con tal cosa o tal otra");
-            //return null;
-            var Apellido = textBox15.Text;
-            var Nombre = textBox14.Text;
-            var DNI = int.Parse(textBox16.Text);
-
+            
             var validador = new Validaciones();
-            bool dniok = validador.ValidaDNI(DNI);
-            if (dniok)
+            string dniP = textBox16.Text;
+            string nombreP = textBox14.Text;
+            string apellidoP = textBox15.Text;
+            if (!validador.ValidaCampoVacio(nombreP, "Nombre"))
             {
-                return DNI;
+                
+                return null;
             }
-            bool nombreok = validador
+            else if (!validador.ValidaTexto(nombreP))
+            {
+                MessageBox.Show("Nombre no tiene formato válido.");
+                return null;
+            }
+            if (!validador.ValidaCampoVacio(apellidoP, "Apellido"))
+            {
+                
+                return null;
+            }
+            else if (!validador.ValidaTexto(apellidoP))
+            {
+                MessageBox.Show("Apellido no tiene formato válido.");
+                return null;
+            }
 
+            if (!validador.ValidaCampoVacio(dniP, "DNI"))
+            {
+                
+                return null;
+            }
+            else if (!validador.ValidaDNI(dniP))
+            {
+               return null;
+            }
+              
+                
+            
+           
             DateTime selectedDateTime = dateTimePicker1.Value;
             DateOnly dateOnly = new DateOnly(selectedDateTime.Date.Year, selectedDateTime.Date.Month, selectedDateTime.Date.Day);
             return new PasajeroEnt
             {
-                Apellido = textBox15.Text,
-                Nombre = textBox14.Text,
-                DNI = int.Parse(textBox16.Text),
+                Apellido = nombreP,
+                Nombre = apellidoP,
+                DNI = int.Parse(dniP),
                 FechaNac = dateOnly 
             };
 
