@@ -494,11 +494,11 @@ namespace SolucionCAI.AgenciaDeViajes
 
                 MessageBox.Show("La cantidad de huéspedes no puede ser cero (0)");
             }
-            else if (string.IsNullOrEmpty(comboBox6.Text))
+           /* else if (string.IsNullOrEmpty(comboBox6.Text))
             {
 
                 MessageBox.Show("Debe completar el tipo de habitación");
-            }
+            } */
             else if (string.IsNullOrEmpty(comboBox5.Text))
             {
 
