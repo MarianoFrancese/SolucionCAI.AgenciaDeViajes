@@ -484,15 +484,7 @@ namespace SolucionCAI.AgenciaDeViajes
 
             hotelesFiltrados = ModuloProductos.ListaHoteles(ciudad, fechaEntradaFormateada, fechaSalidaFormateada, cantHuespedes, tipoHabitacion);
             Console.WriteLine(hotelesFiltrados);
-
-            if ((string.IsNullOrEmpty(comboBox5.Text)) && (dateTimePicker2.Value < DateTime.Now) && (dateTimePicker3.Value < DateTime.Now) 
-                && (numericUpDown2.Value <= 0) && (string.IsNullOrEmpty(comboBox6.Text)))
-
-            {
-                MessageBox.Show("Debe completar los campos");
-            }
-
-            else if (hotelesFiltrados.Count > 0 && numericUpDown2.Value > 0)
+            if (hotelesFiltrados.Count > 0 && numericUpDown2.Value > 0)
             {
                 RellenarTablaHoteles(hotelesFiltrados, fechaEntradaFormateada, fechaSalidaFormateada);
             }
@@ -510,16 +502,12 @@ namespace SolucionCAI.AgenciaDeViajes
             {
 
                 MessageBox.Show("Debe seleccionar una ciudad");
-
             }
-
-            else if (dateTimePicker2.Value < DateTime.Now && dateTimePicker3.Value <= dateTimePicker2.Value)
+            else if (dateTimePicker3.Value <= dateTimePicker2.Value)
 
             {
-            MessageBox.Show("La Fecha de Entrada no puede ser inferior a hoy" 
-             + Environment.NewLine + "La fecha de salida no puede ser menor a la fecha de Entrada");
+                MessageBox.Show("La Fecha Salida debe ser mayor a la Fecha Entrada");
             }
-          
 
             else
             {
