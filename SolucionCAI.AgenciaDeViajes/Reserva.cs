@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -175,7 +176,7 @@ namespace SolucionCAI.AgenciaDeViajes
             }
             else
             {
-                MessageBox.Show("No se encontraron Reservas para ese Nro de Seguimiento");
+                MessageBox.Show("El campo no puede estar vacío");
             }
         }
 
@@ -281,10 +282,59 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void button6_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Confirma reserva");
+            bool contieneFilasVacias = false;
+
+            for (int rowIndex = 0; rowIndex < dataGridView3.Rows.Count; rowIndex++)
+            {
+                DataGridViewRow fila = dataGridView3.Rows[rowIndex];
+                bool filaNoVacia = false;
+
+                for (int i = 0; i < dataGridView3.Columns.Count; i++)
+                {
+                    if (fila.Cells[i].Value != null && !string.IsNullOrEmpty(fila.Cells[i].Value.ToString()))
+                    {
+                        filaNoVacia = true;
+                        break;
+                    }
+                }
+
+                if (filaNoVacia)
+                {
+                    contieneFilasVacias = false;
+                    if (dataGridView3.Rows.Count > 0 && dataGridView3.Rows[0].Cells[5].Value != null && dataGridView3.Rows[0].Cells[5].Value.ToString() == "Pendiente")
+                    {
+                        MessageBox.Show("No se puede confirmar una Reserva con Pago Pendiente");
+                        break;
+                    }
+
+                    else
+                    {
+                        //Console.WriteLine("El DataGridView no contiene filas vacías");
+                        MessageBox.Show("La reserva ha sido confirmada con éxito");
+                        break;
+                    }
+
+                } 
+
+                else 
+                {
+                    contieneFilasVacias = true;
+
+                    //Console.WriteLine("El DataGridView contiene filas vacías");
+                    MessageBox.Show("No existe Reserva para confirmar");
+                    break;
+                }
+
+               
+            }
+
+
+            
         }
 
-        
+
+
+
         private void button3_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Busqueda con filtros aplicados");

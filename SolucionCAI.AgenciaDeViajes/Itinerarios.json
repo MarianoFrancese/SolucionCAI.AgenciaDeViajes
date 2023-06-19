@@ -50,7 +50,7 @@
     }
   },
   {
-    "Estado": "PreReserva",
+    "Estado": "Reserva",
     "EstadoPago": "Pendiente",
     "Presupuesto": {
       "NroSeguimiento": 1002,
@@ -109,9 +109,9 @@
   },
   {
     "Estado": "Reserva",
-    "EstadoPago": "Pendiente",
+    "EstadoPago": "Confirmado",
     "Presupuesto": {
-      "NroSeguimiento": 1002,
+      "NroSeguimiento": 1010,
       "Productos": [
         {
           "ProductoH": {
