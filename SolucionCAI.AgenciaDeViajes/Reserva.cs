@@ -246,7 +246,7 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+
             IngresoClientes ingresoClientes = new IngresoClientes(nroseguimiento);
             ingresoClientes.Show();
 
@@ -259,13 +259,13 @@ namespace SolucionCAI.AgenciaDeViajes
             // MessageBox.Show("Se reserva el presupuesto y se piden más datos relativos al cliente");
         }
 
-       
+
         private void button5_Click(object sender, EventArgs e) //muestra form pasajeros
         {
-            
+
             if (dataGridView2.SelectedRows.Count > 0)
             {
-                
+
                 int rowIndex = dataGridView2.SelectedRows[0].Index;
 
                 bool tieneVuelo = false;
@@ -331,7 +331,7 @@ namespace SolucionCAI.AgenciaDeViajes
                         DialogResult result = ModuloItinerario.GrabarReservaConfirmada(selectedItinerario);
                         dataGridView3.Rows.Clear();
                         break;
-                        
+
                     }
 
                 }

@@ -542,7 +542,7 @@
             Controls.Add(tabControl1);
             Margin = new Padding(5, 4, 5, 4);
             Name = "Reserva";
-            Text = "Form1";
+            Text = "Pantalla de Reservas";
             Load += Form1_Load;
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
