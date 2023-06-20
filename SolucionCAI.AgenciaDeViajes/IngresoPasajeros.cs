@@ -18,6 +18,7 @@ namespace SolucionCAI.AgenciaDeViajes
     public partial class IngresoPasajeros : Form
     {
         private ItinerarioEnt itinerario;
+        List<PasajeroEnt> pasajeros = new List<PasajeroEnt>();
         public IngresoPasajeros(ItinerarioEnt selectedItinerario)
         {
             InitializeComponent();
@@ -39,6 +40,7 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void btnTerminar_Click(object sender, EventArgs e)
         {
+            pasajeros.RemoveAll(x => true);
             this.Hide();
         }
 
@@ -50,6 +52,13 @@ namespace SolucionCAI.AgenciaDeViajes
             {
                 MessageBox.Show(mensajerror);
                 return;
+            }
+            else
+            {
+                List<ItinerarioEnt> itinerariosAGrabar = ModuloItinerario.CargarPasajeros(itinerario);
+                ModuloItinerario.GrabarReserva(itinerariosAGrabar);
+                MessageBox.Show("Reserva realizada con exito");
+                pasajeros.RemoveAll(x => true);
             }
 
             //realizar la operacion y zaraza.....
@@ -77,7 +86,7 @@ namespace SolucionCAI.AgenciaDeViajes
             {
                 if (linea.ProductoV != null)
                 {
-                    var descripcion = $"{linea.ProductoV.Tarifas[0].Clase}-{linea.ProductoV.Tarifas[0].TipoPasajero} {linea.ProductoV.Aerolinea} {linea.ProductoV.Origen}-{linea.ProductoV.Destino}-{linea.ProductoV.FechaSalida:dd/MM/yy HH:mm}";
+                    var descripcion = $"{linea.ProductoV.Tarifas[0].Clase} - {linea.ProductoV.Tarifas[0].TipoPasajero} {linea.ProductoV.Aerolinea} {linea.ProductoV.Origen} - {linea.ProductoV.Destino} - {linea.ProductoV.FechaSalida:dd/MM/yy HH:mm} - Uid: {linea.ProductoV.Tarifas[0].Uid}";
                     ProductoPasajero.Items.Add(new TarifaComboItem { Descripcion = descripcion, Tarifa = linea.ProductoV.Tarifas[0] });
                 }
             }
@@ -111,9 +120,8 @@ namespace SolucionCAI.AgenciaDeViajes
 
         private void button1_Click(object sender, EventArgs e)
         {
-                       
 
-                var pasajero = ConstruirPasajero();
+            var pasajero = ConstruirPasajero();
             if (pasajero == null)
             {
                 return;
@@ -125,6 +133,7 @@ namespace SolucionCAI.AgenciaDeViajes
                 MessageBox.Show("Seleccione una tarifa");
                 return;
             }
+
 
             foreach (var productoL in itinerario.Presupuesto.Productos)
             {
@@ -141,29 +150,27 @@ namespace SolucionCAI.AgenciaDeViajes
 
                     //otras....
 
-                    if (seleccionCombo.Tarifa.Pasajeros.Count == productoLinea.Cantidad)
+                    if (seleccionCombo.Tarifa != null && seleccionCombo.Tarifa.Pasajeros != null && pasajeros.Count == productoLinea.Cantidad)
                     {
-                        MessageBox.Show("Ya ha ingresado todos los pasajeros de este vuelo / tarifa");
+                        MessageBox.Show("Ya ha ingresado todos los pasajeros de este vuelo / tarifa"); //sera porque busca distinto de null y como no encuentra no entra
                         return;
                     }
                     else
-                    {
-                        seleccionCombo.Tarifa.Pasajeros.Add(pasajero);
+                    { 
+                        pasajeros.Add(pasajero);
+                        seleccionCombo.Tarifa.Pasajeros = pasajeros;
 
-                        var descripcion = $"{seleccionCombo.Tarifa.Clase}-{seleccionCombo.Tarifa.TipoPasajero}-{productoLinea.ProductoV.Aerolinea}-{productoLinea.ProductoV.Origen}-{productoLinea.ProductoV.Destino}-{productoLinea.ProductoV.FechaSalida:dd/MM/yyyy HH:mm}";
+                        var descripcion = $"{pasajero.Nombre} {pasajero.Apellido}, DNI: {pasajero.DNI}, Fecha de nacimiento: {pasajero.FechaNac} - {seleccionCombo.Tarifa.Clase} - {seleccionCombo.Tarifa.TipoPasajero} - {productoLinea.ProductoV.Aerolinea} - {productoLinea.ProductoV.Origen} - {productoLinea.ProductoV.Destino} - {productoLinea.ProductoV.FechaSalida:dd/MM/yyyy HH:mm} - Uid: {seleccionCombo.Tarifa.Uid}";
                         listBox1.Items.Add(new PasajeroListItem
                         {
-                            Descripcion = descripcion,
+                            Descripcion = descripcion, 
                             Tarifa = seleccionCombo.Tarifa,
                             Pasajero = pasajero
                         });
                     }
+                    productoL.ProductoV.Tarifas[0].Pasajeros = pasajeros;
                 }
-
-                    
             }
-            
-
 
         }
         private PasajeroEnt ConstruirPasajero()
@@ -171,7 +178,7 @@ namespace SolucionCAI.AgenciaDeViajes
 
             var validador = new Validaciones();
             string dniP = textBox16.Text;
-            string nombreP = textBox14.Text;
+            string nombreP = textBox14.Text; 
             string apellidoP = textBox15.Text;
             if (!validador.ValidaCampoVacio(nombreP, "Nombre"))
             {
@@ -211,8 +218,8 @@ namespace SolucionCAI.AgenciaDeViajes
             DateOnly dateOnly = new DateOnly(selectedDateTime.Date.Year, selectedDateTime.Date.Month, selectedDateTime.Date.Day);
             return new PasajeroEnt
             {
-                Apellido = nombreP,
-                Nombre = apellidoP,
+                Nombre = nombreP,
+                Apellido = apellidoP,
                 DNI = int.Parse(dniP),
                 FechaNac = dateOnly
             };
@@ -229,9 +236,11 @@ namespace SolucionCAI.AgenciaDeViajes
             var item = listBox1.SelectedItem as PasajeroListItem;
             if (item == null)
             {
+                MessageBox.Show("Seleccione el pasajero que desea quitar");
                 return;
             }
 
+            pasajeros.Remove(item.Pasajero);
             item.Tarifa.Pasajeros.Remove(item.Pasajero);
             listBox1.Items.Remove(item);
         }

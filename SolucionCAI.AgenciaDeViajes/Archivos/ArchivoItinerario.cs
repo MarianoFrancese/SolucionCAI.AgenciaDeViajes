@@ -29,7 +29,8 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                     JArray jsonArray = JArray.Parse(contenidoDelArchivo);
                     return jsonArray;
                 }
-                
+               
+
                 //foreach (JObject json in jsonArray)
                 //{
                 //    foreach (JObject disponibilidad in json["Disponibilidad"]["HabitacionFechaDisp"])
@@ -57,6 +58,11 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
         {
             string contenido = JsonConvert.SerializeObject(itinerarios, Formatting.Indented);
             File.WriteAllText("Itinerarios.json", contenido);
+        }
+
+        public static void GrabarItinerarioString(string itinerarios)
+        {
+            File.WriteAllText("Itinerarios.json", itinerarios);
         }
     } 
 }

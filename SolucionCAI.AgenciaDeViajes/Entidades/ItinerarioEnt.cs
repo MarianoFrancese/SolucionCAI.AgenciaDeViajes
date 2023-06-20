@@ -21,11 +21,12 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
             {
                 if (productoLinea.ProductoV != null)
                 {
-                    if (productoLinea.ProductoV.Tarifas[0] == tarifa)
+                    if (productoLinea.ProductoV.Tarifas[0].Uid == tarifa.Uid)
                     {
                         return productoLinea;
                     }
                 }
+
             }
 
             //acá no debería llegar nunca.
@@ -36,10 +37,19 @@ namespace SolucionCAI.AgenciaDeViajes.Entidades
         {
             foreach (var productoLinea in Presupuesto.Productos)
             {
-                if (productoLinea.ProductoV.Tarifas[0].Pasajeros.Count != productoLinea.Cantidad)
+                if (productoLinea.ProductoV != null)
                 {
-                    return "La tarifa ... del vuelo ... no tiene todos sus pasajeros asignados.";
+                    if (productoLinea.ProductoV.Tarifas[0].Pasajeros.Count != productoLinea.Cantidad)
+                    {
+                        return "La tarifa ... del vuelo ... no tiene todos sus pasajeros asignados.";
+                    }
+                    else
+                    {
+
+                    }
+
                 }
+
             }
 
             //si hay mas validaciones poner acá.

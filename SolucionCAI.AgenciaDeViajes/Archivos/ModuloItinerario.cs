@@ -80,9 +80,10 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
 
                         ItinerarioEnt itinerario = new ItinerarioEnt
                         {
-                            Presupuesto = presupuestos, //JsonConvert.DeserializeObject<PresupuestoEnt>(itinerarioJson["Presupuesto"].ToString()),
-                            Cliente = cliente //JsonConvert.DeserializeObject<ClienteEnt>(itinerarioJson["Cliente"].ToString()),                          
-
+                            Presupuesto = presupuestos,
+                            Cliente = cliente,
+                            EstadoPago = "Pendiente",
+                            Estado = "PreReserva",
 
                         };
                         Console.WriteLine(itinerario.Presupuesto);
@@ -233,6 +234,116 @@ namespace SolucionCAI.AgenciaDeViajes.Archivos
                     ArchivoItinerario.GrabarItinerario(jsonArray);
 
                     MessageBox.Show("La pre-reserva se grabó correctamente", "Grabar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            return result;
+
+        }
+
+        public static List<ItinerarioEnt> CargarPasajeros (ItinerarioEnt itinerario)
+        {
+            itinerario.Estado = "Reserva";
+            if (File.Exists("Itinerarios.json"))
+            {
+                JArray jsonArray = ArchivoItinerario.LeerItinerario();
+                var itinerariosJson = JsonConvert.DeserializeObject<List<ItinerarioEnt>>(jsonArray.ToString());
+                for (int i = 0; i < itinerariosJson.Count; i++)
+                {
+                    if (itinerariosJson[i].Presupuesto.NroSeguimiento == itinerario.Presupuesto.NroSeguimiento)
+                    {
+                        itinerariosJson[i] = itinerario;
+                        break;
+                    }
+                }
+
+                return itinerariosJson;
+            }
+            else
+            {
+                List<ItinerarioEnt> itinerariosJson = new List<ItinerarioEnt>();
+                itinerariosJson.Add(itinerario);
+
+                return itinerariosJson;
+            }
+        }
+        
+        public static DialogResult GrabarReserva (List<ItinerarioEnt> itinerarios)
+        {
+            DialogResult result = MessageBox.Show("¿Desea grabar la reserva?", "Grabar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                if (File.Exists("Itinerarios.json"))
+                {
+                    JArray jsonReservas = new JArray();
+                    var jsonArray = JsonConvert.SerializeObject(itinerarios, Formatting.Indented);
+                    ArchivoItinerario.GrabarItinerarioString(jsonArray);
+
+                }
+                else
+                {
+                    JArray jsonArray = new JArray();
+
+                    var itinerarioJson = JsonConvert.SerializeObject(itinerarios, Formatting.Indented);
+
+                    jsonArray.Add(JObject.Parse(itinerarioJson));
+
+                    ArchivoItinerario.GrabarItinerario(jsonArray);
+
+                }
+            }
+            return result;
+
+        }
+
+        public static DialogResult GrabarReservaConfirmada(ItinerarioEnt reserva)
+        {
+            DialogResult result = MessageBox.Show("¿Desea generar la Reserva?", "Reservar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                reserva.Estado = "Reserva Confirmada";
+
+                if (File.Exists("Itinerarios.json"))
+                {
+                    JArray jsonArray = ArchivoItinerario.LeerItinerario();
+
+
+                    JObject reservaExistente = jsonArray.FirstOrDefault(item => item["Presupuesto"]["NroSeguimiento"].Value<int>() == reserva.Presupuesto.NroSeguimiento) as JObject;
+
+                    if (reservaExistente != null)
+                    {
+                        jsonArray.Remove(reservaExistente);
+                    }
+
+                    var itinerarioJson = JsonConvert.SerializeObject(reserva, Formatting.Indented);
+
+
+
+                    JObject reservaConfirmada = JObject.Parse(itinerarioJson);
+                    jsonArray.Add(reservaConfirmada);
+
+                    ArchivoItinerario.GrabarItinerario(jsonArray);
+
+                    MessageBox.Show("La Reserva se grabó correctamente", "Reservar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    JArray jsonArray = new JArray();
+
+                    var itinerarioJson = JsonConvert.SerializeObject(reserva, Formatting.Indented);
+
+
+                    JObject reservaExistente = jsonArray.FirstOrDefault(item => item["Presupuesto"]["NroSeguimiento"].Value<int>() == reserva.Presupuesto.NroSeguimiento) as JObject;
+
+                    if (reservaExistente != null)
+                    {
+                        jsonArray.Remove(reservaExistente); // Remove the existing reserva object
+                    }
+                    JObject reservaConfirmada = JObject.Parse(itinerarioJson);
+                    jsonArray.Add(reservaConfirmada);
+
+                    ArchivoItinerario.GrabarItinerario(jsonArray);
+
+                    MessageBox.Show("La Reserva se grabó correctamente", "Reservar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             return result;

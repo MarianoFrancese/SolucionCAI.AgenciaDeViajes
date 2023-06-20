@@ -327,9 +327,8 @@ namespace SolucionCAI.AgenciaDeViajes
 
                     else
                     {
-                        
-                        MessageBox.Show("La reserva ha sido confirmada con éxito");
-                        // Clear the data grid
+                        ItinerarioEnt selectedItinerario = itinerariosFiltrados[rowIndex];
+                        DialogResult result = ModuloItinerario.GrabarReservaConfirmada(selectedItinerario);
                         dataGridView3.Rows.Clear();
                         break;
                         
