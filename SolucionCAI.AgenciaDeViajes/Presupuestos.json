@@ -1,6 +1,6 @@
 [
     {
-        "NroSeguimiento": 1001,
+        "NroSeguimiento": 1005,
         "Productos": [
             {
                 "ProductoH": {
@@ -168,201 +168,398 @@
         "Descripcion": null,
         "Total": 975502.000
     },
-    {
-        "NroSeguimiento": 1002,
-        "Productos": [
+  {
+    "NroSeguimiento": 1002,
+    "Productos": [
+      {
+        "ProductoH": {
+          "Codigo": "HT002",
+          "Nombre": "Four Seasons",
+          "CodigoCiudad": "MAD",
+          "Calificacion": 5,
+          "Direccion": {
+            "Calle": "C. de Sevilla",
+            "Numero": 30,
+            "CP": 28014,
+            "Latitud": 40.41707269127456,
+            "Longitud": -3.7004233112454163
+          },
+          "Disponibilidad": {
+            "Nombre": "Deluxe",
+            "TarifaHab": 75200.0,
+            "Capacidad": 6,
+            "Adultos": 6,
+            "Menores": 3,
+            "Infantes": 3,
+            "HabitacionFechaDisp": [
+              {
+                "FechaEntHab": "0001-01-01T00:00:00",
+                "CantHab": 3,
+                "Uid": "0887ce84-31bf-4421-b47a-c80406a44be0"
+              },
+              {
+                "FechaEntHab": "0001-01-01T00:00:00",
+                "CantHab": 4,
+                "Uid": "638b85a9-8453-4000-a54c-00e62c564f76"
+              },
+              {
+                "FechaEntHab": "0001-01-01T00:00:00",
+                "CantHab": 6,
+                "Uid": "68d05e5a-0e4f-404f-bed1-860c16d323b2"
+              },
+              {
+                "FechaEntHab": "0001-01-01T00:00:00",
+                "CantHab": 6,
+                "Uid": "d2be359a-0868-4115-a05e-7db635c75365"
+              },
+              {
+                "FechaEntHab": "0001-01-01T00:00:00",
+                "CantHab": 4,
+                "Uid": "2759df33-6c1a-4af6-850f-c76ee9ecb827"
+              },
+              {
+                "FechaEntHab": "0001-01-01T00:00:00",
+                "CantHab": 5,
+                "Uid": "85e83d6d-fefb-4849-9593-6a783f2e3800"
+              },
+              {
+                "FechaEntHab": "0001-01-01T00:00:00",
+                "CantHab": 6,
+                "Uid": "3ed0e89a-56b9-40a0-b6b1-21f0ce34328a"
+              }
+            ]
+          },
+          "Uid": "434ca706-3e5d-4e35-9cee-a8429286f990"
+        },
+        "ProductoV": null,
+        "Cantidad": 1,
+        "PrecioUn": 75200.0,
+        "SubTotal": 75200.0,
+        "IVA": 15792.00,
+        "TotalProd": 90992.00
+      },
+      {
+        "ProductoH": {
+          "Codigo": "HT003",
+          "Nombre": "ibis budget Meudon",
+          "CodigoCiudad": "ROM",
+          "Calificacion": 3,
+          "Direccion": {
+            "Calle": "Pza Vittorio Emanuele",
+            "Numero": 3,
+            "CP": 92190,
+            "Latitud": 48.81806260303906,
+            "Longitud": 2.2493296544913317
+          },
+          "Disponibilidad": {
+            "Nombre": "Deluxe",
+            "TarifaHab": 48000.0,
+            "Capacidad": 6,
+            "Adultos": 6,
+            "Menores": 3,
+            "Infantes": 3,
+            "HabitacionFechaDisp": [
+              {
+                "FechaEntHab": "0001-01-01T00:00:00",
+                "CantHab": 3,
+                "Uid": "3a91395d-2fc4-49c1-99d4-b2da85f83a6d"
+              },
+              {
+                "FechaEntHab": "0001-01-01T00:00:00",
+                "CantHab": 2,
+                "Uid": "9be30126-f5ff-40c4-8fe0-3f50625db1a5"
+              },
+              {
+                "FechaEntHab": "0001-01-01T00:00:00",
+                "CantHab": 4,
+                "Uid": "7d5d772e-526a-40ee-9368-41eeb3be5ffb"
+              },
+              {
+                "FechaEntHab": "0001-01-01T00:00:00",
+                "CantHab": 5,
+                "Uid": "57058ce5-f726-4eeb-aafb-21fe42716af5"
+              },
+              {
+                "FechaEntHab": "0001-01-01T00:00:00",
+                "CantHab": 4,
+                "Uid": "571f768f-c772-456c-9716-f18ef7134aa3"
+              },
+              {
+                "FechaEntHab": "0001-01-01T00:00:00",
+                "CantHab": 5,
+                "Uid": "cbc521e7-8751-496b-aa3b-efd0ced4f4e5"
+              },
+              {
+                "FechaEntHab": "0001-01-01T00:00:00",
+                "CantHab": 3,
+                "Uid": "09bf454b-41f4-4da1-bf6c-a346db13ee07"
+              }
+            ]
+          },
+          "Uid": "a6845e07-9a1b-430b-9bfd-cbfe9a43de5d"
+        },
+        "ProductoV": null,
+        "Cantidad": 1,
+        "PrecioUn": 48000.0,
+        "SubTotal": 48000.0,
+        "IVA": 10080.00,
+        "TotalProd": 58080.00
+      },
+      {
+        "ProductoH": null,
+        "ProductoV": {
+          "Codigo": "AA002",
+          "Origen": "BUE",
+          "Destino": "CDG",
+          "FechaSalida": "2023-07-20T00:00:00",
+          "FechaArribo": "2023-07-21T00:00:00",
+          "TiempoVuelo": "11:00:00",
+          "Aerolinea": "Air France",
+          "Tarifas": [
             {
-                "ProductoH": {
-                    "Codigo": "HT002",
-                    "Nombre": "Four Seasons",
-                    "CodigoCiudad": "MAD",
-                    "Calificacion": 5,
-                    "Direccion": {
-                        "Calle": "C. de Sevilla",
-                        "Numero": 30,
-                        "CP": 28014,
-                        "Latitud": 40.41707269127456,
-                        "Longitud": -3.7004233112454163
-                    },
-                    "Disponibilidad": {
-                        "Nombre": "Deluxe",
-                        "TarifaHab": 75200.0,
-                        "Capacidad": 6,
-                        "Adultos": 6,
-                        "Menores": 3,
-                        "Infantes": 3,
-                        "HabitacionFechaDisp": [
-                            {
-                                "FechaEntHab": "0001-01-01T00:00:00",
-                                "CantHab": 3,
-                                "Uid": "0887ce84-31bf-4421-b47a-c80406a44be0"
-                            },
-                            {
-                                "FechaEntHab": "0001-01-01T00:00:00",
-                                "CantHab": 4,
-                                "Uid": "638b85a9-8453-4000-a54c-00e62c564f76"
-                            },
-                            {
-                                "FechaEntHab": "0001-01-01T00:00:00",
-                                "CantHab": 6,
-                                "Uid": "68d05e5a-0e4f-404f-bed1-860c16d323b2"
-                            },
-                            {
-                                "FechaEntHab": "0001-01-01T00:00:00",
-                                "CantHab": 6,
-                                "Uid": "d2be359a-0868-4115-a05e-7db635c75365"
-                            },
-                            {
-                                "FechaEntHab": "0001-01-01T00:00:00",
-                                "CantHab": 4,
-                                "Uid": "2759df33-6c1a-4af6-850f-c76ee9ecb827"
-                            },
-                            {
-                                "FechaEntHab": "0001-01-01T00:00:00",
-                                "CantHab": 5,
-                                "Uid": "85e83d6d-fefb-4849-9593-6a783f2e3800"
-                            },
-                            {
-                                "FechaEntHab": "0001-01-01T00:00:00",
-                                "CantHab": 6,
-                                "Uid": "3ed0e89a-56b9-40a0-b6b1-21f0ce34328a"
-                            }
-                        ]
-                    },
-                    "Uid": "434ca706-3e5d-4e35-9cee-a8429286f990"
-                },
-                "ProductoV": null,
-                "Cantidad": 1,
-                "PrecioUn": 75200.0,
-                "SubTotal": 75200.0,
-                "IVA": 15792.00,
-                "TotalProd": 90992.00
-            },
-            {
-                "ProductoH": {
-                    "Codigo": "HT003",
-                    "Nombre": "ibis budget Meudon",
-                    "CodigoCiudad": "ROM",
-                    "Calificacion": 3,
-                    "Direccion": {
-                        "Calle": "Pza Vittorio Emanuele",
-                        "Numero": 3,
-                        "CP": 92190,
-                        "Latitud": 48.81806260303906,
-                        "Longitud": 2.2493296544913317
-                    },
-                    "Disponibilidad": {
-                        "Nombre": "Deluxe",
-                        "TarifaHab": 48000.0,
-                        "Capacidad": 6,
-                        "Adultos": 6,
-                        "Menores": 3,
-                        "Infantes": 3,
-                        "HabitacionFechaDisp": [
-                            {
-                                "FechaEntHab": "0001-01-01T00:00:00",
-                                "CantHab": 3,
-                                "Uid": "3a91395d-2fc4-49c1-99d4-b2da85f83a6d"
-                            },
-                            {
-                                "FechaEntHab": "0001-01-01T00:00:00",
-                                "CantHab": 2,
-                                "Uid": "9be30126-f5ff-40c4-8fe0-3f50625db1a5"
-                            },
-                            {
-                                "FechaEntHab": "0001-01-01T00:00:00",
-                                "CantHab": 4,
-                                "Uid": "7d5d772e-526a-40ee-9368-41eeb3be5ffb"
-                            },
-                            {
-                                "FechaEntHab": "0001-01-01T00:00:00",
-                                "CantHab": 5,
-                                "Uid": "57058ce5-f726-4eeb-aafb-21fe42716af5"
-                            },
-                            {
-                                "FechaEntHab": "0001-01-01T00:00:00",
-                                "CantHab": 4,
-                                "Uid": "571f768f-c772-456c-9716-f18ef7134aa3"
-                            },
-                            {
-                                "FechaEntHab": "0001-01-01T00:00:00",
-                                "CantHab": 5,
-                                "Uid": "cbc521e7-8751-496b-aa3b-efd0ced4f4e5"
-                            },
-                            {
-                                "FechaEntHab": "0001-01-01T00:00:00",
-                                "CantHab": 3,
-                                "Uid": "09bf454b-41f4-4da1-bf6c-a346db13ee07"
-                            }
-                        ]
-                    },
-                    "Uid": "a6845e07-9a1b-430b-9bfd-cbfe9a43de5d"
-                },
-                "ProductoV": null,
-                "Cantidad": 1,
-                "PrecioUn": 48000.0,
-                "SubTotal": 48000.0,
-                "IVA": 10080.00,
-                "TotalProd": 58080.00
-            },
-            {
-                "ProductoH": null,
-                "ProductoV": {
-                    "Codigo": "AA002",
-                    "Origen": "BUE",
-                    "Destino": "CDG",
-                    "FechaSalida": "2023-07-20T00:00:00",
-                    "FechaArribo": "2023-07-21T00:00:00",
-                    "TiempoVuelo": "11:00:00",
-                    "Aerolinea": "Air France",
-                    "Tarifas": [
-                        {
-                            "Clase": "First",
-                            "TipoPasajero": "Adulto",
-                            "Precio": 640000.0,
-                            "Disponibilidad": 1,
-                            "Pasajeros": null,
-                            "Uid": "054200e4-83ff-47f3-9b2e-f58bfbb4abb2"
-                        }
-                    ],
-                    "Uid": "2323e7e9-db07-446b-a22a-a2e7940f0f10"
-                },
-                "Cantidad": 1,
-                "PrecioUn": 640000.0,
-                "SubTotal": 640000.0,
-                "IVA": 134400.000,
-                "TotalProd": 774400.000
-            },
-            {
-                "ProductoH": null,
-                "ProductoV": {
-                    "Codigo": "AA003",
-                    "Origen": "BUE",
-                    "Destino": "MAD",
-                    "FechaSalida": "2023-07-06T00:00:00",
-                    "FechaArribo": "2023-07-07T00:00:00",
-                    "TiempoVuelo": "13:00:00",
-                    "Aerolinea": "United Airlines",
-                    "Tarifas": [
-                        {
-                            "Clase": "Economy",
-                            "TipoPasajero": "Adulto",
-                            "Precio": 392000.0,
-                            "Disponibilidad": 3,
-                            "Pasajeros": null,
-                            "Uid": "49cb166e-ccd8-46fd-8fef-e6cf7cacf4ca"
-                        }
-                    ],
-                    "Uid": "b5d6e42b-7bab-47fd-a06b-907ad53c0f0a"
-                },
-                "Cantidad": 3,
-                "PrecioUn": 392000.0,
-                "SubTotal": 1176000.0,
-                "IVA": 246960.000,
-                "TotalProd": 1422960.000
+              "Clase": "First",
+              "TipoPasajero": "Adulto",
+              "Precio": 640000.0,
+              "Disponibilidad": 1,
+              "Pasajeros": null,
+              "Uid": "054200e4-83ff-47f3-9b2e-f58bfbb4abb2"
             }
-        ],
-        "Descripcion": null,
-        "Total": 2346432.000
-    }
+          ],
+          "Uid": "2323e7e9-db07-446b-a22a-a2e7940f0f10"
+        },
+        "Cantidad": 1,
+        "PrecioUn": 640000.0,
+        "SubTotal": 640000.0,
+        "IVA": 134400.000,
+        "TotalProd": 774400.000
+      },
+      {
+        "ProductoH": null,
+        "ProductoV": {
+          "Codigo": "AA003",
+          "Origen": "BUE",
+          "Destino": "MAD",
+          "FechaSalida": "2023-07-06T00:00:00",
+          "FechaArribo": "2023-07-07T00:00:00",
+          "TiempoVuelo": "13:00:00",
+          "Aerolinea": "United Airlines",
+          "Tarifas": [
+            {
+              "Clase": "Economy",
+              "TipoPasajero": "Adulto",
+              "Precio": 392000.0,
+              "Disponibilidad": 3,
+              "Pasajeros": null,
+              "Uid": "49cb166e-ccd8-46fd-8fef-e6cf7cacf4ca"
+            }
+          ],
+          "Uid": "b5d6e42b-7bab-47fd-a06b-907ad53c0f0a"
+        },
+        "Cantidad": 3,
+        "PrecioUn": 392000.0,
+        "SubTotal": 1176000.0,
+        "IVA": 246960.000,
+        "TotalProd": 1422960.000
+      }
+    ],
+    "Descripcion": null,
+    "Total": 2346432.000
+  },
+  {
+    "NroSeguimiento": 1004,
+    "Productos": [
+      {
+        "ProductoH": {
+          "Codigo": "HT002",
+          "Nombre": "Four Seasons",
+          "CodigoCiudad": "MAD",
+          "Calificacion": 5,
+          "Direccion": {
+            "Calle": "C. de Sevilla",
+            "Numero": 30,
+            "CP": 28014,
+            "Latitud": 40.41707269127456,
+            "Longitud": -3.7004233112454163
+          },
+          "Disponibilidad": {
+            "Nombre": "Deluxe",
+            "TarifaHab": 75200.0,
+            "Capacidad": 6,
+            "Adultos": 6,
+            "Menores": 3,
+            "Infantes": 3,
+            "HabitacionFechaDisp": [
+              {
+                "FechaEntHab": "0001-01-01T00:00:00",
+                "CantHab": 3,
+                "Uid": "0887ce84-31bf-4421-b47a-c80406a44be0"
+              },
+              {
+                "FechaEntHab": "0001-01-01T00:00:00",
+                "CantHab": 4,
+                "Uid": "638b85a9-8453-4000-a54c-00e62c564f76"
+              },
+              {
+                "FechaEntHab": "0001-01-01T00:00:00",
+                "CantHab": 6,
+                "Uid": "68d05e5a-0e4f-404f-bed1-860c16d323b2"
+              },
+              {
+                "FechaEntHab": "0001-01-01T00:00:00",
+                "CantHab": 6,
+                "Uid": "d2be359a-0868-4115-a05e-7db635c75365"
+              },
+              {
+                "FechaEntHab": "0001-01-01T00:00:00",
+                "CantHab": 4,
+                "Uid": "2759df33-6c1a-4af6-850f-c76ee9ecb827"
+              },
+              {
+                "FechaEntHab": "0001-01-01T00:00:00",
+                "CantHab": 5,
+                "Uid": "85e83d6d-fefb-4849-9593-6a783f2e3800"
+              },
+              {
+                "FechaEntHab": "0001-01-01T00:00:00",
+                "CantHab": 6,
+                "Uid": "3ed0e89a-56b9-40a0-b6b1-21f0ce34328a"
+              }
+            ]
+          },
+          "Uid": "434ca706-3e5d-4e35-9cee-a8429286f990"
+        },
+        "ProductoV": null,
+        "Cantidad": 1,
+        "PrecioUn": 75200.0,
+        "SubTotal": 75200.0,
+        "IVA": 15792.00,
+        "TotalProd": 90992.00
+      },
+      {
+        "ProductoH": {
+          "Codigo": "HT003",
+          "Nombre": "ibis budget Meudon",
+          "CodigoCiudad": "ROM",
+          "Calificacion": 3,
+          "Direccion": {
+            "Calle": "Pza Vittorio Emanuele",
+            "Numero": 3,
+            "CP": 92190,
+            "Latitud": 48.81806260303906,
+            "Longitud": 2.2493296544913317
+          },
+          "Disponibilidad": {
+            "Nombre": "Deluxe",
+            "TarifaHab": 48000.0,
+            "Capacidad": 6,
+            "Adultos": 6,
+            "Menores": 3,
+            "Infantes": 3,
+            "HabitacionFechaDisp": [
+              {
+                "FechaEntHab": "0001-01-01T00:00:00",
+                "CantHab": 3,
+                "Uid": "3a91395d-2fc4-49c1-99d4-b2da85f83a6d"
+              },
+              {
+                "FechaEntHab": "0001-01-01T00:00:00",
+                "CantHab": 2,
+                "Uid": "9be30126-f5ff-40c4-8fe0-3f50625db1a5"
+              },
+              {
+                "FechaEntHab": "0001-01-01T00:00:00",
+                "CantHab": 4,
+                "Uid": "7d5d772e-526a-40ee-9368-41eeb3be5ffb"
+              },
+              {
+                "FechaEntHab": "0001-01-01T00:00:00",
+                "CantHab": 5,
+                "Uid": "57058ce5-f726-4eeb-aafb-21fe42716af5"
+              },
+              {
+                "FechaEntHab": "0001-01-01T00:00:00",
+                "CantHab": 4,
+                "Uid": "571f768f-c772-456c-9716-f18ef7134aa3"
+              },
+              {
+                "FechaEntHab": "0001-01-01T00:00:00",
+                "CantHab": 5,
+                "Uid": "cbc521e7-8751-496b-aa3b-efd0ced4f4e5"
+              },
+              {
+                "FechaEntHab": "0001-01-01T00:00:00",
+                "CantHab": 3,
+                "Uid": "09bf454b-41f4-4da1-bf6c-a346db13ee07"
+              }
+            ]
+          },
+          "Uid": "a6845e07-9a1b-430b-9bfd-cbfe9a43de5d"
+        },
+        "ProductoV": null,
+        "Cantidad": 1,
+        "PrecioUn": 48000.0,
+        "SubTotal": 48000.0,
+        "IVA": 10080.00,
+        "TotalProd": 58080.00
+      },
+      {
+        "ProductoH": null,
+        "ProductoV": {
+          "Codigo": "AA002",
+          "Origen": "BUE",
+          "Destino": "CDG",
+          "FechaSalida": "2023-07-20T00:00:00",
+          "FechaArribo": "2023-07-21T00:00:00",
+          "TiempoVuelo": "11:00:00",
+          "Aerolinea": "Air France",
+          "Tarifas": [
+            {
+              "Clase": "First",
+              "TipoPasajero": "Adulto",
+              "Precio": 640000.0,
+              "Disponibilidad": 1,
+              "Pasajeros": null,
+              "Uid": "054200e4-83ff-47f3-9b2e-f58bfbb4abb2"
+            }
+          ],
+          "Uid": "2323e7e9-db07-446b-a22a-a2e7940f0f10"
+        },
+        "Cantidad": 1,
+        "PrecioUn": 640000.0,
+        "SubTotal": 640000.0,
+        "IVA": 134400.000,
+        "TotalProd": 774400.000
+      },
+      {
+        "ProductoH": null,
+        "ProductoV": {
+          "Codigo": "AA003",
+          "Origen": "BUE",
+          "Destino": "MAD",
+          "FechaSalida": "2023-07-06T00:00:00",
+          "FechaArribo": "2023-07-07T00:00:00",
+          "TiempoVuelo": "13:00:00",
+          "Aerolinea": "United Airlines",
+          "Tarifas": [
+            {
+              "Clase": "Economy",
+              "TipoPasajero": "Adulto",
+              "Precio": 392000.0,
+              "Disponibilidad": 3,
+              "Pasajeros": null,
+              "Uid": "49cb166e-ccd8-46fd-8fef-e6cf7cacf4ca"
+            }
+          ],
+          "Uid": "b5d6e42b-7bab-47fd-a06b-907ad53c0f0a"
+        },
+        "Cantidad": 3,
+        "PrecioUn": 392000.0,
+        "SubTotal": 1176000.0,
+        "IVA": 246960.000,
+        "TotalProd": 1422960.000
+      }
+    ],
+    "Descripcion": null,
+    "Total": 2346432.000
+  }
 ]
