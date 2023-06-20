@@ -132,8 +132,6 @@ namespace SolucionCAI.AgenciaDeViajes
                     ClienteEnt cliente = ModuloItinerario.CrearCliente(nombre, apellido, dni, cuil, condFiscal, telefono, email, medioPago);
                     PresupuestoEnt presupuesto = ModuloPresupuesto.TraerPresupuesto(Convert.ToInt32(numeroSeguimiento));
                     ItinerarioEnt prereserva = ModuloItinerario.CrearPrereserva(presupuesto, cliente);
-
-
                     ModuloItinerario.GrabarPrereserva(prereserva);
 
 
@@ -171,17 +169,28 @@ namespace SolucionCAI.AgenciaDeViajes
                         return;
                     }
 
-                    validacion.ValidarCUIT(cuit);
-                    validacion.ValidaTextoNumero(domicilioE);
-                    validacion.ValidaTelefono(telefonoE);
-                    validacion.ValidaEmail(emailE);
+
+                    try
+                    {
+
+                        validacion.ValidarCUIT(cuit);
+                        validacion.ValidaTextoNumero(domicilioE);
+                        validacion.ValidaTelefono(telefonoE);
+                        validacion.ValidaEmail(emailE);
+
+                        ClienteEnt cliente = ModuloItinerario.CrearClienteEmpresa(razonSocial, domicilioE, cuit, condFiscalE, telefonoE, emailE, medioPagoE);
+                        PresupuestoEnt presupuesto = ModuloPresupuesto.TraerPresupuesto(Convert.ToInt32(numeroSeguimiento));
+                        ItinerarioEnt prereserva = ModuloItinerario.CrearPrereserva(presupuesto, cliente);
+                        ModuloItinerario.GrabarPrereserva(prereserva);
 
 
 
-                    ClienteEnt cliente = ModuloItinerario.CrearClienteEmpresa(razonSocial, domicilioE, cuit, condFiscalE, telefonoE, emailE, medioPagoE);
-                    PresupuestoEnt presupuesto = ModuloPresupuesto.TraerPresupuesto(Convert.ToInt32(numeroSeguimiento));
-                    ItinerarioEnt prereserva = ModuloItinerario.CrearPrereserva(presupuesto, cliente);
-                    ModuloItinerario.GrabarPrereserva(prereserva);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+
                     // this.Close();
 
                 }
@@ -193,7 +202,7 @@ namespace SolucionCAI.AgenciaDeViajes
 
 
 
-            
+
         }
     }
 }

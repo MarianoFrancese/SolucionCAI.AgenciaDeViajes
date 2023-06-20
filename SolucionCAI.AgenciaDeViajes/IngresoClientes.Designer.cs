@@ -448,8 +448,8 @@
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(tipoCliente);
-            Controls.Add(personaFisica);
             Controls.Add(personaJuridica);
+            Controls.Add(personaFisica);
             Margin = new Padding(3, 4, 3, 4);
             Name = "IngresoClientes";
             Text = "IngresoClientes";
