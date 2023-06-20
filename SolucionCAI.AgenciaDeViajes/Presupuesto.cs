@@ -483,7 +483,6 @@ namespace SolucionCAI.AgenciaDeViajes
 
 
             hotelesFiltrados = ModuloProductos.ListaHoteles(ciudad, fechaEntradaFormateada, fechaSalidaFormateada, cantHuespedes, tipoHabitacion);
-
             Console.WriteLine(hotelesFiltrados);
             if (hotelesFiltrados.Count > 0 && numericUpDown2.Value > 0)
             {
@@ -498,7 +497,7 @@ namespace SolucionCAI.AgenciaDeViajes
             {
 
                 MessageBox.Show("Debe completar el tipo de habitación");
-            } 
+            }
             else if (string.IsNullOrEmpty(comboBox5.Text))
             {
 
